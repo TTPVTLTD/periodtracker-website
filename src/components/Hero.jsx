@@ -20,7 +20,7 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left py-4 sm:py-6 lg:py-10">
 
             {/* Main Primary SEO H1 */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-[1.15]">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
                Period Tracker Ovulation Cycles — World’s Cycle Companion
             </h1>
 

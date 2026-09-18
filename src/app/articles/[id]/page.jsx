@@ -135,7 +135,7 @@ export default function ArticlePage({ params }) {
             </nav>
 
             {/* Article Headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight max-w-4xl">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug max-w-4xl">
               {article.title}
             </h1>
 

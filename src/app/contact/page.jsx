@@ -148,7 +148,7 @@ export default function ContactPage() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FF5E8C]/10 border border-[#FF5E8C]/20 text-[#FF5E8C] font-bold text-xs sm:text-sm uppercase tracking-wider">
             Get In Touch
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1819] leading-tight tracking-tight font-heading">
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1A1819] leading-snug tracking-tight font-heading">
             Contact Our Team
           </h1>
           <p className="text-[#706B6E] text-sm sm:text-base leading-relaxed max-w-xl mx-auto font-medium">

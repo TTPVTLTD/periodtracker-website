@@ -69,7 +69,7 @@ export default function FaqSection() {
             <HelpCircle className="w-4 h-4 text-flo-500" />
             <span>Frequently Asked Questions</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug">
             Frequently Asked Questions About Period & Ovulation Tracking
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">

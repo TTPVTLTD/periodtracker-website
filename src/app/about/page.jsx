@@ -73,9 +73,9 @@ export default function AboutPage() {
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FF5E8C]/10 border border-[#FF5E8C]/20 text-[#FF5E8C] font-bold text-xs sm:text-sm uppercase tracking-wider">
            About US
           </div>
-          {/* <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1819] leading-tight tracking-tight font-heading">
-            About TrackFlow
-          </h1> */}
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#1A1819] leading-snug tracking-tight font-heading">
+            About Period Tracker
+          </h1>
           <p className="text-[#706B6E] text-sm sm:text-base leading-relaxed max-w-xl mx-auto font-medium">
             Empowering women globally with reliable, science-backed cycle intelligence while maintaining the highest standard of data privacy.
           </p>

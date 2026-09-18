@@ -34,7 +34,7 @@ export default function SubscriptionPage() {
               <span>Manage Subscription & Premium Access</span>
             </div> */}
 
-            <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
               Invest in your daily reproductive wellness
             </h1>
 

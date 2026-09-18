@@ -70,7 +70,7 @@ export default function CalculatorsHubPage() {
               <span className="text-gray-800 font-bold">HEALTH TOOLS & CALCULATORS</span>
             </nav>
 
-            <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
               Reproductive & Cycle Calculators
             </h1>
             <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">

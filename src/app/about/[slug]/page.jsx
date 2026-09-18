@@ -344,7 +344,7 @@ function ScienceAndResearchView({ pageData, otherPages }) {
                 Advancing female health
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-[1.15]">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
                 Science and research at Period Tracker
               </h1>
 
@@ -733,7 +733,7 @@ function AiReportsView({ pageData, otherPages }) {
                 <span>Intelligent Cycle Diagnostics</span>
               </div> */}
               
-              <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
                 AI-Generated Health Reports for Your Cycle
               </h1>
 
@@ -1001,7 +1001,7 @@ function AyurvedaCareView({ pageData, otherPages }) {
                 <span>Ancient Wisdom for Cycle Harmony</span>
               </div>
 
-              <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
                 Ayurveda & Natural Home Remedies Module
               </h1>
 
@@ -1215,7 +1215,7 @@ function PrivacyPortalView({ pageData, otherPages }) {
               <span>100% In-Device Data Protection</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug">
               Your cycle data belongs strictly to you. Period.
             </h1>
 

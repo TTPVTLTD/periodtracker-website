@@ -47,7 +47,7 @@ export default function Testimonials() {
         
         {/* Header matching Reference Image 3 */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug">
             What Our Community Says About Period Tracker
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -174,10 +174,10 @@ export default function Testimonials() {
               <span>4.9 / 5 Mobile & Web</span>
             </span>
             <span>•</span>
-            <span className="flex items-center gap-1.5">
+            {/* <span className="flex items-center gap-1.5">
               <span>⭐</span>
               <span>98% Doctor Verified Accuracy</span>
-            </span>
+            </span> */}
           </div>
         </div>
 

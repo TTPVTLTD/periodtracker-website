@@ -149,7 +149,7 @@ export default function CalculatorDetailPage({ params }) {
             </nav>
 
             {/* Main Title matching screenshot */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight max-w-4xl">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug max-w-4xl">
               {calc.shortTitle} & Early Health Charts
             </h1>
 

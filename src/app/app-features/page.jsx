@@ -101,7 +101,7 @@ export default function AppFeaturesPage() {
               <span>Mobile App Architecture</span>
             </div> */}
 
-            <h1 className="text-3xl sm:text-5xl font-black text-brand-dark tracking-tight leading-tight font-heading">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight leading-snug font-heading">
               Simple, Powerful Features Designed Around <span className="bg-gradient-to-r from-brand-pink via-brand-babyPink to-brand-peach bg-clip-text text-transparent">Your Body.</span>
             </h1>
 
