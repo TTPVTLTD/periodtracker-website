@@ -16,12 +16,55 @@ import {
   Calendar,
   BookOpen
 } from 'lucide-react';
+import { clampTitle, clampDescription, clampKeywords } from '../../../utils/seo';
 
 // Next.js static params generation for all articles
 export function generateStaticParams() {
   return ARTICLES.map((article) => ({
     id: article.id,
   }));
+}
+
+export function generateMetadata({ params }) {
+  const article = ARTICLES.find((a) => a.id === params.id);
+  if (!article) {
+    return {
+      title: 'Article Not Found',
+    };
+  }
+
+  const safeTitle = clampTitle(article.title, 'Period Tracker', 60);
+  const safeDesc = clampDescription(article.summary, 158);
+  const safeKeywords = clampKeywords(article.tags || [article.categoryName, 'period health', 'fertility tracker'], 6);
+
+  return {
+    title: safeTitle,
+    description: safeDesc,
+    keywords: safeKeywords,
+    alternates: {
+      canonical: `/articles/${article.id}`,
+    },
+    openGraph: {
+      title: safeTitle,
+      description: safeDesc,
+      url: `/articles/${article.id}`,
+      type: 'article',
+      publishedTime: article.publishedDate,
+      authors: [article.author || 'Period Tracker Health Editorial'],
+      images: [
+        {
+          url: article.image || '/logo.png',
+          alt: safeTitle,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: safeTitle,
+      description: safeDesc,
+      images: [article.image || '/logo.png'],
+    },
+  };
 }
 
 export default function ArticlePage({ params }) {
@@ -36,11 +79,38 @@ export default function ArticlePage({ params }) {
     (a) => a.id !== article.id && (a.category === article.category || Math.random() > 0.4)
   ).slice(0, 3);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalWebPage',
+    name: article.title,
+    headline: article.title,
+    description: article.summary,
+    image: `https://periodtracker.online${article.image}`,
+    author: {
+      '@type': 'Organization',
+      name: article.author || 'Period Tracker Health Editorial',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Period Tracker & Ovulation Cycle',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://periodtracker.online/logo.png',
+      },
+    },
+    datePublished: article.publishedDate,
+    mainEntityOfPage: `https://periodtracker.online/articles/${article.id}`,
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[#fff9fb]">
       <Navbar />
 
       <main className="flex-1">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {/* Flo.health Top Header Banner */}
         <section className="bg-gradient-to-b from-flo-100/60 via-pink-50/40 to-[#fff9fb] pt-8 pb-12 border-b border-pink-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -55,7 +125,7 @@ export default function ArticlePage({ params }) {
                 WELLNESS HUB
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-              <Link href={`/wellness-hub?cat=${article.category}`} className="hover:text-flo-600 transition-colors">
+              <Link href={`/wellness-hub?category=${article.category}`} className="hover:text-flo-600 transition-colors">
                 {article.categoryName}
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-gray-400" />

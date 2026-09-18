@@ -27,6 +27,33 @@ const iconMap = {
   Sparkles
 };
 
+export const metadata = {
+  title: 'Free Period & Ovulation Calculators - Menstrual Tools',
+  description: 'Calculate your next period date, ovulation day, fertile window, beta hCG doubling, and pregnancy due date. Free, instant, and 100% private in-browser tools.',
+  keywords: [
+    'period calculator',
+    'ovulation calculator',
+    'fertility tools',
+    'pregnancy due date calculator',
+    'beta hcg calculator',
+    'cycle tools'
+  ],
+  alternates: {
+    canonical: '/calculators',
+  },
+  openGraph: {
+    title: 'Free Period & Ovulation Calculators - Menstrual Tools | Period Tracker',
+    description: 'Calculate your next period date, ovulation day, fertile window, beta hCG doubling, and pregnancy due date. 100% private in-browser reproductive tools.',
+    url: '/calculators',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free Period & Ovulation Calculators - Menstrual Tools',
+    description: 'Calculate your next period date, ovulation day, fertile window, beta hCG doubling, and pregnancy due date. 100% private in-browser tools.',
+  },
+};
+
 export default function CalculatorsHubPage() {
   return (
     <div className="min-h-screen flex flex-col bg-[#fff9fb]">

@@ -30,7 +30,7 @@ export default function HealthLibraryPage() {
     const handleUrlCategory = () => {
       if (typeof window === 'undefined') return;
       const params = new URLSearchParams(window.location.search);
-      const catParam = params.get('category') || window.location.hash.replace('#', '');
+      const catParam = params.get('category') || params.get('cat') || window.location.hash.replace('#', '');
       if (catParam && ['period', 'wellness', 'ovulation', 'pregnancy', 'ayurveda'].includes(catParam)) {
         setActiveCategoryFilter(catParam);
         setTimeout(() => {

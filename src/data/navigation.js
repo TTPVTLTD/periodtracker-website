@@ -61,7 +61,7 @@ export const TOP_NAV_MENUS = [
   {
     id: "calculators",
     name: "Cycle Tools",
-    href: "/cycle-tools",
+    href: "/calculators",
     isCalculatorsMenu: true // renders the 8 specialized calculators from calculators.js
   },
   {

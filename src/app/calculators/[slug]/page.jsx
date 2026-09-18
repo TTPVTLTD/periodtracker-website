@@ -22,10 +22,47 @@ import {
   ArrowRight
 } from 'lucide-react';
 
+import { clampTitle, clampDescription, clampKeywords } from '../../../utils/seo';
+
 export function generateStaticParams() {
   return CALCULATORS.map((calc) => ({
     slug: calc.slug,
   }));
+}
+
+export function generateMetadata({ params }) {
+  const calc = CALCULATORS.find((c) => c.slug === params.slug);
+  if (!calc) {
+    return {
+      title: 'Calculator Not Found',
+    };
+  }
+
+  const rawTitle = calc.seoTitle || `${calc.name} - Free Online Tool`;
+  const rawDesc = calc.seoDescription || calc.description || calc.summary;
+  const safeTitle = clampTitle(rawTitle, 'Period Tracker', 60);
+  const safeDesc = clampDescription(rawDesc, 158);
+  const safeKeywords = clampKeywords(calc.keywords || [calc.name, 'period tracker', 'fertility calculator'], 6);
+
+  return {
+    title: safeTitle,
+    description: safeDesc,
+    keywords: safeKeywords,
+    alternates: {
+      canonical: `/calculators/${calc.slug}`,
+    },
+    openGraph: {
+      title: safeTitle,
+      description: safeDesc,
+      url: `/calculators/${calc.slug}`,
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: safeTitle,
+      description: safeDesc,
+    },
+  };
 }
 
 export default function CalculatorDetailPage({ params }) {
@@ -60,11 +97,30 @@ export default function CalculatorDetailPage({ params }) {
 
   const otherCalculators = CALCULATORS.filter((c) => c.slug !== slug);
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebApplication',
+    name: calc.name,
+    description: calc.description || calc.summary,
+    applicationCategory: 'HealthApplication',
+    operatingSystem: 'All',
+    url: `https://periodtracker.online/calculators/${calc.slug}`,
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[#fff9fb]">
       <Navbar />
 
       <main className="flex-1">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {/* Flo.health Top Banner matching screenshot */}
         <section className="bg-gradient-to-b from-flo-100/70 via-pink-50/40 to-[#fff9fb] pt-8 pb-12 border-b border-pink-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

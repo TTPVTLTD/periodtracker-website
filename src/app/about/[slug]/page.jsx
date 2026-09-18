@@ -1,6 +1,4 @@
-'use client';
-
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
@@ -8,6 +6,7 @@ import { ABOUT_PAGES } from '../../../data/aboutPages';
 import { APP_LINKS } from '../../../data/appLinks';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
+import ContactForm from '../../../components/about/ContactForm';
 import { 
   ChevronRight, 
   ShieldCheck, 
@@ -26,6 +25,58 @@ import {
   Globe2,
   Heart
 } from 'lucide-react';
+import { clampTitle, clampDescription, clampKeywords } from '../../../utils/seo';
+
+export function generateStaticParams() {
+  return ABOUT_PAGES.map((page) => ({
+    slug: page.slug,
+  }));
+}
+
+export function generateMetadata({ params }) {
+  const pageData = ABOUT_PAGES.find((p) => p.slug === params.slug);
+  if (!pageData) {
+    return {
+      title: 'Page Not Found',
+    };
+  }
+
+  const keywordsMap = {
+    'science-and-research': ['menstrual cycle science', 'predictive cycle algorithms', 'fertility research', 'period tracking science'],
+    'ai-reports': ['ai cycle reports', 'smart health summaries', 'menstrual symptom analysis', 'doctor ready period reports'],
+    'ayurveda-care': ['ayurvedic period care', 'cramp relief remedies', 'holistic menstrual health', 'ayurveda for pms'],
+    'privacy-portal': ['period tracker privacy', 'private health app', 'zero ad tracking period tracker', 'encrypted cycle data'],
+    'contact': ['period tracker support', 'contact period tracker', 'cycle app community help', 'customer support'],
+    'medical-affairs': ['period tracker medical affairs', 'clinical cycle review', 'reproductive health board'],
+    'accuracy': ['period tracker accuracy', 'ovulation prediction reliability', 'cycle prediction models'],
+  };
+
+  const rawTitle = `${pageData.title} - Science & Care`;
+  const rawDesc = pageData.subtitle || pageData.heroDesc;
+  const safeTitle = clampTitle(rawTitle, 'Period Tracker', 60);
+  const safeDesc = clampDescription(rawDesc, 158);
+  const safeKeywords = clampKeywords(keywordsMap[pageData.slug] || [pageData.title, 'period tracker', 'reproductive health'], 6);
+
+  return {
+    title: safeTitle,
+    description: safeDesc,
+    keywords: safeKeywords,
+    alternates: {
+      canonical: `/about/${pageData.slug}`,
+    },
+    openGraph: {
+      title: safeTitle,
+      description: safeDesc,
+      url: `/about/${pageData.slug}`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: safeTitle,
+      description: safeDesc,
+    },
+  };
+}
 
 export default function AboutDetailPage({ params }) {
   const { slug } = params;
@@ -56,10 +107,27 @@ export default function AboutDetailPage({ params }) {
     }
   };
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'AboutPage',
+    name: pageData.title,
+    description: pageData.subtitle || pageData.heroDesc,
+    url: `https://periodtracker.online/about/${pageData.slug}`,
+    publisher: {
+      '@type': 'Organization',
+      name: 'Period Tracker & Ovulation Cycle',
+      logo: 'https://periodtracker.online/logo.png',
+    },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[#fffbf9]">
       <Navbar />
       <main className="flex-1">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {renderCustomView()}
       </main>
       <Footer />
@@ -1216,14 +1284,6 @@ function PrivacyPortalView({ pageData, otherPages }) {
    5. CONTACT VIEW (Clean Customer Support Hub & Real Interactive Feedback Form)
    ========================================================================= */
 function ContactView({ pageData, otherPages }) {
-  const [submitted, setSubmitted] = useState(false);
-  const [formData, setFormData] = useState({ name: '', email: '', category: 'General', message: '' });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
     <div className="space-y-12">
       {/* Contact Hero Banner - Clean & Inviting */}
@@ -1310,92 +1370,7 @@ function ContactView({ pageData, otherPages }) {
 
           {/* Right Column: In-Page Feedback Form */}
           <div className="lg:col-span-7 bg-white rounded-3xl p-8 border border-pink-100 shadow-sm">
-            {submitted ? (
-              <div className="py-12 text-center space-y-3">
-                <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
-                  <Check className="w-8 h-8" />
-                </div>
-                <h3 className="text-2xl font-black text-gray-900">Message Received!</h3>
-                <p className="text-sm text-gray-600 max-w-md mx-auto">
-                  Thank you for reaching out. Your feedback has been forwarded to our support and product development team.
-                </p>
-                <button
-                  type="button"
-                  onClick={() => setSubmitted(false)}
-                  className="mt-4 px-6 py-2.5 rounded-full bg-flo-600 text-white font-bold text-xs hover:bg-flo-700 transition-colors"
-                >
-                  Send Another Message
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <h3 className="text-xl font-extrabold text-gray-900">Send us a message</h3>
-                  <p className="text-xs text-gray-500 mt-1">We respond to community inquiries within 24–48 hours.</p>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-xs font-bold text-gray-700 mb-1">Your Name</label>
-                    <input
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      placeholder="e.g. Priya Sharma"
-                      className="w-full px-4 py-3 rounded-2xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-flo-500"
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-bold text-gray-700 mb-1">Email Address</label>
-                    <input
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      placeholder="name@example.com"
-                      className="w-full px-4 py-3 rounded-2xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-flo-500"
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">Topic / Category</label>
-                  <select
-                    value={formData.category}
-                    onChange={(e) => setFormData({ ...formData, category: e.target.value })}
-                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-flo-500 bg-white"
-                  >
-                    <option value="General">General Inquiry</option>
-                    <option value="Ayurveda">Ayurveda Remedy Suggestion</option>
-                    <option value="AI">AI Health Report Feedback</option>
-                    <option value="AppSupport">App Support (iOS / Android)</option>
-                    <option value="Subscription">Subscription Management</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label className="block text-xs font-bold text-gray-700 mb-1">Your Message</label>
-                  <textarea
-                    rows="4"
-                    required
-                    value={formData.message}
-                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="How can we help you today?"
-                    className="w-full px-4 py-3 rounded-2xl border border-gray-200 text-sm focus:outline-none focus:ring-2 focus:ring-flo-500 resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full py-3.5 rounded-full bg-[#f43f77] hover:bg-[#e11d5f] text-white font-bold text-sm shadow-md shadow-pink-200 transition-colors flex items-center justify-center gap-2 cursor-pointer"
-                >
-                  <span>Submit Message</span>
-                  <Send className="w-4 h-4" />
-                </button>
-              </form>
-            )}
+            <ContactForm />
           </div>
 
         </div>
