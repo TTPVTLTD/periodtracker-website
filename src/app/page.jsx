@@ -10,22 +10,25 @@ import FaqSection from '../components/FaqSection';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Period Tracker & Ovulation Calculator - Cycle Calendar',
-  description: 'Track your period, calculate fertile ovulation days, and log cycle symptoms with 100% privacy. Free, simple, and accurate menstrual health companion.',
+  title: 'Period Tracker & Ovulation Calculator — Menstrual Cycle Calendar',
+  description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
   keywords: [
     'period tracker',
     'ovulation calculator',
-    'menstrual cycle',
-    'period calendar',
-    'fertility tracker',
-    'safe days to avoid pregnancy'
+    'menstrual cycle calendar',
+    'fertile window calculator',
+    'safe days to avoid pregnancy',
+    'period symptoms tracker',
+    'pcos cycle tracker',
+    'pregnancy due date calculator',
+    'natural period cramp remedies ayurveda'
   ],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Period Tracker & Ovulation Calculator - Cycle Calendar',
-    description: 'Track your period, calculate fertile ovulation days, and log cycle symptoms with 100% privacy. Free, simple, and accurate menstrual health companion.',
+    title: 'Period Tracker & Ovulation Calculator — Menstrual Cycle Calendar',
+    description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
     url: '/',
     siteName: 'Period Tracker & Ovulation Cycle',
     locale: 'en_US',
@@ -33,8 +36,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Period Tracker & Ovulation Calculator - Cycle Calendar',
-    description: 'Track your period, calculate fertile ovulation days, and log cycle symptoms with 100% privacy. Free, simple, and accurate menstrual health companion.',
+    title: 'Period Tracker & Ovulation Calculator — Menstrual Cycle Calendar',
+    description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
   },
 };
 
@@ -64,6 +67,73 @@ export default function HomePage() {
     ],
   };
 
+  const softwareAppSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'Period Tracker & Ovulation Cycle',
+    operatingSystem: 'iOS, Android, Web',
+    applicationCategory: 'HealthApplication',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      ratingCount: '500000',
+      bestRating: '5',
+      worstRating: '1',
+    },
+  };
+
+  const faqPageSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How do I calculate my ovulation day and fertile window?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ovulation typically occurs around 14 days before your next period starts in an average 28-day menstrual cycle. Your fertile window spans 6 days: the 5 days leading up to ovulation plus ovulation day itself.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How does the Period Tracker calculate my next cycle?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'The period tracker counts from the first day of your last period and adds your average menstrual cycle length (typically 21 to 35 days) to forecast your upcoming period start date, follicular phase, and luteal phase.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I track irregular periods or PCOS cycles?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. Our adaptive algorithm accommodates cycle variations and logs symptoms, cervical mucus changes, and basal body temperature to provide accurate forecasting even for irregular menstrual patterns.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is my menstrual health data kept private and secure?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, 100%. All cycle calculations and logs are processed locally with on-device encryption. No personal health information or cycle dates are sold to data brokers or third-party advertisers.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'How do Ayurvedic remedies help with period cramps and PMS?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Ayurvedic care addresses Dosha imbalances (predominantly Vata and Pitta) through herbal preparations like ginger, ashoka, cumin tea, and dietary protocols that naturally alleviate dysmenorrhea, bloating, and fatigue.',
+        },
+      },
+    ],
+  };
+
   return (
     <div className="flex-1 flex flex-col bg-[#FAF8F9]">
       <script
@@ -73,6 +143,14 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }}
       />
       {/* Top Navbar with Dynamic Dropdowns */}
       <Navbar />

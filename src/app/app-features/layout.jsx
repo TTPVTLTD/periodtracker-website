@@ -2,12 +2,12 @@ export const metadata = {
   title: 'Mobile App Features & Cycle Tools | Period Tracker',
   description: 'Explore the 6 flagship mobile app features: predictive cycle engine, fertility radar, pregnancy milestones, smart AI summaries, and private encrypted vault.',
   keywords: [
-    'period tracker app features',
-    'ovulation radar app',
-    'pregnancy tracker app',
-    'ai health summaries',
-    'ayurveda cramp relief app',
-    'private period tracker'
+    // 'period tracker app features',
+    // 'ovulation radar app',
+    // 'pregnancy tracker app',
+    // 'ai health summaries',
+    // 'ayurveda cramp relief app',
+    // 'private period tracker'
   ],
   alternates: {
     canonical: '/app-features',

@@ -14,9 +14,10 @@ export default function FaqSection() {
     );
   };
 
-  const faqs = FAQS.slice(0, 6);
-  const leftFaqs = faqs.slice(0, 3);
-  const rightFaqs = faqs.slice(3, 6);
+  const faqs = FAQS.slice(0, 8);
+  const half = Math.ceil(faqs.length / 2);
+  const leftFaqs = faqs.slice(0, half);
+  const rightFaqs = faqs.slice(half);
 
   const renderFaqCard = (faq, idx) => {
     const isOpen = openIndices.includes(idx);
@@ -50,7 +51,7 @@ export default function FaqSection() {
         </button>
 
         {isOpen && (
-          <div className="px-5 pb-5 pt-1 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-pink-50 bg-pink-50/20 animate-fadeIn">
+          <div className="px-5 pb-5 pt-2 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-pink-50 bg-pink-50/20 animate-fadeIn">
             {faq.answer}
           </div>
         )}
@@ -59,7 +60,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section id="faq" className="py-16 sm:py-24 bg-[#fffbfa] border-b border-pink-100/70">
+    <section id="faq" className="py-16 sm:py-24 bg-[#fffbfa] border-b border-pink-100/70 scroll-mt-24 sm:scroll-mt-28">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
@@ -69,23 +70,23 @@ export default function FaqSection() {
             <span>Frequently Asked Questions</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">
-            Everything You Need to Know About Cycle Tracking
+            Frequently Asked Questions About Period & Ovulation Tracking
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-gray-600">
-            Clear, doctor-approved answers to help you navigate periods, ovulation timing, and in-device privacy.
+          <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+            Doctor-verified answers regarding menstrual cycle calculations, fertile windows, safe days to prevent pregnancy, and personal health privacy.
           </p>
         </div>
 
-        {/* 2-Column Grid: 3 FAQs on the Left, 3 FAQs on the Right */}
+        {/* 2-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 items-start">
-          {/* Left Column (3 FAQs) */}
+          {/* Left Column */}
           <div className="space-y-4">
             {leftFaqs.map((faq, i) => renderFaqCard(faq, i))}
           </div>
 
-          {/* Right Column (3 FAQs) */}
+          {/* Right Column */}
           <div className="space-y-4">
-            {rightFaqs.map((faq, i) => renderFaqCard(faq, i + 3))}
+            {rightFaqs.map((faq, i) => renderFaqCard(faq, i + half))}
           </div>
         </div>
 

@@ -23,17 +23,17 @@ export default function ExpertAnswers() {
   }));
 
   return (
-    <section className="py-16 sm:py-24 bg-white border-b border-pink-100/80">
+    <section id="expert-answers" className="py-16 sm:py-24 bg-white border-b border-pink-100/80 scroll-mt-24 sm:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">
-            Questions about your cycle, answered clearly
+            Reproductive Health & Ovulation Questions Answered by Experts
           </h2>
           
-          <p className="mt-3 text-sm sm:text-base text-gray-600 font-normal max-w-2xl mx-auto">
-            Helpful, clear reproductive wellness insights, cycle tips, and natural care to support your journey.
+          <p className="mt-3 text-sm sm:text-base text-gray-600 font-normal max-w-2xl mx-auto leading-relaxed">
+            Medically reviewed cycle guides, conception timing insights, and natural Ayurvedic care to support every phase of your journey.
           </p>
         </div>
 
@@ -57,7 +57,7 @@ export default function ExpertAnswers() {
                 
                 {/* Category Pill Tag */}
                 <div className="absolute top-3 left-3">
-                  <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full border shadow-2xs backdrop-blur-md ${article.categoryColor}`}>
+                  <span className={`text-xs sm:text-sm font-bold px-3 py-1 rounded-full border shadow-2xs backdrop-blur-md ${article.categoryColor}`}>
                     {article.tag || article.categoryName}
                   </span>
                 </div>
@@ -71,24 +71,24 @@ export default function ExpertAnswers() {
                     {article.title}
                   </h3>
 
-                  {/* Brief 1-Line Excerpt */}
-                  <p className="text-xs text-gray-500 font-normal mt-1.5 leading-relaxed line-clamp-1">
+                  {/* Brief Excerpt */}
+                  <p className="text-sm text-gray-500 font-normal mt-1.5 leading-relaxed line-clamp-2">
                     {article.summary}
                   </p>
                 </div>
 
                 {/* Meta & Action */}
                 <div className="pt-3 mt-3 border-t border-pink-50 flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs text-gray-400 font-medium">
+                  <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-400 font-medium">
                     <span>{article.publishedDate || article.date}</span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-3 h-3 text-gray-400" />
+                      <Clock className="w-3.5 h-3.5 text-gray-400" />
                       {article.readTime}
                     </span>
                   </div>
 
-                  <span className="text-xs font-bold text-flo-600 group-hover:translate-x-0.5 transition-transform shrink-0">
+                  <span className="text-sm font-bold text-flo-600 group-hover:translate-x-0.5 transition-transform shrink-0">
                     Read &rarr;
                   </span>
                 </div>
@@ -107,17 +107,17 @@ export default function ExpertAnswers() {
             <ArrowRight className="w-4 h-4" />
           </Link>
           
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs font-semibold text-gray-500">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm font-semibold text-gray-500">
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
               Cycle Insights
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-flo-500" />
+              <span className="w-2 h-2 rounded-full bg-flo-500" />
               Ayurveda Care
             </span>
             <span className="flex items-center gap-1.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-500" />
+              <span className="w-2 h-2 rounded-full bg-purple-500" />
               Regularly Updated
             </span>
           </div>

@@ -27,8 +27,28 @@ const nextConfig = {
         permanent: true,
       },
       {
-        source: '/about',
-        destination: '/about/science-and-research',
+        source: '/contact.html',
+        destination: '/contact',
+        permanent: true,
+      },
+      {
+        source: '/privacy.html',
+        destination: '/privacy',
+        permanent: true,
+      },
+      {
+        source: '/terms.html',
+        destination: '/terms',
+        permanent: true,
+      },
+      {
+        source: '/about.html',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/faq.html',
+        destination: '/faq',
         permanent: true,
       },
     ];

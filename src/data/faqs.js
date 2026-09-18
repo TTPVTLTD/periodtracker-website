@@ -33,5 +33,15 @@ export const FAQS = [
     question: "How is the pregnancy due date calculated?",
     answer: "Our due date calculator uses Naegele's rule, the standard gestational method used worldwide. It calculates estimated delivery as 280 days (40 weeks) from the first day of your last menstrual period (LMP), assuming a 28-day menstrual cycle.",
     category: "pregnancy"
+  },
+  {
+    question: "How can I calculate safe days to avoid pregnancy naturally?",
+    answer: "Safe days are the days in your cycle outside your fertile window (typically before day 8 and after day 19 in a regular 28-day cycle) when the chance of conception is lowest. However, because sperm can survive up to 5 days and ovulation timing can shift due to stress, natural rhythm tracking works best when combined with cervical mucus and basal body temperature observations.",
+    category: "period"
+  },
+  {
+    question: "How do Ayurvedic remedies help relieve painful period cramps?",
+    answer: "Ayurveda views period cramps (Kashtartava) as an aggravation of Apana Vata. Simple natural remedies like warm ginger-cumin tea, carom seed (ajwain) decoctions, gentle sesame oil lower abdominal massage, and balanced nutrition help soothe uterine smooth muscles, reduce inflammation, and restore natural cycle flow.",
+    category: "wellness"
   }
 ];

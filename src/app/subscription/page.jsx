@@ -29,10 +29,10 @@ export default function SubscriptionPage() {
         {/* Hero Section */}
         <section className="bg-gradient-to-b from-[#fef0e7] via-[#fff6f0] to-[#fffbf9] pt-12 pb-16 border-b border-orange-100/70 text-center">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-pink-200 text-flo-600 text-xs font-bold shadow-2xs">
+            {/* <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-pink-200 text-flo-600 text-sm font-bold shadow-2xs">
               <Sparkles className="w-3.5 h-3.5 text-amber-500" />
               <span>Manage Subscription & Premium Access</span>
-            </div>
+            </div> */}
 
             <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight leading-tight">
               Invest in your daily reproductive wellness
@@ -48,7 +48,7 @@ export default function SubscriptionPage() {
                 <button
                   type="button"
                   onClick={() => setBillingCycle('monthly')}
-                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all cursor-pointer ${
+                  className={`px-4 py-2 rounded-xl text-sm sm:text-sm font-bold transition-all cursor-pointer ${
                     billingCycle === 'monthly'
                       ? 'bg-flo-600 text-white shadow-xs'
                       : 'text-gray-600 hover:text-gray-900'
@@ -59,14 +59,14 @@ export default function SubscriptionPage() {
                 <button
                   type="button"
                   onClick={() => setBillingCycle('annual')}
-                  className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer ${
+                  className={`px-4 py-2 rounded-xl text-sm sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer ${
                     billingCycle === 'annual'
                       ? 'bg-flo-600 text-white shadow-xs'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
                   <span>Annual Billing</span>
-                  <span className="text-xs uppercase font-black px-2 py-0.5 rounded-full bg-emerald-500 text-white">
+                  <span className="text-sm uppercase font-black px-2 py-0.5 rounded-full bg-emerald-500 text-white">
                     Save 50%
                   </span>
                 </button>
@@ -83,14 +83,14 @@ export default function SubscriptionPage() {
             <div className="bg-white rounded-3xl border border-gray-200 p-8 shadow-xs flex flex-col justify-between space-y-6">
               <div className="space-y-4">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-gray-400">Basic Access</span>
+                  <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Basic Access</span>
                   <h3 className="text-2xl font-black text-gray-900 mt-1">Free Lifetime</h3>
-                  <p className="text-xs text-gray-500 mt-1">Essential period tracking and cycle calculations</p>
+                  <p className="text-sm text-gray-500 mt-1">Essential period tracking and cycle calculations</p>
                 </div>
 
                 <div className="pt-2">
-                  <span className="text-4xl font-black text-gray-900">$0</span>
-                  <span className="text-xs text-gray-500 font-semibold ml-2">Forever free</span>
+                  <span className="text-4xl font-black text-gray-900">₹0</span>
+                  <span className="text-sm text-gray-500 font-semibold ml-2">Forever free</span>
                 </div>
 
                 <ul className="space-y-3 pt-4 border-t border-gray-100 text-sm text-gray-700">
@@ -133,23 +133,23 @@ export default function SubscriptionPage() {
             <div className="bg-gradient-to-br from-white via-pink-50/50 to-rose-50/30 rounded-3xl border-2 border-flo-400 p-8 shadow-xl shadow-pink-900/10 flex flex-col justify-between space-y-6 relative">
               
               {/* Popular Badge */}
-              <div className="absolute -top-3.5 right-8 bg-gradient-to-r from-flo-600 to-pink-500 text-white px-3.5 py-1 rounded-full text-xs font-black uppercase tracking-wider shadow-sm">
+              <div className="absolute -top-3.5 right-8 bg-gradient-to-r from-flo-600 to-pink-500 text-white px-3.5 py-1 rounded-full text-sm font-black uppercase tracking-wider shadow-sm">
                 Most Popular
               </div>
 
               <div className="space-y-4">
                 <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-flo-600">Full Access</span>
+                  <span className="text-sm font-bold uppercase tracking-wider text-flo-600">Full Access</span>
                   <h3 className="text-2xl font-black text-gray-900 mt-1">Premium Wellness</h3>
-                  <p className="text-xs text-gray-500 mt-1">Unlimited AI reports, full Ayurveda module & priority care</p>
+                  <p className="text-sm text-gray-500 mt-1">Unlimited AI reports, full Ayurveda module & priority care</p>
                 </div>
 
                 <div className="pt-2">
                   <span className="text-4xl font-black text-gray-900">
-                    {billingCycle === 'annual' ? '$2.99' : '$5.99'}
+                    {billingCycle === 'annual' ? '₹1,999' : '₹299'}
                   </span>
-                  <span className="text-xs text-gray-500 font-semibold ml-2">
-                    / month {billingCycle === 'annual' ? '(Billed annually at $35.99)' : '(Billed monthly)'}
+                  <span className="text-sm text-gray-500 font-semibold ml-2">
+                    / month {billingCycle === 'annual' ? '(Billed annually at₹1,999)' : '(Billed monthly)'}
                   </span>
                 </div>
 
@@ -187,7 +187,7 @@ export default function SubscriptionPage() {
                     href={APP_LINKS.ios}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-3.5 px-4 rounded-2xl bg-[#f43f77] hover:bg-[#e11d5f] text-white font-bold text-xs text-center shadow-md shadow-pink-200 transition-all cursor-pointer"
+                    className="flex-1 py-3.5 px-4 rounded-2xl bg-[#f43f77] hover:bg-[#e11d5f] text-white font-bold text-sm text-center shadow-md shadow-pink-200 transition-all cursor-pointer"
                   >
                     Subscribe on iOS App
                   </a>
@@ -195,12 +195,12 @@ export default function SubscriptionPage() {
                     href={APP_LINKS.android}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-1 py-3.5 px-4 rounded-2xl bg-black hover:bg-gray-800 text-white font-bold text-xs text-center shadow-md transition-all cursor-pointer"
+                    className="flex-1 py-3.5 px-4 rounded-2xl bg-black hover:bg-gray-800 text-white font-bold text-sm text-center shadow-md transition-all cursor-pointer"
                   >
                     Subscribe on Android
                   </a>
                 </div>
-                <p className="text-xs text-gray-400 text-center font-medium">
+                <p className="text-sm text-gray-400 text-center font-medium">
                   Free 7-day trial included. Cancel anytime in Apple/Google settings.
                 </p>
               </div>
@@ -225,7 +225,7 @@ export default function SubscriptionPage() {
                 <h4 className="font-extrabold text-gray-900 flex items-center gap-2 text-base">
                   <span>Apple App Store (iPhone & iPad)</span>
                 </h4>
-                <ol className="text-xs text-gray-600 space-y-2 list-decimal list-inside leading-relaxed">
+                <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside leading-relaxed">
                   <li>Open the <strong>Settings</strong> app on your iPhone.</li>
                   <li>Tap your <strong>Name / Apple ID</strong> at the top.</li>
                   <li>Tap <strong>Subscriptions</strong>.</li>
@@ -239,7 +239,7 @@ export default function SubscriptionPage() {
                 <h4 className="font-extrabold text-gray-900 flex items-center gap-2 text-base">
                   <span>Google Play (Android Phones & Tablets)</span>
                 </h4>
-                <ol className="text-xs text-gray-600 space-y-2 list-decimal list-inside leading-relaxed">
+                <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside leading-relaxed">
                   <li>Open the <strong>Google Play Store</strong> app.</li>
                   <li>Tap your <strong>Profile Icon</strong> in the top right.</li>
                   <li>Tap <strong>Payments & subscriptions</strong> &rarr; <strong>Subscriptions</strong>.</li>

@@ -42,16 +42,16 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white via-flo-50/20 to-white border-b border-pink-100/70">
+    <section id="testimonials" className="py-16 sm:py-20 bg-gradient-to-b from-white via-flo-50/20 to-white border-b border-pink-100/70 scroll-mt-24 sm:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Header matching Reference Image 3 */}
         <div className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
-            What our users say about us
+            What Our Community Says About Period Tracker
           </h2>
-          <p className="mt-3 text-base text-gray-600">
-            Smart cycle predictions, AI health reports, and natural Ayurvedic remedies; no wonder hundreds of thousands of women rely on Period Tracker every month.
+          <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+            From managing unpredictable PCOS cycles to pinpointing fertile conception days and finding herbal cramp relief, discover why hundreds of thousands of women trust our companion every month.
           </p>
         </div>
 
@@ -63,14 +63,14 @@ export default function Testimonials() {
             
             {/* Previous Card (semi-transparent on desktop) */}
             <div className="hidden md:block p-6 rounded-3xl bg-white/70 border border-pink-100 shadow-xs opacity-60 transform scale-95 transition-all text-center space-y-4">
-              <p className="text-xs text-gray-600 italic line-clamp-4 leading-relaxed">
+              <p className="text-sm text-gray-600 italic line-clamp-4 leading-relaxed">
                 {reviews[(currentIndex - 1 + reviews.length) % reviews.length].text}
               </p>
               <div>
-                <span className="text-xs font-bold text-gray-800 block">
+                <span className="text-sm font-bold text-gray-800 block">
                   {reviews[(currentIndex - 1 + reviews.length) % reviews.length].author}
                 </span>
-                <span className="text-xs text-gray-400">
+                <span className="text-sm text-gray-500 font-medium">
                   {reviews[(currentIndex - 1 + reviews.length) % reviews.length].tag}
                 </span>
               </div>
@@ -91,10 +91,10 @@ export default function Testimonials() {
               </p>
 
               <div className="pt-2 border-t border-pink-50">
-                <span className="text-sm font-extrabold text-gray-900 block">
+                <span className="text-base font-extrabold text-gray-900 block">
                   {reviews[currentIndex].author}
                 </span>
-                <span className="text-xs font-semibold text-flo-600 mt-0.5 block">
+                <span className="text-sm font-semibold text-flo-600 mt-0.5 block">
                   {reviews[currentIndex].tag}
                 </span>
               </div>
@@ -103,14 +103,14 @@ export default function Testimonials() {
 
             {/* Next Card (semi-transparent on desktop) */}
             <div className="hidden md:block p-6 rounded-3xl bg-white/70 border border-pink-100 shadow-xs opacity-60 transform scale-95 transition-all text-center space-y-4">
-              <p className="text-xs text-gray-600 italic line-clamp-4 leading-relaxed">
+              <p className="text-sm text-gray-600 italic line-clamp-4 leading-relaxed">
                 {reviews[(currentIndex + 1) % reviews.length].text}
               </p>
               <div>
-                <span className="text-xs font-bold text-gray-800 block">
+                <span className="text-sm font-bold text-gray-800 block">
                   {reviews[(currentIndex + 1) % reviews.length].author}
                 </span>
-                <span className="text-xs text-gray-400">
+                <span className="text-sm text-gray-500 font-medium">
                   {reviews[(currentIndex + 1) % reviews.length].tag}
                 </span>
               </div>
@@ -165,7 +165,7 @@ export default function Testimonials() {
           </div>
 
           <h3 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
-            Over 500,000+ 5-star ratings worldwide
+            Loved & Trusted by Women Worldwide
           </h3>
 
           <div className="flex items-center justify-center gap-6 text-sm font-extrabold text-gray-700 pt-1">

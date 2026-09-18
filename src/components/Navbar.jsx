@@ -42,6 +42,37 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Helper function to smoothly scroll to anchor with accurate sticky header clearance
+  const smoothScrollToHash = (hash) => {
+    if (!hash || typeof window === 'undefined') return;
+    const cleanHash = hash.replace(/^#/, '');
+    const target = document.getElementById(cleanHash);
+    if (target) {
+      const headerOffset = 92;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      window.scrollTo({
+        top: Math.max(0, offsetPosition),
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  // Ensure anchor navigation aligns properly below sticky header on mount & hashchange
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      if (typeof window !== 'undefined' && window.location.hash) {
+        setTimeout(() => {
+          smoothScrollToHash(window.location.hash);
+        }, 150);
+      }
+    };
+
+    handleHashNavigation();
+    window.addEventListener('hashchange', handleHashNavigation);
+    return () => window.removeEventListener('hashchange', handleHashNavigation);
+  }, []);
+
   // Close dropdown if clicked outside
   useEffect(() => {
     function handleClickOutside(event) {
@@ -109,9 +140,7 @@ export default function Navbar() {
                             <span className="text-xs font-black text-gray-400 uppercase tracking-wider">
                               Cycle & Fertility Tools
                             </span>
-                            <span className="text-xs font-bold text-flo-600 bg-flo-50 px-2 py-0.5 rounded-full border border-pink-200">
-                              8 Calculators
-                            </span>
+                            
                           </div>
 
                           <div className="space-y-0.5">
@@ -134,7 +163,7 @@ export default function Navbar() {
                             <Link
                               href="/calculators"
                               onClick={() => setActiveDropdown(null)}
-                              className="text-xs font-bold text-flo-600 hover:underline flex items-center justify-between px-1 py-1"
+                              className="text-sm font-bold text-flo-600 hover:underline flex items-center justify-between px-1 py-1"
                             >
                               <span>Explore all 8 cycle tools &rarr;</span>
                             </Link>
@@ -180,10 +209,7 @@ export default function Navbar() {
                                   if (typeof window !== 'undefined' && sub.href.includes('#')) {
                                     const [path, hash] = sub.href.split('#');
                                     if (window.location.pathname === path && hash) {
-                                      const target = document.getElementById(hash);
-                                      if (target) {
-                                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                      }
+                                      smoothScrollToHash(hash);
                                     }
                                   }
                                 }}
@@ -208,7 +234,7 @@ export default function Navbar() {
                               <Link
                                 href={menu.href}
                                 onClick={() => setActiveDropdown(null)}
-                                className="text-xs font-bold text-flo-600 hover:underline flex items-center justify-between px-1 py-1"
+                                className="text-sm font-bold text-flo-600 hover:underline flex items-center justify-between px-1 py-1"
                               >
                                 <span>Explore all {menu.name} &rarr;</span>
                               </Link>
@@ -292,7 +318,7 @@ export default function Navbar() {
                           key={calc.slug}
                           href={`/calculators/${calc.slug}`}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block py-1.5 text-xs text-gray-600 hover:text-flo-600 font-medium"
+                          className="block py-2 text-sm text-gray-700 hover:text-flo-600 font-semibold"
                         >
                           • {calc.name}
                         </Link>
@@ -321,7 +347,7 @@ export default function Navbar() {
                         <Link
                           href={menu.href}
                           onClick={() => setMobileMenuOpen(false)}
-                          className="block py-1.5 text-xs text-flo-600 font-bold"
+                          className="block py-2 text-sm text-flo-600 font-bold"
                         >
                           → Explore All {menu.name}
                         </Link>
@@ -335,14 +361,11 @@ export default function Navbar() {
                             if (typeof window !== 'undefined' && sub.href.includes('#')) {
                               const [path, hash] = sub.href.split('#');
                               if (window.location.pathname === path && hash) {
-                                const target = document.getElementById(hash);
-                                if (target) {
-                                  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                }
+                                smoothScrollToHash(hash);
                               }
                             }
                           }}
-                          className="block py-1.5 text-xs text-gray-600 hover:text-flo-600 font-medium"
+                          className="block py-2 text-sm text-gray-700 hover:text-flo-600 font-semibold"
                         >
                           • {sub.name}
                         </Link>

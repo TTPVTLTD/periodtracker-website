@@ -77,7 +77,7 @@ export default function CalculatorsHubPage() {
               Smart interactive tools designed to predict menstrual phases, calculate hCG doubling rates, determine fertile windows, and estimate pregnancy due dates.
             </p>
 
-            <div className="mt-6 flex items-center justify-center gap-4 text-xs font-semibold text-emerald-800">
+            {/* <div className="mt-6 flex items-center justify-center gap-4 text-xs font-semibold text-emerald-800">
               <span className="flex items-center gap-1.5 bg-emerald-50 px-3.5 py-1.5 rounded-full border border-emerald-200">
                 <ShieldCheck className="w-4 h-4 text-emerald-600" />
                 100% In-Browser Privacy
@@ -86,7 +86,7 @@ export default function CalculatorsHubPage() {
                 <Sparkles className="w-4 h-4 text-flo-500" />
                 Zero API or Tracking
               </span>
-            </div>
+            </div> */}
 
           </div>
         </section>

@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CALCULATORS } from '../../../data/calculators';
+import { CALCULATOR_ARTICLES } from '../../../data/calculatorArticles';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
 import PeriodCalculator from '../../../components/PeriodCalculator';
@@ -19,7 +20,8 @@ import {
   Sparkles, 
   Activity, 
   HelpCircle,
-  ArrowRight
+  ArrowRight,
+  BookOpen
 } from 'lucide-react';
 
 import { clampTitle, clampDescription, clampKeywords } from '../../../utils/seo';
@@ -72,6 +74,8 @@ export default function CalculatorDetailPage({ params }) {
   if (!calc) {
     notFound();
   }
+
+  const articleData = CALCULATOR_ARTICLES[slug];
 
   // Render matching interactive calculator component
   const renderCalculatorComponent = () => {
@@ -163,6 +167,10 @@ export default function CalculatorDetailPage({ params }) {
               <span className="text-flo-600 font-semibold">
                 Smart Predictive Cycle Tool
               </span>
+              <span>•</span>
+              <span className="text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+                Medically Verified Guide
+              </span>
             </div>
 
           </div>
@@ -182,34 +190,62 @@ export default function CalculatorDetailPage({ params }) {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
               
-              {/* Left Column: Detailed Guide Section (lg:col-span-8) */}
+              {/* Left Column: Detailed Medical Guide Section (lg:col-span-8) */}
               <div className="lg:col-span-8 space-y-10">
-                <div className="space-y-6 text-gray-800 leading-relaxed">
-                  <div id="overview" className="scroll-mt-28 space-y-3">
-                    <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-                      Understanding How This Calculation Works
-                    </h2>
-                    <p className="text-base text-gray-700 leading-relaxed">
-                      Our calculator relies on reproductive biology models, cycle averages, and predictive algorithmic estimation. Menstrual cycle variations, LH hormone surges, and basal temperature shifts provide reliable benchmarks for predicting reproductive milestones.
-                    </p>
-                  </div>
+                
+                {articleData && articleData.sections ? (
+                  <div className="space-y-12 text-gray-800 leading-relaxed">
+                    
+                    {/* Article Header Banner */}
+                    <div className="p-6 rounded-3xl bg-flo-50/70 border border-pink-200/80 space-y-2">
+                      <div className="flex items-center gap-2 text-flo-700 font-bold text-sm">
+                        <BookOpen className="w-4 h-4 text-flo-600" />
+                        <span>Clinical Guide & Medical Analysis</span>
+                      </div>
+                      <h2 className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight font-heading">
+                        {articleData.title}
+                      </h2>
+                    </div>
 
-                  <div id="accuracy" className="scroll-mt-28 space-y-3">
-                    <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-                      When Are the Calculations Most Accurate?
-                    </h2>
-                    <p className="text-base text-gray-700 leading-relaxed">
-                      Calculations achieve peak reliability when tracked across 2 to 3 consecutive natural cycles. If you have recently discontinued hormonal contraception, experienced significant stress, or are managing conditions such as PCOS, standard timelines may exhibit natural variations.
-                    </p>
+                    {/* Render Each Point/Section with minimum 4 detailed paragraphs */}
+                    {articleData.sections.map((sec) => (
+                      <div key={sec.id} id={sec.id} className="scroll-mt-28 space-y-4">
+                        <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight font-heading border-b border-pink-100 pb-3">
+                          {sec.heading}
+                        </h2>
+                        
+                        <div className="space-y-4">
+                          {sec.paragraphs.map((para, pIdx) => (
+                            <p 
+                              key={pIdx} 
+                              className="text-base sm:text-lg text-gray-700 leading-relaxed bg-white p-5 sm:p-6 rounded-2xl border border-pink-100/80 shadow-2xs hover:border-pink-200 transition-colors"
+                            >
+                              {para}
+                            </p>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
                   </div>
-                </div>
+                ) : (
+                  <div className="space-y-6 text-gray-800 leading-relaxed">
+                    <div id="overview" className="scroll-mt-28 space-y-3">
+                      <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
+                        Understanding How This Calculation Works
+                      </h2>
+                      <p className="text-base text-gray-700 leading-relaxed">
+                        Our calculator relies on reproductive biology models, cycle averages, and predictive algorithmic estimation. Menstrual cycle variations, LH hormone surges, and basal temperature shifts provide reliable benchmarks for predicting reproductive milestones.
+                      </p>
+                    </div>
+                  </div>
+                )}
 
                 {/* Educational Disclaimer Box */}
                 <div className="p-6 sm:p-7 rounded-3xl bg-amber-50/80 border border-amber-200 text-xs sm:text-sm text-amber-900 leading-relaxed space-y-2.5">
-                  <h4 className="font-bold flex items-center gap-2 text-amber-950 uppercase tracking-wider text-xs">
+                  <h3 className="font-bold flex items-center gap-2 text-amber-950 uppercase tracking-wider text-xs">
                     <AlertCircle className="w-4.5 h-4.5 text-amber-600 shrink-0" />
                     <span>Educational Disclaimer</span>
-                  </h4>
+                  </h3>
                   <p>
                     This online calculator is an educational estimation tool based on average biological models. It is not a diagnostic device or a substitute for medical testing, clinical consultation, or pelvic ultrasound. Always consult your obstetrician or healthcare practitioner for personalized fertility management and prenatal care.
                   </p>
@@ -219,10 +255,10 @@ export default function CalculatorDetailPage({ params }) {
               {/* Right Column: Sticky Table of Contents & Other Calculators (lg:col-span-4) */}
               <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
                 
-                {/* Table of Contents */}
+                {/* Dynamic Table of Contents */}
                 <div className="bg-white rounded-3xl border border-pink-100 p-6 shadow-xs space-y-3">
                   <h3 className="text-xs font-extrabold uppercase tracking-widest text-gray-400">
-                    IN THIS TOOL
+                    IN THIS GUIDE
                   </h3>
                   <ul className="space-y-2 text-sm font-semibold">
                     <li>
@@ -230,16 +266,13 @@ export default function CalculatorDetailPage({ params }) {
                         • Interactive Calculator Widget
                       </a>
                     </li>
-                    <li>
-                      <a href="#overview" className="text-gray-700 hover:text-flo-600 transition-colors block py-0.5">
-                        • How the Calculation Works
-                      </a>
-                    </li>
-                    <li>
-                      <a href="#accuracy" className="text-gray-700 hover:text-flo-600 transition-colors block py-0.5">
-                        • Accuracy & Biological Factors
-                      </a>
-                    </li>
+                    {articleData?.sections?.map((sec) => (
+                      <li key={sec.id}>
+                        <a href={`#${sec.id}`} className="text-gray-700 hover:text-flo-600 transition-colors block py-0.5 line-clamp-1">
+                          • {sec.heading.replace(/^[0-9]+\.\s*/, '')}
+                        </a>
+                      </li>
+                    ))}
                   </ul>
                 </div>
 
@@ -253,7 +286,7 @@ export default function CalculatorDetailPage({ params }) {
                       <Link
                         key={c.slug}
                         href={`/calculators/${c.slug}`}
-                        className="flex items-center justify-between p-2.5 rounded-2xl hover:bg-flo-50 text-xs font-bold text-gray-700 hover:text-flo-600 transition-colors"
+                        className="flex items-center justify-between p-2.5 rounded-2xl hover:bg-flo-50 text-xs sm:text-sm font-bold text-gray-700 hover:text-flo-600 transition-colors"
                       >
                         <span className="truncate">{c.name}</span>
                         <ChevronRight className="w-3.5 h-3.5 text-gray-400 shrink-0" />
@@ -263,9 +296,9 @@ export default function CalculatorDetailPage({ params }) {
                   <div className="pt-2 border-t border-pink-50">
                     <Link
                       href="/calculators"
-                      className="text-xs font-bold text-flo-600 hover:underline block text-center"
+                      className="text-xs sm:text-sm font-bold text-flo-600 hover:underline block text-center"
                     >
-                      View all reproductive tools &rarr;
+                      View all 8 reproductive tools &rarr;
                     </Link>
                   </div>
                 </div>

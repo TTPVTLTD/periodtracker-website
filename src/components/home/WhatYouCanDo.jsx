@@ -12,43 +12,43 @@ export default function WhatYouCanDo() {
   const features = [
     {
       id: 0,
-      title: "Track your cycle and flow symptoms",
+      title: "Track Your Period, Flow & Cycle Symptoms",
       linkText: "period and cycle predictor",
       linkHref: "/app-features#cycle-tracking",
       image: "/images/app/app-screen-1.png",
-      description: "Figure out what's normal for you with our accurate cycle predictor. Spot patterns in your daily moods, cramps, and energy so you're always prepared."
+      description: "Understand your unique cycle rhythm with our accurate period and cycle predictor. Spot recurring patterns in PMS symptoms, cramps, flow intensity, and mood so you are always prepared."
     },
     {
       id: 1,
-      title: "Understand your fertility better",
+      title: "Ovulation Calculator & Fertile Window Radar",
       linkText: "ovulation radar",
       linkHref: "/app-features#ovulation-radar",
       image: "/images/app/app-screen-2.png",
-      description: "Get daily conception guidance and learn how to read your body's fertility signals with our ovulation tracker — so you can maximize your chances of a positive test."
+      description: "Receive daily fertility forecasts and discover your 6-day conception window with our intelligent ovulation radar — helping you pinpoint ovulation whether planning pregnancy or monitoring natural rhythm."
     },
     {
       id: 2,
-      title: "Pregnancy & Milestone Tracker",
+      title: "Pregnancy Due Date & Milestone Tracker",
       linkText: "pregnancy and milestone tracker",
       linkHref: "/app-features#pregnancy-tracker",
       image: "/images/app/app-screen-3.png",
-      description: "Switch seamlessly into Pregnancy Mode to track all 40 gestational weeks, monitor developmental milestones, count fetal kicks, and prepare for your estimated due date."
+      description: "Switch into Pregnancy Mode to follow all 40 gestational weeks with our pregnancy and milestone tracker, monitoring fetal growth comparisons, kick counts, and estimated due date calculations."
     },
     {
       id: 3,
-      title: "Discover ancient Ayurvedic remedies",
+      title: "Ancient Ayurvedic Care for Cramps & PMS",
       linkText: "Ayurvedic wellness library",
-      linkHref: "/wellness-hub",
+      linkHref: "/wellness-hub?category=ayurveda",
       image: "/images/app/app-screen-4.png",
-      description: "Embrace nature's path to hormonal harmony. Access time-tested Ayurvedic remedies, herbs, and diet protocols formulated for cramps, PMS, PCOS, and bloating."
+      description: "Harness natural holistic balance with our Ayurvedic wellness library. Access herbal remedies, teas, and soothing lifestyle routines crafted for menstrual cramp relief, bloating, and hormonal balance."
     },
     {
       id: 4,
-      title: "Smart AI Health Summaries & Privacy Vault",
+      title: "Smart AI Health Summaries & 100% Private Vault",
       linkText: "doctor-ready health summaries",
       linkHref: "/app-features#ai-reports",
       image: "/images/app/app-screen-5.png",
-      description: "Synthesize multi-month symptom logs into clean, doctor-ready digital wellness summaries with 100% on-device sandboxed privacy."
+      description: "Transform multi-month symptom logs into doctor-ready health summaries with 100% on-device sandboxed privacy — ensuring your reproductive data stays solely in your hands."
     }
   ];
 
@@ -67,7 +67,7 @@ export default function WhatYouCanDo() {
   return (
     <section 
       id="features"
-      className="py-14 sm:py-20 bg-white border-b border-pink-100/80 scroll-mt-20"
+      className="py-14 sm:py-20 bg-white border-b border-pink-100/80 scroll-mt-24 sm:scroll-mt-28"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -75,15 +75,15 @@ export default function WhatYouCanDo() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100 text-flo-700 text-xs font-bold tracking-wide">
+          {/* <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100 text-flo-700 text-xs sm:text-sm font-bold tracking-wide">
             <Sparkles className="w-3.5 h-3.5 text-flo-600" />
-            <span>Interactive Mobile Features</span>
-          </div>
+            <span>Comprehensive Reproductive Health Tracking</span>
+          </div> */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight">
-            Smart Features Designed Around Your Natural Rhythm
+            Smart Menstrual Cycle & Fertility Tracking Features
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Discover how our intuitive companion supports every phase of your reproductive journey—from everyday symptom tracking to AI-powered health summaries and soothing herbal comfort.
+            Discover how our intuitive companion supports every stage of your reproductive journey — from daily flow logging and ovulation calculations to pregnancy milestones and natural Ayurvedic comfort.
           </p>
         </div>
 
@@ -156,11 +156,11 @@ export default function WhatYouCanDo() {
                     {feat.title}
                   </h3>
 
-                  <p className="text-xs sm:text-sm text-gray-600 font-normal leading-relaxed">
+                  <p className="text-sm text-gray-600 font-normal leading-relaxed">
                     {feat.description.split(feat.linkText)[0]}
                     <Link
                       href={feat.linkHref}
-                      className="text-gray-800 font-semibold underline decoration-pink-300 hover:text-flo-600 transition-colors inline"
+                      className="text-gray-900 font-semibold underline decoration-pink-300 hover:text-flo-600 transition-colors inline"
                       onClick={(e) => e.stopPropagation()}
                     >
                       {feat.linkText}
@@ -177,32 +177,51 @@ export default function WhatYouCanDo() {
         {/* Quick App Download Bar */}
         <div className="mt-12 pt-6 border-t border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4 bg-flo-50/50 rounded-3xl p-6">
           <div className="text-center sm:text-left">
-            <h4 className="font-extrabold text-gray-900 text-base">Ready to start tracking on your phone?</h4>
-            <p className="text-xs text-gray-500 mt-0.5">Log daily periods, generate AI reports, and explore Ayurvedic remedies.</p>
+            <h3 className="font-extrabold text-gray-900 text-base">Ready to start tracking on your phone?</h3>
+            <p className="text-sm text-gray-500 mt-0.5">Log daily periods, generate AI reports, and explore Ayurvedic remedies.</p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
             <Link
               href="/app-features"
-              className="px-4 py-2.5 rounded-xl bg-white border border-pink-200 hover:bg-pink-50 text-flo-600 font-bold text-xs transition-transform hover:-translate-y-0.5 shadow-2xs"
+              className="px-4 py-2.5 rounded-xl bg-white border border-pink-200 hover:bg-pink-50 text-flo-600 font-bold text-sm transition-transform hover:-translate-y-0.5 shadow-2xs"
             >
               Explore All Features &rarr;
             </Link>
-            <a
-              href="https://apps.apple.com/app/id6774117828"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2.5 rounded-xl bg-black hover:bg-gray-900 text-white font-bold text-xs transition-transform hover:-translate-y-0.5 shadow-xs cursor-pointer"
-            >
-              Download on App Store
-            </a>
-            <a
-              href="https://play.google.com/store/apps/details?id=com.tracewave.period"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2.5 rounded-xl bg-black hover:bg-gray-900 text-white font-bold text-xs transition-transform hover:-translate-y-0.5 shadow-xs cursor-pointer"
-            >
-              Get on Google Play
-            </a>
+           {/* Apple App Store Button */}
+              <a
+                href="https://apps.apple.com/app/id6774117828"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-black hover:bg-gray-900 text-white transition-all shadow-sm hover:shadow-md duration-200 transform hover:-translate-y-0.5 cursor-pointer"
+              >
+                <svg className="w-6 h-6 fill-white shrink-0" viewBox="0 0 24 24">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.67-1.08 1.74-.95 2.77 1.01.08 2.05-.51 2.68-1.27z"/>
+                </svg>
+                <div className="text-left">
+                  {/* <div className="text-xs uppercase font-medium leading-none text-gray-300">Download on the</div> */}
+                  <div className="text-sm font-bold leading-tight font-sans tracking-tight">App Store</div>
+                </div>
+              </a>
+
+              {/* Google Play Store Button */}
+              <a
+                href="https://play.google.com/store/apps/details?id=com.tracewave.period"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-black hover:bg-gray-900 text-white transition-all shadow-sm hover:shadow-md duration-200 transform hover:-translate-y-0.5 cursor-pointer"
+              >
+                <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M3.6 1.8L13.8 12 3.6 22.2c-.3-.3-.6-.8-.6-1.4V3.2c0-.6.3-1.1.6-1.4z"/>
+                  <path fill="#FBBC05" d="M17.3 8.5L5.1.7C4.6.4 4.1.3 3.6 1.8l10.2 10.2 3.5-3.5z"/>
+                  <path fill="#34A853" d="M17.3 15.5l-3.5-3.5L3.6 22.2c.5.5 1 .3 1.5.1l12.2-6.8z"/>
+                  <path fill="#EA4335" d="M20.9 10.5l-3.6-2-3.5 3.5 3.5 3.5 3.6-2c.9-.5.9-1.5 0-2z"/>
+                </svg>
+                <div className="text-left">
+                  {/* <div className="text-xs uppercase font-medium leading-none text-gray-300">GET IT ON</div> */}
+                  <div className="text-sm font-bold leading-tight font-sans tracking-tight">Google Play</div>
+                </div>
+              </a>
+
           </div>
         </div>
 

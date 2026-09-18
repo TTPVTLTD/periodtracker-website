@@ -8,38 +8,38 @@ export default function WhyChooseUs() {
   const pillars = [
     {
       icon: Target,
-      title: "Predictions you can plan around",
-      description: "Obstetric mathematical models adapted to your unique cycle history, giving you reliable period forecasts and pinpoint ovulation dates.",
+      title: "Predictions You Can Confidently Plan Around",
+      description: "Obstetric mathematical algorithms adapt to your unique cycle history — delivering pinpoint period start dates, fertile ovulation windows, and safe day estimations.",
       linkText: "Why women rely on our cycle calculations",
       linkHref: "/calculators/ovulation-calculator"
     },
     {
       icon: Lock,
-      title: "Personal data that stays private to you",
-      description: "Your intimate menstrual records and cycle history are protected by private end-to-end encryption. Zero advertising trackers, zero data selling.",
-      linkText: "Your privacy standards answered",
+      title: "100% In-Device Privacy & Zero Ad Tracking",
+      description: "Your intimate menstrual logs and symptom history are safeguarded with local on-device encryption. No cloud leaks, zero third-party data broker selling, complete peace of mind.",
+      linkText: "Read our strict data privacy standards",
       linkHref: "/about/privacy-portal"
     },
     {
       icon: Sparkles,
-      title: "AI health reports & Ayurveda care",
-      description: "Automated monthly AI trend summaries from your logs, alongside time-tested Ayurvedic remedies for cramps and natural cycle balance.",
-      linkText: "Explore our Ayurveda remedies & AI models",
+      title: "Ayurvedic Cramp Care & Smart AI Insights",
+      description: "Harness ancient herbal wisdom for period cramp relief and PMS alongside doctor-ready AI health summaries that chart symptom patterns across months.",
+      linkText: "Explore Ayurvedic remedies & AI models",
       linkHref: "/about/ayurveda-care"
     }
   ];
 
   return (
-    <section className="py-20 bg-white border-b border-pink-100/70">
+    <section id="why-choose-us" className="py-16 sm:py-20 bg-white border-b border-pink-100/70 scroll-mt-24 sm:scroll-mt-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Heading */}
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
-            Why choose Period Tracker?
+            Why Choose Period Tracker & Ovulation Calculator?
           </h2>
-          <p className="mt-3 text-base text-gray-600">
-            A private, intelligent wellness experience designed for predictive accuracy and natural self-care.
+          <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+            A clinically grounded, private women’s wellness companion built for predictive accuracy, personalized hormone insights, and natural menstrual care.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function WhyChooseUs() {
                 <div className="pt-2">
                   <Link
                     href={item.linkHref}
-                    className="inline-flex items-center gap-1.5 text-xs font-bold text-flo-600 hover:text-flo-700 hover:underline transition-colors"
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-flo-600 hover:text-flo-700 hover:underline transition-colors"
                   >
                     <span>{item.linkText}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
