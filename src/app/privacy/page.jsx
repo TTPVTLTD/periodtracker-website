@@ -245,12 +245,12 @@ export default function PrivacyPolicyPage() {
                 <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
                   <Mail className="w-5 h-5 text-gray-600" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 font-heading">Contact Our Privacy Officer</h3>
+                <h3 className="text-lg font-bold text-gray-900 mb-2 font-heading">Contact US</h3>
                 <p className="text-sm text-[#706B6E] mb-6 max-w-md mx-auto">
                   If you have any questions about our privacy policies, data encryption keys, or account controls, reach out to our security team.
                 </p>
-                <a href="mailto:privacy@tracewavetransparency.com" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-bold text-sm transition-colors">
-                  <Mail className="w-4 h-4" /> Email privacy@tracewavetransparency.com
+                <a href="mailto:support@tracewavetransparency.com" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-bold text-sm transition-colors">
+                  <Mail className="w-4 h-4" /> support@tracewavetransparency.com
                 </a>
               </div>
 
