@@ -1,8 +1,9 @@
 'use client';
 
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { useSearchParams } from 'next/navigation';
 import Navbar from '../../components/Navbar';
 import Footer from '../../components/Footer';
 import { ARTICLES } from '../../data/articles';
@@ -20,34 +21,61 @@ import {
   Filter 
 } from 'lucide-react';
 
-export default function HealthLibraryPage() {
+function HealthLibraryContent() {
   const [searchQuery, setSearchQuery] = useState('');
   const [activeCategoryFilter, setActiveCategoryFilter] = useState('all');
   const [expandedCategories, setExpandedCategories] = useState({});
 
-  // Sync category filter from URL query parameter or hash (e.g. from Navbar dropdown)
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams ? searchParams.get('category') || searchParams.get('cat') : null;
+
+  // Sync category filter from URL query parameter or hash (e.g. from Navbar dropdown while on page)
   useEffect(() => {
-    const handleUrlCategory = () => {
-      if (typeof window === 'undefined') return;
-      const params = new URLSearchParams(window.location.search);
-      const catParam = params.get('category') || params.get('cat') || window.location.hash.replace('#', '');
-      if (catParam && ['period', 'wellness', 'ovulation', 'pregnancy', 'ayurveda'].includes(catParam)) {
-        setActiveCategoryFilter(catParam);
-        setTimeout(() => {
-          const el = document.getElementById(catParam) || document.getElementById('category-filter-section');
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }, 150);
-      } else if (catParam === 'all') {
-        setActiveCategoryFilter('all');
-      }
+    const rawCat = categoryParam || (typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('category') || window.location.hash.replace('#', '') : '');
+    
+    if (!rawCat) {
+      setActiveCategoryFilter('all');
+      return;
+    }
+
+    const normalizeMap = {
+      'period': 'period',
+      'cycle': 'period',
+      'your-cycle': 'period',
+      'wellness': 'wellness',
+      'health': 'wellness',
+      'health-360': 'wellness',
+      'ovulation': 'ovulation',
+      'getting-pregnant': 'ovulation',
+      'fertility': 'ovulation',
+      'pregnancy': 'pregnancy',
+      'ayurveda': 'ayurveda',
+      'ayurveda-care': 'ayurveda',
+      'remedies': 'ayurveda',
+      'all': 'all'
     };
 
-    handleUrlCategory();
-    window.addEventListener('popstate', handleUrlCategory);
-    return () => window.removeEventListener('popstate', handleUrlCategory);
-  }, []);
+    const matchedCat = normalizeMap[rawCat.toLowerCase()];
+    if (matchedCat) {
+      setActiveCategoryFilter(matchedCat);
+      setSearchQuery('');
+      setTimeout(() => {
+        const el = document.getElementById(matchedCat) || document.getElementById('category-filter-section');
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 150);
+    }
+  }, [categoryParam]);
+
+  const handleCategoryClick = (slug) => {
+    setSearchQuery('');
+    if (activeCategoryFilter === slug) {
+      setActiveCategoryFilter('all');
+    } else {
+      setActiveCategoryFilter(slug);
+    }
+  };
 
   const toggleCategoryExpand = (slug) => {
     setExpandedCategories((prev) => ({
@@ -96,14 +124,18 @@ export default function HealthLibraryPage() {
   // Filtered articles when searching
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
-    const q = searchQuery.toLowerCase();
-    return ARTICLES.filter((article) => 
+    const q = searchQuery.toLowerCase().trim();
+    let list = ARTICLES;
+    if (activeCategoryFilter !== 'all') {
+      list = list.filter((a) => a.category === activeCategoryFilter);
+    }
+    return list.filter((article) => 
       article.title.toLowerCase().includes(q) ||
       article.summary.toLowerCase().includes(q) ||
       article.tag?.toLowerCase().includes(q) ||
       (article.tags && article.tags.some(t => t.toLowerCase().includes(q)))
     );
-  }, [searchQuery]);
+  }, [searchQuery, activeCategoryFilter]);
 
   // Determine which sections to show
   const activeSections = useMemo(() => {
@@ -129,10 +161,10 @@ export default function HealthLibraryPage() {
             </h1>
 
             <p className="text-base sm:text-base text-gray-600 font-normal max-w-2xl mx-auto leading-relaxed">
-              Explore informative guides on mentrual cycles, ovulation timing, fertility signals, holistic wellness, and natural symptom tracking.
+              Explore informative guides on menstrual cycles, ovulation timing, fertility signals, holistic wellness, and natural symptom tracking.
             </p>
 
-            {/* Clean Rounded Search Bar with Search Icon on Right (matching media_1789623637393.png) */}
+            {/* Clean Rounded Search Bar */}
             <div className="pt-2 max-w-2xl mx-auto">
               <div className="relative flex items-center bg-gray-50 hover:bg-white border border-gray-200 hover:border-pink-300 focus-within:border-flo-500 focus-within:bg-white focus-within:ring-3 focus-within:ring-pink-100 rounded-full transition-all shadow-xs">
                 <input
@@ -181,7 +213,7 @@ export default function HealthLibraryPage() {
         {/* Content Container */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 space-y-12">
           
-          {/* 1. Explore by Category Section (Unique Interactive Cards matching Reference Screenshot) */}
+          {/* 1. Explore by Category Section */}
           <section id="category-filter-section" className="space-y-4 scroll-mt-24">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
@@ -193,24 +225,27 @@ export default function HealthLibraryPage() {
                 </p>
               </div>
 
-              {activeCategoryFilter !== 'all' && (
+              {(activeCategoryFilter !== 'all' || searchQuery.trim() !== '') && (
                 <button
                   type="button"
-                  onClick={() => setActiveCategoryFilter('all')}
+                  onClick={() => {
+                    setActiveCategoryFilter('all');
+                    setSearchQuery('');
+                  }}
                   className="inline-flex items-center gap-1.5 text-base font-bold text-flo-600 hover:text-flo-700 hover:underline cursor-pointer"
                 >
-                  <span>Show all categories</span>
+                  <span>Show all guides</span>
                   <X className="w-3.5 h-3.5" />
                 </button>
               )}
             </div>
 
-            {/* Category Button Cards Grid (Clean Titles Only, Original Height, Centered Text) */}
+            {/* Category Button Cards Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
               {/* All Articles Button */}
               <button
                 type="button"
-                onClick={() => setActiveCategoryFilter('all')}
+                onClick={() => handleCategoryClick('all')}
                 className={`h-[72px] sm:h-[76px] px-3 sm:px-4 rounded-2xl border text-center transition-all duration-200 cursor-pointer flex items-center justify-center font-bold text-xs sm:text-sm tracking-wide ${
                   activeCategoryFilter === 'all'
                     ? 'bg-gradient-to-tr from-pink-500 to-rose-500 text-white border-transparent shadow-md shadow-pink-200'
@@ -228,7 +263,7 @@ export default function HealthLibraryPage() {
                   <button
                     key={cat.slug}
                     type="button"
-                    onClick={() => setActiveCategoryFilter(cat.slug)}
+                    onClick={() => handleCategoryClick(cat.slug)}
                     className={`h-[72px] sm:h-[76px] px-3 sm:px-4 rounded-2xl border text-center transition-all duration-200 cursor-pointer flex items-center justify-center font-bold text-xs sm:text-sm tracking-wide ${
                       isSelected
                         ? 'bg-gradient-to-tr from-pink-500 to-rose-500 text-white border-transparent shadow-md shadow-pink-200'
@@ -282,7 +317,7 @@ export default function HealthLibraryPage() {
               )}
             </section>
           ) : (
-            /* 3. Category-Grouped Sections (4-article initial limit with append on 'View more') */
+            /* 3. Category-Grouped Sections */
             <section className="space-y-12 sm:space-y-16">
               {activeSections.map((sec) => {
                 const secArticles = ARTICLES.filter((a) => a.category === sec.slug);
@@ -295,7 +330,7 @@ export default function HealthLibraryPage() {
                 return (
                   <div key={sec.slug} id={sec.slug} className="space-y-5 scroll-mt-28">
                     
-                    {/* Category Header Row matching Screenshot */}
+                    {/* Category Header Row */}
                     <div className="flex items-center justify-between gap-4">
                       <button
                         type="button"
@@ -308,10 +343,8 @@ export default function HealthLibraryPage() {
                         <ChevronRight className={`w-5 h-5 text-teal-700 transition-transform ${isExpanded ? 'rotate-90 text-flo-600' : 'group-hover:translate-x-1'}`} />
                       </button>
 
-                      {/* Subtle decorative divider line */}
                       <div className="hidden sm:block flex-1 h-px bg-gradient-to-r from-pink-200 via-pink-100 to-transparent mx-3" />
 
-                      {/* View All / Toggle Button matching media_1789625252792.png */}
                       {secArticles.length > 4 ? (
                         <button
                           type="button"
@@ -341,8 +374,8 @@ export default function HealthLibraryPage() {
                       ))}
                     </div>
 
-                    {/* Bottom Append / Load More Button if section has more than 4 articles */}
-                    {secArticles.length > 4 && (
+                    {/* Bottom Append / Load More Button */}
+                    {secArticles.length > 4 && activeCategoryFilter === 'all' && (
                       <div className="text-center pt-2">
                         <button
                           type="button"
@@ -368,80 +401,70 @@ export default function HealthLibraryPage() {
 
         </div>
 
-        {/* Full-Bleed Split Mission Banner matching Reference Screenshot (media_1789622616289.png) */}
+        {/* Full-Bleed Split Mission Banner */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-16 sm:my-24">
           <div className="rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 min-h-[480px]">
             
-            {/* Full Left-Side Edge-to-Edge Image (Pregnant Woman with Smartphone) */}
             <div className="md:col-span-1 lg:col-span-6 relative min-h-[340px] sm:min-h-[420px] md:min-h-full">
               <Image
                 src="/images/about/pregnancy-journey-banner.jpg"
                 alt="Pregnant woman tracking wellness milestones on smartphone"
                 fill
                 className="object-cover object-center"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 50vw"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent md:hidden" />
             </div>
 
-            {/* Right Side: Deep Forest Emerald Panel matching Reference Screenshot */}
-            <div className="md:col-span-1 lg:col-span-6 bg-[#0c5a52] p-8 sm:p-12 lg:p-14 flex flex-col justify-between text-left">
-              <div className="space-y-5">
-                <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight tracking-tight">
-                  Start your personalized journey to parenthood.
-                </h2>
+            <div className="md:col-span-1 lg:col-span-6 bg-gradient-to-br from-[#0f766e] via-[#0d6e67] to-[#0a5c56] p-8 sm:p-12 lg:p-14 flex flex-col justify-between text-white space-y-8">
+              <div className="space-y-4">
+                <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/15 border border-white/25 text-white font-bold text-xs uppercase tracking-wider">
+                  <Sparkles className="w-3.5 h-3.5 text-amber-300" />
+                  <span>Empowering Every Life Stage</span>
+                </div>
 
-                <div className="pt-1">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight font-heading">
+                  Supporting women from first period to pregnancy and beyond
+                </h3>
+
+                <p className="text-white/90 text-sm sm:text-base leading-relaxed font-normal">
+                  Whether you're trying to conceive, tracking monthly symptoms, or navigating pregnancy milestones, Period Tracker delivers medically grounded tools and personalized Ayurvedic insights directly to your device.
+                </p>
+
+                <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
                   <a
-                    href={APP_LINKS.ios}
+                    href="https://apps.apple.com/app/id6774117828"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center px-7 py-3 rounded-full bg-white text-gray-900 font-bold text-sm hover:bg-gray-100 transition-all shadow-md"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-black hover:bg-gray-900 text-white transition-all shadow-sm hover:shadow-md duration-200 transform hover:-translate-y-0.5 cursor-pointer"
                   >
-                    Try Period Tracker today
+                    <svg className="w-6 h-6 fill-white shrink-0" viewBox="0 0 24 24">
+                      <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.67-1.08 1.74-.95 2.77 1.01.08 2.05-.51 2.68-1.27z"/>
+                    </svg>
+                    <div className="text-left">
+                      <div className="text-base font-bold leading-tight font-sans tracking-tight">App Store</div>
+                    </div>
                   </a>
-                </div>
 
-                {/* Direct Store Download Badges */}
-                <div className="flex flex-wrap items-center gap-3 pt-2">
-                 {/* Apple App Store Button */}
-              <a
-                href="https://apps.apple.com/app/id6774117828"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-black hover:bg-gray-900 text-white transition-all shadow-sm hover:shadow-md duration-200 transform hover:-translate-y-0.5 cursor-pointer"
-              >
-                <svg className="w-6 h-6 fill-white shrink-0" viewBox="0 0 24 24">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.67-1.08 1.74-.95 2.77 1.01.08 2.05-.51 2.68-1.27z"/>
-                </svg>
-                <div className="text-left">
-                  {/* <div className="text-xs uppercase font-medium leading-none text-gray-300">Download on the</div> */}
-                  <div className="text-base font-bold leading-tight font-sans tracking-tight">App Store</div>
-                </div>
-              </a>
-
-              {/* Google Play Store Button */}
-              <a
-                href="https://play.google.com/store/apps/details?id=com.tracewave.period"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-black hover:bg-gray-900 text-white transition-all shadow-sm hover:shadow-md duration-200 transform hover:-translate-y-0.5 cursor-pointer"
-              >
-                <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
-                  <path fill="#4285F4" d="M3.6 1.8L13.8 12 3.6 22.2c-.3-.3-.6-.8-.6-1.4V3.2c0-.6.3-1.1.6-1.4z"/>
-                  <path fill="#FBBC05" d="M17.3 8.5L5.1.7C4.6.4 4.1.3 3.6 1.8l10.2 10.2 3.5-3.5z"/>
-                  <path fill="#34A853" d="M17.3 15.5l-3.5-3.5L3.6 22.2c.5.5 1 .3 1.5.1l12.2-6.8z"/>
-                  <path fill="#EA4335" d="M20.9 10.5l-3.6-2-3.5 3.5 3.5 3.5 3.6-2c.9-.5.9-1.5 0-2z"/>
-                </svg>
-                <div className="text-left">
-                  {/* <div className="text-xs uppercase font-medium leading-none text-gray-300">GET IT ON</div> */}
-                  <div className="text-base font-bold leading-tight font-sans tracking-tight">Google Play</div>
-                </div>
-              </a>
-
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.tracewave.period"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-black hover:bg-gray-900 text-white transition-all shadow-sm hover:shadow-md duration-200 transform hover:-translate-y-0.5 cursor-pointer"
+                  >
+                    <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                      <path fill="#4285F4" d="M3.6 1.8L13.8 12 3.6 22.2c-.3-.3-.6-.8-.6-1.4V3.2c0-.6.3-1.1.6-1.4z"/>
+                      <path fill="#FBBC05" d="M17.3 8.5L5.1.7C4.6.4 4.1.3 3.6 1.8l10.2 10.2 3.5-3.5z"/>
+                      <path fill="#34A853" d="M17.3 15.5l-3.5-3.5L3.6 22.2c.5.5 1 .3 1.5.1l12.2-6.8z"/>
+                      <path fill="#EA4335" d="M20.9 10.5l-3.6-2-3.5 3.5 3.5 3.5 3.6-2c.9-.5.9-1.5 0-2z"/>
+                    </svg>
+                    <div className="text-left">
+                      <div className="text-base font-bold leading-tight font-sans tracking-tight">Google Play</div>
+                    </div>
+                  </a>
                 </div>
               </div>
 
-              {/* Testimonial Quote Block exactly matching Reference Screenshot */}
               <div className="mt-8 pt-6 border-t border-white/20">
                 <p className="text-white/95 text-xs sm:text-sm leading-relaxed font-normal italic">
                   “Period Tracker has allowed me to keep track of my pregnancy... It’s very useful because this is my first baby, so I don't really know what's going on half the time.”
@@ -480,16 +503,20 @@ export default function HealthLibraryPage() {
   );
 }
 
-/**
- * Modern Horizontal Article Card (Magazine Layout matching media_1789623637393.png & media_1789624716950.png)
- */
+export default function HealthLibraryPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-[#fffbf9]" />}>
+      <HealthLibraryContent />
+    </Suspense>
+  );
+}
+
 function HorizontalArticleCard({ article, categoryBadgeStyles }) {
   return (
     <Link
       href={`/articles/${article.id}`}
       className="group flex flex-col sm:flex-row bg-white rounded-2xl sm:rounded-3xl border border-pink-100/80 hover:border-pink-300 hover:shadow-xl hover:shadow-pink-900/5 transition-all duration-300 overflow-hidden cursor-pointer transform hover:-translate-y-1"
     >
-      {/* Left Column: Full-Bleed Edge-to-Edge Image (No white margin around it) */}
       <div className="relative w-full sm:w-48 md:w-52 aspect-[16/10] sm:aspect-auto sm:self-stretch overflow-hidden shrink-0 bg-pink-50">
         <Image
           src={article.image}
@@ -500,7 +527,6 @@ function HorizontalArticleCard({ article, categoryBadgeStyles }) {
         />
       </div>
 
-      {/* Right Column: Content Details */}
       <div className="flex-1 p-4 sm:p-5 flex flex-col justify-between w-full space-y-2.5 min-w-0">
         <div>
           <h4 className="!text-lg sm:text-base font-bold text-gray-900 group-hover:text-flo-600 transition-colors leading-snug line-clamp-2">
@@ -511,7 +537,6 @@ function HorizontalArticleCard({ article, categoryBadgeStyles }) {
           </p>
         </div>
 
-        {/* Tag Pill + Read Duration */}
         <div className="flex items-center justify-between pt-1">
           <span className={`text-sm font-bold px-2.5 py-0.5 rounded-full border shadow-2xs ${categoryBadgeStyles[article.category] || 'bg-gray-50 text-gray-700'}`}>
             {article.tag || article.categoryName}

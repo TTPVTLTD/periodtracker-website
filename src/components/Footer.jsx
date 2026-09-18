@@ -112,10 +112,50 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Cycle Calculators */}
+          {/* Col 2: Wellness Hub Categories */}
           <div className="lg:col-span-3 space-y-3">
             <h4 className="text-sm font-extrabold text-[#1A1819] uppercase tracking-wider font-heading">
-              Cycle Calculators
+              Wellness Hub Topics
+            </h4>
+            <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">
+              <li>
+                <Link href="/wellness-hub?category=period" className="hover:text-[#FF5E8C] transition-colors">
+                  Your Cycle (Periods & PMS)
+                </Link>
+              </li>
+              <li>
+                <Link href="/wellness-hub?category=wellness" className="hover:text-[#FF5E8C] transition-colors">
+                  Health 360° (Hormones & Care)
+                </Link>
+              </li>
+              <li>
+                <Link href="/wellness-hub?category=ovulation" className="hover:text-[#FF5E8C] transition-colors">
+                  Getting Pregnant (Fertility)
+                </Link>
+              </li>
+              <li>
+                <Link href="/wellness-hub?category=pregnancy" className="hover:text-[#FF5E8C] transition-colors">
+                  Pregnancy (Milestones & Signs)
+                </Link>
+              </li>
+              <li>
+                <Link href="/wellness-hub?category=ayurveda" className="hover:text-[#FF5E8C] transition-colors">
+                  Ayurveda & Cramp Care
+                </Link>
+              </li>
+              <li className="pt-1">
+                <Link href="/wellness-hub" className="text-sm font-bold text-[#FF5E8C] hover:underline inline-flex items-center gap-1">
+                  <span>Explore all wellness guides</span>
+                  <span>&rarr;</span>
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Col 3: Cycle Tools & Features */}
+          <div className="lg:col-span-3 space-y-3">
+            <h4 className="text-sm font-extrabold text-[#1A1819] uppercase tracking-wider font-heading">
+              Cycle Tools & Calculators
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">
               <li>
@@ -147,40 +187,6 @@ export default function Footer() {
                 <Link href="/calculators" className="text-sm font-bold text-[#FF5E8C] hover:underline inline-flex items-center gap-1">
                   <span>Browse all 8 reproductive tools</span>
                   <span>&rarr;</span>
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Col 3: Wellness Hub */}
-          <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-extrabold text-[#1A1819] uppercase tracking-wider font-heading">
-              Health & Ayurveda
-            </h4>
-            <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">
-              <li>
-                <Link href="/wellness-hub" className="hover:text-[#FF5E8C] transition-colors">
-                  Questions Answered by Experts
-                </Link>
-              </li>
-              <li>
-                <Link href="/about/ayurveda-care" className="hover:text-[#FF5E8C] transition-colors">
-                  Ayurvedic Remedies for Cramps & PMS
-                </Link>
-              </li>
-              <li>
-                <Link href="/about/ai-reports" className="hover:text-[#FF5E8C] transition-colors">
-                  AI-Generated Cycle Health Reports
-                </Link>
-              </li>
-              <li>
-                <Link href="/articles/best-time-to-have-sex-avoid-pregnancy" className="hover:text-[#FF5E8C] transition-colors">
-                  Fertile Windows & Timing Intercourse
-                </Link>
-              </li>
-              <li>
-                <Link href="/articles/how-long-birth-control-stays-in-system" className="hover:text-[#FF5E8C] transition-colors">
-                  Birth Control & Return of Fertility
                 </Link>
               </li>
             </ul>
@@ -222,11 +228,11 @@ export default function Footer() {
                   Terms & Conditions
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/subscription" className="hover:text-[#FF5E8C] transition-colors">
                   Subscriptions
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
