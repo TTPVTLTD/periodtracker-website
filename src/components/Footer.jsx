@@ -13,25 +13,16 @@ export default function Footer() {
         {/* Top 4-Column Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-10">
           
-          {/* Col 1: Brand & Logo (Circle, Larger, Borderless) */}
+          {/* Col 1: Brand & Logo: Common Official Logo */}
           <div className="lg:col-span-4 space-y-4">
-            <Link href="/" className="flex items-center space-x-3.5 group">
-              <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden shadow-xs group-hover:scale-105 transition-transform duration-200 shrink-0">
-                <Image
-                  src="/logo.png"
-                  alt="Period Tracker & Ovulation Cycle Logo"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-              <div>
-                <span className="text-lg sm:text-xl font-black bg-gradient-to-r from-flo-600 to-pink-500 bg-clip-text text-transparent block">
-                  Period Tracker & Ovulation
-                </span>
-                <span className="text-xs text-gray-400 font-semibold tracking-wide">
-                  Women’s Health & Reproductive Wellness
-                </span>
-              </div>
+            <Link href="/" className="inline-block group py-1" aria-label="Period Tracker & Ovulation Cycle Home">
+              <Image
+                src="/brand-logo-final.png"
+                alt="Period Tracker & Ovulation Cycle Logo"
+                width={210}
+                height={58}
+                className="h-11 sm:h-12 w-auto object-contain group-hover:opacity-95 transition-opacity"
+              />
             </Link>
 
             <p className="text-sm text-gray-600 leading-relaxed max-w-sm">

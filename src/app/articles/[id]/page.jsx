@@ -95,7 +95,7 @@ export default function ArticlePage({ params }) {
       name: 'Period Tracker & Ovulation Cycle',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://periodtracker.online/logo.png',
+        url: 'https://periodtracker.online/brand-logo-final.png',
       },
     },
     datePublished: article.publishedDate,
@@ -103,7 +103,7 @@ export default function ArticlePage({ params }) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fff9fb]">
+    <div className="min-h-screen flex flex-col bg-[#FAF8F9]">
       <Navbar />
 
       <main className="flex-1">

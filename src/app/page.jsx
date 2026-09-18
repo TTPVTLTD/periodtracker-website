@@ -57,7 +57,7 @@ export default function HomePage() {
     '@type': 'Organization',
     name: 'Period Tracker & Ovulation Cycle',
     url: 'https://periodtracker.online',
-    logo: 'https://periodtracker.online/logo.png',
+    logo: 'https://periodtracker.online/brand-logo-final.png',
     sameAs: [
       'https://apps.apple.com/app/id6774117828',
       'https://play.google.com/store/apps/details?id=com.tracewave.period',
@@ -65,7 +65,7 @@ export default function HomePage() {
   };
 
   return (
-    <div className="flex-1 flex flex-col bg-[#fff9fb]">
+    <div className="flex-1 flex flex-col bg-[#FAF8F9]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}

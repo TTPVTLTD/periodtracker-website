@@ -116,12 +116,12 @@ export default function AboutDetailPage({ params }) {
     publisher: {
       '@type': 'Organization',
       name: 'Period Tracker & Ovulation Cycle',
-      logo: 'https://periodtracker.online/logo.png',
+      logo: 'https://periodtracker.online/brand-logo-final.png',
     },
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#fffbf9]">
+    <div className="min-h-screen flex flex-col bg-[#FAF8F9]">
       <Navbar />
       <main className="flex-1">
         <script

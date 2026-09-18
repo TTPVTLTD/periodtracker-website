@@ -65,25 +65,16 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`flex items-center justify-between transition-all duration-300 ${isScrolled ? 'h-16 sm:h-17' : 'h-18 sm:h-20'}`}>
           
-          {/* Brand Logo & Name: Borderless, Circular, and Larger */}
-          <Link href="/" className="flex items-center space-x-3 group shrink-0">
-            <div className="relative w-11 h-11 sm:w-13 sm:h-13 rounded-full overflow-hidden shadow-xs group-hover:scale-105 transition-transform duration-200 shrink-0">
-              <Image 
-                src="/logo.png" 
-                alt="Period Tracker & Ovulation Cycle Logo" 
-                fill 
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div>
-              <span className="text-base sm:text-lg font-black tracking-tight bg-gradient-to-r from-flo-600 via-flo-500 to-pink-500 bg-clip-text text-transparent block">
-                Period Tracker & Ovulation
-              </span>
-              <span className="hidden sm:block text-xs font-semibold text-gray-400 tracking-wide">
-                Women’s Health & Reproductive Wellness
-              </span>
-            </div>
+          {/* Brand Logo: Common Official Logo from Reference Site */}
+          <Link href="/" className="flex items-center group shrink-0 py-1" aria-label="Period Tracker & Ovulation Cycle Home">
+            <Image 
+              src="/brand-logo-final.png" 
+              alt="Period Tracker & Ovulation Cycle Logo" 
+              width={200}
+              height={55}
+              priority
+              className="h-10 sm:h-11 w-auto object-contain group-hover:opacity-95 transition-opacity"
+            />
           </Link>
 
           {/* Desktop Navigation Links */}
@@ -245,7 +236,7 @@ export default function Navbar() {
               href="https://apps.apple.com/app/id6774117828"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-[#f43f77] hover:bg-[#e11d5f] text-white font-bold px-4 lg:px-5 py-2.5 rounded-full shadow-md shadow-pink-200 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-xs sm:text-sm cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 bg-brand-pink hover:bg-flo-600 text-white font-bold px-4 lg:px-5 py-2.5 rounded-full shadow-md shadow-pink-200 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-xs sm:text-sm cursor-pointer whitespace-nowrap"
             >
               <span>Get the App</span>
               <Sparkles className="w-3.5 h-3.5" />
@@ -369,7 +360,7 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 w-full py-3.5 bg-[#f43f77] text-white rounded-full font-bold shadow-md shadow-pink-200 text-center text-sm"
+              className="flex items-center justify-center gap-2 w-full py-3.5 bg-brand-pink hover:bg-flo-600 text-white rounded-full font-bold shadow-md shadow-pink-200 text-center text-sm transition-colors"
             >
               <span>Get the App</span>
               <Sparkles className="w-4 h-4" />
