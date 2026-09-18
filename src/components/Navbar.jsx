@@ -91,16 +91,16 @@ export default function Navbar() {
                     onMouseEnter={() => setActiveDropdown('calculators')}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button
-                      type="button"
-                      onClick={() => setActiveDropdown(isOpen ? null : 'calculators')}
+                    <Link
+                      href={menu.href || '/calculators'}
+                      onClick={() => setActiveDropdown(null)}
                       className={`flex items-center gap-1 px-3 py-2 rounded-full transition-all text-sm font-bold ${
                         isOpen ? 'bg-flo-100 text-flo-700' : 'hover:text-flo-600 hover:bg-flo-50'
                       }`}
                     >
                       <span>{menu.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180 text-flo-600' : 'text-gray-400'}`} />
-                    </button>
+                    </Link>
 
                     {isOpen && (
                       <div className="absolute top-full left-0 pt-1.5 z-50 animate-fadeIn">
@@ -156,16 +156,16 @@ export default function Navbar() {
                     onMouseEnter={() => setActiveDropdown(menu.id)}
                     onMouseLeave={() => setActiveDropdown(null)}
                   >
-                    <button
-                      type="button"
-                      onClick={() => setActiveDropdown(isOpen ? null : menu.id)}
+                    <Link
+                      href={menu.href || '#'}
+                      onClick={() => setActiveDropdown(null)}
                       className={`flex items-center gap-1 px-3 py-2 rounded-full transition-all text-sm font-bold ${
                         isOpen ? 'bg-flo-100 text-flo-700' : 'hover:text-flo-600 hover:bg-flo-50'
                       }`}
                     >
                       <span>{menu.name}</span>
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${isOpen ? 'rotate-180 text-flo-600' : 'text-gray-400'}`} />
-                    </button>
+                    </Link>
 
                     {isOpen && (
                       <div className="absolute top-full left-0 pt-1.5 z-50 animate-fadeIn">
@@ -175,7 +175,18 @@ export default function Navbar() {
                               <Link
                                 key={idx}
                                 href={sub.href}
-                                onClick={() => setActiveDropdown(null)}
+                                onClick={() => {
+                                  setActiveDropdown(null);
+                                  if (typeof window !== 'undefined' && sub.href.includes('#')) {
+                                    const [path, hash] = sub.href.split('#');
+                                    if (window.location.pathname === path && hash) {
+                                      const target = document.getElementById(hash);
+                                      if (target) {
+                                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                      }
+                                    }
+                                  }
+                                }}
                                 className="flex items-center justify-between px-3 py-2 rounded-xl hover:bg-flo-50 hover:text-flo-600 transition-colors group text-sm font-semibold text-gray-800"
                               >
                                 <span className="group-hover:text-flo-600 transition-colors">
@@ -319,7 +330,18 @@ export default function Navbar() {
                         <Link
                           key={idx}
                           href={sub.href}
-                          onClick={() => setMobileMenuOpen(false)}
+                          onClick={() => {
+                            setMobileMenuOpen(false);
+                            if (typeof window !== 'undefined' && sub.href.includes('#')) {
+                              const [path, hash] = sub.href.split('#');
+                              if (window.location.pathname === path && hash) {
+                                const target = document.getElementById(hash);
+                                if (target) {
+                                  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }
+                              }
+                            }
+                          }}
                           className="block py-1.5 text-xs text-gray-600 hover:text-flo-600 font-medium"
                         >
                           • {sub.name}
