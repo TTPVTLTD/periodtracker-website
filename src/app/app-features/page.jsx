@@ -317,7 +317,7 @@ export default function AppFeaturesPage() {
 your body's rhythm?
             </h2>
             <p className="text-white/90 text-sm sm:text-base max-w-xl mx-auto">
-              Download TrackFlow today for iOS or Android. Join over 100,000+ women tracking cycles, optimizing workouts, and living in sync.
+              Download Period Tracker Ovulation Cycle today for iOS or Android. Join over 100,000+ women tracking cycles, optimizing workouts, and living in sync.
             </p>
             <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
              {/* Apple App Store Button */}

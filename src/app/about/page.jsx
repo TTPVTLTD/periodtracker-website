@@ -45,8 +45,8 @@ export default function AboutPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'About TrackFlow - Our Mission & Team',
-    description: 'Learn more about the mission behind TrackFlow. We design female health trackers focused on security, biological precision, and user data safety.',
+    name: 'About Period Tracker Ovulation Cycle - Our Mission & Team',
+    description: 'Learn more about the mission behind Period Tracker Ovulation Cycle. We design female health trackers focused on security, biological precision, and user data safety.',
     url: 'https://periodtracker.online/about',
     publisher: {
       '@type': 'Organization',
@@ -164,10 +164,10 @@ export default function AboutPage() {
                       <span>Our Story</span>
                     </h2>
                     <p className="text-[#4A4547] text-base sm:text-lg leading-relaxed">
-                      TrackFlow was founded by a passionate collective of women's health advocates, developers, and researchers. We noticed a critical flaw in the ecosystem: the majority of digital health trackers were commoditizing deeply personal reproductive data.
+                      Period Tracker Ovulation Cycle was founded by a passionate collective of women's health advocates, developers, and researchers. We noticed a critical flaw in the ecosystem: the majority of digital health trackers were commoditizing deeply personal reproductive data.
                     </p>
                     <p className="text-[#4A4547] text-base sm:text-lg leading-relaxed">
-                      We set out to engineer a fundamentally different platform. One built on bank-grade local encryption, scientifically validated cycle modeling, and a stunningly beautiful user experience. Today, TrackFlow helps thousands of individuals navigate their natural biology safely, confidently, and elegantly.
+                      We set out to engineer a fundamentally different platform. One built on bank-grade local encryption, scientifically validated cycle modeling, and a stunningly beautiful user experience. Today, Period Tracker Ovulation Cycle helps thousands of individuals navigate their natural biology safely, confidently, and elegantly.
                     </p>
                   </div>
 
@@ -244,7 +244,7 @@ export default function AboutPage() {
               Ready to take control of your cycle?
             </h2>
             <p className="text-white/90 text-sm sm:text-base max-w-xl mx-auto mb-8 font-medium relative z-10">
-              Join thousands of individuals tracking their health securely and intelligently. Download TrackFlow today.
+              Join thousands of individuals tracking their health securely and intelligently. Download Period Tracker Ovulation Cycle today.
             </p>
             <div className="relative z-10">
               <a

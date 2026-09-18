@@ -116,8 +116,8 @@ export default function ContactPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ContactPage',
-    name: 'Contact TrackFlow Support Team',
-    description: 'Reach out to the TrackFlow support team. Submit app bugs, request features, or ask billing questions.',
+    name: 'Contact Period Tracker Ovulation Cycle Support Team',
+    description: 'Reach out to the Period Tracker Ovulation Cycle support team. Submit app bugs, request features, or ask billing questions.',
     url: 'https://periodtracker.online/contact',
     publisher: {
       '@type': 'Organization',
@@ -174,7 +174,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <h3 className="text-sm font-bold text-gray-900 mb-1 uppercase tracking-wider">Email Support</h3>
-                      <a href="mailto:support@trackflow.app" className="text-[#FF5E8C] font-bold text-lg hover:underline">support@tracewavetransparency.com</a>
+                      <a href="mailto:support@tracewavetransparency.com" className="text-[#FF5E8C] font-bold text-lg hover:underline">support@tracewavetransparency.com</a>
                       <p className="text-sm text-gray-500 mt-1">For general inquiries and technical help.</p>
                     </div>
                   </div>

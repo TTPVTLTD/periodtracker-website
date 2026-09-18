@@ -282,7 +282,7 @@ export default function FAQPage() {
                 <FileText className="w-6 h-6" />
               </div>
               <h3 className="text-xl font-bold text-[#1A1819] mb-2 font-heading">User Guide</h3>
-              <p className="text-[#706B6E] text-sm mb-6">Read our comprehensive guide on how to get the most out of TrackFlow's features.</p>
+              <p className="text-[#706B6E] text-sm mb-6">Read our comprehensive guide on how to get the most out of Period Tracker Ovulation Cycle's features.</p>
               <Link href="/about" className="text-blue-600 font-bold hover:underline text-sm inline-flex items-center gap-1">
                 Read Guide <ChevronDown className="w-4 h-4 -rotate-90" />
               </Link>

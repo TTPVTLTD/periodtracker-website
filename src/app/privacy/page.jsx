@@ -45,8 +45,8 @@ export default function PrivacyPolicyPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: 'Privacy Policy - TrackFlow Smart Period & Fertility Companion',
-    description: 'Learn how TrackFlow secures your cycle, symptom, and reproductive health data with bank-grade local encryption.',
+    name: 'Privacy Policy - Period Tracker Ovulation Cycle Smart Period & Fertility Companion',
+    description: 'Learn how Period Tracker Ovulation Cycle secures your cycle, symptom, and reproductive health data with bank-grade local encryption.',
     url: 'https://periodtracker.online/privacy',
     publisher: {
       '@type': 'Organization',
@@ -129,7 +129,7 @@ export default function PrivacyPolicyPage() {
                   <ShieldCheck className="w-6 h-6 text-emerald-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-emerald-900 mb-1">The TrackFlow Privacy Promise</h3>
+                  <h3 className="text-lg font-bold text-emerald-900 mb-1">The Period Tracker Ovulation Cycle Privacy Promise</h3>
                   <p className="text-sm text-emerald-800 font-medium">We do not sell, rent, or trade your personal health data to third-party brokers, advertisers, or data aggregators. Period.</p>
                 </div>
               </div>
@@ -175,7 +175,7 @@ export default function PrivacyPolicyPage() {
                         <div className="w-8 h-8 rounded-lg bg-pink-50 flex items-center justify-center text-[#FF5E8C]"><ShieldCheck className="w-4 h-4"/></div>
                         1. Our Core Privacy Commitment
                       </h2>
-                      <p className="leading-relaxed">At TrackFlow, we design our services with privacy as our foundation. Your reproductive logs, period predictions, symptom records, and wellness diary contain deeply personal health insights. Our commitment is simple: <strong>your reproductive data will never be sold, shared, or compiled for marketing or advertising purposes.</strong></p>
+                      <p className="leading-relaxed">At Period Tracker Ovulation Cycle, we design our services with privacy as our foundation. Your reproductive logs, period predictions, symptom records, and wellness diary contain deeply personal health insights. Our commitment is simple: <strong>your reproductive data will never be sold, shared, or compiled for marketing or advertising purposes.</strong></p>
                     </section>
 
                     <hr className="border-gray-100" />
@@ -246,11 +246,11 @@ export default function PrivacyPolicyPage() {
                   <Mail className="w-5 h-5 text-gray-600" />
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2 font-heading">Contact Our Privacy Officer</h3>
-                <p className="text-sm text-gray-600 mb-6 max-w-md mx-auto">
+                <p className="text-sm text-[#706B6E] mb-6 max-w-md mx-auto">
                   If you have any questions about our privacy policies, data encryption keys, or account controls, reach out to our security team.
                 </p>
-                <a href="mailto:privacy@trackflow.app" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-bold text-sm transition-colors">
-                  <Mail className="w-4 h-4" /> Email privacy@trackflow.app
+                <a href="mailto:privacy@tracewavetransparency.com" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-bold text-sm transition-colors">
+                  <Mail className="w-4 h-4" /> Email privacy@tracewavetransparency.com
                 </a>
               </div>
 

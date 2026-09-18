@@ -75,7 +75,7 @@ export const TOP_NAV_MENUS = [
   //   href: "/about",
     // dropdown: [
     //   {
-    //     name: "About TrackFlow",
+    //     name: "About Period Tracker Ovulation Cycle",
     //     href: "/about"
     //   },
     //   {

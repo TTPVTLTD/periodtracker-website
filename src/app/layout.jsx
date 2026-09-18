@@ -18,36 +18,39 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 export const metadata = {
   metadataBase: new URL('https://periodtracker.online'),
   title: {
-    default: 'Period Tracker & Ovulation Calculator - Cycle Calendar',
+    default: 'Period Tracker Ovulation Cycle | Menstrual Calendar & Fertility App',
     template: '%s',
   },
-  description: 'Track your period, calculate fertile ovulation days, and log cycle symptoms with 100% privacy. Free, simple, and accurate menstrual health companion.',
+  description: 'Period Tracker Ovulation Cycle is your 100% private companion to track periods, calculate fertile ovulation days, and monitor menstrual health effortlessly.',
   keywords: [
-    'period tracker',
+    'Period Tracker Ovulation Cycle',
+    'period tracker app',
     'ovulation calculator',
-    'menstrual cycle',
+    'menstrual cycle calendar',
     'fertility tracker',
-    'period calendar',
-    'safe days to avoid pregnancy'
+    'safe days to avoid pregnancy',
+    'pregnancy planning app',
+    'women health companion',
+    'private cycle tracking'
   ],
-  authors: [{ name: 'Period Tracker Editorial Team' }],
-  creator: 'Period Tracker & Ovulation Cycle',
-  publisher: 'Period Tracker & Ovulation Cycle',
+  authors: [{ name: 'Period Tracker Ovulation Cycle Team' }],
+  creator: 'Period Tracker Ovulation Cycle',
+  publisher: 'Period Tracker Ovulation Cycle',
   icons: {
     icon: '/logo.png',
     apple: '/logo.png',
   },
   openGraph: {
-    title: 'Period Tracker & Ovulation Cycle | Women\'s Health & Fertility Platform',
-    description: 'Track your menstrual cycle, predict your next period and peak ovulation days, and explore doctor-reviewed health guides.',
+    title: 'Period Tracker Ovulation Cycle | Women\'s Health & Fertility Platform',
+    description: 'Track your menstrual cycle, predict your next period and peak ovulation days with the Period Tracker Ovulation Cycle app.',
     url: 'https://periodtracker.online',
-    siteName: 'Period Tracker & Ovulation Cycle',
+    siteName: 'Period Tracker Ovulation Cycle',
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Period Tracker & Ovulation Cycle',
+    title: 'Period Tracker Ovulation Cycle',
     description: '100% private in-browser menstrual cycle, ovulation, and pregnancy milestone tracking.',
   },
   robots: {
