@@ -281,7 +281,7 @@ export default function PeriodCalculator() {
               onChange={(e) => setCycleLength(Number(e.target.value))}
               className="w-full accent-flo-500 cursor-pointer h-2 bg-pink-200 rounded-lg"
             />
-            <div className="flex justify-between text-[11px] text-gray-400 mt-1 font-medium">
+            <div className="flex justify-between text-xs text-gray-400 mt-1 font-medium">
               <span>21 Days</span>
               <span className="font-bold text-gray-600">28 Days (Average)</span>
               <span>45 Days</span>
@@ -306,7 +306,7 @@ export default function PeriodCalculator() {
               onChange={(e) => setPeriodDuration(Number(e.target.value))}
               className="w-full accent-flo-500 cursor-pointer h-2 bg-pink-200 rounded-lg"
             />
-            <div className="flex justify-between text-[11px] text-gray-400 mt-1 font-medium">
+            <div className="flex justify-between text-xs text-gray-400 mt-1 font-medium">
               <span>3 Days</span>
               <span className="font-bold text-gray-600">5 Days</span>
               <span>10 Days</span>

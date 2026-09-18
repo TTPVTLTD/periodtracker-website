@@ -387,7 +387,7 @@ export default function ArticlePage({ params }) {
                     </div>
                     <div className="p-5 flex-1 flex flex-col justify-between space-y-3">
                       <div>
-                        <span className="text-[11px] font-bold text-flo-600 uppercase tracking-wider block mb-1">
+                        <span className="text-xs font-bold text-flo-600 uppercase tracking-wider block mb-1">
                           {rel.categoryName}
                         </span>
                         <h4 className="text-base font-bold text-gray-900 group-hover:text-flo-600 line-clamp-2">

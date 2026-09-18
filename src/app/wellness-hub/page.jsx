@@ -319,7 +319,7 @@ export default function HealthLibraryPage() {
                           className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-gray-950 font-black text-xs shadow-xs hover:shadow-md transition-all shrink-0 cursor-pointer"
                         >
                           <span>{isExpanded ? 'Show less' : 'View all'}</span>
-                          <span className="w-5 h-5 rounded-full bg-gray-950 text-white text-[10px] font-extrabold flex items-center justify-center">
+                          <span className="w-5 h-5 rounded-full bg-gray-950 text-white text-xs font-extrabold flex items-center justify-center">
                             {secArticles.length}
                           </span>
                         </button>
@@ -442,7 +442,7 @@ export default function HealthLibraryPage() {
                     <div className="text-white font-bold text-xs sm:text-sm leading-tight">
                       Anessa, USA
                     </div>
-                    <div className="text-white/75 text-[11px] sm:text-xs">
+                    <div className="text-white/75 text-xs">
                       Period Tracker for Pregnancy user
                     </div>
                   </div>
@@ -494,11 +494,11 @@ function HorizontalArticleCard({ article, categoryBadgeStyles }) {
 
         {/* Tag Pill + Read Duration */}
         <div className="flex items-center justify-between pt-1">
-          <span className={`text-[11px] font-bold px-2.5 py-0.5 rounded-full border shadow-2xs ${categoryBadgeStyles[article.category] || 'bg-gray-50 text-gray-700'}`}>
+          <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full border shadow-2xs ${categoryBadgeStyles[article.category] || 'bg-gray-50 text-gray-700'}`}>
             {article.tag || article.categoryName}
           </span>
 
-          <span className="text-[11px] text-gray-400 font-medium flex items-center gap-1 group-hover:text-flo-600 transition-colors">
+          <span className="text-xs text-gray-400 font-medium flex items-center gap-1 group-hover:text-flo-600 transition-colors">
             <span>{article.readTime}</span>
             <ChevronRight className="w-3.5 h-3.5 text-flo-500 group-hover:translate-x-1 transition-transform" />
           </span>

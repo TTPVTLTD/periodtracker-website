@@ -80,7 +80,7 @@ export default function Navbar() {
               <span className="text-base sm:text-lg font-black tracking-tight bg-gradient-to-r from-flo-600 via-flo-500 to-pink-500 bg-clip-text text-transparent block">
                 Period Tracker & Ovulation
               </span>
-              <span className="hidden sm:block text-[10px] sm:text-[11px] font-semibold text-gray-400 tracking-wide">
+              <span className="hidden sm:block text-xs font-semibold text-gray-400 tracking-wide">
                 Women’s Health & Reproductive Wellness
               </span>
             </div>
@@ -115,10 +115,10 @@ export default function Navbar() {
                       <div className="absolute top-full left-0 pt-1.5 z-50 animate-fadeIn">
                         <div className="w-72 sm:w-80 bg-white rounded-2xl shadow-xl shadow-pink-900/10 border border-pink-100 p-2.5">
                           <div className="px-3 py-1.5 mb-1 border-b border-pink-50 flex items-center justify-between">
-                            <span className="text-[11px] font-black text-gray-400 uppercase tracking-wider">
+                            <span className="text-xs font-black text-gray-400 uppercase tracking-wider">
                               Cycle & Fertility Tools
                             </span>
-                            <span className="text-[10px] font-bold text-flo-600 bg-flo-50 px-2 py-0.5 rounded-full border border-pink-200">
+                            <span className="text-xs font-bold text-flo-600 bg-flo-50 px-2 py-0.5 rounded-full border border-pink-200">
                               8 Calculators
                             </span>
                           </div>
@@ -191,7 +191,7 @@ export default function Navbar() {
                                   {sub.name}
                                 </span>
                                 {sub.badge ? (
-                                  <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full shrink-0">
+                                  <span className="text-xs font-bold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded-full shrink-0">
                                     {sub.badge}
                                   </span>
                                 ) : (

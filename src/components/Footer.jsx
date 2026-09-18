@@ -207,7 +207,7 @@ export default function Footer() {
         </div>
 
         {/* Medical & Legal Disclaimer - Compact & Sleek */}
-        <div className="p-3.5 sm:p-4 rounded-2xl bg-gray-50/80 border border-gray-200/70 text-[11px] sm:text-xs text-gray-500 leading-relaxed">
+        <div className="p-3.5 sm:p-4 rounded-2xl bg-gray-50/80 border border-gray-200/70 text-xs sm:text-sm text-gray-500 leading-relaxed">
           <p>
             <strong className="text-gray-700">Educational Disclaimer:</strong> The calculators, forecasts, and articles on this platform are for informational and educational purposes only and do not replace professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare practitioner for personalized health care.
           </p>

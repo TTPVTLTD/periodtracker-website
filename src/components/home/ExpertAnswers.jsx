@@ -57,7 +57,7 @@ export default function ExpertAnswers() {
                 
                 {/* Category Pill Tag */}
                 <div className="absolute top-3 left-3">
-                  <span className={`text-[10px] sm:text-[11px] font-bold px-2.5 py-0.5 rounded-full border shadow-2xs backdrop-blur-md ${article.categoryColor}`}>
+                  <span className={`text-xs font-bold px-2.5 py-0.5 rounded-full border shadow-2xs backdrop-blur-md ${article.categoryColor}`}>
                     {article.tag || article.categoryName}
                   </span>
                 </div>

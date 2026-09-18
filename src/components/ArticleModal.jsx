@@ -145,11 +145,11 @@ export default function ArticleModal({ article, onClose, onSelectOtherArticle, a
                       />
                     </div>
                     <div className="flex-1 min-w-0">
-                      <span className="text-[10px] font-bold text-flo-600 uppercase">{rel.categoryName}</span>
+                      <span className="text-xs font-bold text-flo-600 uppercase">{rel.categoryName}</span>
                       <h5 className="text-xs font-bold text-gray-900 group-hover:text-flo-600 truncate">
                         {rel.title}
                       </h5>
-                      <span className="text-[11px] text-gray-500">{rel.readTime}</span>
+                      <span className="text-xs text-gray-500">{rel.readTime}</span>
                     </div>
                   </div>
                 ))}

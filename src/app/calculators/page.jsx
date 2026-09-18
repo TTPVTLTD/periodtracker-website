@@ -109,7 +109,7 @@ export default function CalculatorsHubPage() {
                         <div className="w-12 h-12 rounded-2xl bg-flo-100 text-flo-600 flex items-center justify-center group-hover:bg-flo-600 group-hover:text-white transition-colors">
                           <Icon className="w-6 h-6" />
                         </div>
-                        <span className="text-[11px] font-bold text-flo-700 bg-flo-50 px-3 py-1 rounded-full border border-pink-200">
+                        <span className="text-xs font-bold text-flo-700 bg-flo-50 px-3 py-1 rounded-full border border-pink-200">
                           {calc.badge}
                         </span>
                       </div>

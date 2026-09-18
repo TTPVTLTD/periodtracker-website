@@ -20,7 +20,7 @@ export default function ArticleCard({ article }) {
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
-        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-flo-700 shadow-xs border border-pink-100">
+        <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-flo-700 shadow-xs border border-pink-100">
           {article.categoryName}
         </div>
       </div>

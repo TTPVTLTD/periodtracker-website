@@ -70,7 +70,7 @@ export default function Testimonials() {
                 <span className="text-xs font-bold text-gray-800 block">
                   {reviews[(currentIndex - 1 + reviews.length) % reviews.length].author}
                 </span>
-                <span className="text-[10px] text-gray-400">
+                <span className="text-xs text-gray-400">
                   {reviews[(currentIndex - 1 + reviews.length) % reviews.length].tag}
                 </span>
               </div>
@@ -110,7 +110,7 @@ export default function Testimonials() {
                 <span className="text-xs font-bold text-gray-800 block">
                   {reviews[(currentIndex + 1) % reviews.length].author}
                 </span>
-                <span className="text-[10px] text-gray-400">
+                <span className="text-xs text-gray-400">
                   {reviews[(currentIndex + 1) % reviews.length].tag}
                 </span>
               </div>

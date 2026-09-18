@@ -66,7 +66,7 @@ export default function SubscriptionPage() {
                   }`}
                 >
                   <span>Annual Billing</span>
-                  <span className="text-[10px] uppercase font-black px-2 py-0.5 rounded-full bg-emerald-500 text-white">
+                  <span className="text-xs uppercase font-black px-2 py-0.5 rounded-full bg-emerald-500 text-white">
                     Save 50%
                   </span>
                 </button>
@@ -200,7 +200,7 @@ export default function SubscriptionPage() {
                     Subscribe on Android
                   </a>
                 </div>
-                <p className="text-[11px] text-gray-400 text-center font-medium">
+                <p className="text-xs text-gray-400 text-center font-medium">
                   Free 7-day trial included. Cancel anytime in Apple/Google settings.
                 </p>
               </div>

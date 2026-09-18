@@ -7,10 +7,11 @@ import { Star, ArrowRight, Heart, Calendar, Activity, Sparkles, CheckCircle2 } f
 
 export default function Hero() {
   return (
-    <section id="hero" className="relative overflow-hidden pt-6 sm:pt-8 lg:pt-10 pb-0 bg-gradient-to-b from-white via-[#fff7f9] to-[#ffedf2] border-b border-pink-100/70">
+    <section id="hero" className="relative overflow-hidden pt-6 sm:pt-8 lg:pt-10 pb-0 bg-mesh-glow border-b border-pink-100/70">
       
       {/* Soft background ambient lighting */}
-      <div className="absolute top-0 right-1/4 w-[460px] h-[460px] bg-pink-100/40 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-0 right-1/4 w-[460px] h-[460px] bg-brand-pink/10 rounded-full blur-3xl pointer-events-none -z-10" />
+      <div className="absolute top-1/3 left-10 w-[380px] h-[380px] bg-brand-peach/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
@@ -54,7 +55,7 @@ export default function Hero() {
                   <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.67-1.08 1.74-.95 2.77 1.01.08 2.05-.51 2.68-1.27z"/>
                 </svg>
                 <div className="text-left">
-                  <div className="text-[9px] uppercase font-medium leading-none text-gray-300">Download on the</div>
+                  <div className="text-xs uppercase font-medium leading-none text-gray-300">Download on the</div>
                   <div className="text-sm font-bold leading-tight font-sans tracking-tight">App Store</div>
                 </div>
               </a>
@@ -73,7 +74,7 @@ export default function Hero() {
                   <path fill="#EA4335" d="M20.9 10.5l-3.6-2-3.5 3.5 3.5 3.5 3.6-2c.9-.5.9-1.5 0-2z"/>
                 </svg>
                 <div className="text-left">
-                  <div className="text-[9px] uppercase font-medium leading-none text-gray-300">GET IT ON</div>
+                  <div className="text-xs uppercase font-medium leading-none text-gray-300">GET IT ON</div>
                   <div className="text-sm font-bold leading-tight font-sans tracking-tight">Google Play</div>
                 </div>
               </a>
@@ -104,7 +105,7 @@ export default function Hero() {
 
             {/* Floating Card 1: Symptom Patterns (Flo Reference Style) */}
             <div className="absolute -left-3 sm:-left-8 top-10 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl shadow-pink-900/10 border border-pink-100/90 z-20 hidden sm:block text-left">
-              <span className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider block mb-1.5">
+              <span className="text-xs font-extrabold text-gray-400 uppercase tracking-wider block mb-1.5">
                 Symptom patterns
               </span>
               <div className="space-y-1.5">
@@ -129,7 +130,7 @@ export default function Hero() {
 
             {/* Floating Card 2: Cycle Trends (Flo Reference Style) */}
             <div className="absolute -right-3 sm:-right-8 top-6 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl shadow-pink-900/10 border border-pink-100/90 z-20 hidden sm:block text-left">
-              <span className="text-[10px] font-extrabold text-gray-400 uppercase tracking-wider block mb-1">
+              <span className="text-xs font-extrabold text-gray-400 uppercase tracking-wider block mb-1">
                 Cycle trends
               </span>
               <svg className="w-24 h-7 overflow-visible" viewBox="0 0 96 28">
@@ -148,7 +149,7 @@ export default function Hero() {
             {/* Floating Card 3: Health Assistant Badge */}
             <div className="absolute -right-2 sm:-right-6 bottom-32 sm:bottom-36 bg-white/95 backdrop-blur-md px-3 py-1.5 rounded-full shadow-lg shadow-pink-900/10 border border-pink-100/90 z-20 flex items-center gap-2 hidden sm:flex">
               <span className="text-xs">🌸</span>
-              <span className="text-[11px] font-bold text-gray-800">
+              <span className="text-xs font-bold text-gray-800">
                 Hi, I'm Health Assistant
               </span>
             </div>

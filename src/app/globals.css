@@ -4,8 +4,15 @@
 
 @layer base {
   :root {
-    --primary-pink: #f43f77;
-    --soft-pink-bg: #fff5f8;
+    --color-primary: #FF85A2;
+    --color-primary-dark: #FF5E8C;
+    --color-secondary: #FF8C69;
+    --color-dark: #1A1819;
+    --color-gray: #706B6E;
+    --color-soft: #FAF8F9;
+    --color-accent: #FFF0F2;
+    --primary-pink: #FF5E8C;
+    --soft-pink-bg: #FFF0F2;
   }
   
   html {
@@ -13,12 +20,21 @@
   }
 
   body {
-    background-color: #fff9fb;
-    color: #111827;
+    background-color: #FAF8F9;
+    color: #1A1819;
     font-family: var(--font-sans), 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: #1A1819;
+    letter-spacing: -0.02em;
+    font-weight: 700;
   }
 }
 
@@ -29,36 +45,60 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #fdf2f4;
+  background: #FAF8F9;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #fecddc;
+  background: #FECDD9;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #fc6a97;
+  background: #FF85A2;
+}
+
+/* Background Mesh Glow matching reference site */
+.bg-mesh-glow {
+  background-color: #FAF8F9;
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(255, 133, 162, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(255, 140, 105, 0.09) 0%, transparent 40%);
+}
+
+.glow-orb-pink {
+  background: radial-gradient(circle, rgba(255, 94, 140, 0.18) 0%, rgba(255, 94, 140, 0) 70%);
+}
+
+.glow-orb-peach {
+  background: radial-gradient(circle, rgba(255, 140, 105, 0.18) 0%, rgba(255, 140, 105, 0) 70%);
+}
+
+/* Glassmorphism Cards & Panels */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 228, 235, 0.75);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(254, 205, 217, 0.6);
+  box-shadow: 0 4px 20px -2px rgba(255, 94, 140, 0.06);
 }
 
 /* Cycle Phase Pill Animations */
 @keyframes pulseGlow {
   0%, 100% {
-    box-shadow: 0 0 15px rgba(244, 63, 119, 0.25);
+    box-shadow: 0 0 15px rgba(255, 94, 140, 0.25);
   }
   50% {
-    box-shadow: 0 0 25px rgba(244, 63, 119, 0.45);
+    box-shadow: 0 0 25px rgba(255, 94, 140, 0.45);
   }
 }
 
 .glow-pink {
   animation: pulseGlow 3s ease-in-out infinite;
-}
-
-/* Glassmorphism */
-.glass-panel {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(254, 205, 220, 0.45);
 }

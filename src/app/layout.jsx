@@ -1,5 +1,12 @@
 import './globals.css';
-import { Plus_Jakarta_Sans } from 'next/font/google';
+import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-heading',
+  display: 'swap',
+});
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -58,11 +65,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${plusJakartaSans.variable} scroll-smooth font-sans`}>
+    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable} scroll-smooth font-sans`}>
       <head>
         <link rel="icon" href="/logo.png" type="image/png" />
       </head>
-      <body className={`${plusJakartaSans.className} min-h-screen flex flex-col bg-[#fff9fb] text-gray-900 antialiased selection:bg-flo-200 selection:text-flo-900 font-sans`}>
+      <body className={`${plusJakartaSans.className} min-h-screen flex flex-col bg-[#FAF8F9] text-[#1A1819] antialiased selection:bg-[#FF5E8C]/20 selection:text-[#FF5E8C] font-sans text-base`}>
         {children}
       </body>
     </html>

@@ -201,7 +201,7 @@ export default function DueDateCalculator() {
                 onChange={(e) => setCycleDays(e.target.value)}
                 className="w-full accent-flo-500 cursor-pointer h-2 bg-pink-200 rounded-lg"
               />
-              <div className="flex justify-between text-[11px] text-gray-400 mt-1 font-medium">
+              <div className="flex justify-between text-xs text-gray-400 mt-1 font-medium">
                 <span>22 Days</span>
                 <span className="font-bold text-gray-600">28 Days (Standard)</span>
                 <span>40 Days</span>
@@ -311,7 +311,7 @@ export default function DueDateCalculator() {
               {/* Progress Details Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-left">
                 <div className="p-4 bg-white rounded-2xl border border-pink-100 shadow-2xs">
-                  <span className="text-[11px] text-gray-400 font-bold block uppercase tracking-wider">Gestational Age</span>
+                  <span className="text-xs text-gray-400 font-bold block uppercase tracking-wider">Gestational Age</span>
                   <span className="text-xl sm:text-2xl font-black text-gray-900 mt-1 block">
                     {results.weeks} Weeks, {results.days} Days
                   </span>
@@ -321,7 +321,7 @@ export default function DueDateCalculator() {
                 </div>
 
                 <div className="p-4 bg-white rounded-2xl border border-pink-100 shadow-2xs">
-                  <span className="text-[11px] text-gray-400 font-bold block uppercase tracking-wider">Current Stage</span>
+                  <span className="text-xs text-gray-400 font-bold block uppercase tracking-wider">Current Stage</span>
                   <span className="text-xl sm:text-2xl font-black text-flo-600 mt-1 block">
                     {results.trimester}
                   </span>
