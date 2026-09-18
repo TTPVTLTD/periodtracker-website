@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = 'https://periodtracker.online';
+  const baseUrl = 'https://trackperiods.com';
 
   return {
     rules: [

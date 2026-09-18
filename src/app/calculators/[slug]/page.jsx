@@ -108,7 +108,7 @@ export default function CalculatorDetailPage({ params }) {
     description: calc.description || calc.summary,
     applicationCategory: 'HealthApplication',
     operatingSystem: 'All',
-    url: `https://periodtracker.online/calculators/${calc.slug}`,
+    url: `https://trackperiods.com/calculators/${calc.slug}`,
     offers: {
       '@type': 'Offer',
       price: '0',

@@ -46,11 +46,11 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: 'Period Tracker & Ovulation Cycle',
-    url: 'https://periodtracker.online',
+    url: 'https://trackperiods.com',
     description: 'Free, simple, and accurate menstrual cycle, ovulation, and pregnancy tracking platform with 100% in-browser privacy.',
     potentialAction: {
       '@type': 'SearchAction',
-      target: 'https://periodtracker.online/wellness-hub?category={search_term_string}',
+      target: 'https://trackperiods.com/wellness-hub?category={search_term_string}',
       'query-input': 'required name=search_term_string',
     },
   };
@@ -59,8 +59,8 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Period Tracker & Ovulation Cycle',
-    url: 'https://periodtracker.online',
-    logo: 'https://periodtracker.online/brand-logo-final.png',
+    url: 'https://trackperiods.com',
+    logo: 'https://trackperiods.com/brand-logo-final.png',
     sameAs: [
       'https://apps.apple.com/app/id6774117828',
       'https://play.google.com/store/apps/details?id=com.tracewave.period',

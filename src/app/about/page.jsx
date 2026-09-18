@@ -47,11 +47,11 @@ export default function AboutPage() {
     '@type': 'AboutPage',
     name: 'About Period Tracker Ovulation Cycle - Our Mission & Team',
     description: 'Learn more about the mission behind Period Tracker Ovulation Cycle. We design female health trackers focused on security, biological precision, and user data safety.',
-    url: 'https://periodtracker.online/about',
+    url: 'https://trackperiods.com/about',
     publisher: {
       '@type': 'Organization',
       name: 'Period Tracker & Ovulation Cycle',
-      logo: 'https://periodtracker.online/brand-logo-final.png'
+      logo: 'https://trackperiods.com/brand-logo-final.png'
     }
   };
 

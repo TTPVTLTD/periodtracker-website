@@ -47,11 +47,11 @@ export default function PrivacyPolicyPage() {
     '@type': 'WebPage',
     name: 'Privacy Policy - Period Tracker Ovulation Cycle Smart Period & Fertility Companion',
     description: 'Learn how Period Tracker Ovulation Cycle secures your cycle, symptom, and reproductive health data with bank-grade local encryption.',
-    url: 'https://periodtracker.online/privacy',
+    url: 'https://trackperiods.com/privacy',
     publisher: {
       '@type': 'Organization',
       name: 'Period Tracker & Ovulation Cycle',
-      logo: 'https://periodtracker.online/brand-logo-final.png'
+      logo: 'https://trackperiods.com/brand-logo-final.png'
     }
   };
 

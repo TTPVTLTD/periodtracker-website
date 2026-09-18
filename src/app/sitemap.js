@@ -3,7 +3,7 @@ import { ARTICLES } from '../data/articles';
 import { ABOUT_PAGES } from '../data/aboutPages';
 
 export default async function sitemap() {
-  const baseUrl = 'https://periodtracker.online';
+  const baseUrl = 'https://trackperiods.com';
 
   // Core Static Hub Routes
   const staticRoutes = [

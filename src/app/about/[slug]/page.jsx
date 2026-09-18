@@ -112,11 +112,11 @@ export default function AboutDetailPage({ params }) {
     '@type': 'AboutPage',
     name: pageData.title,
     description: pageData.subtitle || pageData.heroDesc,
-    url: `https://periodtracker.online/about/${pageData.slug}`,
+    url: `https://trackperiods.com/about/${pageData.slug}`,
     publisher: {
       '@type': 'Organization',
       name: 'Period Tracker & Ovulation Cycle',
-      logo: 'https://periodtracker.online/brand-logo-final.png',
+      logo: 'https://trackperiods.com/brand-logo-final.png',
     },
   };
 

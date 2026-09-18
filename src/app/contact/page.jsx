@@ -118,11 +118,11 @@ export default function ContactPage() {
     '@type': 'ContactPage',
     name: 'Contact Period Tracker Ovulation Cycle Support Team',
     description: 'Reach out to the Period Tracker Ovulation Cycle support team. Submit app bugs, request features, or ask billing questions.',
-    url: 'https://periodtracker.online/contact',
+    url: 'https://trackperiods.com/contact',
     publisher: {
       '@type': 'Organization',
       name: 'Period Tracker & Ovulation Cycle',
-      logo: 'https://periodtracker.online/brand-logo-final.png'
+      logo: 'https://trackperiods.com/brand-logo-final.png'
     }
   };
 

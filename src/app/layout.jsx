@@ -16,7 +16,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://periodtracker.online'),
+  metadataBase: new URL('https://trackperiods.com'),
   title: {
     default: 'Period Tracker Ovulation Cycle | Menstrual Calendar & Fertility App',
     template: '%s',
@@ -43,7 +43,7 @@ export const metadata = {
   openGraph: {
     title: 'Period Tracker Ovulation Cycle | Women\'s Health & Fertility Platform',
     description: 'Track your menstrual cycle, predict your next period and peak ovulation days with the Period Tracker Ovulation Cycle app.',
-    url: 'https://periodtracker.online',
+    url: 'https://trackperiods.com',
     siteName: 'Period Tracker Ovulation Cycle',
     locale: 'en_US',
     type: 'website',

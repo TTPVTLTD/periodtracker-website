@@ -85,7 +85,7 @@ export default function ArticlePage({ params }) {
     name: article.title,
     headline: article.title,
     description: article.summary,
-    image: `https://periodtracker.online${article.image}`,
+    image: `https://trackperiods.com${article.image}`,
     author: {
       '@type': 'Organization',
       name: article.author || 'Period Tracker Health Editorial',
@@ -95,11 +95,11 @@ export default function ArticlePage({ params }) {
       name: 'Period Tracker & Ovulation Cycle',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://periodtracker.online/brand-logo-final.png',
+        url: 'https://trackperiods.com/brand-logo-final.png',
       },
     },
     datePublished: article.publishedDate,
-    mainEntityOfPage: `https://periodtracker.online/articles/${article.id}`,
+    mainEntityOfPage: `https://trackperiods.com/articles/${article.id}`,
   };
 
   return (

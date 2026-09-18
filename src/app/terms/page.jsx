@@ -47,11 +47,11 @@ export default function TermsAndConditionsPage() {
     '@type': 'WebPage',
     name: 'Terms & Conditions - Period Tracker Ovulation Cycle Smart Period & Fertility Companion',
     description: 'Read Period Tracker Ovulation Cycle Terms and Conditions. Learn about our terms of use, subscription billing policies, and medical disclaimer statements.',
-    url: 'https://periodtracker.online/terms',
+    url: 'https://trackperiods.com/terms',
     publisher: {
       '@type': 'Organization',
       name: 'Period Tracker & Ovulation Cycle',
-      logo: 'https://periodtracker.online/brand-logo-final.png'
+      logo: 'https://trackperiods.com/brand-logo-final.png'
     }
   };
 
