@@ -30,7 +30,7 @@ export default function ArticleSection({ selectedCategory, onSelectCategory }) {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
               Period & Ovulation Health Guides
             </h2>
             <p className="mt-2 text-base text-gray-600">

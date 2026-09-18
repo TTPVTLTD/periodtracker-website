@@ -114,7 +114,7 @@ export default function Footer() {
 
           {/* Col 2: Wellness Hub Categories */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-extrabold text-[#1A1819] uppercase tracking-wider font-heading">
+            <h4 className="text-sm font-bold text-[#1A1819] uppercase tracking-wider font-heading">
               Wellness Hub Topics
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">
@@ -154,7 +154,7 @@ export default function Footer() {
 
           {/* Col 3: Cycle Tools & Features */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-extrabold text-[#1A1819] uppercase tracking-wider font-heading">
+            <h4 className="text-sm font-bold text-[#1A1819] uppercase tracking-wider font-heading">
               Cycle Tools & Calculators
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">
@@ -194,7 +194,7 @@ export default function Footer() {
 
           {/* Col 4: Platform & Legal */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-extrabold text-[#1A1819] uppercase tracking-wider font-heading">
+            <h4 className="text-sm font-bold text-[#1A1819] uppercase tracking-wider font-heading">
               Platform & Legal
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">

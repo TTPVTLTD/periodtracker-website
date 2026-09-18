@@ -101,7 +101,7 @@ export default function AppFeaturesPage() {
               <span>Mobile App Architecture</span>
             </div> */}
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-brand-dark tracking-tight leading-snug font-heading">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark tracking-tight leading-snug font-heading">
               Simple, Powerful Features Designed Around <span className="bg-gradient-to-r from-brand-pink via-brand-babyPink to-brand-peach bg-clip-text text-transparent">Your Body.</span>
             </h1>
 
@@ -211,7 +211,7 @@ export default function AppFeaturesPage() {
 
                       {/* Title & Subtitle */}
                       <div className="space-y-1.5">
-                        <h3 className="text-xl sm:text-2xl font-extrabold text-brand-dark tracking-tight leading-snug font-heading">
+                        <h3 className="text-xl sm:text-2xl font-bold text-brand-dark tracking-tight leading-snug font-heading">
                           {feature.title}
                         </h3>
                         <p className="text-base sm:text-sm font-semibold text-brand-gray">

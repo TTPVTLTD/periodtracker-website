@@ -279,7 +279,7 @@ function DetailedContentAndFaqs({ pageData, otherPages, accentColor = "rose" }) 
         {/* Sidebar: Explore Platform & Cycle Calculator Promo */}
         <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
           <div className="bg-white rounded-3xl border border-pink-100 p-6 shadow-xs space-y-3">
-            <h3 className="text-sm font-extrabold uppercase tracking-widest text-gray-400">
+            <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400">
               EXPLORE ABOUT TOPICS
             </h3>
             <div className="space-y-1.5">
@@ -344,7 +344,7 @@ function ScienceAndResearchView({ pageData, otherPages }) {
                 Advancing female health
               </div>
 
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
                 Science and research at Period Tracker
               </h1>
 
@@ -733,7 +733,7 @@ function AiReportsView({ pageData, otherPages }) {
                 <span>Intelligent Cycle Diagnostics</span>
               </div> */}
               
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
                 AI-Generated Health Reports for Your Cycle
               </h1>
 
@@ -1001,7 +1001,7 @@ function AyurvedaCareView({ pageData, otherPages }) {
                 <span>Ancient Wisdom for Cycle Harmony</span>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
                 Ayurveda & Natural Home Remedies Module
               </h1>
 
@@ -1065,7 +1065,7 @@ function AyurvedaCareView({ pageData, otherPages }) {
           {remedies.map((rem, idx) => (
             <div key={idx} className="bg-white rounded-3xl p-6 sm:p-7 border border-emerald-100 shadow-xs hover:shadow-md transition-shadow space-y-3">
               <div className="flex items-center justify-between">
-                <span className="text-base font-extrabold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
+                <span className="text-base font-bold uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full border border-emerald-200">
                   {rem.timing}
                 </span>
                 <Leaf className="w-4 h-4 text-emerald-500" />
@@ -1215,7 +1215,7 @@ function PrivacyPortalView({ pageData, otherPages }) {
               <span>100% In-Device Data Protection</span>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight leading-snug">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-snug">
               Your cycle data belongs strictly to you. Period.
             </h1>
 

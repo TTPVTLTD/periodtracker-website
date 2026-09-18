@@ -20,7 +20,7 @@ export default function Hero() {
           <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left py-4 sm:py-6 lg:py-10">
 
             {/* Main Primary SEO H1 */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
                Period Tracker Ovulation Cycles — World’s Cycle Companion
             </h1>
 
@@ -109,7 +109,7 @@ export default function Hero() {
 
             {/* Floating Card 1: Symptom Patterns (Flo Reference Style) */}
             <div className="absolute -left-3 sm:-left-8 top-10 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl shadow-pink-900/10 border border-pink-100/90 z-20 hidden sm:block text-left">
-              <span className="text-xs font-extrabold text-gray-400 uppercase tracking-wider block mb-1.5">
+              <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1.5">
                 Symptom patterns
               </span>
               <div className="space-y-1.5">
@@ -134,7 +134,7 @@ export default function Hero() {
 
             {/* Floating Card 2: Cycle Trends (Flo Reference Style) */}
             <div className="absolute -right-3 sm:-right-8 top-6 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl shadow-pink-900/10 border border-pink-100/90 z-20 hidden sm:block text-left">
-              <span className="text-xs font-extrabold text-gray-400 uppercase tracking-wider block mb-1">
+              <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block mb-1">
                 Cycle trends
               </span>
               <svg className="w-24 h-7 overflow-visible" viewBox="0 0 96 28">

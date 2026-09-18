@@ -35,7 +35,7 @@ export default function WhyChooseUs() {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
             Why Choose Period Tracker & Ovulation Calculator?
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -55,7 +55,7 @@ export default function WhyChooseUs() {
                   <Icon className="w-8 h-8 stroke-[1.75]" />
                 </div>
 
-                <h3 className="text-xl font-extrabold text-gray-900 leading-snug max-w-xs">
+                <h3 className="text-xl font-bold text-gray-900 leading-snug max-w-xs">
                   {item.title}
                 </h3>
 

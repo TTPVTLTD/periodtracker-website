@@ -85,7 +85,7 @@ export default function PregnancyTestCalculator() {
               <CheckCircle className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-extrabold text-gray-900">Test Timing Inputs</h3>
+              <h3 className="text-xl font-bold text-gray-900">Test Timing Inputs</h3>
               <p className="text-xs text-gray-500">Calculate date for reliable at-home testing</p>
             </div>
           </div>
@@ -253,7 +253,7 @@ export default function PregnancyTestCalculator() {
 
               {/* Tips Card */}
               <div className="p-6 rounded-3xl bg-white border border-pink-200 shadow-xs space-y-3">
-                <h5 className="font-extrabold text-gray-900 text-base flex items-center gap-2">
+                <h5 className="font-bold text-gray-900 text-base flex items-center gap-2">
                   <Clock className="w-5 h-5 text-flo-500" />
                   <span>Understanding At-Home Urine Test Sensitivity</span>
                 </h5>

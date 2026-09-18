@@ -34,7 +34,7 @@ export default function SubscriptionPage() {
               <span>Manage Subscription & Premium Access</span>
             </div> */}
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
               Invest in your daily reproductive wellness
             </h1>
 
@@ -222,7 +222,7 @@ export default function SubscriptionPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Apple instructions */}
               <div className="p-6 rounded-3xl bg-gray-50 border border-gray-200 space-y-3">
-                <h4 className="font-extrabold text-gray-900 flex items-center gap-2 text-base">
+                <h4 className="font-bold text-gray-900 flex items-center gap-2 text-base">
                   <span>Apple App Store (iPhone & iPad)</span>
                 </h4>
                 <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside leading-relaxed">
@@ -236,7 +236,7 @@ export default function SubscriptionPage() {
 
               {/* Google Play instructions */}
               <div className="p-6 rounded-3xl bg-gray-50 border border-gray-200 space-y-3">
-                <h4 className="font-extrabold text-gray-900 flex items-center gap-2 text-base">
+                <h4 className="font-bold text-gray-900 flex items-center gap-2 text-base">
                   <span>Google Play (Android Phones & Tablets)</span>
                 </h4>
                 <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside leading-relaxed">

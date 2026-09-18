@@ -47,7 +47,7 @@ export default function Testimonials() {
         
         {/* Header matching Reference Image 3 */}
         <div className="text-center max-w-3xl mx-auto mb-14">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
             What Our Community Says About Period Tracker
           </h2>
           <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
@@ -91,7 +91,7 @@ export default function Testimonials() {
               </p>
 
               <div className="pt-2 border-t border-pink-50">
-                <span className="text-base font-extrabold text-gray-900 block">
+                <span className="text-base font-bold text-gray-900 block">
                   {reviews[currentIndex].author}
                 </span>
                 <span className="text-sm font-semibold text-flo-600 mt-0.5 block">
@@ -168,7 +168,7 @@ export default function Testimonials() {
             Loved & Trusted by Women Worldwide
           </h3>
 
-          <div className="flex items-center justify-center gap-6 text-sm font-extrabold text-gray-700 pt-1">
+          <div className="flex items-center justify-center gap-6 text-sm font-bold text-gray-700 pt-1">
             <span className="flex items-center gap-1.5">
               <span>🍏</span>
               <span>4.9 / 5 Mobile & Web</span>

@@ -131,7 +131,7 @@ export default function DueDateCalculator() {
               <Baby className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-extrabold text-gray-900">Due Date Calculation</h3>
+              <h3 className="text-xl font-bold text-gray-900">Due Date Calculation</h3>
               <p className="text-xs text-gray-500">Calculate delivery date using Naegele's standard rule</p>
             </div>
           </div>

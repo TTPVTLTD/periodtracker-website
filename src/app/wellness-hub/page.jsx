@@ -156,7 +156,7 @@ function HealthLibraryContent() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             
             {/* Main Title */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight">
               Wellness Hub
             </h1>
 
@@ -352,7 +352,7 @@ function HealthLibraryContent() {
                           className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-400 hover:bg-amber-300 text-gray-950 font-black text-xs shadow-xs hover:shadow-md transition-all shrink-0 cursor-pointer"
                         >
                           <span>{isExpanded ? 'Show less' : 'View all'}</span>
-                          <span className="w-5 h-5 rounded-full bg-gray-950 text-white text-xs font-extrabold flex items-center justify-center">
+                          <span className="w-5 h-5 rounded-full bg-gray-950 text-white text-xs font-bold flex items-center justify-center">
                             {secArticles.length}
                           </span>
                         </button>

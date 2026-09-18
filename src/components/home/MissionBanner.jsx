@@ -28,7 +28,7 @@ export default function MissionBanner() {
 
           {/* Right Column: Mission Text Content matching Reference Image 2 */}
           <div className="lg:col-span-7 space-y-5 text-center lg:text-left">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
               Global Reproductive Health Access for Every Woman
             </h2>
 

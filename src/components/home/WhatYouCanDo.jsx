@@ -79,7 +79,7 @@ export default function WhatYouCanDo() {
             <Sparkles className="w-3.5 h-3.5 text-flo-600" />
             <span>Comprehensive Reproductive Health Tracking</span>
           </div> */}
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-extrabold text-gray-900 tracking-tight leading-snug">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
             Smart Menstrual Cycle & Fertility Tracking Features
           </h2>
           <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -177,7 +177,7 @@ export default function WhatYouCanDo() {
         {/* Quick App Download Bar */}
         <div className="mt-12 pt-6 border-t border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4 bg-flo-50/50 rounded-3xl p-6">
           <div className="text-center sm:text-left">
-            <h3 className="font-extrabold text-gray-900 text-base">Ready to start tracking on your phone?</h3>
+            <h3 className="font-bold text-gray-900 text-base">Ready to start tracking on your phone?</h3>
             <p className="text-sm text-gray-500 mt-0.5">Log daily periods, generate AI reports, and explore Ayurvedic remedies.</p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">

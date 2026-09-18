@@ -242,7 +242,7 @@ export default function PeriodCalculator() {
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-extrabold text-gray-900">Your Cycle Details</h3>
+              <h3 className="text-xl font-bold text-gray-900">Your Cycle Details</h3>
               <p className="text-xs text-gray-500">Instant ovulation & period prediction</p>
             </div>
           </div>
@@ -269,7 +269,7 @@ export default function PeriodCalculator() {
               <label className="text-sm font-bold text-gray-800">
                 Average Cycle Length
               </label>
-              <span className="px-3 py-1 bg-flo-50 rounded-full text-flo-600 font-extrabold text-sm border border-pink-200 shadow-xs">
+              <span className="px-3 py-1 bg-flo-50 rounded-full text-flo-600 font-bold text-sm border border-pink-200 shadow-xs">
                 {cycleLength} Days
               </span>
             </div>
@@ -294,7 +294,7 @@ export default function PeriodCalculator() {
               <label className="text-sm font-bold text-gray-800">
                 Period Duration (Bleeding Days)
               </label>
-              <span className="px-3 py-1 bg-flo-50 rounded-full text-flo-600 font-extrabold text-sm border border-pink-200 shadow-xs">
+              <span className="px-3 py-1 bg-flo-50 rounded-full text-flo-600 font-bold text-sm border border-pink-200 shadow-xs">
                 {periodDuration} Days
               </span>
             </div>
@@ -466,7 +466,7 @@ export default function PeriodCalculator() {
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 flex-wrap">
                     <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">Today's Cycle Status</span>
-                    <span className={`px-3 py-0.5 rounded-full text-xs font-extrabold border ${calculations.phaseBadgeColor}`}>
+                    <span className={`px-3 py-0.5 rounded-full text-xs font-bold border ${calculations.phaseBadgeColor}`}>
                       {calculations.currentPhase}
                     </span>
                   </div>
@@ -495,7 +495,7 @@ export default function PeriodCalculator() {
                       <div className="w-9 h-9 rounded-xl bg-flo-100 text-flo-600 flex items-center justify-center">
                         <CalendarDays className="w-5 h-5" />
                       </div>
-                      <h4 className="font-extrabold text-gray-900 text-lg">
+                      <h4 className="font-bold text-gray-900 text-lg">
                         {calendarDays.monthName}
                       </h4>
                     </div>

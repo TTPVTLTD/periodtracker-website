@@ -149,7 +149,7 @@ export default function CalculatorDetailPage({ params }) {
             </nav>
 
             {/* Main Title matching screenshot */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug max-w-4xl">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug max-w-4xl">
               {calc.shortTitle} & Early Health Charts
             </h1>
 
@@ -202,7 +202,7 @@ export default function CalculatorDetailPage({ params }) {
                         <BookOpen className="w-4 h-4 text-flo-600" />
                         <span>Clinical Guide & Medical Analysis</span>
                       </div>
-                      <h2 className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight font-heading">
+                      <h2 className="text-lg sm:text-xl font-black text-gray-900 tracking-tight font-heading">
                         {articleData.title}
                       </h2>
                     </div>
@@ -210,7 +210,7 @@ export default function CalculatorDetailPage({ params }) {
                     {/* Render Each Point/Section with minimum 4 detailed paragraphs */}
                     {articleData.sections.map((sec) => (
                       <div key={sec.id} id={sec.id} className="scroll-mt-28 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 tracking-tight font-heading border-b border-pink-100 pb-3">
+                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight font-heading border-b border-pink-100 pb-3">
                           {sec.heading}
                         </h2>
                         
@@ -218,7 +218,7 @@ export default function CalculatorDetailPage({ params }) {
                           {sec.paragraphs.map((para, pIdx) => (
                             <p 
                               key={pIdx} 
-                              className="text-base sm:text-lg text-gray-700 leading-relaxed bg-white p-5 sm:p-6 rounded-2xl border border-pink-100/80 shadow-2xs hover:border-pink-200 transition-colors"
+                              className="text-sm sm:text-base text-gray-700 leading-relaxed bg-white p-5 sm:p-6 rounded-2xl border border-pink-100/80 shadow-2xs hover:border-pink-200 transition-colors"
                             >
                               {para}
                             </p>
@@ -230,7 +230,7 @@ export default function CalculatorDetailPage({ params }) {
                 ) : (
                   <div className="space-y-6 text-gray-800 leading-relaxed">
                     <div id="overview" className="scroll-mt-28 space-y-3">
-                      <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
+                      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
                         Understanding How This Calculation Works
                       </h2>
                       <p className="text-base text-gray-700 leading-relaxed">
@@ -257,7 +257,7 @@ export default function CalculatorDetailPage({ params }) {
                 
                 {/* Dynamic Table of Contents */}
                 <div className="bg-white rounded-3xl border border-pink-100 p-6 shadow-xs space-y-3">
-                  <h3 className="text-xs font-extrabold uppercase tracking-widest text-gray-400">
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">
                     IN THIS GUIDE
                   </h3>
                   <ul className="space-y-2 text-sm font-semibold">
@@ -278,7 +278,7 @@ export default function CalculatorDetailPage({ params }) {
 
                 {/* Other Calculators Switcher List */}
                 <div className="bg-white rounded-3xl border border-pink-100 p-6 shadow-xs space-y-3">
-                  <h3 className="text-xs font-extrabold uppercase tracking-widest text-gray-400">
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">
                     MORE CALCULATORS
                   </h3>
                   <div className="space-y-1.5">

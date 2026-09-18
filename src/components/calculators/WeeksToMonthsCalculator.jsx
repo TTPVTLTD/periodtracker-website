@@ -93,7 +93,7 @@ export default function WeeksToMonthsCalculator() {
               <Clock className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-extrabold text-gray-900">Weeks to Months</h3>
+              <h3 className="text-xl font-bold text-gray-900">Weeks to Months</h3>
               <p className="text-xs text-gray-500">Convert pregnancy weeks to months & trimesters</p>
             </div>
           </div>
@@ -103,7 +103,7 @@ export default function WeeksToMonthsCalculator() {
               <label className="text-sm font-bold text-gray-800">
                 Current Gestational Week
               </label>
-              <span className="px-3.5 py-1 bg-flo-50 rounded-full text-flo-600 font-extrabold text-sm border border-pink-200 shadow-xs">
+              <span className="px-3.5 py-1 bg-flo-50 rounded-full text-flo-600 font-bold text-sm border border-pink-200 shadow-xs">
                 Week {weeks}
               </span>
             </div>
@@ -233,7 +233,7 @@ export default function WeeksToMonthsCalculator() {
                   <span className="text-xs font-bold text-gray-400 uppercase tracking-wider block truncate">
                     Trimester Stage
                   </span>
-                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-extrabold border mt-3 ${results.trimesterColor}`}>
+                  <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold border mt-3 ${results.trimesterColor}`}>
                     {results.trimester}
                   </span>
                   <span className="text-xs text-gray-500 mt-1 block">
@@ -257,7 +257,7 @@ export default function WeeksToMonthsCalculator() {
 
               {/* Conversion Reference Card */}
               <div className="p-6 rounded-3xl bg-white border border-pink-200 shadow-xs space-y-3">
-                <h5 className="font-extrabold text-gray-900 text-base flex items-center gap-2">
+                <h5 className="font-bold text-gray-900 text-base flex items-center gap-2">
                   <Baby className="w-5 h-5 text-flo-500" />
                   <span>Trimester & Gestational Chart Overview</span>
                 </h5>

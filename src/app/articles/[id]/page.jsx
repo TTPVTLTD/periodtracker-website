@@ -135,7 +135,7 @@ export default function ArticlePage({ params }) {
             </nav>
 
             {/* Article Headline */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-snug max-w-4xl">
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug max-w-4xl">
               {article.title}
             </h1>
 
@@ -211,7 +211,7 @@ export default function ArticlePage({ params }) {
                       {/* Section Detail Bullets */}
                       {sec.bullets && sec.bullets.length > 0 && (
                         <div className="bg-white/90 border border-pink-100/90 rounded-2xl p-5 sm:p-6 shadow-2xs space-y-3 mt-4">
-                          <h4 className="text-xs font-extrabold uppercase tracking-wider text-flo-700">
+                          <h4 className="text-xs font-bold uppercase tracking-wider text-flo-700">
                             Key Checklist & Essential Facts
                           </h4>
                           <ul className="space-y-2.5">
@@ -268,7 +268,7 @@ export default function ArticlePage({ params }) {
 
                 {/* Educational & Health Wellness Disclaimer */}
                 <div className="mt-12 p-6 sm:p-7 rounded-3xl bg-amber-50/80 border border-amber-200/90 space-y-2.5 text-xs sm:text-sm text-amber-950 leading-relaxed shadow-xs">
-                  <div className="flex items-center gap-2 text-amber-900 font-extrabold uppercase tracking-wider text-xs">
+                  <div className="flex items-center gap-2 text-amber-900 font-bold uppercase tracking-wider text-xs">
                     <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
                     <span>Educational & Wellness Disclaimer</span>
                   </div>
@@ -296,7 +296,7 @@ export default function ArticlePage({ params }) {
                 
                 {/* Table of Contents Box (Matching screenshot) */}
                 <div className="bg-white rounded-3xl border border-pink-100 p-6 shadow-xs space-y-4">
-                  <h3 className="text-xs font-extrabold uppercase tracking-widest text-gray-400">
+                  <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">
                     IN THIS ARTICLE
                   </h3>
 

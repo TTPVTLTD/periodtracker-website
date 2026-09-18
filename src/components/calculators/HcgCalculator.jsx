@@ -118,7 +118,7 @@ export default function HcgCalculator() {
             <Activity className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-xl font-extrabold text-gray-900">Beta hCG Doubling Inputs</h3>
+            <h3 className="text-xl font-bold text-gray-900">Beta hCG Doubling Inputs</h3>
             <p className="text-xs text-gray-500">Calculate hormone rise rate between two serial blood draws</p>
           </div>
         </div>

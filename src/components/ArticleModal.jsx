@@ -72,7 +72,7 @@ export default function ArticleModal({ article, onClose, onSelectOtherArticle, a
               <span className="text-gray-600 font-medium">By {article.author}</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 leading-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
               {article.title}
             </h2>
 

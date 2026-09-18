@@ -36,7 +36,7 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <h3 className="text-xl font-extrabold text-gray-900">Send us a message</h3>
+        <h3 className="text-xl font-bold text-gray-900">Send us a message</h3>
         <p className="text-xs text-gray-500 mt-1">We respond to community inquiries within 24–48 hours.</p>
       </div>
 

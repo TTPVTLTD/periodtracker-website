@@ -83,7 +83,7 @@ export default function ImplantationCalculator() {
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-extrabold text-gray-900">Implantation Window</h3>
+              <h3 className="text-xl font-bold text-gray-900">Implantation Window</h3>
               <p className="text-xs text-gray-500">Calculate when the blastocyst attaches</p>
             </div>
           </div>
@@ -218,7 +218,7 @@ export default function ImplantationCalculator() {
 
               {/* Clinical Educational Explanation */}
               <div className="p-6 rounded-3xl bg-white border border-pink-200 shadow-xs space-y-3">
-                <h5 className="font-extrabold text-gray-900 text-base flex items-center gap-2">
+                <h5 className="font-bold text-gray-900 text-base flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-flo-500" />
                   <span>What does implantation feel like?</span>
                 </h5>
