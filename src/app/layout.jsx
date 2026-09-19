@@ -17,23 +17,31 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
+export const viewport = {
+  themeColor: '#FF5E8C',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata = {
   metadataBase: new URL('https://trackperiods.com'),
   title: {
-    default: 'Period Tracker Ovulation Cycle | Menstrual Calendar & Fertility App',
+    default: 'Period Tracker Ovulation Cycles | Smart Cycle Calendar',
     template: '%s',
   },
-  description: 'Period Tracker Ovulation Cycle is your 100% private companion to track periods, calculate fertile ovulation days, and monitor menstrual health effortlessly.',
+  description: 'Period Tracker Ovulation Cycles is your 100% private companion to track periods, calculate fertile ovulation days, and monitor menstrual health effortlessly.',
   keywords: [
-    'Period Tracker Ovulation Cycle',
-    'period tracker app',
-    'ovulation calculator',
-    'menstrual cycle calendar',
-    'fertility tracker',
+    'Period Tracker Ovulation Cycles',
+    'period date calculator',
+    'safe period calculator',
     'safe days to avoid pregnancy',
-    'pregnancy planning app',
-    'women health companion',
-    'private cycle tracking'
+    'ovulation calculator for pregnancy',
+    'irregular period tracker',
+    'pcos cycle tracker',
+    'best days to get pregnant',
+    'free period tracker app india',
+    'menstrual cycle calendar'
   ],
   authors: [{ name: 'Period Tracker Ovulation Cycle Team' }],
   creator: 'Period Tracker Ovulation Cycle',
@@ -42,11 +50,22 @@ export const metadata = {
     icon: '/logo.png',
     apple: '/logo.png',
   },
+  itunes: {
+    appId: '6774117828',
+  },
   openGraph: {
-    title: 'Period Tracker Ovulation Cycle | Women\'s Health & Fertility Platform',
+    title: 'Period Tracker Ovulation Cycles | Smart Cycle Calendar',
     description: 'Track your menstrual cycle, predict your next period and peak ovulation days with the Period Tracker Ovulation Cycle app.',
     url: 'https://trackperiods.com',
     siteName: 'Period Tracker Ovulation Cycle',
+    images: [
+      {
+        url: 'https://trackperiods.com/brand-logo-final.png',
+        width: 1200,
+        height: 630,
+        alt: 'Period Tracker Ovulation Cycle App',
+      },
+    ],
     locale: 'en_US',
     type: 'website',
   },

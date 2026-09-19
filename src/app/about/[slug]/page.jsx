@@ -677,12 +677,14 @@ function ScienceAndResearchView({ pageData, otherPages }) {
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-3 rounded-xl bg-black hover:bg-gray-900 text-white transition-all shadow-sm hover:shadow-md duration-200 transform hover:-translate-y-0.5 cursor-pointer"
               >
-                <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
+                {/* <svg className="w-5 h-5 shrink-0" viewBox="0 0 24 24">
                   <path fill="#4285F4" d="M3.6 1.8L13.8 12 3.6 22.2c-.3-.3-.6-.8-.6-1.4V3.2c0-.6.3-1.1.6-1.4z"/>
                   <path fill="#FBBC05" d="M17.3 8.5L5.1.7C4.6.4 4.1.3 3.6 1.8l10.2 10.2 3.5-3.5z"/>
                   <path fill="#34A853" d="M17.3 15.5l-3.5-3.5L3.6 22.2c.5.5 1 .3 1.5.1l12.2-6.8z"/>
                   <path fill="#EA4335" d="M20.9 10.5l-3.6-2-3.5 3.5 3.5 3.5 3.6-2c.9-.5.9-1.5 0-2z"/>
-                </svg>
+                </svg> */}
+                    <img className="w-5 h-5" src="https://img.utdstc.com/icon/5d0/b04/5d0b0403257ac6cde82fa20c08ec83bea1d4b6ccd406fefdb1672717881c1a7a:600" alt="" />
+
                 <div className="text-left">
                   {/* <div className="text-base uppercase font-medium leading-none text-gray-300">GET IT ON</div> */}
                   <div className="text-sm font-bold leading-tight font-sans tracking-tight">Google Play</div>

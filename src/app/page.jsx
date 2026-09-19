@@ -10,24 +10,25 @@ import FaqSection from '../components/FaqSection';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Period Tracker & Ovulation Calculator | Smart Cycle Calendar',
+  title: 'Period Tracker Ovulation Cycles | Smart Cycle Calendar',
   description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
   keywords: [
-    'period tracker',
-    'ovulation calculator',
-    'menstrual cycle calendar',
-    'fertile window calculator',
+    'period tracker ovulation cycles',
+    'period date calculator',
+    'safe period calculator',
     'safe days to avoid pregnancy',
-    'period symptoms tracker',
+    'ovulation calculator for pregnancy',
+    'irregular period tracker',
     'pcos cycle tracker',
-    'pregnancy due date calculator',
-    'natural period cramp remedies ayurveda'
+    'best days to get pregnant',
+    'free period tracker app india',
+    'menstrual cycle calendar'
   ],
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'Period Tracker & Ovulation Calculator | Smart Cycle Calendar',
+    title: 'Period Tracker Ovulation Cycles | Smart Cycle Calendar',
     description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
     url: '/',
     siteName: 'Period Tracker & Ovulation Cycle',

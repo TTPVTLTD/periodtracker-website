@@ -49,7 +49,7 @@ export default function CookieBanner() {
             <Cookie className="w-5 h-5 text-[#FF5E8C]" />
           </div>
           <div className="pr-4">
-            <h3 className="font-bold text-[#1A1819] text-base mb-1">Your Privacy Matters</h3>
+            <h3 className="font-bold text-[#1A1819] text-base mb-1">We Care About Your Privacy</h3>
             <div className="text-sm text-[#706B6E] leading-relaxed mb-4">
               We use cookies to improve your experience and deliver relevant content. 
               Read our <Link href="/privacy" className="text-[#FF5E8C] font-semibold hover:underline">Privacy Policy</Link>.

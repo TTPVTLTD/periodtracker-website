@@ -17,11 +17,12 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-end">
           
           {/* Left Column: Headline, App Ratings, Store Buttons */}
-          <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center py-4 sm:py-6 lg:py-10">
+          <div className="lg:col-span-7 space-y-4 sm:space-y-5 text-center lg:text-left py-4 sm:py-6 lg:py-10">
 
             {/* Main Primary SEO H1 */}
-            <h1 className="  font-extrabold leading-snug">
-               Period Tracker Ovulation Cycles - <span className="bg-gradient-to-r from-brand-pink via-brand-babyPink to-brand-peach bg-clip-text text-transparent">Smart Cycle Calendar</span>
+            <h1 className="font-extrabold leading-snug">
+               Period Tracker Ovulation Cycles - <br />
+               <span className="bg-gradient-to-r from-brand-pink via-brand-babyPink to-brand-peach bg-clip-text text-transparent">Smart Cycle Calendar</span>
             </h1>
 
             {/* Subheadline with core keywords */}
@@ -109,7 +110,7 @@ export default function Hero() {
 
             {/* Floating Card 1: Symptom Patterns (Flo Reference Style) */}
             <div className="absolute -left-3 sm:-left-8 top-10 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl shadow-pink-900/10 border border-pink-100/90 z-20 hidden sm:block text-left">
-              <span className="font-bold text-gray-400 uppercase tracking-wider block mb-1.5">
+              <span className="text-sm font-bold text-gray-400 uppercase tracking-wider block mb-1.5">
                 Symptom patterns
               </span>
               <div className="space-y-1.5">
@@ -134,7 +135,7 @@ export default function Hero() {
 
             {/* Floating Card 2: Cycle Trends (Flo Reference Style) */}
             <div className="absolute -right-3 sm:-right-8 top-6 bg-white/95 backdrop-blur-md px-3.5 py-2.5 rounded-2xl shadow-xl shadow-pink-900/10 border border-pink-100/90 z-20 hidden sm:block text-left">
-              <span className="font-bold text-gray-400 uppercase tracking-wider block mb-1">
+              <span className="text-sm font-bold text-gray-400 uppercase tracking-wider block mb-1">
                 Cycle trends
               </span>
               <svg className="w-24 h-7 overflow-visible" viewBox="0 0 96 28">
@@ -153,7 +154,7 @@ export default function Hero() {
             {/* Floating Card 3: Health Assistant Badge */}
             <div className="absolute -right-2 sm:-right-6 bottom-32 sm:bottom-36 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-full shadow-lg shadow-pink-900/10 border border-pink-100/90 z-20 flex items-center gap-2 hidden sm:flex">
               <span className="">🌸</span>
-              <span className="font-bold text-gray-800">
+              <span className="text-sm font-bold text-gray-800">
                 Hi, I'm Health Assistant
               </span>
             </div>
