@@ -18,8 +18,8 @@ export default function ContactForm() {
         <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto">
           <Check className="w-8 h-8" />
         </div>
-        <h3 className="text-2xl font-black text-gray-900">Message Received!</h3>
-        <p className="text-sm text-gray-600 max-w-md mx-auto">
+        <h3 className="">Message Received!</h3>
+        <p className="text-gray-600 max-w-md mx-auto">
           Thank you for reaching out. Your feedback has been forwarded to our support and product development team.
         </p>
         <button
@@ -36,8 +36,8 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div>
-        <h3 className="text-xl font-bold text-gray-900">Send us a message</h3>
-        <p className="text-xs text-gray-500 mt-1">We respond to community inquiries within 24–48 hours.</p>
+        <h3 className="">Send us a message</h3>
+        <p className="text-gray-500 mt-1">We respond to community inquiries within 24–48 hours.</p>
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

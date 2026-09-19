@@ -206,11 +206,11 @@ function DetailedContentAndFaqs({ pageData, otherPages, accentColor = "rose" }) 
           <div className="space-y-6 text-gray-800 leading-relaxed">
             {pageData.content && pageData.content.map((sec, idx) => (
               <div key={idx} className="bg-white rounded-3xl border border-pink-100/90 p-6 sm:p-8 shadow-xs space-y-4">
-                <h2 className="text-xl sm:text-2xl font-black text-gray-900 flex items-center gap-3">
+                <h2 className=" font-extrabold flex items-center gap-3">
                   <CheckCircle2 className={`w-6 h-6 ${accentClasses.check} shrink-0`} />
                   <span>{sec.heading}</span>
                 </h2>
-                <p className="text-sm sm:text-base text-gray-700 leading-relaxed pl-9">
+                <p className=" text-gray-700 leading-relaxed pl-9">
                   {sec.body}
                 </p>
 
@@ -223,7 +223,7 @@ function DetailedContentAndFaqs({ pageData, otherPages, accentColor = "rose" }) 
                       </h4>
                       <ul className="space-y-2">
                         {sec.bullets.map((b, bIdx) => (
-                          <li key={bIdx} className="flex items-start gap-2.5 text-base sm:text-sm text-gray-700 leading-snug">
+                          <li key={bIdx} className="flex items-start gap-2.5 text-base text-gray-700 leading-snug">
                             <Check className={`w-4 h-4 ${accentClasses.check} shrink-0 mt-0.5`} />
                             <span>{b}</span>
                           </li>
@@ -244,10 +244,10 @@ function DetailedContentAndFaqs({ pageData, otherPages, accentColor = "rose" }) 
                   ?
                 </div>
                 <div>
-                  <h3 className="text-xl sm:text-2xl font-black text-gray-900">
+                  <h3 className="text-xl  font-bold">
                     Frequently Asked Questions
                   </h3>
-                  <p className="text-base text-gray-500">
+                  <p className="text-gray-500">
                     Clear answers to common questions regarding {pageData.title}
                   </p>
                 </div>
@@ -259,13 +259,13 @@ function DetailedContentAndFaqs({ pageData, otherPages, accentColor = "rose" }) 
                     key={fIdx}
                     className={`group rounded-2xl border ${accentClasses.faqItem} p-5 open:ring-1 transition-all`}
                   >
-                    <summary className="flex items-center justify-between font-bold text-gray-900 cursor-pointer list-none select-none text-sm sm:text-base">
+                    <summary className="flex items-center justify-between font-bold text-gray-900 cursor-pointer list-none select-none text-base">
                       <span className="pr-4">{faq.question}</span>
                       <span className={`${accentClasses.faqPlus} text-lg font-black group-open:rotate-45 transition-transform shrink-0`}>
                         +
                       </span>
                     </summary>
-                    <div className="mt-3 text-base sm:text-sm text-gray-600 leading-relaxed pt-3 border-t border-gray-100">
+                    <div className="mt-3 text-base text-gray-600 leading-relaxed pt-3 border-t border-gray-100">
                       {faq.answer}
                     </div>
                   </details>
@@ -279,7 +279,7 @@ function DetailedContentAndFaqs({ pageData, otherPages, accentColor = "rose" }) 
         {/* Sidebar: Explore Platform & Cycle Calculator Promo */}
         <aside className="lg:col-span-4 space-y-6 lg:sticky lg:top-28">
           <div className="bg-white rounded-3xl border border-pink-100 p-6 shadow-xs space-y-3">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-gray-400">
+            <h3 className="uppercase tracking-widest text-gray-400">
               EXPLORE ABOUT TOPICS
             </h3>
             <div className="space-y-1.5">
@@ -300,10 +300,10 @@ function DetailedContentAndFaqs({ pageData, otherPages, accentColor = "rose" }) 
             <div className="text-base font-bold uppercase tracking-wider text-pink-100">
               Free Web Tools
             </div>
-            <h4 className="text-lg font-black leading-snug">
+            <h4 className="leading-snug">
               Calculate Your Cycle & Ovulation Window
             </h4>
-            <p className="text-base text-white/90 leading-relaxed">
+            <p className="text-white/90 leading-relaxed">
               Use our private in-browser calculators to predict your fertile days and period timeline in seconds.
             </p>
             <Link
@@ -340,15 +340,15 @@ function ScienceAndResearchView({ pageData, otherPages }) {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
             <div className="lg:col-span-7 space-y-5">
-              <div className="inline-block text-[#0f766e] text-base sm:text-sm font-bold uppercase tracking-wider">
+              <div className="inline-block text-[#0f766e] text-base font-bold uppercase tracking-wider">
                 Advancing female health
               </div>
 
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
+              <h1 className="  font-extrabold leading-snug">
                 Science and research at Period Tracker
               </h1>
 
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed font-normal">
+              <p className=" text-gray-700 leading-relaxed">
                 On a global level, female health has historically lacked personalized research. That’s why we built Period Tracker around user empowerment: combining smart predictive algorithms, AI health reports, and time-tested Ayurvedic remedies to give women full ownership of their reproductive well-being.
               </p>
 
@@ -451,10 +451,10 @@ function ScienceAndResearchView({ pageData, otherPages }) {
             {/* <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-pink-100 text-flo-700 text-base font-bold">
               <span></span>
             </div> */}
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight">
+            <h2 className=" font-extrabold ">
               Designed for Women, Grounded in Real Science
             </h2>
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            <p className=" text-gray-600 leading-relaxed">
               Our team is committed to finding new ways to support groundbreaking app features and addressing the gaps in female health science.
             </p>
           </div>
@@ -479,8 +479,8 @@ function ScienceAndResearchView({ pageData, otherPages }) {
                   <span>AI Smart Reports</span>
                 </div>
               </div>
-              <h3 className="text-base font-black text-gray-900 mt-2">AI-Driven Insights</h3>
-              <p className="text-base text-gray-500 mt-1 max-w-[200px] leading-relaxed">
+              <h3 className="mt-2">AI-Driven Insights</h3>
+              <p className="text-gray-500 mt-1 max-w-[200px] leading-relaxed">
                 Smart mathematical pattern analysis for rolling cycle shifts
               </p>
             </div>
@@ -502,8 +502,8 @@ function ScienceAndResearchView({ pageData, otherPages }) {
                   <span>100% In-Device</span>
                 </div>
               </div>
-              <h3 className="text-base font-black text-gray-900 mt-2">Private & Confidential</h3>
-              <p className="text-base text-gray-500 mt-1 max-w-[200px] leading-relaxed">
+              <h3 className="mt-2">Private & Confidential</h3>
+              <p className="text-gray-500 mt-1 max-w-[200px] leading-relaxed">
                 Your intimate cycle records never leave your local mobile sandbox
               </p>
             </div>
@@ -525,8 +525,8 @@ function ScienceAndResearchView({ pageData, otherPages }) {
                   <span>Ayurveda Care</span>
                 </div>
               </div>
-              <h3 className="text-base font-black text-gray-900 mt-2">Natural Herbal Relief</h3>
-              <p className="text-base text-gray-500 mt-1 max-w-[200px] leading-relaxed">
+              <h3 className="mt-2">Natural Herbal Relief</h3>
+              <p className="text-gray-500 mt-1 max-w-[200px] leading-relaxed">
                 Ancient herbal infusions & dietary remedies for menstrual cramp comfort
               </p>
             </div>
@@ -548,8 +548,8 @@ function ScienceAndResearchView({ pageData, otherPages }) {
                   <span>500K+ Women</span>
                 </div>
               </div>
-              <h3 className="text-base font-black text-gray-900 mt-2">Global Community</h3>
-              <p className="text-base text-gray-500 mt-1 max-w-[200px] leading-relaxed">
+              <h3 className="mt-2">Global Community</h3>
+              <p className="text-gray-500 mt-1 max-w-[200px] leading-relaxed">
                 Trusted by hundreds of thousands of women across 140+ countries
               </p>
             </div>
@@ -562,7 +562,7 @@ function ScienceAndResearchView({ pageData, otherPages }) {
               
               {/* Left Column: Authentic Copy with Peach Highlighted Pills */}
               <div className="lg:col-span-6 space-y-5 text-left">
-                <p className="text-lg sm:text-xl lg:text-2xl text-gray-900 leading-relaxed font-normal">
+                <p className=" text-gray-900 leading-relaxed">
                   In the Period Tracker app, you'll find the lowdown on what to expect{' '}
                   <span className="bg-[#ffe4d6] text-gray-950 px-2 py-0.5 rounded font-medium">cycle by cycle</span>.
                   {' '}Plus a{' '}
@@ -591,20 +591,20 @@ function ScienceAndResearchView({ pageData, otherPages }) {
                   
                   {/* Circle 1: Soft Lavender Circle */}
                   <div className="w-44 h-44 sm:w-56 sm:h-56 rounded-full bg-[#f3ebf8] flex flex-col items-center justify-center p-6 text-center shadow-md border border-purple-100 relative z-10">
-                    <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
+                    <span className="  font-black text-gray-900 tracking-tight">
                       88%
                     </span>
-                    <span className="text-base sm:text-sm text-gray-700 font-medium mt-2 leading-snug">
+                    <span className="text-base text-gray-700 font-medium mt-2 leading-snug">
                       of users felt more educated about their cycle & hormones
                     </span>
                   </div>
 
                   {/* Circle 2: Soft Mint / Sage Circle (Overlapping & Staggered) */}
                   <div className="w-48 h-48 sm:w-60 sm:h-60 rounded-full bg-[#d7ece6] flex flex-col items-center justify-center p-6 text-center shadow-lg border border-teal-100 -ml-10 sm:-ml-14 -mt-6 sm:-mt-8 relative z-20">
-                    <span className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
+                    <span className="  font-black text-gray-900 tracking-tight">
                       1 in 3
                     </span>
-                    <span className="text-base sm:text-sm text-gray-700 font-medium mt-2 leading-snug">
+                    <span className="text-base text-gray-700 font-medium mt-2 leading-snug">
                       discovered irregular cycle patterns early with our AI tools
                     </span>
                   </div>
@@ -646,11 +646,11 @@ function ScienceAndResearchView({ pageData, otherPages }) {
             </div>
 
             {/* Right Column: Mission Text & Store CTAs */}
-            <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight leading-tight">
+            <div className="lg:col-span-7 space-y-4 text-center">
+              <h2 className=" font-extrabold  leading-tight">
                 Closing the global divide in female health science
               </h2>
-              <p className="text-sm sm:text-base text-gray-700 leading-relaxed max-w-2xl">
+              <p className=" text-gray-700 leading-relaxed max-w-2xl">
                 Historically, women’s reproductive studies were concentrated in narrow geographic regions. Period Tracker delivers free, localized cycle tools and predictive health models to women and families across Nigeria, Africa, and communities worldwide.
               </p>
               <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
@@ -691,7 +691,7 @@ function ScienceAndResearchView({ pageData, otherPages }) {
 
                 <Link
                   href="/calculators"
-                  className="inline-flex items-center gap-2 text-base sm:text-sm font-bold text-teal-800 hover:text-teal-900 group transition-colors ml-1"
+                  className="inline-flex items-center gap-2 text-base font-bold text-teal-800 hover:text-teal-900 group transition-colors ml-1"
                 >
                   <span className="underline decoration-teal-400 group-hover:decoration-teal-600">
                     Explore Cycle Tools
@@ -733,11 +733,11 @@ function AiReportsView({ pageData, otherPages }) {
                 <span>Intelligent Cycle Diagnostics</span>
               </div> */}
               
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
+              <h1 className="  font-extrabold leading-snug">
                 AI-Generated Health Reports for Your Cycle
               </h1>
 
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed max-w-2xl">
+              <p className=" text-gray-700 leading-relaxed max-w-2xl">
                 When you log your period days, cramp intensity, and body signals, our in-app AI synthesizes the patterns into comprehensive digital health reports. Spot irregularities, track rolling averages, and stay in sync with your rhythm.
               </p>
 
@@ -812,8 +812,8 @@ function AiReportsView({ pageData, otherPages }) {
             <div className="w-10 h-10 rounded-2xl bg-purple-100 text-purple-600 flex items-center justify-center font-black">
               1
             </div>
-            <h3 className="text-lg font-bold text-gray-900">User Cycle Logging</h3>
-            <p className="text-base text-gray-600 leading-relaxed">
+            <h3 className="">User Cycle Logging</h3>
+            <p className="text-gray-600 leading-relaxed">
               Log period starts, flow heaviness, and symptoms with a few quick taps. The app stores all logs securely on your phone.
             </p>
           </div>
@@ -822,8 +822,8 @@ function AiReportsView({ pageData, otherPages }) {
             <div className="w-10 h-10 rounded-2xl bg-pink-100 text-flo-600 flex items-center justify-center font-black">
               2
             </div>
-            <h3 className="text-lg font-bold text-gray-900">AI Pattern Recognition</h3>
-            <p className="text-base text-gray-600 leading-relaxed">
+            <h3 className="">AI Pattern Recognition</h3>
+            <p className="text-gray-600 leading-relaxed">
               The AI detects rolling cycle shifts, fertile windows, and PMS trends over 3, 6, and 12 months with high mathematical accuracy.
             </p>
           </div>
@@ -832,8 +832,8 @@ function AiReportsView({ pageData, otherPages }) {
             <div className="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-black">
               3
             </div>
-            <h3 className="text-lg font-bold text-gray-900">Personalized Health Reports</h3>
-            <p className="text-base text-gray-600 leading-relaxed">
+            <h3 className="">Personalized Health Reports</h3>
+            <p className="text-gray-600 leading-relaxed">
               Export digital summary reports and review your menstrual statistics anytime without third-party data harvesting.
             </p>
           </div>
@@ -860,7 +860,7 @@ function AiReportsView({ pageData, otherPages }) {
           {/* Right Side: Rich Deep Violet/Plum Panel */}
           <div className="md:col-span-1 lg:col-span-6 bg-[#2a1340] p-8 sm:p-12 lg:p-14 flex flex-col justify-between text-left">
             <div className="space-y-5">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight tracking-tight">
+              <h2 className=" font-extrabold  text-white leading-tight">
                 Personalized AI cycle intelligence in every woman’s hands.
               </h2>
 
@@ -917,7 +917,7 @@ function AiReportsView({ pageData, otherPages }) {
 
             {/* Testimonial Quote Block */}
             <div className="mt-8 pt-6 border-t border-white/20">
-              <p className="text-white/95 text-base sm:text-sm leading-relaxed font-normal italic">
+              <p className="text-white/95 leading-relaxed italic">
                 “Generating my monthly AI cycle report before visiting my practitioner made everything so simple. It organized all my cramps, energy shifts, and PMS patterns into one easy-to-read summary.”
               </p>
 
@@ -932,7 +932,7 @@ function AiReportsView({ pageData, otherPages }) {
                   />
                 </div>
                 <div>
-                  <div className="text-white font-bold text-base sm:text-sm leading-tight">
+                  <div className="text-white font-bold text-base leading-tight">
                     Folake O., Lagos, Nigeria
                   </div>
                   <div className="text-white/75 text-base">
@@ -1001,11 +1001,11 @@ function AyurvedaCareView({ pageData, otherPages }) {
                 <span>Ancient Wisdom for Cycle Harmony</span>
               </div>
 
-              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
+              <h1 className="  font-extrabold leading-snug">
                 Ayurveda & Natural Home Remedies Module
               </h1>
 
-              <p className="text-base sm:text-lg text-gray-700 leading-relaxed">
+              <p className=" text-gray-700 leading-relaxed">
                 In Ayurveda, the menstrual cycle is a sacred monthly renewal. Our dedicated in-app module brings you natural home remedies, cycle-synced nutrition, and herbal teas to comfort cramps and harmonize hormones naturally.
               </p>
 
@@ -1055,8 +1055,8 @@ function AyurvedaCareView({ pageData, otherPages }) {
       {/* Remedies Showcase Grid */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         <div>
-          <h2 className="text-2xl font-black text-gray-900">Featured In-App Ayurvedic Remedies</h2>
-          <p className="text-base sm:text-sm text-gray-500 mt-1">
+          <h2 className="">Featured In-App Ayurvedic Remedies</h2>
+          <p className=" text-gray-500 mt-1">
             Proven herbal kitchen remedies accessible right inside your mobile app
           </p>
         </div>
@@ -1071,8 +1071,8 @@ function AyurvedaCareView({ pageData, otherPages }) {
                 <Leaf className="w-4 h-4 text-emerald-500" />
               </div>
 
-              <h3 className="text-lg font-bold text-gray-900">{rem.title}</h3>
-              <p className="text-base sm:text-sm text-gray-600">{rem.benefit}</p>
+              <h3 className="">{rem.title}</h3>
+              <p className=" text-gray-600">{rem.benefit}</p>
               
               <div className="pt-2 border-t border-emerald-50 text-base text-gray-400 font-medium">
                 <strong className="text-gray-600">Key Ingredients:</strong> {rem.ingredient}
@@ -1102,7 +1102,7 @@ function AyurvedaCareView({ pageData, otherPages }) {
           {/* Right Side: Deep Warm Terracotta Panel */}
           <div className="md:col-span-1 lg:col-span-6 bg-[#48211b] p-8 sm:p-12 lg:p-14 flex flex-col justify-between text-left">
             <div className="space-y-5">
-              <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight tracking-tight">
+              <h2 className=" font-extrabold  text-white leading-tight">
                 Gentle, natural herbal relief for menstrual discomfort.
               </h2>
 
@@ -1159,7 +1159,7 @@ function AyurvedaCareView({ pageData, otherPages }) {
 
             {/* Testimonial Quote Block */}
             <div className="mt-8 pt-6 border-t border-white/20">
-              <p className="text-white/95 text-base sm:text-sm leading-relaxed font-normal italic">
+              <p className="text-white/95 leading-relaxed italic">
                 “Drinking the warm ginger-ajwain herbal infusion on Day 1 completely eased my acute menstrual cramps naturally. I love having authentic holistic remedies right alongside my cycle tracker.”
               </p>
 
@@ -1174,7 +1174,7 @@ function AyurvedaCareView({ pageData, otherPages }) {
                   />
                 </div>
                 <div>
-                  <div className="text-white font-bold text-base sm:text-sm leading-tight">
+                  <div className="text-white font-bold text-base leading-tight">
                     Sunita P., India
                   </div>
                   <div className="text-white/75 text-base">
@@ -1215,11 +1215,11 @@ function PrivacyPortalView({ pageData, otherPages }) {
               <span>100% In-Device Data Protection</span>
             </div>
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white tracking-tight leading-snug">
+            <h1 className="  text-white leading-snug">
               Your cycle data belongs strictly to you. Period.
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-300 leading-relaxed font-normal">
+            <p className=" text-gray-300 leading-relaxed">
               Unlike typical period tracking apps that harvest intimate dates for advertising brokers, our calculations happen locally on your device. We have zero access to your cycle records.
             </p>
           </div>
@@ -1234,8 +1234,8 @@ function PrivacyPortalView({ pageData, otherPages }) {
             <div className="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-gray-900">End-to-End Encryption</h3>
-            <p className="text-base sm:text-sm text-gray-600 leading-relaxed">
+            <h3 className="">End-to-End Encryption</h3>
+            <p className=" text-gray-600 leading-relaxed">
               Your period logs and sensitive test entries are protected by private encryption. They are never sold to ad brokers or marketing networks.
             </p>
           </div>
@@ -1244,8 +1244,8 @@ function PrivacyPortalView({ pageData, otherPages }) {
             <div className="w-10 h-10 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center">
               <Lock className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-gray-900">Anonymous Web Tools</h3>
-            <p className="text-base sm:text-sm text-gray-600 leading-relaxed">
+            <h3 className="">Anonymous Web Tools</h3>
+            <p className=" text-gray-600 leading-relaxed">
               No account, email, or telephone number is ever required to use our ovulation calculators, due date tools, or read our health library.
             </p>
           </div>
@@ -1254,8 +1254,8 @@ function PrivacyPortalView({ pageData, otherPages }) {
             <div className="w-10 h-10 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center">
               <Check className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-gray-900">Zero Advertising Brokers</h3>
-            <p className="text-base sm:text-sm text-gray-600 leading-relaxed">
+            <h3 className="">Zero Advertising Brokers</h3>
+            <p className=" text-gray-600 leading-relaxed">
               We never sell or monetize sensitive reproductive health metrics. Your bodily data remains completely confidential.
             </p>
           </div>
@@ -1264,8 +1264,8 @@ function PrivacyPortalView({ pageData, otherPages }) {
             <div className="w-10 h-10 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center">
               <Activity className="w-5 h-5" />
             </div>
-            <h3 className="text-lg font-bold text-gray-900">One-Tap Data Erasure</h3>
-            <p className="text-base sm:text-sm text-gray-600 leading-relaxed">
+            <h3 className="">One-Tap Data Erasure</h3>
+            <p className=" text-gray-600 leading-relaxed">
               Want to reset your cycle history? Wipe your records anytime with a single tap in the app settings, or close your browser tab.
             </p>
           </div>
@@ -1298,11 +1298,11 @@ function PrivacyPortalView({ pageData, otherPages }) {
               <span>100% In-Device Data Protection</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight leading-tight">
+            <h2 className=" font-extrabold  leading-tight">
               Your body, your cycle, your private sanctuary
             </h2>
 
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            <p className=" text-gray-600 leading-relaxed">
               Your reproductive logs and intimacy timeline are strictly personal. We guarantee that your period records and pregnancy calculations remain saved on your own device—never sold to advertisers, never stored on external cloud brokers.
             </p>
 
@@ -1380,11 +1380,11 @@ function ContactView({ pageData, otherPages }) {
               <span>We're Here to Help</span>
             </div>
 
-            <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+            <h1 className=" leading-tight">
               Contact & Community Support
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+            <p className=" text-gray-600 leading-relaxed">
               Have questions about your cycle predictions, suggestions for new Ayurvedic remedies, or need assistance with the app? Our team is always ready to listen.
             </p>
           </div>
@@ -1402,8 +1402,8 @@ function ContactView({ pageData, otherPages }) {
               <div className="w-10 h-10 rounded-2xl bg-flo-50 text-flo-600 flex items-center justify-center">
                 <Mail className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-gray-900 text-base">Direct Email Inquiries</h3>
-              <p className="text-base text-gray-500">
+              <h3 className="">Direct Email Inquiries</h3>
+              <p className="text-gray-500">
                 Reach our app support team directly for assistance:
               </p>
               <a href="mailto:support@tracewave.period" className="text-base font-bold text-flo-600 hover:underline block pt-1">
@@ -1415,14 +1415,14 @@ function ContactView({ pageData, otherPages }) {
               <div className="w-10 h-10 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center">
                 <Sparkles className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-gray-900 text-base">Feature & Remedy Requests</h3>
-              <p className="text-base text-gray-500">
+              <h3 className="">Feature & Remedy Requests</h3>
+              <p className="text-gray-500">
                 Want to see a specific home remedy or cycle feature? Let us know and we'll add it in upcoming app releases.
               </p>
             </div>
 
             <div className="bg-white rounded-3xl p-6 border border-pink-100 shadow-xs space-y-3">
-              <h3 className="font-bold text-gray-900 text-sm">Download Mobile App</h3>
+              <h3 className="">Download Mobile App</h3>
               <div className="flex gap-2">
                 <a
                   href={APP_LINKS.ios}
@@ -1478,11 +1478,11 @@ function ContactView({ pageData, otherPages }) {
               <span>Dedicated 24/7 Community Care</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-gray-900 tracking-tight leading-tight">
+            <h2 className=" font-extrabold  leading-tight">
               A supportive global sisterhood, wherever you live
             </h2>
 
-            <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+            <p className=" text-gray-600 leading-relaxed">
               Have questions about our cycle algorithms, suggestions for new Ayurvedic home remedies, or need help managing your mobile subscription? Our support team and global community creators are always here to listen and help you thrive.
             </p>
 

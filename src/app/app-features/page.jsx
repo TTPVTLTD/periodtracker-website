@@ -101,11 +101,11 @@ export default function AppFeaturesPage() {
               <span>Mobile App Architecture</span>
             </div> */}
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-brand-dark tracking-tight leading-snug font-heading">
+            <h1 className="  font-extrabold leading-snug">
               Simple, Powerful Features Designed Around <span className="bg-gradient-to-r from-brand-pink via-brand-babyPink to-brand-peach bg-clip-text text-transparent">Your Body.</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-brand-gray max-w-2xl mx-auto leading-relaxed">
+            <p className=" text-brand-gray max-w-2xl mx-auto leading-relaxed">
               Explore the core capabilities of Period Tracker—from precision cycle forecasts to ovulation detection, pregnancy milestones, AI health reports, and holistic comfort.
             </p>
 
@@ -177,10 +177,10 @@ export default function AppFeaturesPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
-              <h2 className="text-2xl sm:text-4xl font-black text-brand-dark tracking-tight font-heading">
+              <h1 className="">
                 Complete App Capabilities
-              </h2>
-              <p className="text-sm sm:text-base text-brand-gray">
+              </h1>
+              <p className=" text-brand-gray">
                 Everything you need to track, understand, and nurture your body through each cycle phase.
               </p>
             </div>
@@ -201,26 +201,26 @@ export default function AppFeaturesPage() {
                       
                       {/* Card Header: Icon & Category Badge */}
                       <div className="flex items-center justify-between flex-wrap gap-2">
-                        <div className={`w-12 h-12 rounded-2xl ${style.lightBg} border ${style.border} flex items-center justify-center ${style.color} shadow-2xs`}>
+                        <div className={`w-10 h-10 rounded-2xl ${style.lightBg} border ${style.border} flex items-center justify-center ${style.color} shadow-2xs`}>
                           <Icon className="w-6 h-6" />
                         </div>
-                        <span className={`px-3 py-1 rounded-full text-sm font-bold tracking-wide uppercase border ${feature.badgeColor}`}>
+                        <span className={`px-3 py-1 rounded-full text-xs font-bold tracking-wide uppercase border ${feature.badgeColor}`}>
                           {feature.badge}
                         </span>
                       </div>
 
                       {/* Title & Subtitle */}
                       <div className="space-y-1.5">
-                        <h3 className="text-xl sm:text-2xl font-bold text-brand-dark tracking-tight leading-snug font-heading">
+                        <h3 className=" font-bold leading-snug">
                           {feature.title}
                         </h3>
-                        <p className="text-base sm:text-sm font-semibold text-brand-gray">
+                        <p className="!text-sm text-brand-gray">
                           {feature.subtitle}
                         </p>
                       </div>
 
                       {/* Overview Narrative */}
-                      <p className="text-brand-gray text-base sm:text-sm leading-relaxed">
+                      <p className="!text-sm text-brand-gray leading-relaxed">
                         {feature.overview}
                       </p>
 
@@ -237,7 +237,7 @@ export default function AppFeaturesPage() {
                             >
                               <div className="flex items-start gap-2.5">
                                 <CheckCircle2 className={`w-4 h-4 ${style.color} shrink-0 mt-0.5`} />
-                                <div className="text-base">
+                                <div className="text-sm">
                                   <span className="font-bold text-brand-dark block">{title}</span>
                                   {desc && <span className="text-brand-gray leading-snug mt-0.5 block">{desc}</span>}
                                 </div>
@@ -253,7 +253,7 @@ export default function AppFeaturesPage() {
                       <div className="w-8 h-8 rounded-xl bg-white flex items-center justify-center shadow-2xs shrink-0">
                         <Award className={`w-4 h-4 ${style.color}`} />
                       </div>
-                      <div className="text-base sm:text-sm font-semibold text-gray-800">
+                      <div className="text-sm font-semibold text-gray-800">
                         <span className={`font-bold mr-1 ${style.color}`}>Clinical Highlight:</span>
                         {feature.highlight}
                       </div>
@@ -275,7 +275,7 @@ export default function AppFeaturesPage() {
                 <HelpCircle className="w-3.5 h-3.5" />
                 <span>Frequently Asked Questions</span>
               </div> */}
-              <h2 className="text-2xl sm:text-3xl font-black text-brand-dark tracking-tight font-heading">
+              <h2 className=" font-extrabold">
                 Frequently Asked Questions App Features
               </h2>
             </div>
@@ -289,7 +289,7 @@ export default function AppFeaturesPage() {
                   <button
                     type="button"
                     onClick={() => toggleFaq(fIdx)}
-                    className="w-full py-4 px-5 text-left flex items-center justify-between gap-4 font-bold text-sm sm:text-base text-brand-dark hover:text-brand-pink transition-colors cursor-pointer"
+                    className="w-full py-4 px-5 text-left flex items-center justify-between gap-4 font-bold text-base text-brand-dark hover:text-brand-pink transition-colors cursor-pointer"
                   >
                     <span>{faq.question}</span>
                     <ChevronRight
@@ -299,7 +299,7 @@ export default function AppFeaturesPage() {
                     />
                   </button>
                   {activeFaq === fIdx && (
-                    <div className="px-5 pb-5 pt-1 text-sm sm:text-sm text-brand-gray leading-relaxed border-t border-pink-100 bg-brand-accent/20">
+                    <div className="px-5 pb-5 pt-1 text-base text-brand-gray leading-relaxed border-t border-pink-100 bg-brand-accent/20">
                       {faq.answer}
                     </div>
                   )}
@@ -312,11 +312,10 @@ export default function AppFeaturesPage() {
         {/* Global Download CTA Banner */}
         <section className="py-14 bg-gradient-to-r from-brand-pink via-[#FF7597] to-brand-peach text-white text-center">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
-            <h2 className="text-2xl sm:text-4xl font-black tracking-tight font-heading">
-             Ready to flow with
-your body's rhythm?
+            <h2 className="text-white font-bold">
+             Ready to flow with your body's rhythm?
             </h2>
-            <p className="text-white/90 text-sm sm:text-base max-w-xl mx-auto">
+            <p className="text-white/90 max-w-xl mx-auto">
               Download Period Tracker Ovulation Cycle today for iOS or Android. Join over 100,000+ women tracking cycles, optimizing workouts, and living in sync.
             </p>
             <div className="pt-2 flex flex-wrap items-center justify-center gap-3">

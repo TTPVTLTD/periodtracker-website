@@ -18,10 +18,10 @@ export default function CategoriesSection({ activeCategory, onSelectCategory }) 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-2xl mx-auto mb-8">
-          <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
+          <h3 className="  font-extrabold leading-snug">
             Explore Health Topics & Categories
           </h3>
-          <p className="text-sm sm:text-base text-gray-600 mt-2">
+          <p className=" text-gray-600 mt-2">
             Flo-inspired educational library written by certified reproductive specialists.
           </p>
         </div>

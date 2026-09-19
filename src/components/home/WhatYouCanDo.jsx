@@ -75,14 +75,14 @@ export default function WhatYouCanDo() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16 space-y-3">
-          {/* <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100 text-flo-700 text-xs sm:text-sm font-bold tracking-wide">
+          {/* <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-pink-100 text-flo-700  font-bold tracking-wide">
             <Sparkles className="w-3.5 h-3.5 text-flo-600" />
             <span>Comprehensive Reproductive Health Tracking</span>
           </div> */}
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
+          <h2 className="  font-extrabold leading-snug">
             Smart Menstrual Cycle & Fertility Tracking Features
           </h2>
-          <p className="text-sm sm:text-base text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className=" text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Discover how our intuitive companion supports every stage of your reproductive journey — from daily flow logging and ovulation calculations to pregnancy milestones and natural Ayurvedic comfort.
           </p>
         </div>
@@ -152,11 +152,11 @@ export default function WhatYouCanDo() {
                       : 'bg-transparent border border-transparent hover:bg-flo-50/50'
                   }`}
                 >
-                  <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-1 leading-snug">
+                  <h3 className=" font-bold mb-1 leading-snug">
                     {feat.title}
                   </h3>
 
-                  <p className="text-sm text-gray-600 font-normal leading-relaxed">
+                  <div className="text-sm text-gray-600 leading-relaxed">
                     {feat.description.split(feat.linkText)[0]}
                     <Link
                       href={feat.linkHref}
@@ -166,7 +166,7 @@ export default function WhatYouCanDo() {
                       {feat.linkText}
                     </Link>
                     {feat.description.split(feat.linkText)[1] || ''}
-                  </p>
+                  </div>
                 </div>
               );
             })}
@@ -176,14 +176,14 @@ export default function WhatYouCanDo() {
 
         {/* Quick App Download Bar */}
         <div className="mt-12 pt-6 border-t border-pink-100 flex flex-col sm:flex-row items-center justify-between gap-4 bg-flo-50/50 rounded-3xl p-6">
-          <div className="text-center sm:text-left">
-            <h3 className="font-bold text-gray-900 text-base">Ready to start tracking on your phone?</h3>
-            <p className="text-sm text-gray-500 mt-0.5">Log daily periods, generate AI reports, and explore Ayurvedic remedies.</p>
+          <div className="text-center">
+            <h3 className="">Ready to start tracking on your phone?</h3>
+            <p className="text-gray-500 mt-0.5">Log daily periods, generate AI reports, and explore Ayurvedic remedies.</p>
           </div>
           <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
             <Link
               href="/app-features"
-              className="px-4 py-2.5 rounded-xl bg-white border border-pink-200 hover:bg-pink-50 text-flo-600 font-bold text-sm transition-transform hover:-translate-y-0.5 shadow-2xs"
+              className="px-4 py-2 text-sm rounded-xl bg-white border border-pink-200 hover:bg-pink-50 text-flo-600 font-bold transition-transform hover:-translate-y-0.5 shadow-2xs"
             >
               Explore All Features &rarr;
             </Link>
@@ -198,8 +198,8 @@ export default function WhatYouCanDo() {
                   <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 0.92-2.85-.9.04-2 .6-2.65 1.35-.58.67-1.08 1.74-.95 2.77 1.01.08 2.05-.51 2.68-1.27z"/>
                 </svg>
                 <div className="text-left">
-                  {/* <div className="text-xs uppercase font-medium leading-none text-gray-300">Download on the</div> */}
-                  <div className="text-sm font-bold leading-tight font-sans tracking-tight">App Store</div>
+                  {/* <div className="uppercase font-medium leading-none text-gray-300">Download on the</div> */}
+                  <div className="font-bold leading-tight font-sans tracking-tight">App Store</div>
                 </div>
               </a>
 
@@ -217,8 +217,8 @@ export default function WhatYouCanDo() {
                   <path fill="#EA4335" d="M20.9 10.5l-3.6-2-3.5 3.5 3.5 3.5 3.6-2c.9-.5.9-1.5 0-2z"/>
                 </svg>
                 <div className="text-left">
-                  {/* <div className="text-xs uppercase font-medium leading-none text-gray-300">GET IT ON</div> */}
-                  <div className="text-sm font-bold leading-tight font-sans tracking-tight">Google Play</div>
+                  {/* <div className="uppercase font-medium leading-none text-gray-300">GET IT ON</div> */}
+                  <div className="font-bold leading-tight font-sans tracking-tight">Google Play</div>
                 </div>
               </a>
 

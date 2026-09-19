@@ -1,0 +1,27 @@
+# Period Tracker & Ovulation Cycle - Project Documentation
+
+## Project Summary
+This is the official promotional and informational website for "Period Tracker & Ovulation Cycle", a mobile app offering AI-driven cycle predictions, Ayurveda remedies, and high privacy standards for female reproductive health. The site features SEO-optimized landing pages, informative articles, cycle calculators, and FAQs.
+
+## Tech Stack
+- Next.js 14 (App Router)
+- React
+- Tailwind CSS
+
+## Architecture & Folder Structure
+- `/src/app`: Contains the Next.js App Router structure.
+  - `/src/app/page.jsx`: Main landing page (Home).
+  - `/src/app/articles/[id]`: Dynamic routes for health articles/guides.
+  - `/src/app/calculators/[slug]`: Dynamic routes for cycle/ovulation calculators.
+  - `/src/app/about/[slug]`: Dynamic routes for specific informational pages (Science, AI, Privacy).
+  - `/src/app/privacy`, `/src/app/terms`, `/src/app/faq`, `/src/app/contact`: Standard static pages.
+- `/src/components`: Reusable UI components (Navbar, Footer, Hero, FaqSection, etc.).
+  - `/src/components/home`: Specific sections for the homepage.
+  - `/src/components/calculators`: Calculator logic components.
+- `/src/data`: Contains static mock data, SEO data, and lists of FAQs/Links.
+
+## Core Logic & Data Flow
+- **Routing**: Handled purely by Next.js App Router (`/app` directory).
+- **Styling & Typography**: Heavily relies on Tailwind CSS. Global base styles are injected via `src/app/globals.css`, enforcing strict standard scaling for structural typography (`h1`-`h6`, `p`).
+- **Data Fetching**: Primarily relies on static data imports from `/src/data`. Some pages (like FAQ) demonstrate fetching from external CMS APIs (e.g., `https://flo-tracker-api.tracewavetransparency.com/api/v1/admin/cms/list_cms`).
+- **Dynamic Content**: Uses `generateStaticParams` and `generateMetadata` for SEO-friendly static site generation (SSG) on dynamic routes (Calculators, Articles, About pages).

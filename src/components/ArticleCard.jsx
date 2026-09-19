@@ -39,14 +39,14 @@ export default function ArticleCard({ article }) {
           </div>
 
           {/* Title */}
-          <h4 className="text-lg font-bold text-gray-900 group-hover:text-flo-600 transition-colors line-clamp-2 leading-snug">
+          <h3 className="group-hover:text-flo-600 transition-colors line-clamp-2 leading-snug">
             {article.title}
-          </h4>
+          </h3>
 
           {/* Summary */}
-          <p className="text-sm text-gray-600 line-clamp-3 leading-relaxed">
+          <div className="text-sm text-gray-600 line-clamp-3 leading-relaxed">
             {article.summary}
-          </p>
+          </div>
         </div>
 
         {/* Card Footer: Guide type & Read link */}

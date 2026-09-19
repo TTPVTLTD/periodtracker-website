@@ -149,26 +149,26 @@ export default function CalculatorDetailPage({ params }) {
             </nav>
 
             {/* Main Title matching screenshot */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug max-w-4xl">
+            <h1 className=" font-extrabold leading-snug max-w-4xl">
               {calc.shortTitle} & Early Health Charts
             </h1>
 
             {/* Subheading / Description matching screenshot */}
-            <p className="mt-4 text-base sm:text-lg text-gray-700 leading-relaxed max-w-3xl">
+            <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl">
               {calc.summary}
             </p>
 
             {/* Tool Byline */}
             <div className="mt-6 pt-6 border-t border-pink-200/70 flex flex-wrap items-center gap-4 text-xs text-gray-600">
-              <span className="text-gray-500">
-                Updated <strong className="text-gray-800">{calc.updatedDate}</strong>
+              <span className="text-sm text-gray-500">
+                Updated &nbsp; <strong className="text-gray-800">{calc.updatedDate}</strong>
               </span>
               <span>•</span>
-              <span className="text-flo-600 font-semibold">
+              <span className="text-sm text-flo-600 font-semibold">
                 Smart Predictive Cycle Tool
               </span>
               <span>•</span>
-              <span className="text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
+              <span className="text-sm text-emerald-700 font-bold bg-emerald-50 border border-emerald-200 px-2.5 py-0.5 rounded-full">
                 Medically Verified Guide
               </span>
             </div>
@@ -202,7 +202,7 @@ export default function CalculatorDetailPage({ params }) {
                         <BookOpen className="w-4 h-4 text-flo-600" />
                         <span>Clinical Guide & Medical Analysis</span>
                       </div>
-                      <h2 className="text-lg sm:text-xl font-black text-gray-900 tracking-tight font-heading">
+                      <h2 className=" font-extrabold">
                         {articleData.title}
                       </h2>
                     </div>
@@ -210,15 +210,13 @@ export default function CalculatorDetailPage({ params }) {
                     {/* Render Each Point/Section with minimum 4 detailed paragraphs */}
                     {articleData.sections.map((sec) => (
                       <div key={sec.id} id={sec.id} className="scroll-mt-28 space-y-4">
-                        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight font-heading border-b border-pink-100 pb-3">
+                        <h2 className=" font-extrabold border-b border-pink-100 pb-3">
                           {sec.heading}
                         </h2>
                         
                         <div className="space-y-4">
                           {sec.paragraphs.map((para, pIdx) => (
-                            <p 
-                              key={pIdx} 
-                              className="text-sm sm:text-base text-gray-700 leading-relaxed bg-white p-5 sm:p-6 rounded-2xl border border-pink-100/80 shadow-2xs hover:border-pink-200 transition-colors"
+                            <p key={pIdx} className=" text-gray-700 leading-relaxed bg-white p-5 sm:p-6 rounded-2xl border border-pink-100/80 shadow-2xs hover:border-pink-200 transition-colors"
                             >
                               {para}
                             </p>
@@ -230,10 +228,10 @@ export default function CalculatorDetailPage({ params }) {
                 ) : (
                   <div className="space-y-6 text-gray-800 leading-relaxed">
                     <div id="overview" className="scroll-mt-28 space-y-3">
-                      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+                      <h2 className=" font-extrabold">
                         Understanding How This Calculation Works
                       </h2>
-                      <p className="text-base text-gray-700 leading-relaxed">
+                      <p className="text-gray-700 leading-relaxed">
                         Our calculator relies on reproductive biology models, cycle averages, and predictive algorithmic estimation. Menstrual cycle variations, LH hormone surges, and basal temperature shifts provide reliable benchmarks for predicting reproductive milestones.
                       </p>
                     </div>
@@ -241,12 +239,12 @@ export default function CalculatorDetailPage({ params }) {
                 )}
 
                 {/* Educational Disclaimer Box */}
-                <div className="p-6 sm:p-7 rounded-3xl bg-amber-50/80 border border-amber-200 text-xs sm:text-sm text-amber-900 leading-relaxed space-y-2.5">
-                  <h3 className="font-bold flex items-center gap-2 text-amber-950 uppercase tracking-wider text-xs">
+                <div className="p-6 sm:p-7 rounded-3xl bg-amber-50/80 border border-amber-200 text-xs text-amber-900 leading-relaxed space-y-2.5">
+                  <h3 className="flex items-center gap-2 text-amber-950 uppercase">
                     <AlertCircle className="w-4.5 h-4.5 text-amber-600 shrink-0" />
                     <span>Educational Disclaimer</span>
                   </h3>
-                  <p>
+                  <p className="text-base">
                     This online calculator is an educational estimation tool based on average biological models. It is not a diagnostic device or a substitute for medical testing, clinical consultation, or pelvic ultrasound. Always consult your obstetrician or healthcare practitioner for personalized fertility management and prenatal care.
                   </p>
                 </div>
@@ -257,9 +255,9 @@ export default function CalculatorDetailPage({ params }) {
                 
                 {/* Dynamic Table of Contents */}
                 <div className="bg-white rounded-3xl border border-pink-100 p-6 shadow-xs space-y-3">
-                  <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">
-                    IN THIS GUIDE
-                  </h3>
+                  <h5 className="uppercase tracking-widest text-gray-400">
+                    IN THIS article
+                  </h5>
                   <ul className="space-y-2 text-sm font-semibold">
                     <li>
                       <a href="#calculator-tool" className="text-flo-600 hover:underline block py-0.5">
@@ -278,17 +276,17 @@ export default function CalculatorDetailPage({ params }) {
 
                 {/* Other Calculators Switcher List */}
                 <div className="bg-white rounded-3xl border border-pink-100 p-6 shadow-xs space-y-3">
-                  <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">
+                  <h5 className="uppercase tracking-widest text-gray-400">
                     MORE CALCULATORS
-                  </h3>
+                  </h5>
                   <div className="space-y-1.5">
                     {otherCalculators.slice(0, 6).map((c) => (
                       <Link
                         key={c.slug}
                         href={`/calculators/${c.slug}`}
-                        className="flex items-center justify-between p-2.5 rounded-2xl hover:bg-flo-50 text-xs sm:text-sm font-bold text-gray-700 hover:text-flo-600 transition-colors"
+                        className="flex items-center justify-between p-2.5 rounded-2xl hover:bg-flo-50 text-xs font-bold text-gray-700 hover:text-flo-600 transition-colors"
                       >
-                        <span className="truncate">{c.name}</span>
+                        <span className="truncate text-sm">{c.name}</span>
                         <ChevronRight className="w-3.5 h-3.5 text-gray-400 shrink-0" />
                       </Link>
                     ))}
@@ -296,7 +294,7 @@ export default function CalculatorDetailPage({ params }) {
                   <div className="pt-2 border-t border-pink-50">
                     <Link
                       href="/calculators"
-                      className="text-xs sm:text-sm font-bold text-flo-600 hover:underline block text-center"
+                      className="text-xs font-bold text-flo-600 hover:underline block text-center"
                     >
                       View all 8 reproductive tools &rarr;
                     </Link>

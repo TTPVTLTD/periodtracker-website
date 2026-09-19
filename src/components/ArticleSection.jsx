@@ -30,10 +30,10 @@ export default function ArticleSection({ selectedCategory, onSelectCategory }) {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
           <div className="max-w-2xl">
-            <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
+            <h2 className="  font-extrabold leading-snug">
               Period & Ovulation Health Guides
             </h2>
-            <p className="mt-2 text-base text-gray-600">
+            <p className="mt-2 text-gray-600">
               Explore helpful wellness guides, cycle tips, and reproductive health insights. Click any article to read the full guide.
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function ArticleSection({ selectedCategory, onSelectCategory }) {
           <div className="mb-10 p-6 rounded-3xl bg-white border-2 border-dashed border-flo-300 shadow-sm animate-fadeIn">
             <div className="flex items-start justify-between">
               <div>
-                <h4 className="text-base font-bold text-flo-700 flex items-center gap-2">
+                <h4 className="text-flo-700 flex items-center gap-2">
                   <Sparkles className="w-5 h-5 text-flo-500" />
                   <span>તમારે નવો આર્ટિકલ કે ફોટો કેવી રીતે ઉમેરવો? (Static & Easy):</span>
                 </h4>
@@ -122,8 +122,8 @@ export default function ArticleSection({ selectedCategory, onSelectCategory }) {
           </div>
         ) : (
           <div className="text-center py-16 bg-white rounded-3xl border border-pink-100 p-8">
-            <p className="text-lg font-bold text-gray-700">No articles found matching "{searchQuery}"</p>
-            <p className="text-sm text-gray-500 mt-1">Try another keyword or select "All Articles".</p>
+            <p className="text-gray-700">No articles found matching "{searchQuery}"</p>
+            <p className="text-gray-500 mt-1">Try another keyword or select "All Articles".</p>
             <button
               onClick={() => { setSearchQuery(''); onSelectCategory('all'); }}
               className="mt-4 px-5 py-2 bg-flo-100 text-flo-700 rounded-full text-xs font-bold hover:bg-flo-200 transition-colors"

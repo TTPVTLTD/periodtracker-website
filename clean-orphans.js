@@ -1,0 +1,26 @@
+const fs = require('fs');
+const path = require('path');
+
+function walkDir(dir, callback) {
+  fs.readdirSync(dir).forEach(f => {
+    let dirPath = path.join(dir, f);
+    let isDirectory = fs.statSync(dirPath).isDirectory();
+    isDirectory ? walkDir(dirPath, callback) : callback(path.join(dir, f));
+  });
+}
+
+walkDir('./src', function(filePath) {
+  if (filePath.endsWith('.jsx')) {
+    let content = fs.readFileSync(filePath, 'utf8');
+    const initial = content;
+    
+    // Clean orphaned sm:, md:, lg:, etc. prefixes followed by space or quote
+    content = content.replace(/\b(sm|md|lg|xl|2xl):\s/g, ' ');
+    content = content.replace(/\b(sm|md|lg|xl|2xl):"/g, '"');
+    
+    if(initial !== content) {
+      fs.writeFileSync(filePath, content);
+      console.log('Cleaned orphans in:', filePath);
+    }
+  }
+});

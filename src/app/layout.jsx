@@ -1,5 +1,7 @@
 import './globals.css';
 import { Outfit, Plus_Jakarta_Sans } from 'next/font/google';
+import CookieBanner from '../components/CookieBanner';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -75,8 +77,10 @@ export default function RootLayout({ children }) {
       <head>
         <link rel="icon" href="/logo.png" type="image/png" />
       </head>
-      <body className={`${plusJakartaSans.className} min-h-screen flex flex-col bg-[#FAF8F9] text-[#1A1819] antialiased selection:bg-[#FF5E8C]/20 selection:text-[#FF5E8C] font-sans text-base`}>
+      <body className={`${plusJakartaSans.className} min-h-screen flex flex-col bg-[#FAF8F9] text-[#1A1819] antialiased selection:bg-[#FF5E8C]/20 selection:text-[#FF5E8C] font-sans`}>
         {children}
+        <CookieBanner />
+        <GoogleAnalytics gaId="G-1P5BEQ99QQ" />
       </body>
     </html>
   );

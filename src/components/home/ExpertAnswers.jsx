@@ -28,11 +28,11 @@ export default function ExpertAnswers() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
+          <h2 className="  font-extrabold leading-snug">
             Reproductive Health & Ovulation Questions Answered by Experts
           </h2>
           
-          <p className="mt-3 text-sm sm:text-base text-gray-600 font-normal max-w-2xl mx-auto leading-relaxed">
+          <p className="mt-3 text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Medically reviewed cycle guides, conception timing insights, and natural Ayurvedic care to support every phase of your journey.
           </p>
         </div>
@@ -67,19 +67,19 @@ export default function ExpertAnswers() {
               <div className="p-4 sm:p-5 flex-1 flex flex-col justify-between">
                 <div>
                   {/* Title */}
-                  <h3 className="text-base sm:text-lg font-bold text-gray-900 group-hover:text-flo-600 transition-colors leading-snug line-clamp-2">
+                  <h3 className=" font-bold group-hover:text-flo-600 transition-colors leading-snug line-clamp-2">
                     {article.title}
                   </h3>
 
                   {/* Brief Excerpt */}
-                  <p className="text-sm text-gray-500 font-normal mt-1.5 leading-relaxed line-clamp-2">
+                  <p className="text-gray-500 mt-1.5 leading-relaxed line-clamp-2">
                     {article.summary}
                   </p>
                 </div>
 
                 {/* Meta & Action */}
                 <div className="pt-3 mt-3 border-t border-pink-50 flex items-center justify-between">
-                  <div className="flex items-center gap-2 text-xs sm:text-sm text-gray-400 font-medium">
+                  <div className="flex items-center gap-2  text-gray-400 font-medium">
                     <span>{article.publishedDate || article.date}</span>
                     <span>•</span>
                     <span className="flex items-center gap-1">
@@ -88,7 +88,7 @@ export default function ExpertAnswers() {
                     </span>
                   </div>
 
-                  <span className="text-sm font-bold text-flo-600 group-hover:translate-x-0.5 transition-transform shrink-0">
+                  <span className="font-bold text-flo-600 group-hover:translate-x-0.5 transition-transform shrink-0">
                     Read &rarr;
                   </span>
                 </div>
@@ -101,13 +101,13 @@ export default function ExpertAnswers() {
         <div className="mt-12 sm:mt-16 text-center">
           <Link
             href="/wellness-hub"
-            className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-flo-500 hover:bg-flo-600 text-white font-bold text-sm shadow-md shadow-pink-200 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
+            className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-flo-500 hover:bg-flo-600 text-white font-bold shadow-md shadow-pink-200 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
           >
             <span>Explore All Wellness Hub Topics</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
           
-          <div className="mt-4 flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm font-semibold text-gray-500">
+          <div className="mt-4 flex flex-wrap items-center justify-center gap-4  font-semibold text-gray-500">
             <span className="flex items-center gap-1.5">
               <span className="w-2 h-2 rounded-full bg-emerald-500" />
               Cycle Insights

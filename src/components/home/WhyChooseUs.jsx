@@ -35,10 +35,10 @@ export default function WhyChooseUs() {
         
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-16">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
+          <h2 className="  font-extrabold leading-snug">
             Why Choose Period Tracker & Ovulation Calculator?
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+          <p className="mt-3 text-gray-600 leading-relaxed">
             A clinically grounded, private women’s wellness companion built for predictive accuracy, personalized hormone insights, and natural menstrual care.
           </p>
         </div>
@@ -55,18 +55,18 @@ export default function WhyChooseUs() {
                   <Icon className="w-8 h-8 stroke-[1.75]" />
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 leading-snug max-w-xs">
+                <h3 className="leading-snug max-w-xs">
                   {item.title}
                 </h3>
 
-                <p className="text-sm text-gray-600 leading-relaxed max-w-sm">
+                <p className="text-gray-600 leading-relaxed max-w-sm">
                   {item.description}
                 </p>
 
                 <div className="pt-2">
                   <Link
                     href={item.linkHref}
-                    className="inline-flex items-center gap-1.5 text-sm font-bold text-flo-600 hover:text-flo-700 hover:underline transition-colors"
+                    className="inline-flex items-center gap-1.5 font-bold text-flo-600 hover:text-flo-700 hover:underline transition-colors"
                   >
                     <span>{item.linkText}</span>
                     <ArrowRight className="w-3.5 h-3.5" />

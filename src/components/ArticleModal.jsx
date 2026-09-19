@@ -72,7 +72,7 @@ export default function ArticleModal({ article, onClose, onSelectOtherArticle, a
               <span className="text-gray-600 font-medium">By {article.author}</span>
             </div>
 
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-tight">
+            <h2 className=" font-extrabold  leading-tight">
               {article.title}
             </h2>
 
@@ -89,7 +89,7 @@ export default function ArticleModal({ article, onClose, onSelectOtherArticle, a
           </div>
 
           {/* Article Summary Lead */}
-          <p className="text-base sm:text-lg text-gray-700 font-medium leading-relaxed bg-flo-50/50 p-5 rounded-2xl border-l-4 border-flo-500">
+          <p className=" text-gray-700 font-medium leading-relaxed bg-flo-50/50 p-5 rounded-2xl border-l-4 border-flo-500">
             {article.summary}
           </p>
 
@@ -97,7 +97,7 @@ export default function ArticleModal({ article, onClose, onSelectOtherArticle, a
           <div className="space-y-6 text-gray-800 leading-relaxed text-base">
             {article.content && article.content.map((sec, idx) => (
               <div key={idx} className="space-y-2.5">
-                <h3 className="text-xl font-bold text-gray-900 pt-2">
+                <h3 className="pt-2">
                   {sec.heading}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">
@@ -126,7 +126,7 @@ export default function ArticleModal({ article, onClose, onSelectOtherArticle, a
           {/* Related Articles */}
           {relatedArticles.length > 0 && (
             <div className="pt-6 border-t border-pink-100">
-              <h4 className="text-lg font-bold text-gray-900 mb-4">
+              <h4 className="mb-4">
                 Recommended Related Guides
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -146,7 +146,7 @@ export default function ArticleModal({ article, onClose, onSelectOtherArticle, a
                     </div>
                     <div className="flex-1 min-w-0">
                       <span className="text-xs font-bold text-flo-600 uppercase">{rel.categoryName}</span>
-                      <h5 className="text-xs font-bold text-gray-900 group-hover:text-flo-600 truncate">
+                      <h5 className="group-hover:text-flo-600 truncate">
                         {rel.title}
                       </h5>
                       <span className="text-xs text-gray-500">{rel.readTime}</span>

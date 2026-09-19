@@ -156,11 +156,11 @@ function HealthLibraryContent() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             
             {/* Main Title */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight">
-              Wellness Hub
+            <h1 className=" ">
+              Wellness <span className="bg-gradient-to-r from-brand-pink via-brand-babyPink to-brand-peach bg-clip-text text-transparent">Hub</span>
             </h1>
 
-            <p className="text-base sm:text-base text-gray-600 font-normal max-w-2xl mx-auto leading-relaxed">
+            <p className=" text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Explore informative guides on menstrual cycles, ovulation timing, fertility signals, holistic wellness, and natural symptom tracking.
             </p>
 
@@ -217,10 +217,10 @@ function HealthLibraryContent() {
           <section id="category-filter-section" className="space-y-4 scroll-mt-24">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
-                <h2 className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight">
+                <h2 className=" font-extrabold">
                   Explore by category
                 </h2>
-                <p className="text-base text-gray-500 mt-0.5">
+                <p className="text-gray-500 mt-0.5">
                   Select a topic to focus on specific cycle stages and reproductive health guides
                 </p>
               </div>
@@ -281,7 +281,7 @@ function HealthLibraryContent() {
           {searchQuery.trim() ? (
             <section className="space-y-6">
               <div className="flex items-center justify-between pb-3 border-b border-pink-100">
-                <h3 className="text-lg font-bold text-gray-900">
+                <h3 className="">
                   Search results for "{searchQuery}"
                 </h3>
                 <span className="text-xs font-semibold text-gray-500">
@@ -302,8 +302,8 @@ function HealthLibraryContent() {
               ) : (
                 <div className="text-center py-16 bg-white rounded-3xl p-8 border border-pink-100 shadow-sm max-w-lg mx-auto">
                   <BookOpen className="w-12 h-12 text-pink-300 mx-auto mb-3" />
-                  <h3 className="text-lg font-bold text-gray-900">No matching articles found</h3>
-                  <p className="text-xs sm:text-sm text-gray-500 mt-1">
+                  <h3 className="">No matching articles found</h3>
+                  <p className=" text-gray-500 mt-1">
                     We couldn't find any guides matching "{searchQuery}". Try another keyword or reset search.
                   </p>
                   <button
@@ -337,7 +337,7 @@ function HealthLibraryContent() {
                         onClick={() => toggleCategoryExpand(sec.slug)}
                         className="group flex items-center gap-2 text-left cursor-pointer"
                       >
-                        <h3 className="text-xl sm:text-2xl font-black text-gray-900 group-hover:text-flo-600 transition-colors">
+                        <h3 className="text-xl  font-bold group-hover:text-flo-600 transition-colors">
                           {sec.name}
                         </h3>
                         <ChevronRight className={`w-5 h-5 text-teal-700 transition-transform ${isExpanded ? 'rotate-90 text-flo-600' : 'group-hover:translate-x-1'}`} />
@@ -380,7 +380,7 @@ function HealthLibraryContent() {
                         <button
                           type="button"
                           onClick={() => toggleCategoryExpand(sec.slug)}
-                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white hover:bg-pink-50/70 border border-pink-200 hover:border-flo-300 text-gray-800 hover:text-flo-600 font-bold text-xs sm:text-sm shadow-2xs hover:shadow-md transition-all cursor-pointer group"
+                          className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-white hover:bg-pink-50/70 border border-pink-200 hover:border-flo-300 text-gray-800 hover:text-flo-600 font-bold text-xs shadow-2xs hover:shadow-md transition-all cursor-pointer group"
                         >
                           <span>
                             {isExpanded 
@@ -423,11 +423,11 @@ function HealthLibraryContent() {
                   <span>Empowering Every Life Stage</span>
                 </div>
 
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight font-heading">
+                <h3 className="text-xl  font-bold  text-white leading-tight">
                   Supporting women from first period to pregnancy and beyond
                 </h3>
 
-                <p className="text-white/90 text-sm sm:text-base leading-relaxed font-normal">
+                <p className="text-white/90 leading-relaxed ">
                   Whether you're trying to conceive, tracking monthly symptoms, or navigating pregnancy milestones, Period Tracker delivers medically grounded tools and personalized Ayurvedic insights directly to your device.
                 </p>
 
@@ -466,11 +466,11 @@ function HealthLibraryContent() {
               </div>
 
               <div className="mt-8 pt-6 border-t border-white/20">
-                <p className="text-white/95 text-xs sm:text-sm leading-relaxed font-normal italic">
+                <p className="text-white/95 leading-relaxed italic">
                   “Period Tracker has allowed me to keep track of my pregnancy... It’s very useful because this is my first baby, so I don't really know what's going on half the time.”
                 </p>
 
-                <div className="mt-4 flex items-center gap-3">
+                {/* <div className="mt-4 flex items-center gap-3">
                   <div className="relative w-10 h-10 rounded-full overflow-hidden border-2 border-white/60 shrink-0 bg-white/20">
                     <Image
                       src="/images/about/user-anessa-avatar.jpg"
@@ -481,21 +481,20 @@ function HealthLibraryContent() {
                     />
                   </div>
                   <div>
-                    <div className="text-white font-bold text-xs sm:text-sm leading-tight">
+                    <div className="text-white font-bold text-xs leading-tight">
                       Anessa, USA
                     </div>
                     <div className="text-white/75 text-xs">
                       Period Tracker for Pregnancy user
                     </div>
                   </div>
-                </div>
+                </div> */}
+
               </div>
-
             </div>
-
           </div>
+          
         </section>
-
       </main>
 
       <Footer />
@@ -529,12 +528,12 @@ function HorizontalArticleCard({ article, categoryBadgeStyles }) {
 
       <div className="flex-1 p-4 sm:p-5 flex flex-col justify-between w-full space-y-2.5 min-w-0">
         <div>
-          <h4 className="!text-lg sm:text-base font-bold text-gray-900 group-hover:text-flo-600 transition-colors leading-snug line-clamp-2">
+          <h4 className="group-hover:text-flo-600 transition-colors leading-snug line-clamp-2">
             {article.title}
           </h4>
-          <p className="text-base text-gray-500 line-clamp-2 mt-1.5 font-normal leading-relaxed">
+          <div className="text-sm text-gray-500 line-clamp-2 mt-1.5 leading-relaxed">
             {article.summary}
-          </p>
+          </div>
         </div>
 
         <div className="flex items-center justify-between pt-1">

@@ -71,17 +71,17 @@ export default function AboutPage() {
 
         {/* Hero Section */}
         <section className="relative max-w-5xl mx-auto px-4 sm:px-6 py-16 sm:py-24 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 shadow-sm text-[#FF5E8C] font-bold text-xs sm:text-sm uppercase tracking-wider mx-auto transition-transform hover:scale-105">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 shadow-sm text-[#FF5E8C] font-bold text-xs uppercase tracking-wider mx-auto transition-transform hover:scale-105">
             <Sparkles className="w-4 h-4" />
             <span>Our Mission & Vision</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1819] leading-tight tracking-tight font-heading">
+          <h1 className="sm: lg: font-extrabold text-[#1A1819] leading-tight">
             Empowering Women Through <br className="hidden sm:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF5E8C] to-[#FF8C69]">
               Intelligent Cycle Science
             </span>
           </h1>
-          <p className="text-[#706B6E] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
+          <p className="text-[#706B6E] sm: leading-relaxed max-w-2xl mx-auto font-medium">
             We are redefining female health tracking by combining clinically-backed biological precision, holistic wellness insights, and absolute zero-knowledge data privacy.
           </p>
 
@@ -95,8 +95,8 @@ export default function AboutPage() {
             ].map((stat, idx) => (
               <div key={idx} className="bg-white/80 backdrop-blur-sm border border-[#FF5E8C]/15 rounded-2xl p-4 shadow-sm hover:shadow-md transition-shadow">
                 <stat.icon className="w-6 h-6 text-[#FF5E8C] mx-auto mb-2 opacity-80" />
-                <div className="text-2xl sm:text-3xl font-bold text-[#1A1819] font-heading">{stat.value}</div>
-                <div className="text-xs sm:text-sm text-[#706B6E] font-semibold uppercase tracking-wide mt-1">{stat.label}</div>
+                <div className="sm: font-bold text-[#1A1819] font-heading">{stat.value}</div>
+                <div className="text-xs text-[#706B6E] font-semibold uppercase tracking-wide mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -123,16 +123,7 @@ export default function AboutPage() {
             ) : cmsContent ? (
               /* Dynamic API CMS Content */
               <div
-                className="max-w-none text-[#706B6E] leading-relaxed 
-                  [&>h1]:text-2xl [&>h1]:font-bold [&>h1]:text-[#1A1819] [&>h1]:font-heading [&>h1]:mt-8 [&>h1]:mb-4 
-                  [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-[#1A1819] [&>h2]:font-heading [&>h2]:mt-8 [&>h2]:mb-4 
-                  [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-[#1A1819] [&>h3]:font-heading [&>h3]:mt-6 [&>h3]:mb-3 
-                  [&>p]:mb-4 
-                  [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-4 
-                  [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:mb-4 
-                  [&>li]:mb-1.5 
-                  [&>strong]:text-[#1A1819] [&>strong]:font-bold
-                  [&>a]:text-[#FF5E8C] hover:[&>a]:underline"
+                className="max-w-none text-[#706B6E] leading-relaxed [&>h1]: [&>h1]:font-bold [&>h1]:text-[#1A1819] [&>h1]:font-heading [&>h1]:mt-8 [&>h1]:mb-4 [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-[#1A1819] [&>h2]:font-heading [&>h2]:mt-8 [&>h2]:mb-4 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-[#1A1819] [&>h3]:font-heading [&>h3]:mt-6 [&>h3]:mb-3 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-4 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:mb-4 [&>li]:mb-1.5 [&>strong]:text-[#1A1819] [&>strong]:font-bold [&>a]:text-[#FF5E8C] hover:[&>a]:underline"
                 dangerouslySetInnerHTML={{ __html: cmsContent }}
               />
             ) : error ? (
@@ -157,16 +148,16 @@ export default function AboutPage() {
                   {/* The Journey */}
                   <div className="space-y-5 relative">
                     <div className="absolute -left-12 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FF5E8C] to-transparent hidden lg:block rounded-full" />
-                    <h2 className="text-3xl font-bold text-[#1A1819] flex items-center gap-3 font-heading">
+                    <h2 className="text-[#1A1819] flex items-center gap-3">
                       <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF5E8C] to-[#FF8C69] flex items-center justify-center text-white shadow-lg shadow-pink-200">
                         <Heart className="w-5 h-5 fill-white/20" />
                       </div>
                       <span>Our Story</span>
                     </h2>
-                    <p className="text-[#4A4547] text-base sm:text-lg leading-relaxed">
+                    <p className="text-[#4A4547] sm: leading-relaxed">
                       Period Tracker Ovulation Cycle was founded by a passionate collective of women's health advocates, developers, and researchers. We noticed a critical flaw in the ecosystem: the majority of digital health trackers were commoditizing deeply personal reproductive data.
                     </p>
-                    <p className="text-[#4A4547] text-base sm:text-lg leading-relaxed">
+                    <p className="text-[#4A4547] sm: leading-relaxed">
                       We set out to engineer a fundamentally different platform. One built on bank-grade local encryption, scientifically validated cycle modeling, and a stunningly beautiful user experience. Today, Period Tracker Ovulation Cycle helps thousands of individuals navigate their natural biology safely, confidently, and elegantly.
                     </p>
                   </div>
@@ -176,7 +167,7 @@ export default function AboutPage() {
                   {/* Core Values Grid */}
                   <div className="space-y-6 relative">
                     <div className="absolute -left-12 top-0 bottom-0 w-0.5 bg-gradient-to-b from-[#FF8C69] to-transparent hidden lg:block rounded-full" />
-                    <h2 className="text-3xl font-bold text-[#1A1819] flex items-center gap-3 font-heading">
+                    <h2 className="text-[#1A1819] flex items-center gap-3">
                       <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#FF8C69] to-[#FF5E8C] flex items-center justify-center text-white shadow-lg shadow-orange-200">
                         <Award className="w-5 h-5" />
                       </div>
@@ -222,8 +213,8 @@ export default function AboutPage() {
                           <div className={`w-12 h-12 rounded-xl bg-white flex items-center justify-center ${val.color} shadow-sm mb-4 group-hover:scale-110 transition-transform`}>
                             <val.icon className="w-6 h-6" />
                           </div>
-                          <h3 className="text-xl font-bold text-[#1A1819] font-heading mb-2">{val.title}</h3>
-                          <p className="text-sm text-[#706B6E] leading-relaxed">
+                          <h3 className="text-[#1A1819] mb-2">{val.title}</h3>
+                          <p className="text-[#706B6E] leading-relaxed">
                             {val.desc}
                           </p>
                         </div>
@@ -240,10 +231,10 @@ export default function AboutPage() {
             <div className="absolute top-0 right-0 -mt-10 -mr-10 w-40 h-40 bg-white/10 rounded-full blur-2xl pointer-events-none" />
             <div className="absolute bottom-0 left-0 -mb-10 -ml-10 w-40 h-40 bg-black/10 rounded-full blur-2xl pointer-events-none" />
             
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-heading mb-4 relative z-10">
+            <h2 className="sm: font-extrabold lg: mb-4 relative z-10 !text-white leading-tight">
               Ready to take control of your cycle?
             </h2>
-            <p className="text-white/90 text-sm sm:text-base max-w-xl mx-auto mb-8 font-medium relative z-10">
+            <p className="text-white/90 sm: max-w-xl mx-auto mb-8 font-medium relative z-10">
               Join thousands of individuals tracking their health securely and intelligently. Download Period Tracker Ovulation Cycle today.
             </p>
             <div className="relative z-10">
@@ -251,7 +242,7 @@ export default function AboutPage() {
                 href="https://apps.apple.com/app/id6774117828"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#FF5E8C] rounded-full font-bold text-sm sm:text-base shadow-lg hover:shadow-xl hover:scale-105 transition-all cursor-pointer"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-[#FF5E8C] rounded-full font-bold text-sm shadow-lg hover:shadow-xl hover:scale-105 transition-all cursor-pointer"
               >
                 <span>Get the App Now</span>
                 <ChevronRight className="w-4 h-4" />

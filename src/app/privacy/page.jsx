@@ -78,43 +78,43 @@ export default function PrivacyPolicyPage() {
         <div className="absolute top-40 right-10 w-96 h-96 bg-[#FF8C69]/10 rounded-full blur-3xl opacity-70 animate-pulse pointer-events-none" style={{ animationDelay: '2s' }} />
 
         {/* Header Section */}
-        <div className="relative pt-16 pb-12 px-4 sm:px-6 z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] font-bold text-xs uppercase tracking-wider mx-auto shadow-sm transition-transform hover:scale-105">
+        <div className="relative pt-10 pb-6 px-4 sm:px-6 z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] font-bold text-base uppercase tracking-wider mx-auto shadow-sm transition-transform hover:scale-105">
               <ShieldCheck className="w-4 h-4" />
               <span>Data Protection</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-[#1A1819] font-heading tracking-tight">
+            <h1 className="font-extrabold text-[#1A1819]">
               Privacy Policy
             </h1>
-            <p className="text-[#706B6E] text-base sm:text-lg max-w-2xl mx-auto font-medium">
+            <p className="text-base text-[#706B6E] max-w-2xl mx-auto font-medium">
               Your reproductive health data is intensely personal. We safeguard it with industry-leading encryption and strict no-sell privacy guarantees.
             </p>
-            <div className="text-sm font-bold text-gray-400">Last Updated: June 6, 2026</div>
+            <div className="text-base font-bold text-gray-400">Last Updated: June 6, 2026</div>
           </div>
         </div>
 
         {/* Content Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 flex flex-col lg:flex-row gap-10 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col lg:flex-row gap-10 relative z-10">
           
           {/* Sidebar Jump Navigation (Desktop) */}
           <aside className="hidden lg:block w-64 shrink-0">
             <div className="sticky top-28 bg-white/90 backdrop-blur-xl rounded-2xl border border-[#FF5E8C]/15 p-5 shadow-lg shadow-pink-900/5">
-              <h3 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">Quick Navigation</h3>
+              <h3 className="text-gray-500 uppercase mb-4">Quick Navigation</h3>
               <nav className="space-y-1">
                 {jumpLinks.map(link => (
-                  <a key={link.id} href={`#${link.id}`} className="block px-3 py-2 text-sm font-medium text-[#706B6E] rounded-lg hover:bg-pink-50 hover:text-[#FF5E8C] transition-colors">
+                  <a key={link.id} href={`#${link.id}`} className="block px-3 py-2 text-base font-medium text-[#706B6E] rounded-lg hover:bg-pink-50 hover:text-[#FF5E8C] transition-colors">
                     {link.label}
                   </a>
                 ))}
               </nav>
 
               <div className="mt-8 pt-6 border-t border-pink-50">
-                <div className="flex items-center gap-2 text-sm font-bold text-[#1A1819] mb-2">
+                <div className="flex items-center gap-2 text-base font-bold text-[#1A1819] mb-2">
                   <LockKeyhole className="w-4 h-4 text-emerald-500" />
                   AES-256 Secured
                 </div>
-                <p className="text-xs text-[#706B6E] font-medium leading-relaxed">All local backups and cloud syncs use military-grade encryption protocols.</p>
+                <p className="text-[#706B6E] font-medium leading-relaxed">All local backups and cloud syncs use military-grade encryption protocols.</p>
               </div>
             </div>
           </aside>
@@ -129,8 +129,8 @@ export default function PrivacyPolicyPage() {
                   <ShieldCheck className="w-6 h-6 text-emerald-600" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-emerald-900 mb-1">The Period Tracker Ovulation Cycle Privacy Promise</h3>
-                  <p className="text-sm text-emerald-800 font-medium">We do not sell, rent, or trade your personal health data to third-party brokers, advertisers, or data aggregators. Period.</p>
+                  <h3 className="text-emerald-900 mb-1">The Period Tracker Ovulation Cycle Privacy Promise</h3>
+                  <p className="text-emerald-800 font-medium">We do not sell, rent, or trade your personal health data to third-party brokers, advertisers, or data aggregators. Period.</p>
                 </div>
               </div>
 
@@ -143,35 +143,26 @@ export default function PrivacyPolicyPage() {
                 </div>
               ) : cmsContent ? (
                 <div
-                  className="max-w-none text-[#706B6E] leading-relaxed 
-                    [&>h1]:text-2xl [&>h1]:font-bold [&>h1]:text-[#1A1819] [&>h1]:font-heading [&>h1]:mt-8 [&>h1]:mb-4 
-                    [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-[#1A1819] [&>h2]:font-heading [&>h2]:mt-8 [&>h2]:mb-4 
-                    [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-[#1A1819] [&>h3]:font-heading [&>h3]:mt-6 [&>h3]:mb-3 
-                    [&>p]:mb-4 
-                    [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-4 
-                    [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:mb-4 
-                    [&>li]:mb-1.5 
-                    [&>strong]:text-[#1A1819] [&>strong]:font-bold
-                    [&>a]:text-[#FF5E8C] hover:[&>a]:underline"
+                  className="max-w-none text-base text-[#706B6E] leading-relaxed [&>h1]: [&>h1]:font-bold [&>h1]:text-[#1A1819] [&>h1]:font-heading [&>h1]:mt-8 [&>h1]:mb-4 [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-[#1A1819] [&>h2]:font-heading [&>h2]:mt-8 [&>h2]:mb-4 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-[#1A1819] [&>h3]:font-heading [&>h3]:mt-6 [&>h3]:mb-3 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-4 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:mb-4 [&>li]:mb-1.5 [&>strong]:text-[#1A1819] [&>strong]:font-bold [&>a]:text-[#FF5E8C] hover:[&>a]:underline"
                   dangerouslySetInnerHTML={{ __html: cmsContent }}
                 />
               ) : error ? (
                 <div className="space-y-12">
                   {/* Error Notification */}
-                  <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center justify-between gap-4 text-red-800 text-sm font-semibold mb-8">
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center justify-between gap-4 text-red-800 text-base font-semibold mb-8">
                     <div className="flex items-center gap-2">
                       <AlertCircle className="w-5 h-5 text-red-600 shrink-0" />
                       <span>Showing offline fallback policy.</span>
                     </div>
-                    <button onClick={fetchCMSContent} className="px-3 py-1.5 bg-white border border-red-200 text-red-600 rounded-lg text-xs font-bold shadow-sm flex items-center gap-1.5">
+                    <button onClick={fetchCMSContent} className="px-3 py-1.5 bg-white border border-red-200 text-red-600 rounded-lg text-base font-bold shadow-sm flex items-center gap-1.5">
                       <RefreshCw className="w-3.5 h-3.5" /> Retry
                     </button>
                   </div>
 
                   {/* Offline Content */}
-                  <div className="space-y-10 text-gray-600">
+                  <div className="space-y-10 text-base text-gray-600">
                     <section id="core-commitment" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-pink-50 flex items-center justify-center text-[#FF5E8C]"><ShieldCheck className="w-4 h-4"/></div>
                         1. Our Core Privacy Commitment
                       </h2>
@@ -181,7 +172,7 @@ export default function PrivacyPolicyPage() {
                     <hr className="border-gray-100" />
 
                     <section id="data-collection" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-blue-600"><Database className="w-4 h-4"/></div>
                         2. What Data We Collect & How We Use It
                       </h2>
@@ -197,7 +188,7 @@ export default function PrivacyPolicyPage() {
                     <hr className="border-gray-100" />
 
                     <section id="security" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center text-orange-500"><Lock className="w-4 h-4"/></div>
                         3. Storage & Bank-Grade Security
                       </h2>
@@ -205,13 +196,13 @@ export default function PrivacyPolicyPage() {
                       <div className="grid sm:grid-cols-2 gap-4 mt-4">
                         <div className="bg-gray-50 border border-gray-100 p-4 rounded-xl">
                           <LockKeyhole className="w-5 h-5 text-gray-700 mb-2" />
-                          <h4 className="font-bold text-gray-900 text-sm mb-1">Local Encryption</h4>
-                          <p className="text-xs leading-relaxed text-gray-500">By default, health records can be stored locally on your device with sandbox parameters to prevent unauthorized system access.</p>
+                          <h4 className="mb-1">Local Encryption</h4>
+                          <p className="leading-relaxed text-gray-500">By default, health records can be stored locally on your device with sandbox parameters to prevent unauthorized system access.</p>
                         </div>
                         <div className="bg-gray-50 border border-gray-100 p-4 rounded-xl">
                           <Fingerprint className="w-5 h-5 text-gray-700 mb-2" />
-                          <h4 className="font-bold text-gray-900 text-sm mb-1">Biometric Lock</h4>
-                          <p className="text-xs leading-relaxed text-gray-500">Configure Touch ID or Face ID in settings to prevent unauthorized local viewing of your personal dashboard.</p>
+                          <h4 className="mb-1">Biometric Lock</h4>
+                          <p className="leading-relaxed text-gray-500">Configure Touch ID or Face ID in settings to prevent unauthorized local viewing of your personal dashboard.</p>
                         </div>
                       </div>
                     </section>
@@ -219,7 +210,7 @@ export default function PrivacyPolicyPage() {
                     <hr className="border-gray-100" />
 
                     <section id="no-selling" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center text-red-500"><EyeOff className="w-4 h-4"/></div>
                         4. No Third-Party Selling
                       </h2>
@@ -229,7 +220,7 @@ export default function PrivacyPolicyPage() {
                     <hr className="border-gray-100" />
 
                     <section id="user-control" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-purple-50 flex items-center justify-center text-purple-600"><UserCheck className="w-4 h-4"/></div>
                         5. Data Control & Account Deletion
                       </h2>
@@ -245,11 +236,11 @@ export default function PrivacyPolicyPage() {
                 <div className="w-12 h-12 bg-white border border-gray-200 rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
                   <Mail className="w-5 h-5 text-gray-600" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2 font-heading">Contact US</h3>
-                <p className="text-sm text-[#706B6E] mb-6 max-w-md mx-auto">
+                <h3 className="mb-2">Contact US</h3>
+                <p className="text-[#706B6E] mb-6 max-w-md mx-auto">
                   If you have any questions about our privacy policies, data encryption keys, or account controls, reach out to our security team.
                 </p>
-                <a href="mailto:support@tracewavetransparency.com" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-bold text-sm transition-colors">
+                <a href="mailto:support@tracewavetransparency.com" className="inline-flex items-center gap-2 px-6 py-3 bg-gray-900 hover:bg-gray-800 text-white rounded-xl font-bold text-base transition-colors">
                   <Mail className="w-4 h-4" /> support@tracewavetransparency.com
                 </a>
               </div>

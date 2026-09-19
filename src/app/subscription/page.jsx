@@ -34,11 +34,11 @@ export default function SubscriptionPage() {
               <span>Manage Subscription & Premium Access</span>
             </div> */}
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
+            <h1 className="  font-extrabold leading-snug">
               Invest in your daily reproductive wellness
             </h1>
 
-            <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className=" text-gray-600 max-w-2xl mx-auto leading-relaxed">
               Unlock unlimited AI-generated cycle reports, full Ayurvedic remedy libraries, and advanced prediction models on your mobile device.
             </p>
 
@@ -84,12 +84,12 @@ export default function SubscriptionPage() {
               <div className="space-y-4">
                 <div>
                   <span className="text-sm font-bold uppercase tracking-wider text-gray-400">Basic Access</span>
-                  <h3 className="text-2xl font-black text-gray-900 mt-1">Free Lifetime</h3>
-                  <p className="text-sm text-gray-500 mt-1">Essential period tracking and cycle calculations</p>
+                  <h3 className="mt-1">Free Lifetime</h3>
+                  <p className="text-gray-500 mt-1">Essential period tracking and cycle calculations</p>
                 </div>
 
                 <div className="pt-2">
-                  <span className="text-4xl font-black text-gray-900">₹0</span>
+                  <span className="font-black text-gray-900">₹0</span>
                   <span className="text-sm text-gray-500 font-semibold ml-2">Forever free</span>
                 </div>
 
@@ -140,16 +140,16 @@ export default function SubscriptionPage() {
               <div className="space-y-4">
                 <div>
                   <span className="text-sm font-bold uppercase tracking-wider text-flo-600">Full Access</span>
-                  <h3 className="text-2xl font-black text-gray-900 mt-1">Premium Wellness</h3>
-                  <p className="text-sm text-gray-500 mt-1">Unlimited AI reports, full Ayurveda module & priority care</p>
+                  <h3 className="mt-1">Premium Wellness</h3>
+                  <p className="text-gray-500 mt-1">Unlimited AI reports, full Ayurveda module & priority care</p>
                 </div>
 
                 <div className="pt-2">
-                  <span className="text-4xl font-black text-gray-900">
-                    {billingCycle === 'annual' ? '₹1,999' : '₹299'}
+                  <span className="font-black text-gray-900">
+                    {billingCycle === 'annual' ? '$20' : '$3.12'}
                   </span>
                   <span className="text-sm text-gray-500 font-semibold ml-2">
-                    / month {billingCycle === 'annual' ? '(Billed annually at₹1,999)' : '(Billed monthly)'}
+                    / month {billingCycle === 'annual' ? '(Billed annually at $20)' : '(Billed monthly)'}
                   </span>
                 </div>
 
@@ -200,7 +200,7 @@ export default function SubscriptionPage() {
                     Subscribe on Android
                   </a>
                 </div>
-                <p className="text-sm text-gray-400 text-center font-medium">
+                <p className="text-gray-400 text-center font-medium">
                   Free 7-day trial included. Cancel anytime in Apple/Google settings.
                 </p>
               </div>
@@ -213,8 +213,8 @@ export default function SubscriptionPage() {
         <section className="py-12 bg-white border-t border-pink-100">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
             <div className="text-center space-y-2">
-              <h3 className="text-2xl font-black text-gray-900">How to Manage or Cancel Your Subscription</h3>
-              <p className="text-sm text-gray-600">
+              <h3 className="">How to Manage or Cancel Your Subscription</h3>
+              <p className="text-gray-600">
                 All subscriptions are safely managed through your official Apple App Store or Google Play account.
               </p>
             </div>
@@ -222,7 +222,7 @@ export default function SubscriptionPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {/* Apple instructions */}
               <div className="p-6 rounded-3xl bg-gray-50 border border-gray-200 space-y-3">
-                <h4 className="font-bold text-gray-900 flex items-center gap-2 text-base">
+                <h4 className="flex items-center gap-2">
                   <span>Apple App Store (iPhone & iPad)</span>
                 </h4>
                 <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside leading-relaxed">
@@ -236,7 +236,7 @@ export default function SubscriptionPage() {
 
               {/* Google Play instructions */}
               <div className="p-6 rounded-3xl bg-gray-50 border border-gray-200 space-y-3">
-                <h4 className="font-bold text-gray-900 flex items-center gap-2 text-base">
+                <h4 className="flex items-center gap-2">
                   <span>Google Play (Android Phones & Tablets)</span>
                 </h4>
                 <ol className="text-sm text-gray-600 space-y-2 list-decimal list-inside leading-relaxed">

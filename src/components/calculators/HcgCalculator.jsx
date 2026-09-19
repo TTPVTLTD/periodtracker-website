@@ -118,8 +118,8 @@ export default function HcgCalculator() {
             <Activity className="w-5 h-5" />
           </div>
           <div>
-            <h3 className="text-xl font-bold text-gray-900">Beta hCG Doubling Inputs</h3>
-            <p className="text-xs text-gray-500">Calculate hormone rise rate between two serial blood draws</p>
+            <h3 className="">Beta hCG Doubling Inputs</h3>
+            <p className="text-gray-500 text-sm">Calculate hormone rise rate between two serial blood draws</p>
           </div>
         </div>
 
@@ -207,7 +207,7 @@ export default function HcgCalculator() {
             type="button"
             onClick={handleCalculate}
             disabled={isCalculating}
-            className="w-full py-4 rounded-full bg-[#f43f77] hover:bg-[#e11d5f] text-white font-bold text-base sm:text-lg shadow-md shadow-pink-200 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-center flex items-center justify-center gap-2 disabled:opacity-85 cursor-pointer"
+            className="w-full py-4 rounded-full bg-[#f43f77] hover:bg-[#e11d5f] text-white font-bold text-base shadow-md shadow-pink-200 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-center flex items-center justify-center gap-2 disabled:opacity-85 cursor-pointer"
           >
             {isCalculating ? (
               <>
@@ -235,10 +235,10 @@ export default function HcgCalculator() {
             </div>
 
             <div className="max-w-md space-y-1.5">
-              <h4 className="text-xl sm:text-2xl font-black text-gray-900">
+              <h4 className="text-lg font-bold">
                 Ready to Calculate Doubling Rate
               </h4>
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+              <p className=" text-gray-600 leading-relaxed">
                 Enter your two blood test values and elapsed time above, then click <strong className="text-flo-600">"See results"</strong> to view doubling times and 48-hour percentage increase.
               </p>
             </div>
@@ -278,7 +278,7 @@ export default function HcgCalculator() {
                 <span className="text-xs font-bold text-flo-700 uppercase tracking-wider block">
                   Doubling Time
                 </span>
-                <span className="text-2xl sm:text-3xl font-black text-gray-900 mt-2 block truncate">
+                <span className=" font-black text-gray-900 mt-2 block truncate">
                   {results.doublingHours} <span className="text-sm font-semibold text-gray-600">Hours</span>
                 </span>
                 <span className="text-xs text-gray-500 mt-1 block">
@@ -290,7 +290,7 @@ export default function HcgCalculator() {
                 <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider block">
                   48-Hour Increase
                 </span>
-                <span className="text-2xl sm:text-3xl font-black text-emerald-950 mt-2 block truncate">
+                <span className=" font-black text-emerald-950 mt-2 block truncate">
                   +{results.percentIncrease48h}%
                 </span>
                 <span className="text-xs text-emerald-700 mt-1 block">
@@ -302,7 +302,7 @@ export default function HcgCalculator() {
                 <span className="text-xs font-bold text-amber-800 uppercase tracking-wider block">
                   Overall Increase
                 </span>
-                <span className="text-2xl sm:text-3xl font-black text-amber-950 mt-2 block truncate">
+                <span className=" font-black text-amber-950 mt-2 block truncate">
                   +{results.totalPercentIncrease}%
                 </span>
                 <span className="text-xs text-amber-700 mt-1 block">
@@ -316,8 +316,8 @@ export default function HcgCalculator() {
             <div className={`p-5 rounded-2xl border ${results.statusColor} flex items-start gap-3 shadow-xs`}>
               <CheckCircle2 className="w-5 h-5 shrink-0 mt-0.5" />
               <div>
-                <h5 className="font-bold text-sm sm:text-base">{results.statusText}</h5>
-                <p className="text-xs sm:text-sm mt-1 leading-relaxed opacity-90">{results.statusDesc}</p>
+                <h5 className="">{results.statusText}</h5>
+                <p className=" mt-1 leading-relaxed opacity-90">{results.statusDesc}</p>
               </div>
             </div>
 
@@ -329,10 +329,10 @@ export default function HcgCalculator() {
           <div className="flex items-start gap-3">
             <Info className="w-5 h-5 text-gray-400 shrink-0 mt-0.5" />
             <div className="space-y-2">
-              <p>
+              <p className="text-sm">
                 • Remember that hCG calculator tools and hCG level charts can help you learn more about the part hCG plays in pregnancy. However, results are estimates, and they are for informational purposes only, not a replacement for medical advice or as a self-diagnosis tool. Your doctor should always be your first resource when it comes to tracking and explaining hCG progression.
               </p>
-              <p>
+              <p className="text-sm">
                 • Please note that <strong>Period Tracker & Ovulation Cycle</strong> does not collect, process, or store any of the data that you enter while using these tools. All calculations are done exclusively in your browser. We do not have access to the results. All data will be permanently erased after leaving or closing the page.
               </p>
             </div>
@@ -343,16 +343,16 @@ export default function HcgCalculator() {
 
       {/* Clinical Reference Chart Table */}
       <div className="bg-white rounded-3xl border border-pink-100 p-6 sm:p-8 shadow-sm">
-        <h4 className="text-base font-bold text-gray-900 mb-2 flex items-center gap-2">
+        <h4 className="mb-2 flex items-center gap-2">
           <TrendingUp className="w-5 h-5 text-flo-500" />
           <span>Beta hCG Reference Ranges by Gestational Week</span>
         </h4>
-        <p className="text-xs text-gray-500 mb-4">
+        <p className="text-gray-500 mb-4">
           Weeks counted from the first day of your last menstrual period (LMP). Normal ranges vary widely between individuals.
         </p>
 
         <div className="overflow-x-auto">
-          <table className="w-full text-left text-xs sm:text-sm border-collapse">
+          <table className="w-full text-left text-xs border-collapse">
             <thead>
               <tr className="bg-flo-50/80 border-b border-pink-200 text-flo-900 font-bold">
                 <th className="py-3 px-4 rounded-l-xl">Gestational Age (LMP)</th>

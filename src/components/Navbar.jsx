@@ -264,7 +264,7 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3 lg:gap-4 shrink-0 whitespace-nowrap">
             <Link
               href="/subscription"
-              className="text-xs sm:text-sm font-bold text-gray-700 hover:text-flo-600 transition-colors whitespace-nowrap px-1 py-1"
+              className="text-sm font-bold text-gray-700 hover:text-flo-600 transition-colors whitespace-nowrap px-1 py-1"
             >
               Subscription Plans
             </Link>
@@ -273,7 +273,7 @@ export default function Navbar() {
               href="https://apps.apple.com/app/id6774117828"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 bg-brand-pink hover:bg-flo-600 text-white font-bold px-4 lg:px-5 py-2.5 rounded-full shadow-md shadow-pink-200 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-xs sm:text-sm cursor-pointer whitespace-nowrap"
+              className="inline-flex items-center gap-1.5 bg-brand-pink hover:bg-flo-600 text-white font-bold px-4 lg:px-5 py-2.5 rounded-full shadow-md shadow-pink-200 hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 active:translate-y-0 text-xs cursor-pointer whitespace-nowrap"
             >
               <span>Get the App</span>
               <Sparkles className="w-3.5 h-3.5" />

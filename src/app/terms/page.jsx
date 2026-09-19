@@ -77,31 +77,31 @@ export default function TermsAndConditionsPage() {
         <div className="absolute top-40 right-10 w-96 h-96 bg-[#FF8C69]/10 rounded-full blur-3xl opacity-70 animate-pulse pointer-events-none" style={{ animationDelay: '2s' }} />
 
         {/* Header Section */}
-        <div className="relative pt-16 pb-12 px-4 sm:px-6 z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-6">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] font-bold text-xs uppercase tracking-wider mx-auto shadow-sm transition-transform hover:scale-105">
+        <div className="relative pt-10 pb-6 px-4 px-6 z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] font-bold text-base uppercase tracking-wider mx-auto shadow-sm transition-transform hover:scale-105">
               <FileText className="w-4 h-4" />
               <span>Legal Agreements</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-[#1A1819] font-heading tracking-tight">
+            <h1 className="font-extrabold text-[#1A1819]">
               Terms & Conditions
             </h1>
-            <p className="text-[#706B6E] text-base sm:text-lg max-w-2xl mx-auto font-medium">
+            <p className="text-[#706B6E] max-w-2xl mx-auto font-medium">
               Please read these terms and conditions carefully before using the Period Tracker Ovulation Cycle application or website.
             </p>
-            <div className="text-sm font-bold text-gray-400">Last Updated: June 6, 2026</div>
+            <div className="text-base font-bold text-gray-400">Last Updated: June 6, 2026</div>
           </div>
         </div>
 
         {/* Content Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 flex flex-col lg:flex-row gap-10 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 px-6 py-6 flex flex-col lg:flex-row gap-10 relative z-10">
           
           {/* Sidebar Navigation */}
           <aside className="hidden lg:block w-64 shrink-0">
             <div className="sticky top-28 bg-white/90 backdrop-blur-xl rounded-2xl border border-[#FF5E8C]/15 p-3 shadow-lg shadow-pink-900/5">
               <nav className="space-y-1">
                 {jumpLinks.map(link => (
-                  <a key={link.id} href={`#${link.id}`} className="flex items-center gap-3 px-3 py-2.5 text-sm font-medium text-[#706B6E] rounded-xl hover:bg-pink-50 hover:text-[#FF5E8C] transition-colors group">
+                  <a key={link.id} href={`#${link.id}`} className="flex items-center gap-3 px-3 py-2.5 text-base font-medium text-[#706B6E] rounded-xl hover:bg-pink-50 hover:text-[#FF5E8C] transition-colors group">
                     <link.icon className="w-4 h-4 text-gray-400 group-hover:text-[#FF5E8C]" />
                     <span>{link.label}</span>
                   </a>
@@ -112,14 +112,14 @@ export default function TermsAndConditionsPage() {
 
           {/* Main Content */}
           <div className="flex-1 max-w-4xl">
-            <div className="bg-white/90 backdrop-blur-xl border border-[#FF5E8C]/15 rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xl shadow-pink-900/5 relative">
+            <div className="bg-white/90 backdrop-blur-xl border border-[#FF5E8C]/15 rounded-3xl p-6 p-10 lg:p-12 shadow-xl shadow-pink-900/5 relative">
               
               {/* Critical Medical Disclaimer Banner */}
-              <div className="mb-10 bg-amber-50 border-l-4 border-amber-500 rounded-r-2xl p-6 flex flex-col sm:flex-row items-start gap-4">
+              <div className="mb-10 bg-amber-50 border-l-4 border-amber-500 rounded-r-2xl p-6 flex flex-col flex-row items-start gap-4">
                 <AlertTriangle className="w-6 h-6 text-amber-600 shrink-0 mt-0.5" />
                 <div>
-                  <h3 className="text-lg font-bold text-amber-900 mb-2">Important Medical Disclaimer</h3>
-                  <p className="text-sm text-amber-800 leading-relaxed font-medium">
+                  <h3 className="text-amber-900 mb-2">Important Medical Disclaimer</h3>
+                  <p className="text-amber-800 leading-relaxed font-medium">
                     Period Tracker Ovulation Cycle is a cycle-tracking tool designed for educational and self-care purposes. <strong>Period Tracker Ovulation Cycle does not provide medical diagnostics, medical advice, or family planning/contraception services.</strong> Predictive windows should not be relied upon to prevent pregnancy. Always consult a certified medical provider for health advice.
                   </p>
                 </div>
@@ -134,27 +134,18 @@ export default function TermsAndConditionsPage() {
                 </div>
               ) : cmsContent ? (
                 <div
-                  className="max-w-none text-[#706B6E] leading-relaxed 
-                    [&>h1]:text-2xl [&>h1]:font-bold [&>h1]:text-[#1A1819] [&>h1]:font-heading [&>h1]:mt-8 [&>h1]:mb-4 
-                    [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-[#1A1819] [&>h2]:font-heading [&>h2]:mt-8 [&>h2]:mb-4 
-                    [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-[#1A1819] [&>h3]:font-heading [&>h3]:mt-6 [&>h3]:mb-3 
-                    [&>p]:mb-4 
-                    [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-4 
-                    [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:mb-4 
-                    [&>li]:mb-1.5 
-                    [&>strong]:text-[#1A1819] [&>strong]:font-bold
-                    [&>a]:text-[#FF5E8C] hover:[&>a]:underline"
+                  className="max-w-none text-[#706B6E] leading-relaxed [&>h1]: [&>h1]:font-bold [&>h1]:text-[#1A1819] [&>h1]:font-heading [&>h1]:mt-8 [&>h1]:mb-4 [&>h2]:text-xl [&>h2]:font-bold [&>h2]:text-[#1A1819] [&>h2]:font-heading [&>h2]:mt-8 [&>h2]:mb-4 [&>h3]:text-lg [&>h3]:font-bold [&>h3]:text-[#1A1819] [&>h3]:font-heading [&>h3]:mt-6 [&>h3]:mb-3 [&>p]:mb-4 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-4 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:mb-4 [&>li]:mb-1.5 [&>strong]:text-[#1A1819] [&>strong]:font-bold [&>a]:text-[#FF5E8C] hover:[&>a]:underline"
                   dangerouslySetInnerHTML={{ __html: cmsContent }}
                 />
               ) : error ? (
                 <div className="space-y-12">
                   {/* Error Notification */}
-                  <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center justify-between gap-4 text-red-800 text-sm font-semibold mb-8">
+                  <div className="bg-red-50 border border-red-200 rounded-xl p-4 flex items-center justify-between gap-4 text-red-800 text-base font-semibold mb-8">
                     <div className="flex items-center gap-2">
                       <AlertCircle className="w-5 h-5 text-red-600 shrink-0" />
                       <span>Showing offline fallback terms.</span>
                     </div>
-                    <button onClick={fetchCMSContent} className="px-3 py-1.5 bg-white border border-red-200 text-red-600 rounded-lg text-xs font-bold shadow-sm flex items-center gap-1.5">
+                    <button onClick={fetchCMSContent} className="px-3 py-1.5 bg-white border border-red-200 text-red-600 rounded-lg text-base font-bold shadow-sm flex items-center gap-1.5">
                       <RefreshCw className="w-3.5 h-3.5" /> Retry
                     </button>
                   </div>
@@ -162,7 +153,7 @@ export default function TermsAndConditionsPage() {
                   {/* Offline Content */}
                   <div className="space-y-10 text-gray-600">
                     <section id="acceptance" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-gray-700"><Scale className="w-4 h-4"/></div>
                         1. Acceptance of Terms
                       </h2>
@@ -172,7 +163,7 @@ export default function TermsAndConditionsPage() {
                     <hr className="border-gray-100" />
 
                     <section id="medical-disclaimer" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center text-amber-600"><AlertTriangle className="w-4 h-4"/></div>
                         2. Medical Disclaimer (Not Medical Advice)
                       </h2>
@@ -183,7 +174,7 @@ export default function TermsAndConditionsPage() {
                     <hr className="border-gray-100" />
 
                     <section id="billing" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center text-green-600"><CreditCard className="w-4 h-4"/></div>
                         3. Premium Subscriptions & Billing
                       </h2>
@@ -192,15 +183,15 @@ export default function TermsAndConditionsPage() {
                         <div className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
                           <div>
-                            <strong className="text-gray-900 block text-sm">7-Day Free Trial</strong>
-                            <span className="text-sm text-gray-600">You must cancel before the 7-day trial ends to avoid recurring subscription fee charges.</span>
+                            <strong className="text-gray-900 block text-base">7-Day Free Trial</strong>
+                            <span className="text-base text-gray-600">You must cancel before the 7-day trial ends to avoid recurring subscription fee charges.</span>
                           </div>
                         </div>
                         <div className="flex items-start gap-3">
                           <CheckCircle2 className="w-5 h-5 text-green-500 shrink-0 mt-0.5" />
                           <div>
-                            <strong className="text-gray-900 block text-sm">Flexible Cancellations</strong>
-                            <span className="text-sm text-gray-600">Subscriptions can be cancelled at any time inside the Profile screen settings without lock-in contracts.</span>
+                            <strong className="text-gray-900 block text-base">Flexible Cancellations</strong>
+                            <span className="text-base text-gray-600">Subscriptions can be cancelled at any time inside the Profile screen settings without lock-in contracts.</span>
                           </div>
                         </div>
                       </div>
@@ -209,7 +200,7 @@ export default function TermsAndConditionsPage() {
                     <hr className="border-gray-100" />
 
                     <section id="user-logs" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600"><Shield className="w-4 h-4"/></div>
                         4. User Logs & Security Guidelines
                       </h2>
@@ -219,7 +210,7 @@ export default function TermsAndConditionsPage() {
                     <hr className="border-gray-100" />
 
                     <section id="liability" className="scroll-mt-24 space-y-4">
-                      <h2 className="text-2xl font-bold text-gray-900 flex items-center gap-3 font-heading">
+                      <h2 className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-lg bg-gray-200 flex items-center justify-center text-gray-700"><AlertCircle className="w-4 h-4"/></div>
                         5. Limitation of Liability
                       </h2>
@@ -233,8 +224,8 @@ export default function TermsAndConditionsPage() {
             </div>
 
             <div className="mt-8 text-center bg-white border border-gray-100 p-6 rounded-2xl shadow-sm">
-               <p className="text-sm text-gray-600">Questions about our Terms?</p>
-               <Link href="/contact" className="text-[#FF5E8C] font-bold text-sm hover:underline mt-2 inline-block">Contact our Legal Team</Link>
+               <p className="text-gray-600">Questions about our Terms?</p>
+               <Link href="/contact" className="text-[#FF5E8C] font-bold text-base hover:underline mt-2 inline-block">Contact our Legal Team</Link>
             </div>
           </div>
         </div>

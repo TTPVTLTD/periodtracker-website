@@ -242,8 +242,8 @@ export default function PeriodCalculator() {
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900">Your Cycle Details</h3>
-              <p className="text-xs text-gray-500">Instant ovulation & period prediction</p>
+              <h3 className="">Your Cycle Details</h3>
+              <p className="text-gray-500 text-sm">Instant ovulation & period prediction</p>
             </div>
           </div>
 
@@ -258,7 +258,7 @@ export default function PeriodCalculator() {
               onChange={(e) => setLastPeriodDate(e.target.value)}
               className="w-full px-4 py-3.5 rounded-2xl bg-white border border-gray-300 text-gray-900 font-semibold focus:outline-none focus:ring-2 focus:ring-flo-500 focus:border-transparent transition-all shadow-xs text-base"
             />
-            <p className="text-xs text-gray-500 mt-1.5">
+            <p className="text-gray-500 mt-1.5 text-sm">
               The date you first noticed regular menstrual bleeding.
             </p>
           </div>
@@ -315,7 +315,7 @@ export default function PeriodCalculator() {
 
           {/* Common Presets */}
           <div>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Quick Cycle Presets:</p>
+            <p className="text-gray-500 uppercase mb-2 !text-sm">Quick Cycle Presets:</p>
             <div className="grid grid-cols-3 gap-2">
               {[26, 28, 30].map((days) => (
                 <button
@@ -359,7 +359,7 @@ export default function PeriodCalculator() {
           {/* Privacy note */}
           <div className="p-3.5 rounded-2xl bg-flo-50/70 border border-pink-100 flex items-start gap-2.5 text-xs text-gray-600">
             <Info className="w-4 h-4 text-flo-500 shrink-0 mt-0.5" />
-            <span>
+            <span className="leading-relaxed text-sm">
               <strong>100% In-Browser Privacy:</strong> Your menstrual dates are processed locally inside this browser and are never transmitted to any external server.
             </span>
           </div>
@@ -381,10 +381,10 @@ export default function PeriodCalculator() {
               </div>
 
               <div className="max-w-md space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-black text-gray-900">
+                <h3 className="text-xl  font-bold">
                   Ready to Predict Your Cycle
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   Enter your period details on the left and click <strong className="text-flo-600">"See results"</strong> to reveal your ovulation date, peak fertility window, and personalized monthly calendar.
                 </p>
               </div>
@@ -408,7 +408,7 @@ export default function PeriodCalculator() {
                 </div>
               </div>
 
-              <p className="text-xs text-gray-400 font-medium">
+              <p className="text-gray-400 font-medium">
                 Predictive cycle modeling based on your menstrual dates and averages
               </p>
             </div>
@@ -423,10 +423,10 @@ export default function PeriodCalculator() {
                     <CalendarIcon className="w-3.5 h-3.5 text-flo-500 shrink-0" />
                     Next Period
                   </span>
-                  <h4 className="text-2xl sm:text-3xl font-black text-gray-900 mt-2 truncate">
+                  <h4 className="text-lg font-bold mt-2 truncate">
                     {calculations.nextPeriodStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                   </h4>
-                  <p className="text-xs text-gray-600 mt-1 leading-snug">
+                  <p className="text-gray-600 mt-1 leading-snug">
                     Bleeding runs until {calculations.nextPeriodEnd.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                   </p>
                 </div>
@@ -437,10 +437,10 @@ export default function PeriodCalculator() {
                     <Sparkles className="w-3.5 h-3.5 text-amber-600 shrink-0" />
                     Ovulation Day
                   </span>
-                  <h4 className="text-2xl sm:text-3xl font-black text-amber-950 mt-2 truncate">
+                  <h4 className="text-lg font-bold text-amber-950 mt-2 truncate">
                     {calculations.ovulationDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                   </h4>
-                  <p className="text-xs text-amber-800 mt-1 font-medium leading-snug">
+                  <p className="text-amber-800 mt-1 font-medium leading-snug">
                     Egg release (Peak fertility)
                   </p>
                 </div>
@@ -451,10 +451,10 @@ export default function PeriodCalculator() {
                     <Heart className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
                     Fertile Window
                   </span>
-                  <h4 className="text-lg sm:text-xl font-black text-emerald-950 mt-2 whitespace-nowrap overflow-hidden text-ellipsis">
+                  <h4 className="text-lg font-bold text-emerald-950 mt-2 whitespace-nowrap overflow-hidden text-ellipsis">
                     {calculations.fertileStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} – {calculations.fertileEnd.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                   </h4>
-                  <p className="text-xs text-emerald-800 mt-1 font-medium leading-snug">
+                  <p className="text-emerald-800 mt-1 font-medium leading-snug">
                     6 Days favorable for conception
                   </p>
                 </div>
@@ -470,7 +470,7 @@ export default function PeriodCalculator() {
                       {calculations.currentPhase}
                     </span>
                   </div>
-                  <p className="text-sm font-medium text-gray-700">
+                  <p className="font-medium text-gray-700">
                     {calculations.phaseDescription}
                   </p>
                 </div>
@@ -495,7 +495,7 @@ export default function PeriodCalculator() {
                       <div className="w-9 h-9 rounded-xl bg-flo-100 text-flo-600 flex items-center justify-center">
                         <CalendarDays className="w-5 h-5" />
                       </div>
-                      <h4 className="font-bold text-gray-900 text-lg">
+                      <h4 className="">
                         {calendarDays.monthName}
                       </h4>
                     </div>

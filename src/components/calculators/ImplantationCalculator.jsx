@@ -83,8 +83,8 @@ export default function ImplantationCalculator() {
               <Sparkles className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900">Implantation Window</h3>
-              <p className="text-xs text-gray-500">Calculate when the blastocyst attaches</p>
+              <h3 className="text-lg text-gray-800">Implantation Window</h3>
+              <p className="text-gray-500 text-sm">Calculate when the blastocyst attaches</p>
             </div>
           </div>
 
@@ -98,7 +98,7 @@ export default function ImplantationCalculator() {
               onChange={(e) => setOvulationDate(e.target.value)}
               className="w-full px-4 py-3.5 rounded-2xl bg-white border border-gray-300 text-base font-bold text-gray-800 focus:ring-2 focus:ring-flo-500 focus:outline-none shadow-xs"
             />
-            <p className="text-xs text-gray-500 mt-1.5">
+            <p className="text-gray-500 mt-1.5 text-sm">
               Typically occurs 14 days before your expected period.
             </p>
           </div>
@@ -127,7 +127,7 @@ export default function ImplantationCalculator() {
 
           <div className="p-3.5 rounded-2xl bg-amber-50/70 border border-amber-200 text-xs text-amber-900 flex items-start gap-2.5">
             <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-            <span>
+            <span clsassName="text-sm leading-relaxed">
               <strong>Biology Fact:</strong> Implantation occurs between 6 and 12 days after ovulation, with 85% of successful blastocyst attachments taking place between days 8 and 10.
             </span>
           </div>
@@ -149,10 +149,10 @@ export default function ImplantationCalculator() {
               </div>
 
               <div className="max-w-md space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-black text-gray-900">
+                <h3 className="text-xl  font-bold">
                   Ready to Calculate Implantation
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   Enter your estimated ovulation or conception date on the left and click <strong className="text-flo-600">"See results"</strong> to view your attachment window and earliest pregnancy test date.
                 </p>
               </div>
@@ -182,7 +182,7 @@ export default function ImplantationCalculator() {
                   <span className="text-xs font-bold text-flo-700 uppercase tracking-wider block truncate">
                     Most Likely Window
                   </span>
-                  <span className="text-xl sm:text-2xl font-black text-gray-900 mt-2 block truncate">
+                  <span className="text-xl  font-black text-gray-900 mt-2 block truncate">
                     {results.peakStart.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} – {results.peakEnd.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                   </span>
                   <span className="text-xs text-gray-600 mt-1 block leading-snug">
@@ -194,7 +194,7 @@ export default function ImplantationCalculator() {
                   <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider block truncate">
                     Full Span
                   </span>
-                  <span className="text-lg sm:text-xl font-black text-emerald-950 mt-2 block truncate">
+                  <span className="text-lg font-black text-emerald-950 mt-2 block truncate">
                     {results.earlyImp.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })} – {results.lateImp.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                   </span>
                   <span className="text-xs text-emerald-700 mt-1 block leading-snug">
@@ -206,7 +206,7 @@ export default function ImplantationCalculator() {
                   <span className="text-xs font-bold text-amber-800 uppercase tracking-wider block truncate">
                     Recommended Test
                   </span>
-                  <span className="text-xl sm:text-2xl font-black text-amber-950 mt-2 block truncate">
+                  <span className="text-xl  font-black text-amber-950 mt-2 block truncate">
                     {results.testDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
                   </span>
                   <span className="text-xs text-amber-700 mt-1 block leading-snug">
@@ -218,11 +218,11 @@ export default function ImplantationCalculator() {
 
               {/* Clinical Educational Explanation */}
               <div className="p-6 rounded-3xl bg-white border border-pink-200 shadow-xs space-y-3">
-                <h5 className="font-bold text-gray-900 text-base flex items-center gap-2">
+                <h5 className="flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5 text-flo-500" />
                   <span>What does implantation feel like?</span>
                 </h5>
-                <p className="text-sm text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   About 1 in 3 women notice light implantation bleeding: a few drops of pale pink or light brown spotting lasting 24 to 48 hours without heavy flow or clots. Mild lower pelvis twinges may also occur as the blastocyst burrows into the vascular lining.
                 </p>
               </div>

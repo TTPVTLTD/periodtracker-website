@@ -131,8 +131,8 @@ export default function DueDateCalculator() {
               <Baby className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900">Due Date Calculation</h3>
-              <p className="text-xs text-gray-500">Calculate delivery date using Naegele's standard rule</p>
+              <h3 className="">Due Date Calculation</h3>
+              <p className="text-gray-500 text-sm">Calculate delivery date using Naegele's standard rule</p>
             </div>
           </div>
 
@@ -233,7 +233,7 @@ export default function DueDateCalculator() {
 
           <div className="p-3.5 rounded-2xl bg-flo-50/70 border border-pink-100 flex items-start gap-2.5 text-xs text-gray-600">
             <AlertCircle className="w-4 h-4 text-flo-500 shrink-0 mt-0.5" />
-            <span>
+            <span className="text-sm leading-relaxed">
               <strong>Delivery Fact:</strong> Only 4% to 5% of babies deliver precisely on their calculated due date. Most arrive safely within 2 weeks before or after.
             </span>
           </div>
@@ -255,10 +255,10 @@ export default function DueDateCalculator() {
               </div>
 
               <div className="max-w-md space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-black text-gray-900">
+                <h3 className="text-xl  font-bold">
                   Ready to Calculate Your Due Date
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   Provide your last period start date or conception date on the left and click <strong className="text-flo-600">"See results"</strong> to estimate delivery date and baby size.
                 </p>
               </div>
@@ -282,7 +282,7 @@ export default function DueDateCalculator() {
                 </div>
               </div>
 
-              <p className="text-xs text-gray-400 font-medium">
+              <p className="text-gray-400 font-medium">
                 Standard American College of Obstetricians and Gynecologists (ACOG) guidelines
               </p>
             </div>
@@ -295,7 +295,7 @@ export default function DueDateCalculator() {
                   <span>Estimated Delivery Date</span>
                 </div>
 
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight">
+                <div className="  font-black text-gray-900 tracking-tight">
                   {results.dueDate.toLocaleDateString('en-US', {
                     weekday: 'short',
                     month: 'long',
@@ -303,7 +303,7 @@ export default function DueDateCalculator() {
                     year: 'numeric'
                   })}
                 </div>
-                <p className="text-xs text-gray-500 font-medium">
+                <p className="text-gray-500 font-medium">
                   Calculated based on a 40-week gestational model
                 </p>
               </div>
@@ -312,7 +312,7 @@ export default function DueDateCalculator() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 text-left">
                 <div className="p-4 bg-white rounded-2xl border border-pink-100 shadow-2xs">
                   <span className="text-xs text-gray-400 font-bold block uppercase tracking-wider">Gestational Age</span>
-                  <span className="text-xl sm:text-2xl font-black text-gray-900 mt-1 block">
+                  <span className="text-xl  font-black text-gray-900 mt-1 block">
                     {results.weeks} Weeks, {results.days} Days
                   </span>
                   <span className="text-xs text-gray-500 mt-0.5 block">
@@ -322,7 +322,7 @@ export default function DueDateCalculator() {
 
                 <div className="p-4 bg-white rounded-2xl border border-pink-100 shadow-2xs">
                   <span className="text-xs text-gray-400 font-bold block uppercase tracking-wider">Current Stage</span>
-                  <span className="text-xl sm:text-2xl font-black text-flo-600 mt-1 block">
+                  <span className="text-xl  font-black text-flo-600 mt-1 block">
                     {results.trimester}
                   </span>
                   <span className="text-xs text-gray-500 mt-0.5 block">
@@ -333,14 +333,14 @@ export default function DueDateCalculator() {
 
               {/* Baby Size Visual */}
               <div className="p-5 rounded-2xl bg-white border border-pink-100 flex items-center gap-4 text-left shadow-2xs">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-pink-100 to-rose-200 flex items-center justify-center shrink-0 text-3xl shadow-xs">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-tr from-pink-100 to-rose-200 flex items-center justify-center shrink-0 shadow-xs">
                   🌱
                 </div>
                 <div>
-                  <h4 className="text-base font-bold text-gray-900">
+                  <h4 className="">
                     Baby size: <span className="text-flo-600 font-black">{results.matchedFruit.fruit}</span>
                   </h4>
-                  <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+                  <p className="text-gray-500 mt-1 leading-relaxed">
                     {results.matchedFruit.desc}
                   </p>
                 </div>

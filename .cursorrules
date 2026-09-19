@@ -1,0 +1,27 @@
+# Tech Stack
+- Next.js 14 (App Router)
+- React 18
+- Tailwind CSS 3
+- Lucide React (for icons)
+- JavaScript (JSX)
+
+# Project Context
+This is a landing page and informational website for "Period Tracker & Ovulation Cycle", a mobile application focused on reproductive health, AI cycle reports, Ayurveda care, and privacy. 
+
+# Coding Conventions & Styling Guidelines
+- **Architecture**: App Router (`src/app`). All pages are `.jsx` and use standard Next.js routing.
+- **Styling**: Tailwind CSS exclusively.
+- **Typography Standards**:
+  - Do NOT manually size headings (e.g., `text-4xl`, `sm:text-5xl`). Headings (`h1`, `h2`, `h3`, `h4`, `h5`, `h6`) are globally defined in `src/app/globals.css` under `@layer base`.
+  - Paragraphs (`<p>`) strictly default to 16px (`1rem`). Do NOT add custom size classes (like `text-sm` or `text-lg`) to `<p>` tags.
+  - For small descriptive text (14px) inside cards or FAQs, use `<div className="text-sm">` rather than a `<p>` tag.
+- **Components**: UI components are located in `src/components`. Keep them modular and reusable.
+- **State Management**: React Hooks (`useState`, `useEffect`, `useMemo`).
+- **Icons**: Use `lucide-react` for all iconography.
+
+# Do's and Don'ts
+- **DO**: Maintain the strict global typography rules. Use Tailwind for all styling.
+- **DO**: Ensure mobile responsiveness using Tailwind's `sm:`, `md:`, `lg:` prefixes where necessary (except for headings/p tags which are globally handled).
+- **DON'T**: Use absolute text sizes for standard structural text overriding the global theme.
+- **DON'T**: Create fake legal representatives or falsify legal information in the Privacy Policy.
+- **DON'T**: Expose sensitive API endpoints or tokens.

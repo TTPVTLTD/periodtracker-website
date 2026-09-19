@@ -85,8 +85,8 @@ export default function PregnancyTestCalculator() {
               <CheckCircle className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900">Test Timing Inputs</h3>
-              <p className="text-xs text-gray-500">Calculate date for reliable at-home testing</p>
+              <h3 className="">Test Timing Inputs</h3>
+              <p className="text-gray-500">Calculate date for reliable at-home testing</p>
             </div>
           </div>
 
@@ -199,10 +199,10 @@ export default function PregnancyTestCalculator() {
               </div>
 
               <div className="max-w-md space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-black text-gray-900">
+                <h3 className="text-xl  font-bold">
                   Ready to Calculate Test Date
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   Enter your cycle dates on the left and click <strong className="text-flo-600">"See results"</strong> to determine the earliest reliable date you can test at home without false negatives.
                 </p>
               </div>
@@ -228,10 +228,10 @@ export default function PregnancyTestCalculator() {
                   <span className="text-xs font-bold text-emerald-900 uppercase tracking-wider block">
                     Recommended For 99% Accuracy
                   </span>
-                  <span className="text-2xl sm:text-3xl font-black text-emerald-950 mt-2 block">
+                  <span className=" font-black text-emerald-950 mt-2 block">
                     {results.definitiveTestDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                   </span>
-                  <p className="text-xs text-emerald-800 mt-2 leading-relaxed font-medium">
+                  <p className="text-emerald-800 mt-2 leading-relaxed font-medium">
                     Day of expected missed period. Urine hCG levels are high enough to virtually eliminate false negatives.
                   </p>
                 </div>
@@ -241,10 +241,10 @@ export default function PregnancyTestCalculator() {
                   <span className="text-xs font-bold text-flo-700 uppercase tracking-wider block">
                     Earliest Sensitive Test
                   </span>
-                  <span className="text-2xl sm:text-3xl font-black text-gray-900 mt-2 block">
+                  <span className=" font-black text-gray-900 mt-2 block">
                     {results.earlyTestDate.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
                   </span>
-                  <p className="text-xs text-gray-600 mt-2 leading-relaxed">
+                  <p className="text-gray-600 mt-2 leading-relaxed">
                     Valid for ultra-sensitive (10 mIU/mL) early detection tests. If negative, re-test on the recommended date above.
                   </p>
                 </div>
@@ -253,11 +253,11 @@ export default function PregnancyTestCalculator() {
 
               {/* Tips Card */}
               <div className="p-6 rounded-3xl bg-white border border-pink-200 shadow-xs space-y-3">
-                <h5 className="font-bold text-gray-900 text-base flex items-center gap-2">
+                <h5 className="flex items-center gap-2">
                   <Clock className="w-5 h-5 text-flo-500" />
                   <span>Understanding At-Home Urine Test Sensitivity</span>
                 </h5>
-                <p className="text-sm text-gray-700 leading-relaxed">
+                <p className="text-gray-700 leading-relaxed">
                   Home urine pregnancy tests detect human chorionic gonadotropin (hCG). Standard kits require 25 mIU/mL, which is reliably present starting the first day of a missed period. Testing earlier than 10 to 12 days after ovulation may show a false negative even if conception occurred.
                 </p>
               </div>

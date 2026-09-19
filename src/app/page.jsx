@@ -10,7 +10,7 @@ import FaqSection from '../components/FaqSection';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Period Tracker & Ovulation Calculator — Menstrual Cycle Calendar',
+  title: 'Period Tracker & Ovulation Calculator | Smart Cycle Calendar',
   description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
   keywords: [
     'period tracker',
@@ -27,7 +27,7 @@ export const metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'Period Tracker & Ovulation Calculator — Menstrual Cycle Calendar',
+    title: 'Period Tracker & Ovulation Calculator | Smart Cycle Calendar',
     description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
     url: '/',
     siteName: 'Period Tracker & Ovulation Cycle',
@@ -36,7 +36,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Period Tracker & Ovulation Calculator — Menstrual Cycle Calendar',
+    title: 'Period Tracker & Ovulation Calculator | Smart Cycle Calendar',
     description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
   },
 };

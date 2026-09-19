@@ -36,7 +36,7 @@ export default function FaqSection() {
           onClick={() => toggleFaq(idx)}
           className="w-full px-5 py-4 sm:py-5 text-left flex items-start justify-between gap-3 focus:outline-none cursor-pointer"
         >
-          <span className={`font-bold text-sm sm:text-base leading-snug transition-colors ${
+          <span className={`font-bold text-base leading-snug transition-colors ${
             isOpen ? 'text-flo-600' : 'text-gray-900'
           }`}>
             {faq.question}
@@ -51,7 +51,7 @@ export default function FaqSection() {
         </button>
 
         {isOpen && (
-          <div className="px-5 pb-5 pt-2 text-sm sm:text-base text-gray-600 leading-relaxed border-t border-pink-50 bg-pink-50/20 animate-fadeIn">
+          <div className="text-base px-5 pb-5 pt-2 text-gray-600 leading-relaxed border-t border-pink-50 bg-pink-50/20 animate-fadeIn">
             {faq.answer}
           </div>
         )}
@@ -65,14 +65,14 @@ export default function FaqSection() {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100/80 text-flo-700 text-xs sm:text-sm font-bold mb-3 border border-pink-200">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pink-100/80 text-flo-700 text-xs font-bold mb-3 border border-pink-200">
             <HelpCircle className="w-4 h-4 text-flo-500" />
             <span>Frequently Asked Questions</span>
           </div>
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug">
+          <h2 className="  font-extrabold leading-snug">
             Frequently Asked Questions About Period & Ovulation Tracking
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed">
+          <p className="mt-3 text-gray-600 leading-relaxed">
             Doctor-verified answers regarding menstrual cycle calculations, fertile windows, safe days to prevent pregnancy, and personal health privacy.
           </p>
         </div>

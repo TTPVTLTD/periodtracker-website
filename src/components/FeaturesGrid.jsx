@@ -45,7 +45,7 @@ export default function FeaturesGrid() {
           <span className="text-xs font-bold text-flo-600 uppercase tracking-widest bg-flo-50 px-3 py-1 rounded-full border border-pink-200">
             Why Women Love This Platform
           </span>
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 tracking-tight leading-snug mt-3">
+          <h2 className=" font-extrabold  leading-snug mt-3">
             Designed for Clarity, Privacy & Health Empowerment
           </h2>
         </div>
@@ -61,10 +61,10 @@ export default function FeaturesGrid() {
                 <div className="w-12 h-12 rounded-2xl bg-flo-100 flex items-center justify-center text-flo-600 mb-4">
                   <Icon className="w-6 h-6" />
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">
+                <h4 className="mb-2">
                   {feat.title}
                 </h4>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   {feat.desc}
                 </p>
               </div>

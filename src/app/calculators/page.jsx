@@ -70,10 +70,10 @@ export default function CalculatorsHubPage() {
               <span className="text-gray-800 font-bold">HEALTH TOOLS & CALCULATORS</span>
             </nav>
 
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug">
-              Reproductive & Cycle Calculators
+            <h1 className="leading-snug">
+              Reproductive <span className="bg-gradient-to-r from-brand-pink via-brand-babyPink to-brand-peach bg-clip-text text-transparent">& Cycle Calculators</span>
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
               Smart interactive tools designed to predict menstrual phases, calculate hCG doubling rates, determine fertile windows, and estimate pregnancy due dates.
             </p>
 
@@ -115,12 +115,12 @@ export default function CalculatorsHubPage() {
                       </div>
 
                       <div>
-                        <h3 className="text-xl font-bold text-gray-900 group-hover:text-flo-600 transition-colors">
+                        <h3 className="group-hover:text-flo-600 transition-colors">
                           {calc.name}
                         </h3>
-                        <p className="text-sm text-gray-600 mt-2 leading-relaxed">
+                        <div className="text-sm text-gray-600 mt-2 leading-relaxed">
                           {calc.description}
-                        </p>
+                        </div>
                       </div>
                     </div>
 

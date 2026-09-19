@@ -79,7 +79,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Follow us on Facebook"
                   title="Follow us on Facebook"
-                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] hover:bg-[#FF5E8C] hover:text-white font-bold text-xs sm:text-sm shadow-xs transition-all duration-200 transform hover:-translate-y-0.5 group"
+                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] hover:bg-[#FF5E8C] hover:text-white font-bold text-xs shadow-xs transition-all duration-200 transform hover:-translate-y-0.5 group"
                 >
                   <Facebook className="w-4 h-4 transition-transform group-hover:scale-110 shrink-0" />
                   <span>Facebook</span>
@@ -91,7 +91,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Follow us on Instagram"
                   title="Follow us on Instagram"
-                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] hover:bg-[#FF5E8C] hover:text-white font-bold text-xs sm:text-sm shadow-xs transition-all duration-200 transform hover:-translate-y-0.5 group"
+                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] hover:bg-[#FF5E8C] hover:text-white font-bold text-xs shadow-xs transition-all duration-200 transform hover:-translate-y-0.5 group"
                 >
                   <Instagram className="w-4 h-4 transition-transform group-hover:scale-110 shrink-0" />
                   <span>Instagram</span>
@@ -103,7 +103,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   aria-label="Subscribe on YouTube"
                   title="Subscribe on YouTube"
-                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] hover:bg-[#FF5E8C] hover:text-white font-bold text-xs sm:text-sm shadow-xs transition-all duration-200 transform hover:-translate-y-0.5 group"
+                  className="flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] hover:bg-[#FF5E8C] hover:text-white font-bold text-xs shadow-xs transition-all duration-200 transform hover:-translate-y-0.5 group"
                 >
                   <Youtube className="w-4 h-4 transition-transform group-hover:scale-110 shrink-0" />
                   <span>YouTube</span>
@@ -114,7 +114,7 @@ export default function Footer() {
 
           {/* Col 2: Wellness Hub Categories */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-[#1A1819] uppercase tracking-wider font-heading">
+            <h4 className="text-[#1A1819] uppercase">
               Wellness Hub Topics
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">
@@ -154,7 +154,7 @@ export default function Footer() {
 
           {/* Col 3: Cycle Tools & Features */}
           <div className="lg:col-span-3 space-y-3">
-            <h4 className="text-sm font-bold text-[#1A1819] uppercase tracking-wider font-heading">
+            <h4 className="text-[#1A1819] uppercase">
               Cycle Tools & Calculators
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">
@@ -194,15 +194,11 @@ export default function Footer() {
 
           {/* Col 4: Platform & Legal */}
           <div className="lg:col-span-2 space-y-3">
-            <h4 className="text-sm font-bold text-[#1A1819] uppercase tracking-wider font-heading">
+            <h4 className="text-[#1A1819] uppercase">
               Platform & Legal
             </h4>
             <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">
-              <li>
-                <Link href="/app-features" className="hover:text-[#FF5E8C] transition-colors font-bold text-[#FF5E8C]">
-                  App Features
-                </Link>
-              </li>
+            
               <li>
                 <Link href="/about" className="hover:text-[#FF5E8C] transition-colors">
                   About Us
@@ -228,6 +224,11 @@ export default function Footer() {
                   Terms & Conditions
                 </Link>
               </li>
+                <li>
+                <Link href="/app-features" className="hover:text-[#FF5E8C] transition-colors font-bold text-[#FF5E8C]">
+                  App Features
+                </Link>
+              </li>
               {/* <li>
                 <Link href="/subscription" className="hover:text-[#FF5E8C] transition-colors">
                   Subscriptions
@@ -247,7 +248,7 @@ export default function Footer() {
 
         {/* Bottom Bar: Copyright & Quick Links */}
         <div className="pt-6 border-t border-[#FF5E8C]/15 flex flex-col sm:flex-row items-center justify-between text-sm text-[#706B6E] gap-4">
-          <p className="font-medium text-center sm:text-left">
+          <p className="font-medium text-center">
             © {new Date().getFullYear()} Tracewave Transparency PVT LTD. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-6 font-semibold text-sm">

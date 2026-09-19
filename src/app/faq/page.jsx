@@ -119,15 +119,15 @@ export default function FAQPage() {
         <div className="absolute top-40 right-10 w-96 h-96 bg-[#FF8C69]/10 rounded-full blur-3xl opacity-70 animate-pulse pointer-events-none" style={{ animationDelay: '2s' }} />
 
         {/* Hero Section */}
-        <section className="relative max-w-4xl mx-auto px-4 sm:px-6 py-16 sm:py-20 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 shadow-sm text-[#FF5E8C] font-bold text-xs sm:text-sm uppercase tracking-wider mx-auto transition-transform hover:scale-105">
+        <section className="relative max-w-4xl mx-auto px-4 sm:px-6 py-10 sm:py-12 text-center space-y-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 shadow-sm text-[#FF5E8C] font-bold text-xs uppercase tracking-wider mx-auto transition-transform hover:scale-105">
             <HelpCircle className="w-4 h-4" />
             <span>Support Center</span>
           </div>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#1A1819] leading-tight tracking-tight font-heading">
+          <h1 className="  font-extrabold text-[#1A1819] leading-tight">
             How can we help you today?
           </h1>
-          <p className="text-[#706B6E] text-base sm:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
+          <p className="text-[#706B6E] leading-relaxed max-w-2xl mx-auto font-medium">
             Find quick answers about tracking your cycle, managing your account, and understanding our privacy features.
           </p>
 
@@ -164,8 +164,8 @@ export default function FAQPage() {
         </section>
 
         {/* FAQ Container */}
-        <section className="max-w-3xl mx-auto px-4 sm:px-6 pb-20">
-          <div className="bg-white/80 backdrop-blur-xl border border-[#FF5E8C]/15 rounded-3xl p-6 sm:p-10 shadow-xl shadow-pink-900/5">
+        <section className="max-w-3xl mx-auto px-4 sm:px-6 pb-12">
+          <div className="bg-white/80 backdrop-blur-xl border border-[#FF5E8C]/15 rounded-3xl p-6 sm:p-8 shadow-xl shadow-pink-900/5">
             {loading ? (
               /* Skeleton Loading */
               <div className="animate-pulse space-y-4 py-2">
@@ -197,7 +197,7 @@ export default function FAQPage() {
                     <div className="w-16 h-16 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Search className="w-6 h-6 text-gray-400" />
                     </div>
-                    <h3 className="text-lg font-bold text-gray-900 mb-2">No results found</h3>
+                    <h3 className="mb-2">No results found</h3>
                     <p className="text-gray-500">We couldn't find any FAQs matching "{searchQuery}"</p>
                     <button 
                       onClick={() => { setSearchQuery(''); setActiveCategory('All'); }}
@@ -224,7 +224,7 @@ export default function FAQPage() {
                             onClick={() => toggleFaq(idx)}
                             className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none cursor-pointer group"
                           >
-                            <span className={`text-base sm:text-lg font-bold font-body pr-4 transition-colors ${isOpen ? 'text-[#FF5E8C]' : 'text-[#1A1819] group-hover:text-[#FF5E8C]'}`}>
+                            <span className={`text-base font-bold font-body pr-4 transition-colors ${isOpen ? 'text-[#FF5E8C]' : 'text-[#1A1819] group-hover:text-[#FF5E8C]'}`}>
                               {faq.title}
                             </span>
                             <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-colors ${isOpen ? 'bg-[#FF5E8C]/10' : 'bg-gray-50 group-hover:bg-[#FF5E8C]/10'}`}>
@@ -243,16 +243,7 @@ export default function FAQPage() {
                           >
                             <div className="px-6 pb-6 pt-0">
                               <div
-                                className="border-t border-gray-100 pt-4 text-sm sm:text-base text-[#706B6E] leading-relaxed max-w-none 
-                                  [&>h1]:text-xl [&>h1]:font-bold [&>h1]:text-[#1A1819] [&>h1]:mb-3 
-                                  [&>h2]:text-lg [&>h2]:font-bold [&>h2]:text-[#1A1819] [&>h2]:mt-6 [&>h2]:mb-3 
-                                  [&>h3]:text-base [&>h3]:font-bold [&>h3]:text-[#1A1819] [&>h3]:mt-4 [&>h3]:mb-2 
-                                  [&>p]:mb-3 
-                                  [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-3 
-                                  [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:mb-3 
-                                  [&>li]:mb-1 
-                                  [&>strong]:text-[#1A1819] [&>strong]:font-bold
-                                  [&>a]:text-[#FF5E8C] hover:[&>a]:underline"
+                                className="border-t border-gray-100 pt-4 text-base text-[#706B6E] leading-relaxed max-w-none [&>h1]:text-xl [&>h1]:font-bold [&>h1]:text-[#1A1819] [&>h1]:mb-3 [&>h2]:text-lg [&>h2]:font-bold [&>h2]:text-[#1A1819] [&>h2]:mt-6 [&>h2]:mb-3 [&>h3]:text-base [&>h3]:font-bold [&>h3]:text-[#1A1819] [&>h3]:mt-4 [&>h3]:mb-2 [&>p]:mb-3 [&>ul]:list-disc [&>ul]:pl-5 [&>ul]:mb-3 [&>ol]:list-decimal [&>ol]:pl-5 [&>ol]:mb-3 [&>li]:mb-1 [&>strong]:text-[#1A1819] [&>strong]:font-bold [&>a]:text-[#FF5E8C] hover:[&>a]:underline"
                                 dangerouslySetInnerHTML={{ __html: faq.description }}
                               />
                               
@@ -276,13 +267,13 @@ export default function FAQPage() {
           </div>
 
           {/* Quick Support Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
             <div className="bg-white border border-gray-100 rounded-3xl p-8 text-center hover:shadow-xl hover:shadow-pink-900/5 transition-all group">
               <div className="w-14 h-14 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
                 <FileText className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#1A1819] mb-2 font-heading">User Guide</h3>
-              <p className="text-[#706B6E] text-sm mb-6">Read our comprehensive guide on how to get the most out of Period Tracker Ovulation Cycle's features.</p>
+              <h3 className="text-[#1A1819] mb-2">User Guide</h3>
+              <p className="text-[#706B6E] mb-6">Read our comprehensive guide on how to get the most out of Period Tracker Ovulation Cycle's features.</p>
               <Link href="/about" className="text-blue-600 font-bold hover:underline text-sm inline-flex items-center gap-1">
                 Read Guide <ChevronDown className="w-4 h-4 -rotate-90" />
               </Link>
@@ -292,8 +283,8 @@ export default function FAQPage() {
               <div className="w-14 h-14 bg-pink-50 text-[#FF5E8C] rounded-full flex items-center justify-center mx-auto mb-5 group-hover:scale-110 transition-transform">
                 <MessageCircle className="w-6 h-6" />
               </div>
-              <h3 className="text-xl font-bold text-[#1A1819] mb-2 font-heading">Direct Support</h3>
-              <p className="text-[#706B6E] text-sm mb-6">Can't find what you're looking for? Our dedicated team is ready to help you.</p>
+              <h3 className="text-[#1A1819] mb-2">Direct Support</h3>
+              <p className="text-[#706B6E] mb-6">Can't find what you're looking for? Our dedicated team is ready to help you.</p>
               <Link href="/contact" className="text-[#FF5E8C] font-bold hover:underline text-sm inline-flex items-center gap-1">
                 Contact Us <ChevronDown className="w-4 h-4 -rotate-90" />
               </Link>

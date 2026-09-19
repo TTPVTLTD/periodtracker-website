@@ -31,25 +31,25 @@ export default function ContactPage() {
     const newErrors = {};
 
     if (formData.name.trim().length < 2) {
-      newErrors.name = 'Please enter your name (at least 2 characters).';
+      newErrors.name = 'Please enter full name';
     }
 
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     if (!emailRegex.test(formData.email.trim())) {
-      newErrors.email = 'Please enter a valid email address.';
+      newErrors.email = 'Please enter email address';
     }
 
     const phoneRegex = /^[0-9]{10}$/;
     if (!phoneRegex.test(formData.phone.trim())) {
-      newErrors.phone = 'Please enter a valid 10-digit phone number.';
+      newErrors.phone = 'Please enter phone number';
     }
 
     if (formData.subject.trim().length < 3) {
-      newErrors.subject = 'Please select or enter a subject.';
+      newErrors.subject = 'Please select a topic';
     }
 
     if (formData.message.trim().length < 10) {
-      newErrors.message = 'Please enter a message (at least 10 characters).';
+      newErrors.message = 'Please enter your message';
     }
 
     setErrors(newErrors);
@@ -141,23 +141,23 @@ export default function ContactPage() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-bl from-[#FF5E8C]/10 to-transparent rounded-bl-full pointer-events-none" />
         <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#FF8C69]/10 to-transparent rounded-tr-full pointer-events-none" />
         
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 lg:py-12 relative z-10">
           
           {/* Header */}
-          <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 shadow-sm text-[#FF5E8C] font-bold text-xs sm:text-sm uppercase tracking-wider mx-auto transition-transform hover:scale-105">
+          <div className="text-center max-w-3xl mx-auto mb-10 space-y-3">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 shadow-sm text-[#FF5E8C] font-bold text-xs uppercase tracking-wider mx-auto transition-transform hover:scale-105">
               <MessageSquare className="w-4 h-4" />
               <span>Get in Touch</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl font-extrabold text-[#1A1819] font-heading tracking-tight">
+            <h1 className=" font-extrabold text-[#1A1819]">
               We're Here to Help
             </h1>
-            <p className="text-[#706B6E] text-base sm:text-lg font-medium">
+            <p className="text-[#706B6E] font-medium">
               Have questions about your cycle, subscription, or our app? Reach out to our dedicated support team and we'll ensure you get the answers you need.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             
             {/* Left Column: Contact Info & Quick Links */}
             <div className="lg:col-span-5 space-y-8">
@@ -165,7 +165,7 @@ export default function ContactPage() {
               <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl shadow-pink-900/5 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF5E8C]/5 rounded-bl-full pointer-events-none" />
                 
-                <h2 className="text-2xl font-bold text-[#1A1819] font-heading mb-6">Contact Information</h2>
+                <h2 className="text-[#1A1819] mb-6">Contact Information</h2>
                 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
@@ -173,9 +173,9 @@ export default function ContactPage() {
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold text-gray-900 mb-1 uppercase tracking-wider">Email Support</h3>
+                      <h3 className="mb-1 uppercase">Email Support</h3>
                       <a href="mailto:support@tracewavetransparency.com" className="text-[#FF5E8C] font-bold text-lg hover:underline">support@tracewavetransparency.com</a>
-                      <p className="text-sm text-gray-500 mt-1">For general inquiries and technical help.</p>
+                      <p className="text-gray-500 mt-1">For general inquiries and technical help.</p>
                     </div>
                   </div>
                   
@@ -184,9 +184,9 @@ export default function ContactPage() {
                       <Clock className="w-6 h-6" />
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold text-gray-900 mb-1 uppercase tracking-wider">Response Time</h3>
-                      <p className="text-gray-700 font-bold text-lg">Within 24 Hours</p>
-                      <p className="text-sm text-gray-500 mt-1">Our team is active Monday to Friday.</p>
+                      <h3 className="mb-1 uppercase">Response Time</h3>
+                      <p className="text-gray-700">Within 24 Hours</p>
+                      <p className="text-gray-500 mt-1">Our team is active Monday to Friday.</p>
                     </div>
                   </div> */}
                 </div>
@@ -194,8 +194,8 @@ export default function ContactPage() {
 
               {/* Social Media Block */}
               <div className="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl shadow-pink-900/5">
-                <h2 className="text-xl font-bold text-[#1A1819] font-heading mb-2">Join the Community</h2>
-                <p className="text-sm text-gray-500 mb-6">Follow us for wellness tips, updates, and community support.</p>
+                <h2 className="text-[#1A1819] mb-2">Join the Community</h2>
+                <p className="text-gray-500 mb-6">Follow us for wellness tips, updates, and community support.</p>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <a href="https://www.instagram.com/periodtrackercycle/" target="_blank" rel="noopener noreferrer" 
@@ -219,8 +219,8 @@ export default function ContactPage() {
               {/* FAQ Teaser */}
               <div className="bg-gradient-to-r from-pink-50 to-orange-50 rounded-3xl p-6 border border-pink-100 flex items-center justify-between">
                 <div>
-                  <h3 className="font-bold text-gray-900 mb-1">Need quick answers?</h3>
-                  <p className="text-sm text-gray-600">Check out our Help Center.</p>
+                  <h3 className="mb-1">Need quick answers?</h3>
+                  <p className="text-gray-600">Check out our Help Center.</p>
                 </div>
                 <Link href="/faq" className="px-4 py-2 bg-white rounded-full font-bold text-[#FF5E8C] text-sm shadow-sm hover:shadow-md transition-shadow">
                   View FAQs
@@ -234,7 +234,7 @@ export default function ContactPage() {
               <div className="bg-white/90 backdrop-blur-xl rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-2xl shadow-pink-900/10 relative">
                 
                 <div className="mb-8">
-                  <h2 className="text-2xl font-bold text-[#1A1819] font-heading flex items-center gap-2">
+                  <h2 className="text-[#1A1819] flex items-center gap-2">
                     <Mail className="w-6 h-6 text-[#FF5E8C]" />
                     Send us a Message
                   </h2>
@@ -254,7 +254,7 @@ export default function ContactPage() {
                       <h4 className={`text-sm font-bold ${status.type === 'success' ? 'text-green-800' : 'text-red-800'}`}>
                         {status.type === 'success' ? 'Message Sent' : 'Submission Failed'}
                       </h4>
-                      <p className={`text-sm mt-1 ${status.type === 'success' ? 'text-green-700' : 'text-red-700'}`}>
+                      <p className={` mt-1 ${status.type === 'success' ? 'text-green-700' : 'text-red-700'}`}>
                         {status.message}
                       </p>
                     </div>
@@ -271,7 +271,7 @@ export default function ContactPage() {
                       <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Full Name</label>
                       <input
                         type="text"
-                        placeholder="Jane Doe"
+                        placeholder="Please enter full name"
                         value={formData.name}
                         onFocus={() => setFocusedField('name')}
                         onBlur={() => setFocusedField(null)}
@@ -280,7 +280,7 @@ export default function ContactPage() {
                           errors.name ? 'border-red-300 bg-red-50' : 'border-gray-200'
                         }`}
                       />
-                      {errors.name && <p className="text-xs text-red-500 font-bold mt-1">{errors.name}</p>}
+                      {errors.name && <p className="text-red-500 mt-1">{errors.name}</p>}
                     </div>
 
                     {/* Email */}
@@ -288,7 +288,7 @@ export default function ContactPage() {
                       <label className="text-xs font-bold text-gray-500 uppercase tracking-wider">Email Address</label>
                       <input
                         type="email"
-                        placeholder="jane@example.com"
+                        placeholder="Please enter email address"
                         value={formData.email}
                         onFocus={() => setFocusedField('email')}
                         onBlur={() => setFocusedField(null)}
@@ -297,7 +297,7 @@ export default function ContactPage() {
                           errors.email ? 'border-red-300 bg-red-50' : 'border-gray-200'
                         }`}
                       />
-                      {errors.email && <p className="text-xs text-red-500 font-bold mt-1">{errors.email}</p>}
+                      {errors.email && <p className="text-red-500 mt-1">{errors.email}</p>}
                     </div>
 
                     {/* Phone */}
@@ -307,7 +307,7 @@ export default function ContactPage() {
                         <span className={`absolute left-4 text-sm font-bold transition-colors ${focusedField === 'phone' ? 'text-[#FF5E8C]' : 'text-gray-400'}`}>+91</span>
                         <input
                           type="tel"
-                          placeholder="9876543210"
+                          placeholder="Please enter phone number"
                           value={formData.phone}
                           onFocus={() => setFocusedField('phone')}
                           onBlur={() => setFocusedField(null)}
@@ -317,7 +317,7 @@ export default function ContactPage() {
                           }`}
                         />
                       </div>
-                      {errors.phone && <p className="text-xs text-red-500 font-bold mt-1">{errors.phone}</p>}
+                      {errors.phone && <p className="text-red-500 mt-1">{errors.phone}</p>}
                     </div>
 
                     {/* Subject */}
@@ -331,14 +331,14 @@ export default function ContactPage() {
                         className={`w-full px-4 py-3.5 bg-gray-50 border rounded-xl text-gray-900 focus:bg-white focus:outline-none focus:border-[#FF5E8C] focus:ring-4 focus:ring-[#FF5E8C]/10 transition-all font-medium appearance-none ${
                           errors.subject ? 'border-red-300 bg-red-50' : 'border-gray-200'
                         } ${!formData.subject ? 'text-gray-400' : ''}`}
-                        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239CA3AF'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path সীম%3E%3C/svg%3E")`, backgroundPosition: 'right 1rem center', backgroundRepeat: 'no-repeat', backgroundSize: '1.2em 1.2em' }}
+                        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%239CA3AF'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E")`, backgroundPosition: 'right 1rem center', backgroundRepeat: 'no-repeat', backgroundSize: '1.2em 1.2em' }}
                       >
-                        <option value="" disabled>Select a topic</option>
+                        <option value="" disabled>Please select a topic</option>
                         {commonSubjects.map(sub => (
                           <option key={sub} value={sub} className="text-gray-900">{sub}</option>
                         ))}
                       </select>
-                      {errors.subject && <p className="text-xs text-red-500 font-bold mt-1">{errors.subject}</p>}
+                      {errors.subject && <p className="text-red-500 mt-1">{errors.subject}</p>}
                     </div>
                   </div>
 
@@ -352,7 +352,7 @@ export default function ContactPage() {
                     </div>
                     <textarea
                       rows={5}
-                      placeholder="Please provide details about your inquiry..."
+                      placeholder="Please enter your message"
                       value={formData.message}
                       maxLength={500}
                       onFocus={() => setFocusedField('message')}
@@ -362,7 +362,7 @@ export default function ContactPage() {
                         errors.message ? 'border-red-300 bg-red-50' : 'border-gray-200'
                       }`}
                     />
-                    {errors.message && <p className="text-xs text-red-500 font-bold mt-1">{errors.message}</p>}
+                    {errors.message && <p className="text-red-500 mt-1">{errors.message}</p>}
                   </div>
 
                   {/* Submit Button */}
@@ -384,7 +384,7 @@ export default function ContactPage() {
                     )}
                   </button>
                   
-                  <p className="text-center text-xs text-gray-400 font-medium">
+                  <p className="text-center text-gray-400 font-medium">
                     By submitting this form, you agree to our <Link href="/privacy" className="hover:text-[#FF5E8C] underline">Privacy Policy</Link>.
                   </p>
                 </form>

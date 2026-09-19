@@ -135,12 +135,12 @@ export default function ArticlePage({ params }) {
             </nav>
 
             {/* Article Headline */}
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 tracking-tight leading-snug max-w-4xl">
+            <h1 className=" font-extrabold leading-snug max-w-4xl">
               {article.title}
             </h1>
 
             {/* Subtitle / Lead Summary */}
-            <p className="mt-4 text-lg sm:text-xl text-gray-700 leading-relaxed max-w-3xl">
+            <p className="mt-4 text-gray-700 leading-relaxed max-w-3xl">
               {article.summary}
             </p>
 
@@ -184,39 +184,39 @@ export default function ArticlePage({ params }) {
 
                 {/* Key Takeaways Callout Box (Flo Style) */}
                 <div className="p-6 rounded-3xl bg-flo-50 border border-flo-200 space-y-2">
-                  <h3 className="text-base font-bold text-flo-800 uppercase tracking-wider flex items-center gap-2">
+                  <h3 className="text-flo-800 uppercase flex items-center gap-2">
                     <Sparkles className="w-4 h-4 text-flo-600" />
                     <span>Key Takeaways at a Glance</span>
                   </h3>
-                  <p className="text-sm text-gray-800 leading-relaxed font-medium">
+                  <div className="text-sm text-gray-800 leading-relaxed font-medium">
                     {article.summary}
-                  </p>
+                  </div>
                 </div>
 
                 {/* Article Sections */}
-                <div className="space-y-10 text-gray-800 leading-relaxed text-base sm:text-lg">
+                <div className="space-y-10 text-gray-800 leading-relaxed text-base">
                   {article.content && article.content.map((sec, idx) => (
                     <div 
                       key={idx} 
                       id={`section-${idx}`}
                       className="space-y-4 scroll-mt-28"
                     >
-                      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 pt-2 border-b border-pink-100 pb-2">
+                      <h2 className=" font-extrabold pt-2 border-b border-pink-100 pb-2">
                         {sec.heading}
                       </h2>
-                      <p className="text-gray-700 leading-relaxed">
+                      <div className="text-sm text-gray-700 leading-relaxed">
                         {sec.body}
-                      </p>
+                      </div>
 
                       {/* Section Detail Bullets */}
                       {sec.bullets && sec.bullets.length > 0 && (
                         <div className="bg-white/90 border border-pink-100/90 rounded-2xl p-5 sm:p-6 shadow-2xs space-y-3 mt-4">
-                          <h4 className="text-xs font-bold uppercase tracking-wider text-flo-700">
+                          <h4 className="uppercase text-flo-700">
                             Key Checklist & Essential Facts
                           </h4>
                           <ul className="space-y-2.5">
                             {sec.bullets.map((bullet, bIdx) => (
-                              <li key={bIdx} className="flex items-start gap-3 text-sm sm:text-base text-gray-700">
+                              <li key={bIdx} className="flex items-start gap-3 text-sm text-gray-700">
                                 <CheckCircle2 className="w-5 h-5 text-flo-500 shrink-0 mt-0.5" />
                                 <span className="leading-snug">{bullet}</span>
                               </li>
@@ -236,10 +236,10 @@ export default function ArticlePage({ params }) {
                         <BookOpen className="w-4 h-4" />
                       </div>
                       <div>
-                        <h3 className="text-xl sm:text-2xl font-bold text-gray-900">
+                        <h3 className="text-xl  font-bold">
                           Frequently Asked Questions
                         </h3>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-gray-500">
                           Clear, doctor-reviewed answers to common questions
                         </p>
                       </div>
@@ -257,7 +257,7 @@ export default function ArticlePage({ params }) {
                               +
                             </span>
                           </summary>
-                          <div className="mt-3 text-sm sm:text-base text-gray-600 leading-relaxed pt-3 border-t border-pink-50">
+                          <div className="mt-3 text-base text-gray-600 leading-relaxed pt-3 border-t border-pink-50">
                             {faq.answer}
                           </div>
                         </details>
@@ -267,12 +267,12 @@ export default function ArticlePage({ params }) {
                 )}
 
                 {/* Educational & Health Wellness Disclaimer */}
-                <div className="mt-12 p-6 sm:p-7 rounded-3xl bg-amber-50/80 border border-amber-200/90 space-y-2.5 text-xs sm:text-sm text-amber-950 leading-relaxed shadow-xs">
+                <div className="mt-12 p-6 sm:p-7 rounded-3xl bg-amber-50/80 border border-amber-200/90 space-y-2.5 text-xs text-amber-950 leading-relaxed shadow-xs">
                   <div className="flex items-center gap-2 text-amber-900 font-bold uppercase tracking-wider text-xs">
                     <AlertCircle className="w-4 h-4 text-amber-600 shrink-0" />
                     <span>Educational & Wellness Disclaimer</span>
                   </div>
-                  <p className="text-amber-900/90 font-normal leading-relaxed">
+                  <p className="text-amber-900/90 leading-relaxed">
                     The health guides, cycle timelines, natural remedies, and symptom insights published on Period Tracker & Ovulation are strictly for general educational, self-tracking, and informational purposes. They are not a substitute for clinical advice, formal medical diagnosis, or personalized treatment plans. If you have severe pelvic discomfort, irregular bleeding, or questions about pregnancy, always consult with a licensed physician or gynecologist.
                   </p>
                 </div>
@@ -296,9 +296,9 @@ export default function ArticlePage({ params }) {
                 
                 {/* Table of Contents Box (Matching screenshot) */}
                 <div className="bg-white rounded-3xl border border-pink-100 p-6 shadow-xs space-y-4">
-                  <h3 className="text-xs font-bold uppercase tracking-widest text-gray-400">
+                  <h5 className="uppercase tracking-widest text-gray-400">
                     IN THIS ARTICLE
-                  </h3>
+                  </h5>
 
                   <ul className="space-y-2.5 text-sm font-semibold">
                     {article.content && article.content.map((sec, idx) => (
@@ -330,10 +330,10 @@ export default function ArticlePage({ params }) {
                     <Calendar className="w-5 h-5" />
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-base">Calculate Your Own Cycle</h4>
-                    <p className="text-xs text-gray-600 mt-1">
+                    <h4 className="">Calculate Your Own Cycle</h4>
+                    <div className="text-sm text-gray-700 leading-relaxed mt-1">
                       Predict your next period, ovulation day, and fertile window in seconds.
-                    </p>
+                    </div>
                   </div>
                   <Link
                     href="/calculators/ovulation-calculator"
@@ -355,10 +355,10 @@ export default function ArticlePage({ params }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between mb-8">
                 <div>
-                  <h3 className="text-2xl font-bold text-gray-900">
+                  <h3 className="">
                     Recommended Health Guides
                   </h3>
-                  <p className="text-sm text-gray-600 mt-1">
+                  <p className="text-gray-600 mt-1">
                     Continue reading certified guides in {article.categoryName}.
                   </p>
                 </div>
@@ -390,7 +390,7 @@ export default function ArticlePage({ params }) {
                         <span className="text-xs font-bold text-flo-600 uppercase tracking-wider block mb-1">
                           {rel.categoryName}
                         </span>
-                        <h4 className="text-base font-bold text-gray-900 group-hover:text-flo-600 line-clamp-2">
+                        <h4 className="group-hover:text-flo-600 line-clamp-2">
                           {rel.title}
                         </h4>
                       </div>

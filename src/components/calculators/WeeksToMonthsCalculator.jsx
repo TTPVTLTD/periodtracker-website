@@ -93,8 +93,8 @@ export default function WeeksToMonthsCalculator() {
               <Clock className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900">Weeks to Months</h3>
-              <p className="text-xs text-gray-500">Convert pregnancy weeks to months & trimesters</p>
+              <h3 className="">Weeks to Months</h3>
+              <p className="text-gray-500 text-sm">Convert pregnancy weeks to months & trimesters</p>
             </div>
           </div>
 
@@ -124,7 +124,7 @@ export default function WeeksToMonthsCalculator() {
 
           {/* Quick presets */}
           <div>
-            <p className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Trimester Milestones:</p>
+            <p className="text-gray-500 uppercase mb-2 text-sm">Trimester Milestones:</p>
             <div className="grid grid-cols-3 gap-2">
               {[12, 24, 36].map((w) => (
                 <button
@@ -167,7 +167,7 @@ export default function WeeksToMonthsCalculator() {
 
           <div className="p-3.5 rounded-2xl bg-amber-50/70 border border-amber-200 text-xs text-amber-900 flex items-start gap-2.5">
             <AlertCircle className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-            <span>
+            <span className="text-sm leading-relaxed">
               <strong>Gestational Context:</strong> A pregnancy is 40 weeks long, which works out to ~9.2 calendar months since months have 4.3 weeks on average.
             </span>
           </div>
@@ -189,10 +189,10 @@ export default function WeeksToMonthsCalculator() {
               </div>
 
               <div className="max-w-md space-y-2">
-                <h3 className="text-2xl sm:text-3xl font-black text-gray-900">
+                <h3 className="text-xl  font-bold">
                   Ready to Convert Weeks to Months
                 </h3>
-                <p className="text-sm text-gray-600 leading-relaxed">
+                <p className="text-gray-600 leading-relaxed">
                   Select your current pregnancy week on the left and click <strong className="text-flo-600">"See results"</strong> to view your exact medical month and trimester breakdown.
                 </p>
               </div>
@@ -221,7 +221,7 @@ export default function WeeksToMonthsCalculator() {
                   <span className="text-xs font-bold text-flo-700 uppercase tracking-wider block truncate">
                     Calendar Month
                   </span>
-                  <span className="text-2xl sm:text-3xl font-black text-gray-900 mt-2 block truncate">
+                  <span className=" font-black text-gray-900 mt-2 block truncate">
                     Month {results.month}
                   </span>
                   <span className="text-xs text-gray-600 mt-1 block leading-snug">
@@ -245,7 +245,7 @@ export default function WeeksToMonthsCalculator() {
                   <span className="text-xs font-bold text-emerald-900 uppercase tracking-wider block truncate">
                     Countdown to 40w
                   </span>
-                  <span className="text-2xl sm:text-3xl font-black text-emerald-950 mt-2 block truncate">
+                  <span className=" font-black text-emerald-950 mt-2 block truncate">
                     ~{results.daysRemaining} Days
                   </span>
                   <span className="text-xs text-emerald-800 mt-1 block leading-snug font-medium">
@@ -257,7 +257,7 @@ export default function WeeksToMonthsCalculator() {
 
               {/* Conversion Reference Card */}
               <div className="p-6 rounded-3xl bg-white border border-pink-200 shadow-xs space-y-3">
-                <h5 className="font-bold text-gray-900 text-base flex items-center gap-2">
+                <h5 className="flex items-center gap-2">
                   <Baby className="w-5 h-5 text-flo-500" />
                   <span>Trimester & Gestational Chart Overview</span>
                 </h5>
