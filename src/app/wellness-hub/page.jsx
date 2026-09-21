@@ -550,3 +550,4 @@ function HorizontalArticleCard({ article, categoryBadgeStyles }) {
     </Link>
   );
 }
+

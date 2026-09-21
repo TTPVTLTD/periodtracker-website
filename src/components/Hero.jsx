@@ -32,15 +32,15 @@ export default function Hero() {
 
             {/* Feature Pills */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-1  font-semibold text-gray-700">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-pink-100 shadow-2xs">
+              <span className="text-sm inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-pink-100 shadow-2xs">
                 <CheckCircle2 className="w-3.5 h-3.5 text-flo-500" />
                 98% Forecast Accuracy
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-pink-100 shadow-2xs">
+              <span className="text-sm inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-pink-100 shadow-2xs">
                 <CheckCircle2 className="w-3.5 h-3.5 text-flo-500" />
                 100% On-Device Privacy
               </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-pink-100 shadow-2xs">
+              <span className="text-sm inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white border border-pink-100 shadow-2xs">
                 <CheckCircle2 className="w-3.5 h-3.5 text-flo-500" />
                 Ayurvedic Care & AI Reports
               </span>

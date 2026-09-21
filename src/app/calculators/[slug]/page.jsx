@@ -51,7 +51,7 @@ export function generateMetadata({ params }) {
     description: safeDesc,
     keywords: safeKeywords,
     alternates: {
-      canonical: `/calculators/${calc.slug}`,
+      canonical: `https://trackperiods.com/calculators/${calc.slug}`,
     },
     openGraph: {
       title: safeTitle,
@@ -133,10 +133,6 @@ export default function CalculatorDetailPage({ params }) {
             <nav className="flex items-center space-x-2 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-6 flex-wrap">
               <Link href="/" className="hover:text-flo-600 transition-colors">
                 Home
-              </Link>
-              <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-              <Link href="/wellness-hub" className="hover:text-flo-600 transition-colors">
-                WELLNESS HUB
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
               <Link href="/calculators" className="hover:text-flo-600 transition-colors">

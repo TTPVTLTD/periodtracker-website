@@ -25,7 +25,7 @@ export const metadata = {
     'menstrual cycle calendar'
   ],
   alternates: {
-    canonical: '/',
+    canonical: 'https://trackperiods.com/',
   },
   openGraph: {
     title: 'Period Tracker Ovulation Cycles | Smart Cycle Calendar',

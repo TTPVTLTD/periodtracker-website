@@ -42,7 +42,7 @@ export function generateMetadata({ params }) {
     description: safeDesc,
     keywords: safeKeywords,
     alternates: {
-      canonical: `/articles/${article.id}`,
+      canonical: `https://trackperiods.com/articles/${article.id}`,
     },
     openGraph: {
       title: safeTitle,

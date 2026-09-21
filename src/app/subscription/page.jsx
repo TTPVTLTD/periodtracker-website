@@ -19,7 +19,7 @@ import {
 } from 'lucide-react';
 
 export default function SubscriptionPage() {
-  const [billingCycle, setBillingCycle] = useState('annual'); // 'monthly' or 'annual'
+  const [billingCycle, setBillingCycle] = useState('yearly'); // 'weekly', 'monthly', 'yearly'
 
   return (
     <div className="min-h-screen flex flex-col bg-[#fffbf9]">
@@ -44,7 +44,18 @@ export default function SubscriptionPage() {
 
             {/* Billing Cycle Toggle */}
             <div className="pt-4 flex items-center justify-center">
-              <div className="bg-white p-1 rounded-2xl border border-pink-200 shadow-xs flex items-center gap-1">
+              <div className="bg-white p-1 rounded-2xl border border-pink-200 shadow-xs flex flex-wrap justify-center items-center gap-1">
+                <button
+                  type="button"
+                  onClick={() => setBillingCycle('weekly')}
+                  className={`px-4 py-2 rounded-xl text-sm sm:text-sm font-bold transition-all cursor-pointer ${
+                    billingCycle === 'weekly'
+                      ? 'bg-flo-600 text-white shadow-xs'
+                      : 'text-gray-600 hover:text-gray-900'
+                  }`}
+                >
+                  Weekly
+                </button>
                 <button
                   type="button"
                   onClick={() => setBillingCycle('monthly')}
@@ -54,20 +65,20 @@ export default function SubscriptionPage() {
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
-                  Monthly Billing
+                  Monthly
                 </button>
                 <button
                   type="button"
-                  onClick={() => setBillingCycle('annual')}
+                  onClick={() => setBillingCycle('yearly')}
                   className={`px-4 py-2 rounded-xl text-sm sm:text-sm font-bold transition-all flex items-center gap-2 cursor-pointer ${
-                    billingCycle === 'annual'
+                    billingCycle === 'yearly'
                       ? 'bg-flo-600 text-white shadow-xs'
                       : 'text-gray-600 hover:text-gray-900'
                   }`}
                 >
-                  <span>Annual Billing</span>
-                  <span className="text-sm uppercase font-black px-2 py-0.5 rounded-full bg-emerald-500 text-white">
-                    Save 50%
+                  <span>Yearly</span>
+                  <span className="text-xs uppercase font-black px-2 py-0.5 rounded-full bg-emerald-500 text-white">
+                    Best Value
                   </span>
                 </button>
               </div>
@@ -145,11 +156,11 @@ export default function SubscriptionPage() {
                 </div>
 
                 <div className="pt-2">
-                  <span className="font-black text-gray-900">
-                    {billingCycle === 'annual' ? '$20' : '$3.12'}
+                  <span className="font-black text-gray-900 text-4xl tracking-tight">
+                    {billingCycle === 'yearly' ? '$99.99' : billingCycle === 'monthly' ? '$7.99' : '$2.99'}
                   </span>
                   <span className="text-sm text-gray-500 font-semibold ml-2">
-                    / month {billingCycle === 'annual' ? '(Billed annually at $20)' : '(Billed monthly)'}
+                    / {billingCycle === 'yearly' ? 'year' : billingCycle === 'monthly' ? 'month' : 'week'}
                   </span>
                 </div>
 
@@ -257,3 +268,4 @@ export default function SubscriptionPage() {
     </div>
   );
 }
+
