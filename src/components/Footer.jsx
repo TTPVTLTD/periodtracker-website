@@ -1,11 +1,24 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Facebook, Instagram, Youtube, Heart, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
+  // App Mode Detection (Hides Footer when ?app=true is in URL)
+  const [isAppMode, setIsAppMode] = useState(false);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('app') === 'true') {
+        setIsAppMode(true);
+      }
+    }
+  }, []);
+
+  if (isAppMode) return null;
+
   return (
     <footer className="bg-[#FFF0F2]/60 border-t border-[#FF5E8C]/15 text-[#706B6E] pt-14 pb-10 w-full mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">

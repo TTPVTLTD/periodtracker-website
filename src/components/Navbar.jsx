@@ -31,6 +31,17 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const navRef = useRef(null);
 
+  // App Mode Detection (Hides Navbar when ?app=true is in URL)
+  const [isAppMode, setIsAppMode] = useState(false);
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('app') === 'true') {
+        setIsAppMode(true);
+      }
+    }
+  }, []);
+
   // Detect scroll to animate header from compact floating to full-width
   useEffect(() => {
     const handleScroll = () => {
@@ -86,6 +97,8 @@ export default function Navbar() {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, []);
+
+  if (isAppMode) return null;
 
   return (
     <header
