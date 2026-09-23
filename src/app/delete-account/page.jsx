@@ -25,6 +25,9 @@ export default function DeleteAccountPage() {
 
     // Show custom popup
     setIsSubmitted(true);
+
+    // Clear the form inputs
+    e.target.reset();
   };
 
   return (
