@@ -72,17 +72,17 @@ export default function PrivacyPolicyPage() {
       />
       <Navbar />
 
-      <main className="flex-1 w-full relative overflow-hidden">
+      <main className="flex-1 w-full relative">
         {/* Background Decorative Elements */}
-        <div className="absolute top-10 left-10 w-72 h-72 bg-[#FF5E8C]/10 rounded-full blur-3xl opacity-70 animate-pulse pointer-events-none" />
-        <div className="absolute top-40 right-10 w-96 h-96 bg-[#FF8C69]/10 rounded-full blur-3xl opacity-70 animate-pulse pointer-events-none" style={{ animationDelay: '2s' }} />
+        <div className="absolute inset-0 overflow-hidden pointer-events-none"><div className="absolute top-10 left-10 w-72 h-72 bg-[#FF5E8C]/10 rounded-full blur-3xl opacity-70 animate-pulse pointer-events-none" />
+        <div className="absolute top-40 right-10 w-96 h-96 bg-[#FF8C69]/10 rounded-full blur-3xl opacity-70 animate-pulse pointer-events-none" style={{ animationDelay: '2s' }} /></div>
 
         {/* Header Section */}
-        <div className="relative pt-10 pb-6 px-4 sm:px-6 z-10">
-          <div className="max-w-4xl mx-auto text-center space-y-4">
+        <div className="relative pt-8 sm:pt-10 pb-2 px-4 sm:px-6 z-10">
+          <div className="max-w-4xl mx-auto text-center space-y-3">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-[#FF5E8C]/20 text-[#FF5E8C] font-bold text-base uppercase tracking-wider mx-auto shadow-sm transition-transform hover:scale-105">
               <ShieldCheck className="w-4 h-4" />
-              <span>Data Protection</span>
+              <span className="text-sm">Data Protection</span>
             </div>
             <h1 className="font-extrabold text-[#1A1819]">
               Privacy Policy
@@ -90,32 +90,32 @@ export default function PrivacyPolicyPage() {
             <p className="text-base text-[#706B6E] max-w-2xl mx-auto font-medium">
               Your reproductive health data is intensely personal. We safeguard it with industry-leading encryption and strict no-sell privacy guarantees.
             </p>
-            <div className="text-base font-bold text-gray-400">Last Updated: June 6, 2026</div>
+            <div className="text-sm sm:text-base font-bold text-gray-400 mt-2">Last Updated: June 6, 2026</div>
           </div>
         </div>
 
         {/* Content Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 flex flex-col lg:flex-row gap-10 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 pb-6 pt-2 sm:pt-4 flex flex-col lg:flex-row gap-8 sm:gap-10 relative z-10">
           
           {/* Sidebar Jump Navigation (Desktop) */}
           <aside className="hidden lg:block w-64 shrink-0">
             <div className="sticky top-28 bg-white/90 backdrop-blur-xl rounded-2xl border border-[#FF5E8C]/15 p-5 shadow-lg shadow-pink-900/5">
-              <h3 className="text-gray-500 uppercase mb-4">Quick Navigation</h3>
+              <h3 className="text-sm text-gray-500 uppercase mb-4">Quick Navigation</h3>
               <nav className="space-y-1">
                 {jumpLinks.map(link => (
-                  <a key={link.id} href={`#${link.id}`} className="block px-3 py-2 text-base font-medium text-[#706B6E] rounded-lg hover:bg-pink-50 hover:text-[#FF5E8C] transition-colors">
+                  <a key={link.id} href={`#${link.id}`} className="text-sm block px-3 py-2 text-base font-medium text-[#706B6E] rounded-lg hover:bg-pink-50 hover:text-[#FF5E8C] transition-colors">
                     {link.label}
                   </a>
                 ))}
               </nav>
 
-              <div className="mt-8 pt-6 border-t border-pink-50">
+              {/* <div className="mt-8 pt-6 border-t border-pink-50">
                 <div className="flex items-center gap-2 text-base font-bold text-[#1A1819] mb-2">
                   <LockKeyhole className="w-4 h-4 text-emerald-500" />
                   AES-256 Secured
                 </div>
                 <p className="text-[#706B6E] font-medium leading-relaxed">All local backups and cloud syncs use military-grade encryption protocols.</p>
-              </div>
+              </div> */}
             </div>
           </aside>
 
