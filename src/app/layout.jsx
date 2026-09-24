@@ -99,7 +99,7 @@ export default function RootLayout({ children }) {
       <body className={`${plusJakartaSans.className} min-h-screen flex flex-col bg-[#FAF8F9] text-[#1A1819] antialiased selection:bg-[#FF5E8C]/20 selection:text-[#FF5E8C] font-sans`}>
         {children}
         <CookieBanner />
-        <GoogleAnalytics gaId="G-1P5BEQ99QQ" />
+        <GoogleAnalytics gaId="G-XT1YPH9XL8" />
       </body>
     </html>
   );
