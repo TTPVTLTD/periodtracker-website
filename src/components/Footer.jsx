@@ -213,6 +213,11 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm font-medium text-[#706B6E]">
             
               <li>
+                <Link href="/news" className="hover:text-[#FF5E8C] transition-colors font-bold text-[#FF5E8C]">
+                  Health News
+                </Link>
+              </li>
+              <li>
                 <Link href="/about" className="hover:text-[#FF5E8C] transition-colors">
                   About Us
                 </Link>

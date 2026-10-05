@@ -1,6 +1,7 @@
 import { CALCULATORS } from '../data/calculators';
 import { ARTICLES } from '../data/articles';
 import { ABOUT_PAGES } from '../data/aboutPages';
+import { fetchNewsList } from '../lib/newsApi';
 
 export default async function sitemap() {
   const baseUrl = 'https://trackperiods.com';
@@ -21,6 +22,12 @@ export default async function sitemap() {
     },
     {
       url: `${baseUrl}/wellness-hub`,
+      lastModified: new Date(),
+      changeFrequency: 'daily',
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/news`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.9,
@@ -62,6 +69,12 @@ export default async function sitemap() {
       priority: 0.4,
     },
     {
+      url: `${baseUrl}/app-privacy`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.4,
+    },
+    {
       url: `${baseUrl}/terms`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
@@ -93,10 +106,35 @@ export default async function sitemap() {
     priority: 0.6,
   }));
 
+  // Dynamic News Articles
+  let newsRoutes = [];
+  try {
+    const listData = await fetchNewsList(1, 100);
+    const newsArr = listData?.data?.data || listData?.data || [];
+    if (Array.isArray(newsArr)) {
+      newsRoutes = newsArr.map((newsItem) => {
+        const slug = newsItem.slug || newsItem._id || newsItem.id;
+        let lastMod = new Date();
+        if (newsItem.created_at || newsItem.createdAt || newsItem.date) {
+          lastMod = new Date(newsItem.created_at || newsItem.createdAt || newsItem.date);
+        }
+        return {
+          url: `${baseUrl}/news/${slug}`,
+          lastModified: lastMod,
+          changeFrequency: 'weekly',
+          priority: 0.8,
+        };
+      });
+    }
+  } catch (err) {
+    console.error("Sitemap: Failed to fetch dynamic news", err);
+  }
+
   return [
     ...staticRoutes,
     ...calculatorRoutes,
     ...articleRoutes,
     ...aboutRoutes,
+    ...newsRoutes,
   ];
 }

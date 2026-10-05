@@ -69,6 +69,11 @@ export const TOP_NAV_MENUS = [
     href: "/calculators",
     isCalculatorsMenu: true // renders the 8 specialized calculators from calculators.js
   },
+  {
+    id: "news",
+    name: "Health News",
+    href: "/news"
+  },
   // {
   //   id: "about",
   //   name: "About Us",
