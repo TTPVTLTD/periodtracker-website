@@ -9,12 +9,12 @@ export const metadata = {
     'reproductive health subscription'
   ],
   alternates: {
-    canonical: '/subscription',
+    canonical: 'https://trackperiods.com/subscription',
   },
   openGraph: {
     title: 'Subscription & Premium Plans | Period Tracker',
     description: 'Invest in your reproductive wellness with unlimited AI cycle reports and personalized Ayurvedic remedy modules.',
-    url: '/subscription',
+    url: 'https://trackperiods.com/subscription',
     type: 'website',
   },
   twitter: {

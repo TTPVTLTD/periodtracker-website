@@ -25,12 +25,12 @@ export const metadata = {
     'menstrual cycle calendar'
   ],
   alternates: {
-    canonical: 'https://trackperiods.com/',
+    canonical: 'https://trackperiods.com',
   },
   openGraph: {
     title: 'Period Tracker Ovulation Cycles | Smart Cycle Calendar',
     description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
-    url: '/',
+    url: 'https://trackperiods.com',
     siteName: 'Period Tracker & Ovulation Cycle',
     locale: 'en_US',
     type: 'website',

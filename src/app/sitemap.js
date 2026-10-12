@@ -9,7 +9,7 @@ export default async function sitemap() {
   // Core Static Hub Routes
   const staticRoutes = [
     {
-      url: `${baseUrl}/`,
+      url: `${baseUrl}`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 1.0,

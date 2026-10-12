@@ -10,12 +10,12 @@ export const metadata = {
     // 'private period tracker'
   ],
   alternates: {
-    canonical: '/app-features',
+    canonical: 'https://trackperiods.com/app-features',
   },
   openGraph: {
     title: 'Mobile App Features & Cycle Tools | Period Tracker',
     description: 'Explore the 6 flagship mobile app features: predictive cycle engine, fertility radar, pregnancy milestones, and private encrypted vault.',
-    url: '/app-features',
+    url: 'https://trackperiods.com/app-features',
     type: 'website',
   },
   twitter: {

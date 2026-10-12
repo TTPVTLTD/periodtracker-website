@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { ARTICLES } from '../../../data/articles';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
+import { APP_LINKS } from '../../../data/appLinks';
 import { 
   ChevronRight, 
   Clock, 
@@ -14,7 +15,8 @@ import {
   Sparkles, 
   ArrowLeft,
   Calendar,
-  BookOpen
+  BookOpen,
+  Smartphone
 } from 'lucide-react';
 import { clampTitle, clampDescription, clampKeywords } from '../../../utils/seo';
 
@@ -47,7 +49,7 @@ export function generateMetadata({ params }) {
     openGraph: {
       title: safeTitle,
       description: safeDesc,
-      url: `/articles/${article.id}`,
+      url: `https://trackperiods.com/articles/${article.id}`,
       type: 'article',
       publishedTime: article.publishedDate,
       authors: [article.author || 'Period Tracker Health Editorial'],
@@ -341,6 +343,44 @@ export default function ArticlePage({ params }) {
                   >
                     Open Cycle Calculator &rarr;
                   </Link>
+                </div>
+
+                {/* Direct App Install Banner (Conversion Booster) */}
+                <div className="bg-gradient-to-br from-[#FF3B70] to-[#E0265B] text-white rounded-3xl p-6 shadow-md space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-10 h-10 rounded-2xl bg-white/20 backdrop-blur-sm flex items-center justify-center">
+                      <Smartphone className="w-5 h-5 text-white" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-black uppercase tracking-wider bg-white/20 px-2 py-0.5 rounded-full">
+                        Free Mobile App
+                      </span>
+                      <h4 className="text-white font-bold text-base mt-0.5">
+                        Never Miss a Period Again
+                      </h4>
+                    </div>
+                  </div>
+                  <p className="text-white/90 text-xs leading-relaxed">
+                    Track cycle milestones, log daily symptoms, and predict fertile days offline with 100% private biometric lock.
+                  </p>
+                  <div className="grid grid-cols-2 gap-2 pt-1">
+                    <a
+                      href={APP_LINKS.ios}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-white text-gray-900 font-bold text-xs hover:bg-gray-100 transition shadow-sm"
+                    >
+                      <span>App Store</span>
+                    </a>
+                    <a
+                      href={APP_LINKS.android}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-white/10 border border-white/30 text-white font-bold text-xs hover:bg-white/20 transition"
+                    >
+                      <span>Google Play</span>
+                    </a>
+                  </div>
                 </div>
 
               </aside>

@@ -10,12 +10,12 @@ export const metadata = {
     'pregnancy milestones'
   ],
   alternates: {
-    canonical: '/wellness-hub',
+    canonical: 'https://trackperiods.com/wellness-hub',
   },
   openGraph: {
     title: "Women's Wellness Hub & Health Library | Period Tracker",
     description: "Doctor-backed guides on menstrual cycles, ovulation signs, natural conception, pregnancy milestones, and Ayurvedic cramp relief remedies.",
-    url: '/wellness-hub',
+    url: 'https://trackperiods.com/wellness-hub',
     type: 'website',
   },
   twitter: {

@@ -39,12 +39,12 @@ export const metadata = {
     'cycle tools'
   ],
   alternates: {
-    canonical: '/calculators',
+    canonical: 'https://trackperiods.com/calculators',
   },
   openGraph: {
     title: 'Free Period & Ovulation Calculators - Menstrual Tools | Period Tracker',
     description: 'Calculate your next period date, ovulation day, fertile window, beta hCG doubling, and pregnancy due date. 100% private in-browser reproductive tools.',
-    url: '/calculators',
+    url: 'https://trackperiods.com/calculators',
     type: 'website',
   },
   twitter: {
