@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
-import { fetchNewsDetail, fetchNewsList } from '../../../lib/newsApi';
+import { fetchNewsDetail, fetchNewsList, generateNewsSlug } from '../../../lib/newsApi';
 import { Calendar, ChevronRight } from 'lucide-react';
 
 export async function generateMetadata({ params }) {
@@ -16,13 +16,18 @@ export async function generateMetadata({ params }) {
   const title = news.title || 'Health News';
   const description = news.short_description || news.shortDescription || news.description?.replace(/<[^>]+>/g, '').substring(0, 160) || 'Health and wellness updates.';
   const imageUrl = news.news_image || news.image || news.thumbnail || 'https://trackperiods.com/og-image.jpg';
+  const canonicalSlug = generateNewsSlug(news) || params.slug;
 
   return {
     title: `${title} | Period Tracker News`,
     description: description,
+    alternates: {
+      canonical: `https://trackperiods.com/news/${canonicalSlug}`,
+    },
     openGraph: {
       title,
       description,
+      url: `https://trackperiods.com/news/${canonicalSlug}`,
       images: [imageUrl],
       type: 'article',
     },
@@ -153,7 +158,7 @@ export default async function NewsDetailPage({ params }) {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {recentNews.map((item, index) => {
-                const itemSlug = item.slug || item._id || item.id || index.toString();
+                const itemSlug = generateNewsSlug(item) || index.toString();
                 const itemImg = item.news_image || item.image || item.thumbnail || 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800&auto=format&fit=crop';
                 
                 let itemDate = 'Recent';

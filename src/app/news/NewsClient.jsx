@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Calendar, ChevronRight, Loader2, ArrowRight } from 'lucide-react';
-import { fetchNewsList } from '../../lib/newsApi';
+import { fetchNewsList, generateNewsSlug } from '../../lib/newsApi';
 
 export default function NewsClient({ initialData }) {
   // Extract initial docs array defensively based on the exact API response
@@ -93,8 +93,8 @@ export default function NewsClient({ initialData }) {
       {/* News Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
         {newsList.map((news, index) => {
-          // Fallback slug if API doesn't provide one
-          const slug = news.slug || news._id || news.id || index.toString();
+          // Generate clean, keyword-rich SEO slug (50-60 chars max)
+          const slug = generateNewsSlug(news) || index.toString();
           const imageUrl = news.news_image || news.image || news.thumbnail || 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800&auto=format&fit=crop';
           const title = news.title || 'Health & Wellness Update';
 

@@ -1,7 +1,8 @@
 import { CALCULATORS } from '../data/calculators';
 import { ARTICLES } from '../data/articles';
 import { ABOUT_PAGES } from '../data/aboutPages';
-import { fetchNewsList } from '../lib/newsApi';
+import { CATEGORIES } from '../data/categories';
+import { fetchNewsList, generateNewsSlug } from '../lib/newsApi';
 
 export default async function sitemap() {
   const baseUrl = 'https://trackperiods.com';
@@ -82,6 +83,14 @@ export default async function sitemap() {
     },
   ];
 
+  // Topic Category Hubs (enables Google indexing for specific keyword clusters)
+  const categoryRoutes = CATEGORIES.filter(cat => cat.slug !== 'all').map((cat) => ({
+    url: `${baseUrl}/wellness-hub?category=${cat.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  }));
+
   // 8 Specialized Health & Fertility Calculators
   const calculatorRoutes = CALCULATORS.map((calc) => ({
     url: `${baseUrl}/calculators/${calc.slug}`,
@@ -90,7 +99,7 @@ export default async function sitemap() {
     priority: 0.85,
   }));
 
-  // 23 Comprehensive Educational Articles
+  // 32 Comprehensive Educational Articles
   const articleRoutes = ARTICLES.map((article) => ({
     url: `${baseUrl}/articles/${article.id}`,
     lastModified: new Date(),
@@ -106,14 +115,14 @@ export default async function sitemap() {
     priority: 0.6,
   }));
 
-  // Dynamic News Articles
+  // Dynamic News Articles with Keyword-Rich Slugs
   let newsRoutes = [];
   try {
     const listData = await fetchNewsList(1, 100);
     const newsArr = listData?.data?.data || listData?.data || [];
     if (Array.isArray(newsArr)) {
       newsRoutes = newsArr.map((newsItem) => {
-        const slug = newsItem.slug || newsItem._id || newsItem.id;
+        const slug = generateNewsSlug(newsItem) || newsItem.slug || newsItem._id || newsItem.id;
         let lastMod = new Date();
         if (newsItem.created_at || newsItem.createdAt || newsItem.date) {
           lastMod = new Date(newsItem.created_at || newsItem.createdAt || newsItem.date);
@@ -132,6 +141,7 @@ export default async function sitemap() {
 
   return [
     ...staticRoutes,
+    ...categoryRoutes,
     ...calculatorRoutes,
     ...articleRoutes,
     ...aboutRoutes,

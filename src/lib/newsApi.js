@@ -1,5 +1,38 @@
 export const API_BASE_URL = 'https://docipo.ipotrending.com/api/v1/common';
 
+/**
+ * Generate a clean, keyword-rich SEO slug adhering to Google best practices:
+ * - Optimal length: 50-60 characters
+ * - Lowercase alphanumeric with hyphens
+ * - Prefix with numeric ID so matching is deterministic: e.g. "56-irregular-periods-common-causes-symptoms"
+ */
+export function generateNewsSlug(item) {
+  if (!item) return '';
+  if (item.slug && typeof item.slug === 'string' && item.slug.trim()) {
+    return item.slug.trim();
+  }
+  const id = item.id || item._id;
+  const rawTitle = item.title || item.old_title || '';
+  if (!rawTitle) return String(id || '');
+
+  // Strip stop characters and keep clear alphanumeric words
+  const clean = rawTitle
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .trim()
+    .replace(/\s+/g, '-')
+    .substring(0, 55)
+    .replace(/-+$/, '');
+
+  return id ? `${id}-${clean}` : clean;
+}
+
+export function parseNewsIdFromSlug(slug) {
+  if (!slug) return null;
+  const match = String(slug).match(/^(\d+)/);
+  return match ? match[1] : slug;
+}
+
 export async function fetchNewsList(page = 1, limit = 9) {
   try {
     const payload = {
@@ -8,33 +41,21 @@ export async function fetchNewsList(page = 1, limit = 9) {
       web: 'trackperiods.com',
     };
 
-    console.log("\n========== NEWS API REQUEST ==========");
-    console.log(`ROUTE: ${API_BASE_URL}/getNewsList`);
-    console.log(`PAYLOAD: ${JSON.stringify(payload, null, 2)}`);
-    console.log("======================================\n");
-
     const res = await fetch(`${API_BASE_URL}/getNewsList`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify(payload),
-      cache: 'no-store' 
+      next: { revalidate: 300 } // ISR: cache for 5 minutes, enables fast static generation & auto sitemap updates
     });
 
     if (!res.ok) {
-      console.error("\n========== NEWS API ERROR ==========");
-      console.error(`STATUS: ${res.status}`);
-      console.error(`RESPONSE: ${await res.text()}`);
-      console.error("====================================\n");
-      throw new Error('Failed to fetch news list');
+      console.error(`News API returned status ${res.status}`);
+      return null;
     }
 
     const json = await res.json();
-    console.log("\n========== NEWS API RESPONSE =========");
-    console.log(`STATUS: ${res.status}`);
-    console.log(`DATA: ${JSON.stringify(json, null, 2)}`);
-    console.log("======================================\n");
     return json; 
   } catch (error) {
     console.error("News API Fetch Error (Detailed):", error.message);
@@ -44,21 +65,22 @@ export async function fetchNewsList(page = 1, limit = 9) {
 
 export async function fetchNewsDetail(slug) {
   try {
-    // Note: Assuming detail API exists. If not, fetching list and filtering.
-    const res = await fetch(`${API_BASE_URL}/detail`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ slug, web: 'trackperiods.com' }),
-      cache: 'no-store'
-    });
-    if (!res.ok) {
-      // Fallback: search in list API
-      const listRes = await fetchNewsList(1, 100);
-      const allNews = listRes?.data?.data || listRes?.data || [];
-      return allNews.find(n => n.slug === slug || n._id === slug || n.id?.toString() === slug?.toString()) || null;
-    }
-    const json = await res.json();
-    return json.data || json;
+    const numericId = parseNewsIdFromSlug(slug);
+
+    // Fetch list and locate by slug, raw id, or parsed numeric id
+    const listRes = await fetchNewsList(1, 100);
+    const allNews = listRes?.data?.data || listRes?.data || [];
+    
+    return allNews.find(n => {
+      const generated = generateNewsSlug(n);
+      return (
+        n.slug === slug ||
+        generated === slug ||
+        n._id?.toString() === slug?.toString() ||
+        n.id?.toString() === slug?.toString() ||
+        (numericId && n.id?.toString() === numericId.toString())
+      );
+    }) || null;
   } catch (error) {
     console.error('News Detail Fetch Error:', error);
     return null;
