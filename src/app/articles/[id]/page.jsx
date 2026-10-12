@@ -104,6 +104,19 @@ export default function ArticlePage({ params }) {
     mainEntityOfPage: `https://trackperiods.com/articles/${article.id}`,
   };
 
+  const faqJsonLd = article.faqs && article.faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: article.faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer,
+      },
+    })),
+  } : null;
+
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF8F9]">
       <Navbar />
@@ -113,6 +126,12 @@ export default function ArticlePage({ params }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        {faqJsonLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        )}
         {/* Flo.health Top Header Banner */}
         <section className="bg-gradient-to-b from-flo-100/60 via-pink-50/40 to-[#fff9fb] pt-8 pb-12 border-b border-pink-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -203,12 +222,26 @@ export default function ArticlePage({ params }) {
                       id={`section-${idx}`}
                       className="space-y-4 scroll-mt-28"
                     >
-                      <h2 className=" font-extrabold pt-2 border-b border-pink-100 pb-2">
+                      <h2 className="text-xl sm:text-2xl font-extrabold pt-2 border-b border-pink-100 pb-2 text-gray-900">
                         {sec.heading}
                       </h2>
-                      <div className="text-sm text-gray-700 leading-relaxed">
-                        {sec.body}
-                      </div>
+                      {Array.isArray(sec.paragraphs) ? (
+                        <div className="space-y-4">
+                          {sec.paragraphs.map((para, pIdx) => (
+                            <p key={pIdx} className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                              {para}
+                            </p>
+                          ))}
+                        </div>
+                      ) : (
+                        <div className="space-y-3">
+                          {typeof sec.body === 'string' && sec.body.split('\n\n').map((para, pIdx) => (
+                            <p key={pIdx} className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                              {para}
+                            </p>
+                          ))}
+                        </div>
+                      )}
 
                       {/* Section Detail Bullets */}
                       {sec.bullets && sec.bullets.length > 0 && (
