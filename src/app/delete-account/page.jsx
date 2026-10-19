@@ -73,7 +73,7 @@ function DeleteAccountContent() {
       email: formData.email.trim(),
       phonenumber: formData.phone.trim(),
       description: `[GOOGLE PLAY ACCOUNT DELETION REQUEST]
-App Name: Period Tracker Ovulation Cycles
+App Name: Period Tracker Ovulation Cycle
 Package Name: com.tracewave.period
 User Name: ${formData.name.trim()}
 Registered Email: ${formData.email.trim()}
@@ -127,7 +127,7 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
               />
               <div>
                 <h1 className="text-sm font-bold text-gray-900 leading-tight">
-                  Period Tracker Ovulation Cycles
+                  Period Tracker Ovulation Cycle
                 </h1>
                 <p className="text-[11px] text-gray-500 font-medium">
                   Official Account & Data Deletion Portal
@@ -151,10 +151,10 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
               <span>Google Play Data Safety & Account Deletion</span>
             </div>
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
-              Delete Account & Associated Health Data
+              Delete Account &amp; Data | Period Tracker Ovulation Cycle
             </h1>
             <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-              In accordance with Google Play and Apple App Store data safety policies, you have full authority to request permanent deletion of your account, menstrual cycle history, and logged health records.
+              In accordance with Google Play data safety policies, you have full authority to request permanent deletion of your account, menstrual cycle history, and logged health records.
             </p>
           </div>
         </section>
@@ -170,10 +170,10 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
             <h2 className="text-lg sm:text-xl font-bold text-gray-900">
               App Information for Deletion Request
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
               <div className="bg-pink-50/40 p-4 rounded-2xl border border-pink-100/70 space-y-1">
                 <span className="text-gray-500 font-semibold uppercase text-[11px] block">App Name</span>
-                <span className="text-gray-900 font-bold text-sm block">Period Tracker Ovulation Cycles</span>
+                <span className="text-gray-900 font-bold text-sm block">Period Tracker Ovulation Cycle</span>
               </div>
               <div className="bg-pink-50/40 p-4 rounded-2xl border border-pink-100/70 space-y-1">
                 <span className="text-gray-500 font-semibold uppercase text-[11px] block">Android Package Name</span>
@@ -182,12 +182,8 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                 </code>
               </div>
               <div className="bg-pink-50/40 p-4 rounded-2xl border border-pink-100/70 space-y-1">
-                <span className="text-gray-500 font-semibold uppercase text-[11px] block">Apple App Store ID</span>
-                <span className="text-gray-900 font-bold block">6774117828</span>
-              </div>
-              <div className="bg-pink-50/40 p-4 rounded-2xl border border-pink-100/70 space-y-1">
                 <span className="text-gray-500 font-semibold uppercase text-[11px] block">Developer / Publisher</span>
-                <span className="text-gray-900 font-bold block">TraceWave (TTPVTLTD)</span>
+                <span className="text-gray-900 font-bold block">Tracewave(TTPVTLTD)</span>
               </div>
             </div>
           </div>
@@ -202,44 +198,20 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
               How Your Account is Identified & How to Delete
             </h2>
             <p className="text-gray-700 text-sm leading-relaxed">
-              Depending on how you use the mobile application, your data is stored and purged according to two modes:
+              Your account, profile information, and synced menstrual records are identified using your registered email address or phone number. You can request permanent server-side deletion either directly inside the mobile app or by submitting the web deletion request form below.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {/* Cloud Account */}
-              <div className="p-5 rounded-2xl bg-gradient-to-br from-pink-50/60 to-white border border-pink-200/80 space-y-2.5">
-                <div className="flex items-center gap-2 font-bold text-sm text-gray-900">
-                  <span className="w-6 h-6 rounded-full bg-flo-500 text-white flex items-center justify-center text-xs">A</span>
-                  <span>Registered Cloud Accounts</span>
-                </div>
-                <p className="text-xs text-gray-600 leading-relaxed">
-                  Accounts created with a registered Email, Google/Apple ID, or Phone number sync data to our secure private server. You can request permanent server-side deletion either <strong>in-app</strong> or using the <strong>web form below</strong>.
-                </p>
-              </div>
-
-              {/* Guest / Local Account */}
-              <div className="p-5 rounded-2xl bg-gradient-to-br from-gray-50 to-white border border-gray-200 space-y-2.5">
-                <div className="flex items-center gap-2 font-bold text-sm text-gray-900">
-                  <span className="w-6 h-6 rounded-full bg-gray-700 text-white flex items-center justify-center text-xs">B</span>
-                  <span>Guest / On-Device Only Mode</span>
-                </div>
-                <p className="text-xs text-gray-600 leading-relaxed">
-                  If you used the app locally without registering an account, all cycle data is stored exclusively on your device. Clearing app storage or uninstalling the app permanently purges all records immediately.
-                </p>
-              </div>
-            </div>
-
             {/* In-App Steps */}
-            <div className="bg-amber-50/60 border border-amber-200/80 rounded-2xl p-5 space-y-2.5 text-xs text-amber-950">
+            <div className="bg-amber-50/60 border border-amber-200/80 rounded-2xl p-5 space-y-3 text-xs text-amber-950">
               <h3 className="font-bold text-sm flex items-center gap-2 text-amber-900">
                 <Sparkles className="w-4 h-4 text-amber-600" />
                 <span>Want to delete directly inside the app? (Fastest Method)</span>
               </h3>
-              <ol className="list-decimal list-inside space-y-1 pl-1 text-gray-700 leading-relaxed">
-                <li>Open the <strong>Period Tracker</strong> app on your Android or iOS device.</li>
-                <li>Tap <strong>Settings (⚙️)</strong> in the bottom navigation bar.</li>
-                <li>Navigate to <strong>Account</strong> or <strong>Data Privacy</strong>.</li>
-                <li>Tap <strong>Delete Account & Data</strong> and confirm.</li>
+              <ol className="list-decimal list-inside space-y-1.5 pl-1 text-gray-700 leading-relaxed font-medium text-xs sm:text-sm">
+                <li>Open the Period Tracker app on your Android or iOS device.</li>
+                <li>Tap Settings (⚙️) in the top-right corner.</li>
+                <li>Scroll to bottom of the screen.</li>
+                <li>Tap Delete Account and confirm.</li>
               </ol>
             </div>
           </div>
@@ -456,7 +428,7 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                     className="w-5 h-5 rounded-lg text-flo-600 focus:ring-flo-400 border-gray-300 mt-0.5 cursor-pointer accent-flo-600"
                   />
                   <span className="text-xs text-gray-800 leading-relaxed font-medium">
-                    I acknowledge and confirm that I wish to permanently delete my account for <strong>Period Tracker Ovulation Cycles (com.tracewave.period)</strong>. I understand that all my menstrual records, symptom history, and backups will be purged within <strong>30 to 45 working days</strong> and that this operation cannot be undone.
+                    I acknowledge and confirm that I wish to permanently delete my account for <strong>Period Tracker Ovulation Cycle (com.tracewave.period)</strong>. I understand that all my menstrual records, symptom history, and backups will be purged within <strong>30 to 45 working days</strong> and that this operation cannot be undone.
                   </span>
                 </label>
               </div>
@@ -512,7 +484,7 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
         <Footer />
       ) : (
         <footer className="border-t border-pink-100 py-6 px-4 text-center text-xs text-gray-500 bg-white">
-          <p>© {new Date().getFullYear()} Period Tracker Ovulation Cycles. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Period Tracker Ovulation Cycle. All rights reserved.</p>
           <div className="flex items-center justify-center gap-4 mt-2 font-medium">
             <Link href="/app-privacy" className="hover:text-flo-600 transition-colors">Privacy Policy</Link>
             <span>•</span>
@@ -532,7 +504,7 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
               Deletion Request Received
             </h3>
             <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-              Your account deletion request for <strong>Period Tracker Ovulation Cycles</strong> has been successfully registered.
+              Your account deletion request for <strong>Period Tracker Ovulation Cycle</strong> has been successfully registered.
             </p>
             <div className="p-4 bg-pink-50/70 border border-pink-200 rounded-2xl text-left text-xs space-y-1.5 text-gray-700">
               <div className="flex items-center gap-1.5 text-flo-700 font-bold">
