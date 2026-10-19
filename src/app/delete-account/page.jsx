@@ -274,14 +274,6 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                   </li>
                   <li className="flex items-start gap-2.5">
                     <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
-                    <span><strong className="text-gray-950 font-bold">Intimacy &amp; Diary:</strong> Personal intimate activity logs, birth control pill logs, and personal notes.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
-                    <span><strong className="text-gray-950 font-bold">Pregnancy Records:</strong> Due dates, gestational age logs, and hCG pregnancy test tracking.</span>
-                  </li>
-                  <li className="flex items-start gap-2.5">
-                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
                     <span><strong className="text-gray-950 font-bold">Cloud Backups:</strong> All remote synchronization files and database entries tied to your user ID.</span>
                   </li>
                   <li className="flex items-start gap-2.5">
