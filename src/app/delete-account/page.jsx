@@ -142,19 +142,19 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
               <img 
                 src="/logo.png" 
                 alt="Period Tracker Logo" 
-                className="w-8 h-8 rounded-xl object-contain shadow-xs" 
+                className="w-9 h-9 rounded-xl object-contain shadow-xs" 
               />
               <div>
-                <h1 className="text-sm font-bold text-gray-900 leading-tight">
+                <h1 className="font-heading text-sm sm:text-base font-bold text-gray-950 leading-tight">
                   Period Tracker Ovulation Cycle
                 </h1>
-                <p className="text-[11px] text-gray-500 font-medium">
-                  Official Account & Data Deletion Portal
+                <p className="text-xs text-gray-600 font-medium">
+                  Official Account &amp; Data Deletion Portal
                 </p>
               </div>
             </div>
-            <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 text-[11px] font-bold border border-emerald-200">
-              <ShieldCheck className="w-3.5 h-3.5" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+              <ShieldCheck className="w-4 h-4 text-emerald-600" />
               <span>Verified App</span>
             </span>
           </div>
@@ -163,16 +163,16 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
 
       <main className="flex-1 pb-12 sm:pb-16">
         {/* Hero Header Section */}
-        <section className="bg-gradient-to-b from-pink-50 via-white to-[#FAF8F9] pt-8 sm:pt-12 pb-8 sm:pb-10 border-b border-pink-100/60">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-3">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-rose-700 font-bold text-xs uppercase tracking-wider shadow-2xs">
+        <section className="bg-gradient-to-b from-pink-50 via-white to-[#FAF8F9] pt-8 sm:pt-14 pb-8 sm:pb-12 border-b border-pink-100/60">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-rose-50 border border-rose-200 text-rose-800 font-bold text-xs sm:text-sm uppercase tracking-wider shadow-2xs">
               <ShieldAlert className="w-4 h-4 text-rose-600" />
-              <span>Google Play Data Safety & Account Deletion</span>
+              <span>Google Play Data Safety &amp; Account Deletion</span>
             </div>
-            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+            <h1 className="font-heading text-2xl sm:text-4xl lg:text-[40px] font-extrabold text-gray-950 tracking-tight leading-tight">
               Delete Account &amp; Data | Period Tracker Ovulation Cycle
             </h1>
-            <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-700 text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed font-normal">
               In accordance with Google Play data safety policies, you have full authority to request permanent deletion of your account, menstrual cycle history, and logged health records.
             </p>
           </div>
@@ -181,131 +181,131 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
         <div className="max-w-4xl mx-auto px-4 sm:px-6 mt-8 space-y-8">
 
           {/* Section 1: App Details Card */}
-          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-pink-100 shadow-sm space-y-4">
-            <div className="flex items-center gap-2.5 text-flo-600 font-bold text-sm uppercase tracking-wider">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-pink-100 shadow-sm space-y-4">
+            <div className="flex items-center gap-2.5 text-flo-600 font-bold text-xs sm:text-sm uppercase tracking-wider font-heading">
               <Smartphone className="w-4 h-4" />
               <span>1. Application Details</span>
             </div>
-            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-gray-950">
               App Information for Deletion Request
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs sm:text-sm">
-              <div className="bg-pink-50/40 p-4 rounded-2xl border border-pink-100/70 space-y-1">
-                <span className="text-gray-500 font-semibold uppercase text-[11px] block">App Name</span>
-                <span className="text-gray-900 font-bold text-sm block">Period Tracker Ovulation Cycle</span>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+              <div className="bg-pink-50/50 p-4 rounded-2xl border border-pink-100/80 space-y-1.5">
+                <span className="text-gray-600 font-bold uppercase text-xs tracking-wider block">App Name</span>
+                <span className="text-gray-950 font-bold text-base block">Period Tracker Ovulation Cycle</span>
               </div>
-              <div className="bg-pink-50/40 p-4 rounded-2xl border border-pink-100/70 space-y-1">
-                <span className="text-gray-500 font-semibold uppercase text-[11px] block">Android Package Name</span>
-                <code className="text-flo-600 font-bold text-xs sm:text-sm bg-white px-2 py-0.5 rounded-lg border border-pink-200 block truncate">
+              <div className="bg-pink-50/50 p-4 rounded-2xl border border-pink-100/80 space-y-1.5">
+                <span className="text-gray-600 font-bold uppercase text-xs tracking-wider block">Android Package Name</span>
+                <code className="text-flo-700 font-bold text-sm sm:text-base bg-white px-2.5 py-1 rounded-xl border border-pink-200 block truncate">
                   com.tracewave.period
                 </code>
               </div>
-              <div className="bg-pink-50/40 p-4 rounded-2xl border border-pink-100/70 space-y-1">
-                <span className="text-gray-500 font-semibold uppercase text-[11px] block">Developer / Publisher</span>
-                <span className="text-gray-900 font-bold block">Tracewave(TTPVTLTD)</span>
+              <div className="bg-pink-50/50 p-4 rounded-2xl border border-pink-100/80 space-y-1.5">
+                <span className="text-gray-600 font-bold uppercase text-xs tracking-wider block">Developer / Publisher</span>
+                <span className="text-gray-950 font-bold text-base block">Tracewave(TTPVTLTD)</span>
               </div>
             </div>
           </div>
 
           {/* Section 2: Account Details & Methods */}
-          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-pink-100 shadow-sm space-y-5">
-            <div className="flex items-center gap-2.5 text-flo-600 font-bold text-sm uppercase tracking-wider">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-pink-100 shadow-sm space-y-5">
+            <div className="flex items-center gap-2.5 text-flo-600 font-bold text-xs sm:text-sm uppercase tracking-wider font-heading">
               <User className="w-4 h-4" />
-              <span>2. Account Details & Deletion Methods</span>
+              <span>2. Account Details &amp; Deletion Methods</span>
             </div>
-            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
-              How Your Account is Identified & How to Delete
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-gray-950">
+              How Your Account is Identified &amp; How to Delete
             </h2>
-            <p className="text-gray-700 text-sm leading-relaxed">
-              Your account, profile information, and synced menstrual records are identified using your registered email address or phone number. You can request permanent server-side deletion either directly inside the mobile app or by submitting the web deletion request form below.
+            <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
+              Your account, profile information, and synced menstrual records are identified using your registered email address or mobile phone number. You can request permanent server-side deletion either directly inside the mobile app or by submitting the web deletion request form below.
             </p>
 
             {/* In-App Steps */}
-            <div className="bg-amber-50/60 border border-amber-200/80 rounded-2xl p-5 space-y-3 text-xs text-amber-950">
-              <h3 className="font-bold text-sm flex items-center gap-2 text-amber-900">
-                <Sparkles className="w-4 h-4 text-amber-600" />
+            <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-5 sm:p-6 space-y-3.5">
+              <h3 className="font-heading font-bold text-base sm:text-lg flex items-center gap-2 text-amber-950">
+                <Sparkles className="w-5 h-5 text-amber-600 shrink-0" />
                 <span>Want to delete directly inside the app? (Fastest Method)</span>
               </h3>
-              <ol className="list-decimal list-inside space-y-1.5 pl-1 text-gray-700 leading-relaxed font-medium text-xs sm:text-sm">
-                <li>Open the Period Tracker app on your Android or iOS device.</li>
-                <li>Tap Settings (⚙️) in the top-right corner.</li>
+              <ol className="list-decimal list-inside space-y-2 pl-1 text-gray-900 leading-relaxed font-medium text-sm sm:text-base">
+                <li>Open the <strong className="font-bold text-gray-950">Period Tracker</strong> app on your Android or iOS device.</li>
+                <li>Tap <strong className="font-bold text-gray-950">Settings (⚙️)</strong> in the top-right corner.</li>
                 <li>Scroll to bottom of the screen.</li>
-                <li>Tap Delete Account and confirm.</li>
+                <li>Tap <strong className="font-bold text-rose-700">Delete Account</strong> and confirm.</li>
               </ol>
             </div>
           </div>
 
           {/* Section 3: Data Deleted vs Retained */}
-          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-pink-100 shadow-sm space-y-5">
-            <div className="flex items-center gap-2.5 text-flo-600 font-bold text-sm uppercase tracking-wider">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 border border-pink-100 shadow-sm space-y-5">
+            <div className="flex items-center gap-2.5 text-flo-600 font-bold text-xs sm:text-sm uppercase tracking-wider font-heading">
               <Trash2 className="w-4 h-4" />
               <span>3. Scope of Data Deletion</span>
             </div>
-            <h2 className="text-lg sm:text-xl font-bold text-gray-900">
+            <h2 className="font-heading text-xl sm:text-2xl font-bold text-gray-950">
               What Data is Deleted vs. Retained
             </h2>
-            <p className="text-gray-700 text-sm leading-relaxed">
+            <p className="text-gray-800 text-sm sm:text-base leading-relaxed">
               We respect your right to complete reproductive privacy. When your deletion request is processed, the following data categories are treated as described:
             </p>
 
-            <div className="space-y-4">
+            <div className="space-y-5">
               {/* Data Deleted List */}
-              <div className="bg-emerald-50/50 border border-emerald-200/80 rounded-2xl p-5 space-y-3">
-                <h3 className="font-bold text-sm text-emerald-900 flex items-center gap-2 uppercase tracking-wide">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-600" />
-                  <span>Data Permanently & Irreversibly Deleted:</span>
+              <div className="bg-emerald-50/60 border border-emerald-200 rounded-2xl p-5 sm:p-6 space-y-3.5">
+                <h3 className="font-heading font-bold text-sm sm:text-base text-emerald-950 flex items-center gap-2 uppercase tracking-wider">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0" />
+                  <span>Data Permanently &amp; Irreversibly Deleted:</span>
                 </h3>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-gray-700">
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold mt-0.5">•</span>
-                    <span><strong>Account Credentials:</strong> Name, registered email address, phone number, and authentication tokens.</span>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm sm:text-[15px] text-gray-800">
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
+                    <span><strong className="text-gray-950 font-bold">Account Credentials:</strong> Name, registered email address, phone number, and authentication tokens.</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold mt-0.5">•</span>
-                    <span><strong>Cycle History:</strong> All period dates, cycle lengths, flow volume, and calendar history.</span>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
+                    <span><strong className="text-gray-950 font-bold">Cycle History:</strong> All period dates, cycle lengths, flow volume, and calendar history.</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold mt-0.5">•</span>
-                    <span><strong>Ovulation & Fertility:</strong> Fertile window calculations, OPK tests, and basal body temperature (BBT) logs.</span>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
+                    <span><strong className="text-gray-950 font-bold">Ovulation &amp; Fertility:</strong> Fertile window calculations, OPK tests, and basal body temperature (BBT) logs.</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold mt-0.5">•</span>
-                    <span><strong>Symptoms & Mood:</strong> Cramp logs, headaches, acne, mood changes, water intake, and weight entries.</span>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
+                    <span><strong className="text-gray-950 font-bold">Symptoms &amp; Mood:</strong> Cramp logs, headaches, acne, mood changes, water intake, and weight entries.</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold mt-0.5">•</span>
-                    <span><strong>Intimacy & Diary:</strong> Personal intimate activity logs, birth control pill logs, and personal notes.</span>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
+                    <span><strong className="text-gray-950 font-bold">Intimacy &amp; Diary:</strong> Personal intimate activity logs, birth control pill logs, and personal notes.</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold mt-0.5">•</span>
-                    <span><strong>Pregnancy Records:</strong> Due dates, gestational age logs, and hCG pregnancy test tracking.</span>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
+                    <span><strong className="text-gray-950 font-bold">Pregnancy Records:</strong> Due dates, gestational age logs, and hCG pregnancy test tracking.</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold mt-0.5">•</span>
-                    <span><strong>Cloud Backups:</strong> All remote synchronization files and database entries tied to your user ID.</span>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
+                    <span><strong className="text-gray-950 font-bold">Cloud Backups:</strong> All remote synchronization files and database entries tied to your user ID.</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-emerald-500 font-bold mt-0.5">•</span>
-                    <span><strong>Device Tokens:</strong> Push notification tokens and custom app settings.</span>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-emerald-600 font-black text-base leading-none mt-1">•</span>
+                    <span><strong className="text-gray-950 font-bold">Device Tokens:</strong> Push notification tokens and custom app settings.</span>
                   </li>
                 </ul>
               </div>
 
               {/* Data Retained Disclosure */}
-              <div className="bg-amber-50/50 border border-amber-200/80 rounded-2xl p-5 space-y-2 text-xs text-amber-950">
-                <h3 className="font-bold text-sm text-amber-900 flex items-center gap-2 uppercase tracking-wide">
-                  <AlertTriangle className="w-4 h-4 text-amber-600" />
-                  <span>Data That May Be Retained & Legal Justification:</span>
+              <div className="bg-amber-50/70 border border-amber-200 rounded-2xl p-5 sm:p-6 space-y-3 text-amber-950">
+                <h3 className="font-heading font-bold text-sm sm:text-base text-amber-950 flex items-center gap-2 uppercase tracking-wider">
+                  <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />
+                  <span>Data That May Be Retained &amp; Legal Justification:</span>
                 </h3>
-                <ul className="space-y-1.5 text-gray-700 leading-relaxed">
+                <ul className="space-y-2 text-sm sm:text-[15px] text-gray-800 leading-relaxed">
                   <li>
-                    <strong>Financial / In-App Purchase Records:</strong> If you purchased a premium subscription, transactional receipts (purchase date, transaction ID, currency) are retained solely for mandatory tax, accounting, and anti-fraud statutory compliance under applicable corporate laws.
+                    <strong className="text-gray-950 font-bold">Financial / In-App Purchase Records:</strong> If you purchased a premium subscription, transactional receipts (purchase date, transaction ID, currency) are retained solely for mandatory tax, accounting, and anti-fraud statutory compliance under applicable corporate laws.
                   </li>
                   <li>
-                    <strong>Important Subscription Notice:</strong> Deleting your app account does <em>not</em> automatically cancel an active Google Play or Apple App Store subscription. You must cancel active renewals in your Google Play Store &rarr; <em>Payments &amp; Subscriptions</em> menu or Apple ID Settings.
+                    <strong className="text-gray-950 font-bold">Important Subscription Notice:</strong> Deleting your app account does <em>not</em> automatically cancel an active Google Play or Apple App Store subscription. You must cancel active renewals in your Google Play Store &rarr; <em>Payments &amp; Subscriptions</em> menu or Apple ID Settings.
                   </li>
                   <li>
-                    <strong>De-identified Telemetry:</strong> Aggregated, non-personal crash analytics that contain zero health information and cannot be linked back to any individual identity.
+                    <strong className="text-gray-950 font-bold">De-identified Telemetry:</strong> Aggregated, non-personal crash analytics that contain zero health information and cannot be linked back to any individual identity.
                   </li>
                 </ul>
               </div>
@@ -313,18 +313,18 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
           </div>
 
           {/* Section 4: Deletion Timeline (30 to 45 Working Days) */}
-          <div className="bg-gradient-to-r from-flo-50 via-pink-50 to-rose-50 border-2 border-flo-300/80 rounded-3xl p-6 sm:p-7 shadow-xs space-y-3">
-            <div className="flex items-center gap-2.5 text-flo-700 font-bold text-sm uppercase tracking-wider">
+          <div className="bg-gradient-to-r from-flo-50 via-pink-50 to-rose-50 border-2 border-flo-300 rounded-3xl p-6 sm:p-8 shadow-xs space-y-4">
+            <div className="flex items-center gap-2.5 text-flo-700 font-bold text-xs sm:text-sm uppercase tracking-wider font-heading">
               <Clock className="w-5 h-5 text-flo-600 shrink-0" />
               <span>4. Deletion Processing Timeline</span>
             </div>
-            <h2 className="text-xl sm:text-2xl font-black text-gray-900">
+            <h2 className="font-heading text-xl sm:text-2xl lg:text-3xl font-black text-gray-950 tracking-tight">
               Data Deletion Completed Within 30 to 45 Working Days
             </h2>
-            <p className="text-sm text-gray-700 leading-relaxed font-medium">
+            <p className="text-sm sm:text-base text-gray-800 leading-relaxed font-medium">
               Upon submitting the account deletion request below, our security and compliance team will verify your account credentials. All associated personal records, cycle history, and cloud database backups will be permanently and irreversibly purged from our active systems and storage within <span className="text-flo-600 font-black">30 to 45 working days</span>.
             </p>
-            <div className="inline-flex items-center gap-2 text-xs font-bold text-rose-700 bg-white/80 px-3 py-1.5 rounded-xl border border-rose-200">
+            <div className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-rose-800 bg-white px-3.5 py-2 rounded-xl border border-rose-200 shadow-2xs">
               <span>⚠️ Action is Irreversible: Once purged, your historical menstrual data cannot be recovered.</span>
             </div>
           </div>
@@ -332,14 +332,14 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
           {/* Section 5: Web Deletion Request Form */}
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-pink-100 shadow-sm space-y-6">
             <div className="border-b border-pink-100 pb-4">
-              <div className="flex items-center gap-2 text-flo-600 font-bold text-xs uppercase tracking-wider mb-1">
+              <div className="flex items-center gap-2 text-flo-600 font-bold text-xs sm:text-sm uppercase tracking-wider font-heading mb-1">
                 <FileText className="w-4 h-4" />
                 <span>Web Deletion Request Form</span>
               </div>
-              <h2 className="text-xl sm:text-2xl font-bold text-gray-900">
+              <h2 className="font-heading text-xl sm:text-2xl lg:text-3xl font-bold text-gray-950">
                 Submit Account Deletion Request
               </h2>
-              <p className="text-xs sm:text-sm text-gray-500 mt-1">
+              <p className="text-sm text-gray-600 mt-1.5 font-normal">
                 Please provide the exact details linked to your Period Tracker mobile app account.
               </p>
             </div>
@@ -351,12 +351,12 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
               </div>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-5">
+            <form onSubmit={handleSubmit} className="space-y-6">
               
               {/* Full Name */}
-              <div className="space-y-1.5">
-                <label htmlFor="name" className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
-                  Full Name <span className="text-flo-500">*</span>
+              <div className="space-y-2">
+                <label htmlFor="name" className="block text-xs sm:text-sm font-bold text-gray-900 uppercase tracking-wider font-heading">
+                  Full Name <span className="text-flo-600 font-black">*</span>
                 </label>
                 <input
                   type="text"
@@ -365,19 +365,19 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                   placeholder="Enter your full name"
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
-                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-flo-400 focus:ring-2 focus:ring-flo-400/20 transition-all bg-gray-50/40 text-sm font-medium"
+                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-300 text-gray-950 placeholder-gray-400 focus:outline-none focus:border-flo-500 focus:ring-2 focus:ring-flo-500/20 transition-all bg-white text-base font-medium shadow-2xs"
                 />
               </div>
 
               {/* Registered Email */}
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <label htmlFor="email" className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
-                    Registered Email Address <span className="text-gray-400 font-normal normal-case">(Email or Mobile required)</span>
+                  <label htmlFor="email" className="block text-xs sm:text-sm font-bold text-gray-900 uppercase tracking-wider font-heading">
+                    Registered Email Address <span className="text-gray-500 font-normal normal-case">(Email or Mobile required)</span>
                   </label>
                   {formData.email.trim() && (
-                    <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
-                      Email Entered
+                    <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200">
+                      ✓ Email Entered
                     </span>
                   )}
                 </div>
@@ -387,31 +387,31 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                   placeholder="name@example.com (used in app)"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
-                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-flo-400 focus:ring-2 focus:ring-flo-400/20 transition-all bg-gray-50/40 text-sm font-medium"
+                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-300 text-gray-950 placeholder-gray-400 focus:outline-none focus:border-flo-500 focus:ring-2 focus:ring-flo-500/20 transition-all bg-white text-base font-medium shadow-2xs"
                 />
-                <span className="text-[11px] text-gray-500 block">
+                <span className="text-xs sm:text-[13px] text-gray-600 font-medium block">
                   Enter your registered email address if you created/logged into your account using email.
                 </span>
               </div>
 
               {/* Divider / OR indicator between Email & Phone */}
-              <div className="relative flex py-1 items-center">
-                <div className="flex-grow border-t border-dashed border-gray-200"></div>
-                <span className="flex-shrink mx-4 text-[11px] font-bold text-gray-500 uppercase tracking-wider bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+              <div className="relative flex py-1.5 items-center">
+                <div className="flex-grow border-t-2 border-dashed border-gray-200"></div>
+                <span className="flex-shrink mx-4 text-xs font-extrabold text-gray-700 uppercase tracking-wider bg-gray-100 px-3.5 py-1 rounded-full border border-gray-300 font-heading">
                   — OR —
                 </span>
-                <div className="flex-grow border-t border-dashed border-gray-200"></div>
+                <div className="flex-grow border-t-2 border-dashed border-gray-200"></div>
               </div>
 
               {/* Registered Phone */}
-              <div className="space-y-1.5">
+              <div className="space-y-2">
                 <div className="flex items-center justify-between">
-                  <label htmlFor="phone" className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
-                    Registered Mobile Number <span className="text-gray-400 font-normal normal-case">(Email or Mobile required)</span>
+                  <label htmlFor="phone" className="block text-xs sm:text-sm font-bold text-gray-900 uppercase tracking-wider font-heading">
+                    Registered Mobile Number <span className="text-gray-500 font-normal normal-case">(Email or Mobile required)</span>
                   </label>
                   {formData.phone.trim() && (
-                    <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
-                      Mobile Entered
+                    <span className="text-xs font-bold text-emerald-800 bg-emerald-50 px-2.5 py-0.5 rounded-md border border-emerald-200">
+                      ✓ Mobile Entered
                     </span>
                   )}
                 </div>
@@ -421,23 +421,23 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                   placeholder="+91 or country code with mobile number"
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
-                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-flo-400 focus:ring-2 focus:ring-flo-400/20 transition-all bg-gray-50/40 text-sm font-medium"
+                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-300 text-gray-950 placeholder-gray-400 focus:outline-none focus:border-flo-500 focus:ring-2 focus:ring-flo-500/20 transition-all bg-white text-base font-medium shadow-2xs"
                 />
-                <span className="text-[11px] text-gray-500 block">
+                <span className="text-xs sm:text-[13px] text-gray-600 font-medium block">
                   Enter your mobile number if you created/logged into your account using mobile OTP.
                 </span>
               </div>
 
               {/* Reason for Deletion */}
-              <div className="space-y-1.5">
-                <label htmlFor="reason" className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
+              <div className="space-y-2">
+                <label htmlFor="reason" className="block text-xs sm:text-sm font-bold text-gray-900 uppercase tracking-wider font-heading">
                   Primary Reason for Deletion
                 </label>
                 <select
                   id="reason"
                   value={formData.reason}
                   onChange={(e) => handleInputChange('reason', e.target.value)}
-                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 text-gray-900 focus:outline-none focus:border-flo-400 focus:ring-2 focus:ring-flo-400/20 transition-all bg-gray-50/40 text-sm font-medium"
+                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-300 text-gray-950 focus:outline-none focus:border-flo-500 focus:ring-2 focus:ring-flo-500/20 transition-all bg-white text-base font-medium shadow-2xs"
                 >
                   {reasonsList.map((r, i) => (
                     <option key={i} value={r}>{r}</option>
@@ -446,9 +446,9 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
               </div>
 
               {/* Additional Details */}
-              <div className="space-y-1.5">
-                <label htmlFor="description" className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
-                  Additional Notes or User ID (Optional)
+              <div className="space-y-2">
+                <label htmlFor="description" className="block text-xs sm:text-sm font-bold text-gray-900 uppercase tracking-wider font-heading">
+                  Additional Notes or User ID <span className="text-gray-500 font-normal normal-case">(Optional)</span>
                 </label>
                 <textarea
                   id="description"
@@ -456,22 +456,22 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                   placeholder="Provide any additional account information or instructions..."
                   value={formData.description}
                   onChange={(e) => handleInputChange('description', e.target.value)}
-                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-flo-400 focus:ring-2 focus:ring-flo-400/20 transition-all bg-gray-50/40 text-sm font-medium resize-y"
+                  className="w-full px-4 py-3.5 rounded-2xl border border-gray-300 text-gray-950 placeholder-gray-400 focus:outline-none focus:border-flo-500 focus:ring-2 focus:ring-flo-500/20 transition-all bg-white text-base font-medium resize-y shadow-2xs"
                 />
               </div>
 
               {/* Confirmation Checkbox */}
-              <div className="bg-pink-50/60 p-4 rounded-2xl border border-pink-200/80">
-                <label className="flex items-start gap-3 cursor-pointer select-none">
+              <div className="bg-pink-50/70 p-4 sm:p-5 rounded-2xl border border-pink-200">
+                <label className="flex items-start gap-3.5 cursor-pointer select-none">
                   <input
                     type="checkbox"
                     id="confirmed"
                     checked={formData.confirmed}
                     onChange={(e) => handleInputChange('confirmed', e.target.checked)}
-                    className="w-5 h-5 rounded-lg text-flo-600 focus:ring-flo-400 border-gray-300 mt-0.5 cursor-pointer accent-flo-600"
+                    className="w-5 h-5 rounded-lg text-flo-600 focus:ring-flo-500 border-gray-300 mt-1 cursor-pointer accent-flo-600 shrink-0"
                   />
-                  <span className="text-xs text-gray-800 leading-relaxed font-medium">
-                    I acknowledge and confirm that I wish to permanently delete my account for <strong>Period Tracker Ovulation Cycle (com.tracewave.period)</strong>. I understand that all my menstrual records, symptom history, and backups will be purged within <strong>30 to 45 working days</strong> and that this operation cannot be undone.
+                  <span className="text-sm sm:text-base text-gray-900 leading-relaxed font-medium">
+                    I acknowledge and confirm that I wish to permanently delete my account for <strong className="font-bold text-gray-950">Period Tracker Ovulation Cycle (com.tracewave.period)</strong>. I understand that all my menstrual records, symptom history, and backups will be purged within <strong className="text-flo-700 font-black">30 to 45 working days</strong> and that this operation cannot be undone.
                   </span>
                 </label>
               </div>
@@ -481,7 +481,7 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full sm:w-auto min-w-[280px] px-8 py-4 bg-gradient-to-r from-flo-600 to-rose-600 hover:from-flo-700 hover:to-rose-700 text-white text-sm sm:text-base font-bold rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2 mx-auto"
+                  className="w-full sm:w-auto min-w-[300px] px-8 py-4 bg-gradient-to-r from-flo-600 to-rose-600 hover:from-flo-700 hover:to-rose-700 text-white text-base sm:text-lg font-bold font-heading rounded-full shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2.5 mx-auto"
                 >
                   {isSubmitting ? (
                     <>
@@ -490,7 +490,7 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                     </>
                   ) : (
                     <>
-                      <Trash2 className="w-4 h-4" />
+                      <Trash2 className="w-5 h-5" />
                       <span>Submit Deletion Request</span>
                     </>
                   )}
@@ -501,19 +501,19 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
           </div>
 
           {/* Section 6: Alternative Direct Email Support */}
-          <div className="bg-white rounded-3xl p-6 border border-gray-100 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-            <div className="space-y-1">
-              <h3 className="font-bold text-gray-900 text-sm sm:text-base flex items-center gap-2">
-                <Mail className="w-4 h-4 text-flo-600" />
+          <div className="bg-white rounded-3xl p-6 sm:p-7 border border-pink-100 shadow-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            <div className="space-y-1.5">
+              <h3 className="font-heading font-bold text-gray-950 text-base sm:text-lg flex items-center gap-2">
+                <Mail className="w-5 h-5 text-flo-600 shrink-0" />
                 <span>Need direct human assistance?</span>
               </h3>
-              <p className="text-xs text-gray-500">
-                You can also email our Data Privacy Officer directly at <a href="mailto:support@tracewavetransparency.com" className="text-flo-600 font-bold hover:underline">support@tracewavetransparency.com</a> with subject &quot;Account Deletion - com.tracewave.period&quot;.
+              <p className="text-sm text-gray-700 leading-relaxed font-normal">
+                You can also email our Data Privacy Officer directly at <a href="mailto:support@tracewavetransparency.com" className="text-flo-700 font-bold hover:underline">support@tracewavetransparency.com</a> with subject &quot;Account Deletion - com.tracewave.period&quot;.
               </p>
             </div>
             <a
               href="mailto:support@tracewavetransparency.com?subject=Account%20Deletion%20Request%20-%20com.tracewave.period"
-              className="px-5 py-2.5 rounded-full bg-gray-100 hover:bg-pink-50 text-gray-800 hover:text-flo-600 font-bold text-xs transition-colors shrink-0 shadow-2xs"
+              className="px-6 py-3 rounded-full bg-gray-100 hover:bg-pink-50 text-gray-900 hover:text-flo-700 font-bold text-sm font-heading transition-colors shrink-0 shadow-2xs border border-gray-200 hover:border-pink-200"
             >
               Email Support &rarr;
             </a>
@@ -526,7 +526,7 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
       {!isApp ? (
         <Footer />
       ) : (
-        <footer className="border-t border-pink-100 py-6 px-4 text-center text-xs text-gray-500 bg-white">
+        <footer className="border-t border-pink-100 py-6 px-4 text-center text-xs sm:text-sm text-gray-600 bg-white">
           <p>© {new Date().getFullYear()} Period Tracker Ovulation Cycle. All rights reserved.</p>
           <div className="flex items-center justify-center gap-4 mt-2 font-medium">
             <Link href="/app-privacy" className="hover:text-flo-600 transition-colors">Privacy Policy</Link>
@@ -543,24 +543,24 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
             <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto shadow-sm border border-emerald-200">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h3 className="text-2xl font-extrabold text-gray-900">
+            <h3 className="font-heading text-2xl font-black text-gray-950">
               Deletion Request Received
             </h3>
-            <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
-              Your account deletion request for <strong>Period Tracker Ovulation Cycle</strong> has been successfully registered.
+            <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+              Your account deletion request for <strong className="font-bold text-gray-950">Period Tracker Ovulation Cycle</strong> has been successfully registered.
             </p>
-            <div className="p-4 bg-pink-50/70 border border-pink-200 rounded-2xl text-left text-xs space-y-1.5 text-gray-700">
-              <div className="flex items-center gap-1.5 text-flo-700 font-bold">
-                <Clock className="w-3.5 h-3.5" />
+            <div className="p-4 sm:p-5 bg-pink-50/70 border border-pink-200 rounded-2xl text-left text-sm space-y-2 text-gray-800">
+              <div className="flex items-center gap-1.5 text-flo-800 font-bold font-heading text-sm sm:text-base">
+                <Clock className="w-4 h-4 text-flo-600" />
                 <span>What Happens Next:</span>
               </div>
               <p>• Our compliance team verifies your registered email/phone.</p>
-              <p>• All personal health logs, cycle history, and backups will be completely purged within <strong>30 to 45 working days</strong>.</p>
-              <p>• A final confirmation {formData.email.trim() ? <>email will be sent to <strong>{formData.email.trim()}</strong></> : <>notice will be processed for registered mobile number <strong>{formData.phone.trim()}</strong></>} once processing finishes.</p>
+              <p>• All personal health logs, cycle history, and backups will be completely purged within <strong className="text-flo-700 font-black">30 to 45 working days</strong>.</p>
+              <p>• A final confirmation {formData.email.trim() ? <>email will be sent to <strong className="text-gray-950 font-bold">{formData.email.trim()}</strong></> : <>notice will be processed for registered mobile number <strong className="text-gray-950 font-bold">{formData.phone.trim()}</strong></>} once processing finishes.</p>
             </div>
             <button
               onClick={() => setIsSubmitted(false)}
-              className="w-full py-3.5 bg-flo-600 hover:bg-flo-700 text-white font-bold rounded-2xl transition-all shadow-md text-sm"
+              className="w-full py-3.5 bg-flo-600 hover:bg-flo-700 text-white font-bold font-heading rounded-2xl transition-all shadow-md text-base"
             >
               Understood
             </button>
