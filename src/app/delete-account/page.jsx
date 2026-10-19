@@ -61,6 +61,25 @@ function DeleteAccountContent() {
     e.preventDefault();
     setSubmitError(null);
 
+    const trimmedName = formData.name.trim();
+    const trimmedEmail = formData.email.trim();
+    const trimmedPhone = formData.phone.trim();
+
+    if (!trimmedEmail && !trimmedPhone) {
+      setSubmitError('Please enter either your Registered Email Address or Mobile Number to identify your account.');
+      return;
+    }
+
+    if (trimmedEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(trimmedEmail)) {
+      setSubmitError('Please enter a valid email address.');
+      return;
+    }
+
+    if (trimmedPhone && trimmedPhone.replace(/[^0-9]/g, '').length < 6) {
+      setSubmitError('Please enter a valid mobile number with country code.');
+      return;
+    }
+
     if (!formData.confirmed) {
       setSubmitError('Please check the confirmation box acknowledging that data deletion is permanent.');
       return;
@@ -69,15 +88,15 @@ function DeleteAccountContent() {
     setIsSubmitting(true);
 
     const payload = {
-      name: formData.name.trim(),
-      email: formData.email.trim(),
-      phonenumber: formData.phone.trim(),
+      name: trimmedName,
+      email: trimmedEmail || 'Not Provided (Identified via Mobile)',
+      phonenumber: trimmedPhone || 'Not Provided (Identified via Email)',
       description: `[GOOGLE PLAY ACCOUNT DELETION REQUEST]
 App Name: Period Tracker Ovulation Cycle
 Package Name: com.tracewave.period
-User Name: ${formData.name.trim()}
-Registered Email: ${formData.email.trim()}
-Registered Phone: ${formData.phone.trim()}
+User Name: ${trimmedName}
+Registered Email: ${trimmedEmail || 'Not Provided (User identified via Mobile Number)'}
+Registered Phone: ${trimmedPhone || 'Not Provided (User identified via Email Address)'}
 Reason: ${formData.reason}
 User Notes: ${formData.description.trim() || 'No additional notes'}
 Requested Policy: Permanent deletion of profile, cycle history, ovulation records, symptom logs, and backups within 30-45 working days.`
@@ -352,37 +371,61 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
 
               {/* Registered Email */}
               <div className="space-y-1.5">
-                <label htmlFor="email" className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
-                  Registered Email Address <span className="text-flo-500">*</span>
-                </label>
+                <div className="flex items-center justify-between">
+                  <label htmlFor="email" className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
+                    Registered Email Address <span className="text-gray-400 font-normal normal-case">(Email or Mobile required)</span>
+                  </label>
+                  {formData.email.trim() && (
+                    <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                      Email Entered
+                    </span>
+                  )}
+                </div>
                 <input
                   type="email"
                   id="email"
-                  required
                   placeholder="name@example.com (used in app)"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-flo-400 focus:ring-2 focus:ring-flo-400/20 transition-all bg-gray-50/40 text-sm font-medium"
                 />
                 <span className="text-[11px] text-gray-500 block">
-                  We use this email to locate your account in our database and send a deletion confirmation receipt.
+                  Enter your registered email address if you created/logged into your account using email.
                 </span>
+              </div>
+
+              {/* Divider / OR indicator between Email & Phone */}
+              <div className="relative flex py-1 items-center">
+                <div className="flex-grow border-t border-dashed border-gray-200"></div>
+                <span className="flex-shrink mx-4 text-[11px] font-bold text-gray-500 uppercase tracking-wider bg-gray-100 px-3 py-1 rounded-full border border-gray-200">
+                  — OR —
+                </span>
+                <div className="flex-grow border-t border-dashed border-gray-200"></div>
               </div>
 
               {/* Registered Phone */}
               <div className="space-y-1.5">
-                <label htmlFor="phone" className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
-                  Registered Phone Number <span className="text-flo-500">*</span>
-                </label>
+                <div className="flex items-center justify-between">
+                  <label htmlFor="phone" className="block text-xs font-bold text-gray-700 uppercase tracking-wider">
+                    Registered Mobile Number <span className="text-gray-400 font-normal normal-case">(Email or Mobile required)</span>
+                  </label>
+                  {formData.phone.trim() && (
+                    <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">
+                      Mobile Entered
+                    </span>
+                  )}
+                </div>
                 <input
                   type="tel"
                   id="phone"
-                  required
-                  placeholder="+91 or country code with phone number"
+                  placeholder="+91 or country code with mobile number"
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   className="w-full px-4 py-3.5 rounded-2xl border border-gray-200 text-gray-900 placeholder-gray-400 focus:outline-none focus:border-flo-400 focus:ring-2 focus:ring-flo-400/20 transition-all bg-gray-50/40 text-sm font-medium"
                 />
+                <span className="text-[11px] text-gray-500 block">
+                  Enter your mobile number if you created/logged into your account using mobile OTP.
+                </span>
               </div>
 
               {/* Reason for Deletion */}
@@ -513,7 +556,7 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
               </div>
               <p>• Our compliance team verifies your registered email/phone.</p>
               <p>• All personal health logs, cycle history, and backups will be completely purged within <strong>30 to 45 working days</strong>.</p>
-              <p>• A final confirmation email will be sent to <strong>{formData.email}</strong> once processing finishes.</p>
+              <p>• A final confirmation {formData.email.trim() ? <>email will be sent to <strong>{formData.email.trim()}</strong></> : <>notice will be processed for registered mobile number <strong>{formData.phone.trim()}</strong></>} once processing finishes.</p>
             </div>
             <button
               onClick={() => setIsSubmitted(false)}
