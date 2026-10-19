@@ -178,7 +178,7 @@ export default function AppPrivacyPage() {
                 </p>
                 <ul className="list-disc list-inside space-y-2 ml-2">
                   <li>Account and health data remain stored while your account is active.</li>
-                  <li>If you delete your account through the App or request account deletion through our support team, your personal information, login details, profile data, and associated health records will be permanently deleted from our active systems within 30 days of the deletion request, unless a longer retention period is required by applicable law.</li>
+                  <li>If you delete your account through the App or request account deletion through our support team, your personal information, login details, profile data, and associated health records will be permanently deleted from our active systems within 30 to 45 working days of the deletion request, unless a longer retention period is required by applicable law.</li>
                   <li>We do not retain your menstrual cycle, reproductive health, or personal data for advertising, marketing, or sale to third parties.</li>
                   <li>We do not retain personally identifiable data after account deletion, except where retention is required by applicable law.</li>
                 </ul>
@@ -196,7 +196,7 @@ export default function AppPrivacyPage() {
                 <ul className="list-disc list-inside space-y-2 ml-2">
                   <li>You can review, edit, or modify your profile details and daily logs at any time directly through the app interface.</li>
                   <li>
-                    <strong className="text-[#1A1819]">Account and Data Deletion:</strong> If you wish to stop using the app, you can permanently delete your account directly through the Account Settings by selecting <Link href="/delete-account?app=true" className="text-[#FF5E8C] hover:underline font-bold">"Delete Account"</Link>. Upon receiving this request, all your personal info, login details, and logged health history will be permanently and irreversibly deleted from our active systems within 30 days, except where retention is required by law.
+                    <strong className="text-[#1A1819]">Account and Data Deletion:</strong> If you wish to stop using the app, you can permanently delete your account directly through the Account Settings by selecting <Link href="/delete-account?app=true" className="text-[#FF5E8C] hover:underline font-bold">"Delete Account"</Link>. Upon receiving this request, all your personal info, login details, and logged health history will be permanently and irreversibly deleted from our active systems within 30 to 45 working days, except where retention is required by law.
                   </li>
                 </ul>
               </div>

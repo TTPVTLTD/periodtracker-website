@@ -81,6 +81,12 @@ export default async function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.4,
     },
+    {
+      url: `${baseUrl}/delete-account`,
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.4,
+    },
   ];
 
   // Topic Category Hubs (enables Google indexing for specific keyword clusters)
