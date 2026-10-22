@@ -218,23 +218,24 @@ export const ARTICLES = [
   },
   {
     "id": "period-blood-clots-what-they-mean",
-    "title": "Period blood clots: What they look like and when to see a doctor",
+    "title": "Period Blood Clots: Jelly-Like Chunks, Sizes & What It Means",
     "category": "period",
     "categoryName": "Your cycle",
     "tag": "Menstrual flow",
-    "readTime": "5 min read",
+    "readTime": "6 min read",
     "publishedDate": "24 February 2026",
     "author": "Health & Wellness Editorial",
-    "reviewer": "Period Tracker Editorial Team",
+    "reviewer": "Dr. Sarah Mitchell, OB-GYN & Fertility Specialist",
     "image": "/images/articles/period-blood-clots.jpg",
     "tags": [
       "Blood Clots",
+      "Jelly-Like Period Clots",
       "Heavy Bleeding",
-      "Menstruation",
+      "Period Clots Size",
       "Gynecology",
       "Pelvic Health"
     ],
-    "summary": "Small jelly-like clots during heavy flow days are common, but larger quarter-sized clots warrant a medical conversation. Learn what's normal vs. concerning.",
+    "summary": "Understand why jelly-like blood clots and chunks form during your period, normal vs abnormal clot sizes (quarter vs dime rule), and when heavy clotting needs medical attention.",
     "content": [
       {
         "heading": "Why Do Period Blood Clots Form in the Uterus?",
@@ -246,41 +247,73 @@ export const ARTICLES = [
         ]
       },
       {
-        "heading": "Normal vs. Abnormal Clot Size Thresholds",
-        "body": "Clinical gynecologists evaluate clot significance by comparing dimensions to common currency coins. Small, occasional clots that occur only on Days 1 and 2 are usually benign. Clots consistently larger than a quarter (2.5 cm or 1 inch) signify abnormal uterine bleeding.",
+        "heading": "Jelly-Like Blood Clots During Period: Is It Normal?",
+        "body": "Many women panic when they see stringy, liver-like, or jelly-like chunks in their menstrual blood. Passing small jelly-like blood clots during heavy flow days (usually Day 1 to Day 3) is entirely normal and a natural physiological response of your coagulation cascade. When blood sits in the vaginal vault or uterine cavity, fibrin proteins weave together to create a jelly texture to prevent excessive hemorrhaging.",
         "bullets": [
-          "Normal: Dime-sized or nickel-sized clots (under 1.5 cm) that appear occasionally",
-          "Concerning: Quarter-sized or golf-ball-sized clots measuring 2.5 cm or larger",
-          "Red flag: Soaking through 2 or more pads/tampons an hour for 2 consecutive hours"
+          "Jelly-like texture is caused by fibrin protein webs binding red blood cells together",
+          "Normal on days of high menstrual volume or following periods of physical rest",
+          "Healthy clots break apart easily when pressed and do not have a foul or fishy odor"
         ]
       },
       {
-        "heading": "Underlying Conditions That Cause Heavy Clotting",
-        "body": "When heavy, painful clotting becomes a recurring pattern month after month, medical evaluation is critical to rule out anatomical or hormonal drivers. Uterine fibroids (benign muscular tumors), adenomyosis (uterine lining growing into the muscular wall), cervical polyps, and thyroid disorders are frequent treatable causes.",
+        "heading": "How Big Should Period Blood Clots Be? The Quarter vs Dime Rule",
+        "body": "Gynecologists evaluate the clinical significance of menstrual clots by comparing their dimensions to everyday coins. Small, occasional clots on your heaviest cycle days are standard. Consistently passing clots larger than a quarter (greater than 1 inch or 2.5 cm) is a clinical marker of menorrhagia (abnormal heavy menstrual bleeding).",
         "bullets": [
-          "Uterine Fibroids: Increase the internal surface area of the uterine cavity",
-          "Adenomyosis: En दृष्टी muscle thickening prevents effective uterine contraction",
-          "Von Willebrand disease: An inherited bleeding disorder causing insufficient clotting factors"
+          "Dime or Nickel Sized (Under 1 inch / 2.5 cm): Typically benign and normal on Days 1-2",
+          "Quarter Sized (1 inch / 2.5 cm or larger): Clinically significant; discuss with your gynecologist",
+          "Golf Ball Sized: Red flag requiring urgent medical care, especially if accompanied by dizziness",
+          "The 2-Hour Pad Rule: Soaking through 2 or more heavy pads or tampons per hour for 2 hours in a row warrants emergency evaluation"
         ]
       },
       {
-        "heading": "Actionable Steps & Comfort Remedies",
-        "body": "Apply warm heat packs or hot water bottles to your lower abdomen to stimulate pelvic vasodilation and ease uterine spasms. Boost your intake of bioavailable iron and vitamin C to prevent anemia from chronic heavy blood loss.",
+        "heading": "Blood Clots vs Uterine Tissue Chunks: How to Tell the Difference",
+        "body": "It is critical to distinguish between simple coagulated blood clots and solid pieces of uterine tissue or decidual fragments. Blood clots are deep red, dark crimson, or blackish, with a smooth, jelly-like consistency that dissolves under running water. Endometrial tissue fragments, decidual casts, or pregnancy tissue appear fibrous, firmer, and often have a pinkish-gray, tan, or fleshy appearance.",
         "bullets": [
-          "Continuous topical heat (40°C) is clinically as effective as ibuprofen for pelvic cramping",
-          "Eat iron-rich foods (lentils, spinach, organic meats) combined with citrus vitamin C",
-          "Keep an exact clot dimension and frequency photo log in your period tracking app"
+          "Blood Clots: Uniformly red, burgundy, or black; soft and gelatinous; break down under water",
+          "Uterine Tissue / Decidual Fragments: Firmer, fibrous, grayish-pink or pale flesh-toned",
+          "Early Pregnancy Loss: Large tissue pieces accompanied by severe unilateral cramping and a positive pregnancy test require prompt clinical care"
+        ]
+      },
+      {
+        "heading": "Can You Have Blood Clots During Ovulation?",
+        "body": "True coagulated blood clots do not typically occur during mid-cycle ovulation. Around ovulation (Cycle Days 12-16), a sharp drop in estrogen or the physical rupture of the ovarian follicle can cause light pink or brown spotting mixed with stretchy cervical mucus. However, if you experience noticeable blood clots or chunks mid-cycle, it may indicate cervical polyps, hormonal imbalances (such as progesterone deficiency), uterine fibroids, or breakthrough anovulatory bleeding.",
+        "bullets": [
+          "Normal Ovulation Spotting: Very light, pink or watery brown, lasting 12 to 48 hours without clots",
+          "Mid-Cycle Clots: Warrant gynecological review to check for cervical ectropion, polyps, or thyroid dysfunction",
+          "Use our free Ovulation Calculator to cross-verify your fertile window against unexpected spotting"
+        ]
+      },
+      {
+        "heading": "Underlying Conditions That Cause Heavy Clotting & When to See a Doctor",
+        "body": "When heavy, painful clotting becomes a recurring monthly pattern, medical evaluation is essential to identify the root cause. Treatable conditions include uterine fibroids, adenomyosis (endometrial tissue growing into uterine muscle), endometriosis, polycystic ovary syndrome (PCOS), and bleeding disorders such as Von Willebrand disease.",
+        "bullets": [
+          "Uterine Fibroids: Non-cancerous muscular growths that expand uterine surface area",
+          "Adenomyosis: Causes enlarged, boggy uterus unable to contract effectively to stem bleeding",
+          "Anemia Symptoms: Fatigue, shortness of breath, brittle nails, and pale gums from chronic blood loss",
+          "Record clot dates, size, and pad saturation count in the Period Tracker & Ovulation Cycles app"
         ]
       }
     ],
     "faqs": [
       {
-        "question": "Should I go to urgent care for a period blood clot?",
-        "answer": "Seek prompt medical care if you pass clots larger than a golf ball, experience dizziness, shortness of breath, sudden pallor, or soak through two heavy pads an hour for more than two hours."
+        "question": "Why do my period blood clots look like jelly or raw liver?",
+        "answer": "When blood pools in your uterus or vagina on heavy flow days, the clotting protein fibrin binds red blood cells into a gelatinous mass resembling dark jelly or raw liver. This is a normal mechanism to regulate blood flow."
       },
       {
-        "question": "Why are some clots dark black while others are red?",
-        "answer": "Color reflects oxidation. Dark brown or black clots spent longer in the uterus before being expelled, allowing oxygen to react with iron in the hemoglobin. Bright red clots were expelled quickly."
+        "question": "How big of a blood clot is too big during a period?",
+        "answer": "Any blood clot measuring larger than a 1-inch coin (quarter) is considered abnormal. If you pass clots the size of a golf ball or lemon, seek immediate medical attention."
+      },
+      {
+        "question": "Can blood clots during a period be a sign of miscarriage?",
+        "answer": "Yes. If your period is late or you have taken a positive pregnancy test, passing heavy blood clots accompanied by grayish-pink tissue and sharp lower abdominal cramps may indicate an early pregnancy loss. Consult your doctor immediately."
+      },
+      {
+        "question": "Why are some period blood clots dark black while others are bright red?",
+        "answer": "Color reflects oxidation and flow rate. Bright red clots indicate freshly shed, rapidly flowing blood. Dark brown or black clots have spent more time inside the uterus or vagina, allowing oxygen to oxidize iron in hemoglobin."
+      },
+      {
+        "question": "Is it normal to pass blood clots during ovulation?",
+        "answer": "No. While light pink or brown spotting can occur when the follicle releases an egg, passing distinct blood clots mid-cycle is abnormal and should be evaluated by a healthcare professional."
       }
     ]
   },
@@ -1601,7 +1634,7 @@ export const ARTICLES = [
     "publishedDate": "12 October 2026",
     "author": "Clinical Reproductive Endocrinology Team",
     "reviewer": "Dr. Sarah Mitchell, OB-GYN & Fertility Specialist",
-    "image": "/images/articles/sex-avoid-pregnancy.jpg",
+    "image": "/images/articles/safe-days-calendar-wheel.svg",
     "tags": [
       "Safe Days",
       "Avoid Pregnancy",
@@ -1675,7 +1708,7 @@ export const ARTICLES = [
     "publishedDate": "12 October 2026",
     "author": "Endocrine & Metabolic Health Team",
     "reviewer": "Dr. Elena Rostova, Reproductive Endocrinologist",
-    "image": "/images/articles/pcos-irregular-cycles.jpg",
+    "image": "/images/articles/pcos-irregular-cycle-chart.svg",
     "tags": [
       "PCOS",
       "Irregular Periods",
@@ -2271,6 +2304,276 @@ export const ARTICLES = [
       {
         "question": "How long should a healthy luteal phase last?",
         "answer": "A normal luteal phase lasts between 11 and 14 days. A luteal phase shorter than 10 days (luteal phase defect) can make it difficult for an embryo to implant before progesterone drops."
+      }
+    ]
+  },
+  {
+    "id": "hcg-levels-chart-by-week-doubling-time-calculator-guide",
+    "title": "hCG Levels Chart by Week & Doubling Time Calculator Guide",
+    "category": "pregnancy",
+    "categoryName": "Pregnancy & Conception",
+    "tag": "hCG & Doubling",
+    "readTime": "7 min read",
+    "publishedDate": "22 October 2026",
+    "author": "Clinical Reproductive Endocrinology Team",
+    "reviewer": "Dr. Elena Rostova, Reproductive Endocrinologist",
+    "image": "/images/articles/hcg-doubling-chart.svg",
+    "tags": [
+      "hCG Levels",
+      "hCG Doubling Time",
+      "Beta hCG Calculator",
+      "Early Pregnancy",
+      "hCG Chart by Week",
+      "Pregnancy Test"
+    ],
+    "summary": "Complete medical guide to beta hCG levels by week of pregnancy, normal 48-72 hour doubling time math, what slow-rising or high hCG means, and how to use our free hCG calculator.",
+    "content": [
+      {
+        "heading": "What is Human Chorionic Gonadotropin (Beta hCG)?",
+        "body": "Human Chorionic Gonadotropin (hCG) is a peptide hormone produced primarily by the syncytiotrophoblast cells of the developing embryo following implantation. It signals the corpus luteum inside the ovary to continue secreting progesterone, preventing menstruation and maintaining the thick endometrial lining essential for sustaining the pregnancy.",
+        "bullets": [
+          "Detectable in maternal blood as early as 8 to 11 days post-ovulation (DPO)",
+          "Detectable in home urine pregnancy tests around 12 to 14 DPO",
+          "Qualitative tests provide a yes/no answer; Quantitative (Beta hCG) tests measure exact mIU/mL concentration"
+        ]
+      },
+      {
+        "heading": "Normal hCG Reference Range by Week of Pregnancy (LMP)",
+        "body": "hCG concentrations vary widely between individuals. Clinical diagnostics focus on the rate of rise rather than an isolated baseline figure. In early viable singleton pregnancies with hCG below 1,200 mIU/mL, levels typically double every 48 to 72 hours.",
+        "bullets": [
+          "3 Weeks Gestational Age (1 Week Post-Conception): 5 – 50 mIU/mL",
+          "4 Weeks Gestational Age (Expected Period Day): 10 – 426 mIU/mL",
+          "5 Weeks Gestational Age: 18 – 7,340 mIU/mL",
+          "6 Weeks Gestational Age: 1,080 – 56,500 mIU/mL",
+          "7 – 8 Weeks Gestational Age: 7,650 – 229,000 mIU/mL",
+          "9 – 12 Weeks (Peak Level): 25,700 – 288,000 mIU/mL"
+        ]
+      },
+      {
+        "heading": "hCG Doubling Time Math: What 48 to 72-Hour Rates Indicate",
+        "body": "The mathematical formula for calculating beta hCG doubling time uses natural logarithms: Doubling Time = (Time Elapsed in Hours × ln(2)) / (ln(Second hCG) - ln(First hCG)). A normal doubling rate during the first 4 to 6 weeks is between 48 and 72 hours, corresponding to a minimum 35% to 53% increase over 48 hours.",
+        "bullets": [
+          "Under 1,200 mIU/mL: Doubling time is normally between 48 and 72 hours",
+          "1,200 to 6,000 mIU/mL: Doubling slows to between 72 and 96 hours",
+          "Above 6,000 mIU/mL: Doubling typically takes 96 hours or more",
+          "After 10 to 12 weeks: hCG naturally plateaus and gradually decreases for the remainder of pregnancy"
+        ]
+      },
+      {
+        "heading": "Slow-Rising vs. Abnormally High hCG Levels: Clinical Significance",
+        "body": "Deviations from standard doubling curves warrant serial ultrasound and endocrinological evaluation. A single low reading does not imply complication, but persistent plateaus or declines before 8 weeks are clinical markers.",
+        "bullets": [
+          "Slow-Rising hCG (Doubling > 96 hrs early on): May indicate an ectopic pregnancy, blighted ovum, or imminent early pregnancy loss",
+          "Abnormally High or Rapid Doubling hCG: May indicate twin or triplet gestation, incorrect dating, or gestational trophoblastic disease (molar pregnancy)",
+          "Discriminatory Zone: When quantitative serum hCG surpasses 1,500 to 2,000 mIU/mL, a gestational sac should be identifiable via transvaginal ultrasound"
+        ]
+      },
+      {
+        "heading": "How to Accurately Track Doubling in Our Free Tool",
+        "body": "Our online Beta hCG Doubling Calculator calculates your exact doubling time in hours, 48-hour percentage increase, and projected 72-hour levels based on two successive lab draws. Track your dates and values alongside our free Ovulation Calculator and Due Date Calculator for complete clinical clarity.",
+        "bullets": [
+          "Draw both blood tests at the same laboratory when possible for consistent assay calibration",
+          "Ensure at least 48 hours elapse between blood draws for accurate mathematical velocity",
+          "Store your blood lab values with end-to-end local privacy inside the Period Tracker app"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What is a normal hCG doubling time in early pregnancy?",
+        "answer": "In healthy early pregnancies with hCG levels under 1,200 mIU/mL, doubling time is between 48 and 72 hours (a 60% or higher increase every two days). As hCG increases above 1,200 mIU/mL, the doubling velocity naturally slows to 72–96 hours."
+      },
+      {
+        "question": "Does slow rising hCG always mean a miscarriage or ectopic pregnancy?",
+        "answer": "Not necessarily. About 15% of viable, normal pregnancies exhibit slower-than-average doubling times (down to a 35% rise in 48 hours). However, serial ultrasound scans and continuous clinical monitoring are critical when slow doubling is noted."
+      },
+      {
+        "question": "Can hCG levels double faster than 48 hours with twins?",
+        "answer": "Yes. Multiple gestations (twins or triplets) frequently generate significantly higher baseline hCG concentrations and faster doubling velocities due to multiple functioning placental trophoblasts."
+      },
+      {
+        "question": "At what hCG level should an embryo be visible on ultrasound?",
+        "answer": "A gestational sac is typically visible via transvaginal ultrasound once hCG reaches the discriminatory zone of 1,500 to 2,000 mIU/mL (usually around 5 weeks gestation). A fetal pole and heartbeat typically appear between 6 and 6.5 weeks when hCG exceeds 5,000 to 10,000 mIU/mL."
+      }
+    ]
+  },
+  {
+    "id": "when-to-take-a-pregnancy-test-dpo-accuracy-calculator-timeline",
+    "title": "When to Take a Pregnancy Test: DPO Accuracy & Timing Guide",
+    "category": "pregnancy",
+    "categoryName": "Pregnancy & Conception",
+    "tag": "Testing & DPO",
+    "readTime": "6 min read",
+    "publishedDate": "22 October 2026",
+    "author": "Maternal-Fetal Health Editorial",
+    "reviewer": "Dr. Sarah Mitchell, OB-GYN & Fertility Specialist",
+    "image": "/images/articles/pregnancy-test-dpo-timeline.svg",
+    "tags": [
+      "Pregnancy Test",
+      "DPO Accuracy",
+      "Early Detection Test",
+      "Implantation",
+      "Pregnancy Test Calculator",
+      "When to Test"
+    ],
+    "summary": "Discover the most accurate day to take a home pregnancy test based on Days Past Ovulation (DPO), test sensitivity (10 mIU vs 25 mIU), and avoiding false negatives.",
+    "content": [
+      {
+        "heading": "How Early Can You Take a Pregnancy Test? The Biology of DPO",
+        "body": "Taking a home pregnancy test too early is the single most common cause of emotional distress and false-negative results. A pregnancy test cannot detect pregnancy at fertilization. It detects human Chorionic Gonadotropin (hCG), which only begins entering the maternal bloodstream after the embryo implants into the uterine lining—typically occurring between 8 and 10 Days Past Ovulation (DPO).",
+        "bullets": [
+          "Conception occurs within 24 hours of ovulation, but implantation takes an additional 6 to 10 days",
+          "hCG is secreted into maternal blood within 24-48 hours after blastocyst attachment",
+          "Urine hCG levels trail blood serum concentrations by approximately 24 hours"
+        ]
+      },
+      {
+        "heading": "DPO Pregnancy Test Accuracy Timeline: Day by Day (8 DPO to 14 DPO)",
+        "body": "Clinical studies tracking sensitive urine pregnancy tests demonstrate a steep accuracy curve as Days Past Ovulation progress.",
+        "bullets": [
+          "8 DPO (33% Accuracy): Earliest possible positive; high false-negative risk as most embryos have not yet completed implantation",
+          "9 DPO (52% Accuracy): Implantation has occurred in roughly half of viable pregnancies; faint shadow or squinter line may appear",
+          "10 DPO (74% Accuracy): Faint but discernible positive line on sensitive 10 mIU/mL early detection tests",
+          "11 DPO (84% Accuracy): Solid test line visible; false negative rate drops below 16%",
+          "12 DPO (93% Accuracy): High reliability; most pregnant women achieve unambiguous positive test lines",
+          "14 DPO / Missed Period (99% Accuracy): Gold standard for maximum diagnostic reliability across all test brands"
+        ]
+      },
+      {
+        "heading": "Test Sensitivity: 10 mIU/mL Early Detection vs. 25 mIU/mL Standard Tests",
+        "body": "Home pregnancy tests differ significantly in analytical sensitivity. 'Early Result' tests detect hCG concentrations as low as 10 mIU/mL, enabling detection up to 5 to 6 days before a missed period. Standard rapid-response strips require 25 mIU/mL or higher, meaning testing before 12-14 DPO often yields negative results despite viable conception.",
+        "bullets": [
+          "Ultra-sensitive tests (10 mIU/mL): Suitable for 10 to 12 DPO testing with first morning urine",
+          "Standard tests (25 mIU/mL): Reliable from 13 to 14 DPO onward",
+          "Digital tests: Require 25 to 50 mIU/mL; recommended only after a confirmed missed period"
+        ]
+      },
+      {
+        "heading": "Evaporation Lines vs. Faint Positive Lines: How to Tell",
+        "body": "A true positive line contains pink or blue dye and develops within the test's designated reaction window (typically 3 to 5 minutes). An evaporation line is a colorless, grayish phantom shadow that appears after the urine has completely dried, caused by urine residue passing over the antibody strip.",
+        "bullets": [
+          "True Positive: Displays visible pigment (pink or blue), appears within 3-5 minutes, and darkens over 48 hours",
+          "Evaporation Line: Colorless, gray, or translucent; appears after 10-15 minutes as the test dries",
+          "Rule of thumb: Always discard and ignore test results after the 10-minute validity window"
+        ]
+      },
+      {
+        "heading": "Calculate Your Optimal Testing Date with Our Free Tool",
+        "body": "Instead of guessing when to test and wasting expensive test kits, use our free Pregnancy Test Calculator. By entering your last period date or confirmed ovulation day, the algorithm computes your exact 10 DPO, 12 DPO, and 14 DPO testing milestones for 99% accuracy.",
+        "bullets": [
+          "Always test with first-morning urine, which holds the highest concentration of hCG",
+          "Avoid excessive fluid intake before testing to prevent urine dilution",
+          "Cross-reference results with our Implantation Calculator and Ovulation Calculator"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Can a pregnancy test be positive at 8 DPO?",
+        "answer": "While theoretically possible if early implantation occurred at 6 DPO, only about one-third of viable pregnancies will register positive at 8 DPO. A negative test at 8 DPO is statistically inconclusive and should be repeated at 12–14 DPO."
+      },
+      {
+        "question": "Why is morning urine best for early pregnancy testing?",
+        "answer": "Overnight sleep provides 6 to 8 hours without fluid intake, allowing hCG to concentrate in the bladder. Daytime urine is often diluted by water and caffeinated beverages, leading to false negatives early on."
+      },
+      {
+        "question": "Can I get a false negative if I test before my missed period?",
+        "answer": "Yes. Testing before your missed period produces false negatives in up to 30–50% of pregnant women because hCG has not yet reached the test's minimum detection threshold."
+      },
+      {
+        "question": "What does a very faint line on a pregnancy test mean?",
+        "answer": "If the faint line appeared within the 3-to-5-minute testing window and contains pigment (pink or blue), it is almost certainly an early positive indicating detectable hCG. Retest in 48 hours to confirm the line darkens."
+      }
+    ]
+  },
+  {
+    "id": "embryo-implantation-timeline-symptoms-calculator-guide",
+    "title": "Embryo Implantation Timeline: Symptoms, DPO & Calculator",
+    "category": "pregnancy",
+    "categoryName": "Pregnancy & Conception",
+    "tag": "Implantation",
+    "readTime": "7 min read",
+    "publishedDate": "22 October 2026",
+    "author": "Clinical Reproductive Endocrinology Team",
+    "reviewer": "Dr. Sarah Mitchell, OB-GYN & Fertility Specialist",
+    "image": "/images/articles/embryo-implantation-timeline.svg",
+    "tags": [
+      "Implantation Timeline",
+      "Implantation Calculator",
+      "Implantation Bleeding",
+      "DPO Symptoms",
+      "Blastocyst Implantation",
+      "Conception"
+    ],
+    "summary": "Step-by-step guide to embryo implantation from fertilization to blastocyst attachment at 6-12 DPO, early implantation symptoms, spotting vs period, and calculator math.",
+    "content": [
+      {
+        "heading": "The Biological Journey: From Fertilization to Blastocyst Implantation",
+        "body": "Conception is not an instantaneous single-moment event. After an ovulated egg is fertilized by sperm in the ampulla of the fallopian tube, the resulting zygote undergoes rapid mitotic division into a morula while migrating down the fallopian tube toward the uterus. By day 5 to 6 post-ovulation, the cellular cluster expands into a blastocyst consisting of an inner cell mass (the future fetus) and an outer trophoblast layer (the future placenta).",
+        "bullets": [
+          "Day 1 Post-Ovulation: Fertilization occurs in the fallopian tube",
+          "Days 2 to 4: Cleavage stages (2-cell, 4-cell, 8-cell, and compact morula)",
+          "Day 5: Blastocyst enters the uterine cavity and hatches from its protective zona pellucida shell",
+          "Days 6 to 10: Trophoblast microvilli burrow into the receptive progesterone-primed endometrium"
+        ]
+      },
+      {
+        "heading": "When Does Implantation Happen? The 6 to 12 DPO Window",
+        "body": "Extensive clinical research published by Wilcox et al. (New England Journal of Medicine) demonstrates that 84% of successful implantations occur between 8 and 10 Days Past Ovulation (DPO). Implantation prior to 6 DPO or later than 12 DPO is biologically rare.",
+        "bullets": [
+          "6 to 7 DPO: Early implantation window (less than 10% of conceptions)",
+          "8 to 10 DPO: Peak implantation window (84% of viable singleton pregnancies)",
+          "11 to 12 DPO: Late implantation window (higher risk of early biochemical pregnancy loss)",
+          "Post-12 DPO: The uterine receptivity window closes as progesterone naturally begins to decline"
+        ]
+      },
+      {
+        "heading": "Common Physical Symptoms of Implantation",
+        "body": "As the blastocyst burrows into maternal endometrial capillary beds, subtle neurochemical and vascular reactions can produce observable physical symptoms.",
+        "bullets": [
+          "Implantation Cramping: Mild, dull tingling, pulling, or prickling sensations localized in the lower pelvis or one side, lasting 1 to 2 days",
+          "Implantation Spotting: Scant pinkish or brownish discharge that does not fill a pad, occurring in 25-30% of women",
+          "Basal Body Temperature Dip: A temporary 1-day dip in morning BBT around 7-10 DPO (the 'implantation dip') followed by sustained elevation",
+          "Tender Swollen Breasts: Early estrogen and progesterone surges increase mammary blood flow",
+          "Heightened Fatigue: Progesterone induces metabolic relaxation and drowsiness"
+        ]
+      },
+      {
+        "heading": "Implantation Spotting vs. Early Period Bleeding: Key Distinctions",
+        "body": "Distinguishing between implantation bleeding and an early menstrual period is vital for cycle tracking and conception timing.",
+        "bullets": [
+          "Color: Implantation bleeding is light pink or rusty brown; menstrual bleeding is bright crimson or dark red",
+          "Flow: Implantation is scant spotting (a few drops or wiping residue only); periods flow continuously and require pads/tampons",
+          "Clots: Implantation never produces clots or tissue chunks; menstrual flow frequently includes jelly-like coagulated clots",
+          "Duration: Implantation spotting lasts a few hours up to 48 hours maximum; menstrual periods last 3 to 7 days"
+        ]
+      },
+      {
+        "heading": "How to Calculate Your Implantation Window & Conception Date",
+        "body": "Our free Implantation Calculator estimates your exact implantation timeline based on your last menstrual period (LMP) or confirmed ovulation date. Once implantation is complete, beta hCG enters the bloodstream, enabling positive pregnancy tests within 48 to 72 hours.",
+        "bullets": [
+          "Use our Ovulation Calculator to establish your baseline luteinizing hormone surge",
+          "Allow at least 3 to 4 days after suspected implantation before taking a urine pregnancy test",
+          "Track your symptoms and test results with complete on-device privacy in the Period Tracker app"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "On what day past ovulation (DPO) does implantation most commonly occur?",
+        "answer": "Clinical trials demonstrate that 84% of viable implantations happen between 8 and 10 DPO, with 9 DPO being the single most common day for blastocyst attachment."
+      },
+      {
+        "question": "How long does implantation bleeding last and what color is it?",
+        "answer": "Implantation bleeding typically lasts from a few hours up to 48 hours. It is light pink or pale brown spotting and never heavy enough to fill a menstrual pad or tampon."
+      },
+      {
+        "question": "Can you feel implantation cramps, and where are they located?",
+        "answer": "Yes. About 30% of women report mild twinges, pricking, or pulling sensations in the lower abdomen or uterine center, typically much milder than menstrual cramps."
+      },
+      {
+        "question": "How many days after implantation will a pregnancy test turn positive?",
+        "answer": "Once the blastocyst implants, hCG begins entering maternal circulation. Sensitive urine pregnancy tests can detect hCG 2 to 3 days after implantation (around 10 to 12 DPO)."
       }
     ]
   }

@@ -103,11 +103,58 @@ export default function CalculatorDetailPage({ params }) {
 
   const otherCalculators = CALCULATORS.filter((c) => c.slug !== slug);
 
+  const faqSection = articleData?.sections?.find(s => s.id === 'expert-faqs');
+  const faqItems = faqSection?.paragraphs?.map(p => {
+    const qIndex = p.indexOf('?');
+    if (qIndex !== -1) {
+      return {
+        '@type': 'Question',
+        name: p.substring(0, qIndex + 1).trim(),
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: p.substring(qIndex + 1).trim(),
+        },
+      };
+    }
+    return null;
+  }).filter(Boolean) || [];
+
+  const faqJsonLd = faqItems.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqItems,
+  } : null;
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://trackperiods.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Calculators',
+        item: 'https://trackperiods.com/calculators',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: calc.shortTitle || calc.name,
+        item: `https://trackperiods.com/calculators/${calc.slug}`,
+      },
+    ],
+  };
+
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'WebApplication',
     name: calc.name,
-    description: calc.description || calc.summary,
+    description: calc.seoDescription || calc.description || calc.summary,
     applicationCategory: 'HealthApplication',
     operatingSystem: 'All',
     url: `https://trackperiods.com/calculators/${calc.slug}`,
@@ -127,6 +174,16 @@ export default function CalculatorDetailPage({ params }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+        {faqJsonLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        )}
         {/* Flo.health Top Banner matching screenshot */}
         <section className="bg-gradient-to-b from-flo-100/70 via-pink-50/40 to-[#fff9fb] pt-8 pb-12 border-b border-pink-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,8 +204,8 @@ export default function CalculatorDetailPage({ params }) {
             </nav>
 
             {/* Main Title matching screenshot */}
-            <h1 className=" font-extrabold leading-snug max-w-4xl">
-              {calc.shortTitle} & Early Health Charts
+            <h1 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 tracking-tight leading-tight max-w-4xl">
+              {calc.shortTitle} &amp; Early Health Charts
             </h1>
 
             {/* Subheading / Description matching screenshot */}

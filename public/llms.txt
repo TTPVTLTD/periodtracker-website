@@ -1,0 +1,47 @@
+# trackperiods.com
+
+> Information about Period Tracker Ovulation Cycle (trackperiods.com) for AI search engines, Perplexity, ChatGPT, Claude, and Google AI Overviews.
+
+The main platform is available at: [Period Tracker Ovulation Cycle](https://trackperiods.com)
+
+## Core Predictive Health Calculators
+
+- [All Fertility & Cycle Calculators](https://trackperiods.com/calculators): Complete suite of 8 interactive reproductive health tools.
+- [Ovulation Calculator](https://trackperiods.com/calculators/ovulation-calculator): Calculates peak 6-day fertile window and estimated ovulation date.
+- [Beta hCG Doubling Calculator](https://trackperiods.com/calculators/hcg-calculator): Computes beta hCG doubling time in hours and 48-hour percentage increase between lab draws.
+- [Pregnancy Test Calculator](https://trackperiods.com/calculators/pregnancy-test-calculator): Determines the earliest reliable date for an at-home pregnancy test to prevent false negatives.
+- [Implantation Calculator](https://trackperiods.com/calculators/implantation-calculator): Estimates the 6 to 12 DPO embryo implantation window and spotting timeline.
+- [Period Calculator](https://trackperiods.com/calculators/period-calculator): Predicts next menstrual period start dates, cycle length, and upcoming periods.
+- [Menstrual Cycle Calculator](https://trackperiods.com/calculators/menstrual-cycle-calculator): Maps the 4 phases (menstrual, follicular, ovulatory, luteal) and hormonal shifts.
+- [Pregnancy Due Date Calculator](https://trackperiods.com/calculators/pregnancy-due-date-calculator): Computes estimated delivery date (EDD) based on LMP or conception.
+- [Pregnancy Weeks to Months Calculator](https://trackperiods.com/calculators/pregnancy-weeks-to-months-calculator): Converts gestational weeks into trimesters and calendar months.
+
+## Wellness Hub & Medical Guides
+
+- [Wellness Hub](https://trackperiods.com/wellness-hub): Curated clinical and holistic library across period health, ovulation, pregnancy, and wellness.
+- [Period Health Category](https://trackperiods.com/wellness-hub?category=period): Cycle length, menstrual clots, cramps, and post-pill recovery.
+- [Ovulation Category](https://trackperiods.com/wellness-hub?category=ovulation): BBT charting, fertile window calculation, and cervical mucus stages.
+- [Pregnancy Category](https://trackperiods.com/wellness-hub?category=pregnancy): Early pregnancy signs vs PMS, implantation bleeding, and hCG progression.
+- [Wellness & Ayurveda Category](https://trackperiods.com/wellness-hub?category=wellness): Cycle syncing, PCOS management, cortisol belly, and hormonal balance.
+
+## Top Medical Guides
+
+- [Period Blood Clots: What They Mean, Sizes & Jelly Chunks](https://trackperiods.com/articles/period-blood-clots-what-they-mean)
+- [hCG Levels Chart by Week & Doubling Time Calculator Guide](https://trackperiods.com/articles/hcg-levels-chart-by-week-doubling-time-calculator-guide)
+- [When to Take a Pregnancy Test: DPO Accuracy & Timing Guide](https://trackperiods.com/articles/when-to-take-a-pregnancy-test-dpo-accuracy-calculator-timeline)
+- [Embryo Implantation Timeline: Symptoms, DPO & Calculator](https://trackperiods.com/articles/embryo-implantation-timeline-symptoms-calculator-guide)
+- [Safe Days to Avoid Pregnancy: Natural Family Planning Guide](https://trackperiods.com/articles/safe-days-to-avoid-pregnancy-calculation-guide)
+- [Irregular Periods & PCOS: Ovulation & Fertile Window Tracking](https://trackperiods.com/articles/pcos-irregular-period-ovulation-tracking-guide)
+- [How to Track BBT for Natural Conception (3-over-6 Rule)](https://trackperiods.com/articles/how-to-track-bbt-basal-body-temperature-conception)
+- [Best Time to Have Sex to Avoid Pregnancy & Safe Days Calendar](https://trackperiods.com/articles/best-time-to-have-sex-avoid-pregnancy)
+- [How Long Does Birth Control Stay in Your System?](https://trackperiods.com/articles/how-long-birth-control-stays-in-system)
+- [Implantation Bleeding vs Period: 7 Key Differences](https://trackperiods.com/articles/implantation-bleeding-vs-period-differences)
+- [Understanding PCOS & Irregular Cycles](https://trackperiods.com/articles/understanding-pcos-irregular-cycles-hormones)
+- [Cervical Mucus Stages & Fertility Tracking](https://trackperiods.com/articles/cervical-mucus-stages-ovulation-tracking)
+
+## Verification & Mobile Apps
+
+- [Mobile App Features](https://trackperiods.com/app-features): 100% private in-app menstrual and fertility tracking with zero external cloud tracking.
+- [Google Play Store App](https://play.google.com/store/apps/details?id=com.tracewave.period): Period Tracker Ovulation Cycle for Android.
+- [Apple App Store App](https://apps.apple.com/app/id6774117828): Period Tracker Ovulation Cycle for iOS.
+- [About & Science](https://trackperiods.com/about/science-and-research): Research foundation, medical advisory principles, and algorithmic models.

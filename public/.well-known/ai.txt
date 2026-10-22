@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Crawl-delay: 1
+
+Sitemap: https://trackperiods.com/sitemap.xml
+LLMs-Txt: https://trackperiods.com/llms.txt
+Organization: Tracewave Transparency Private Limited
+Contact: support@tracewavetransparency.com
