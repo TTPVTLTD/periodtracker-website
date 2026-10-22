@@ -1,0 +1,114 @@
+[
+  {
+    "type": "Telegraph Web 2.0",
+    "title": "How to Calculate Embryo Implantation Dates and Early Symptoms",
+    "url": "https://telegra.ph/How-to-Calculate-Embryo-Implantation-Dates-and-Early-Symptoms-10-22",
+    "targetUrl": "https://trackperiods.com/calculators/implantation-calculator",
+    "cluster": "Cluster A: Implantation Calculator"
+  },
+  {
+    "type": "Telegraph Web 2.0",
+    "title": "Implantation Bleeding vs Period: 5 Signs to Look For",
+    "url": "https://telegra.ph/Implantation-Bleeding-vs-Period-5-Signs-to-Look-For-10-22",
+    "targetUrl": "https://trackperiods.com/calculators/implantation-calculator",
+    "cluster": "Cluster A: Implantation Calculator"
+  },
+  {
+    "type": "Telegraph Web 2.0",
+    "title": "hCG Doubling Time in Early Pregnancy: Complete Reference Chart",
+    "url": "https://telegra.ph/hCG-Doubling-Time-in-Early-Pregnancy-Complete-Reference-Chart-10-22",
+    "targetUrl": "https://trackperiods.com/calculators/hcg-calculator",
+    "cluster": "Cluster B: hCG Calculator"
+  },
+  {
+    "type": "Telegraph Web 2.0",
+    "title": "What Does Slow Rising hCG Mean? Clinical Guidelines",
+    "url": "https://telegra.ph/What-Does-Slow-Rising-hCG-Mean-Clinical-Guidelines-10-22",
+    "targetUrl": "https://trackperiods.com/calculators/hcg-calculator",
+    "cluster": "Cluster B: hCG Calculator"
+  },
+  {
+    "type": "Telegraph Web 2.0",
+    "title": "When to Take a Pregnancy Test: 8 DPO to 14 DPO Accuracy Guide",
+    "url": "https://telegra.ph/When-to-Take-a-Pregnancy-Test-8-DPO-to-14-DPO-Accuracy-Guide-10-22",
+    "targetUrl": "https://trackperiods.com/calculators/pregnancy-test-calculator",
+    "cluster": "Cluster C: Pregnancy Test Calculator"
+  },
+  {
+    "type": "Telegraph Web 2.0",
+    "title": "Period Blood Clots: Why Jelly Chunks Form and Size Guidelines",
+    "url": "https://telegra.ph/Period-Blood-Clots-Why-Jelly-Chunks-Form-and-Size-Guidelines-10-22",
+    "targetUrl": "https://trackperiods.com/articles/period-blood-clots-what-they-mean",
+    "cluster": "Cluster D: Period Blood Clots & Safe Days"
+  },
+  {
+    "type": "Telegraph Web 2.0",
+    "title": "Natural Family Planning: How to Calculate Safe Days to Avoid Pregnancy",
+    "url": "https://telegra.ph/Natural-Family-Planning-How-to-Calculate-Safe-Days-to-Avoid-Pregnancy-10-22",
+    "targetUrl": "https://trackperiods.com/articles/safe-days-to-avoid-pregnancy-calculation-guide",
+    "cluster": "Cluster D: Period Blood Clots & Safe Days"
+  },
+  {
+    "type": "Telegraph Web 2.0",
+    "title": "The Rise of 100% Private On-Device Period & Ovulation Tracking",
+    "url": "https://telegra.ph/The-Rise-of-100-Private-On-Device-Period--Ovulation-Tracking-10-22",
+    "targetUrl": "https://trackperiods.com",
+    "cluster": "Cluster E: General Hub & Privacy App"
+  },
+  {
+    "type": "GitHub Gist (DA 96)",
+    "title": "How to Calculate Embryo Implantation Dates and Early Symptoms",
+    "url": "https://gist.github.com/pmilan24/34b7628e4a2f4287571c955361a4f87f",
+    "targetUrl": "https://trackperiods.com/calculators/implantation-calculator",
+    "cluster": "Cluster A: Implantation Calculator"
+  },
+  {
+    "type": "GitHub Gist (DA 96)",
+    "title": "Implantation Bleeding vs Period: 5 Signs to Look For",
+    "url": "https://gist.github.com/pmilan24/c20643671c2d047732ff7a47a01b4e91",
+    "targetUrl": "https://trackperiods.com/calculators/implantation-calculator",
+    "cluster": "Cluster A: Implantation Calculator"
+  },
+  {
+    "type": "GitHub Gist (DA 96)",
+    "title": "hCG Doubling Time in Early Pregnancy: Complete Reference Chart",
+    "url": "https://gist.github.com/pmilan24/fa28a16defd4989e32083e1734ddacf3",
+    "targetUrl": "https://trackperiods.com/calculators/hcg-calculator",
+    "cluster": "Cluster B: hCG Calculator"
+  },
+  {
+    "type": "GitHub Gist (DA 96)",
+    "title": "What Does Slow Rising hCG Mean? Clinical Guidelines",
+    "url": "https://gist.github.com/pmilan24/6f691d9f23d13747aeb8d9b1d441b295",
+    "targetUrl": "https://trackperiods.com/calculators/hcg-calculator",
+    "cluster": "Cluster B: hCG Calculator"
+  },
+  {
+    "type": "GitHub Gist (DA 96)",
+    "title": "When to Take a Pregnancy Test: 8 DPO to 14 DPO Accuracy Guide",
+    "url": "https://gist.github.com/pmilan24/6d7654bbf532f032b2db9b9776f53799",
+    "targetUrl": "https://trackperiods.com/calculators/pregnancy-test-calculator",
+    "cluster": "Cluster C: Pregnancy Test Calculator"
+  },
+  {
+    "type": "GitHub Gist (DA 96)",
+    "title": "Period Blood Clots: Why Jelly Chunks Form and Size Guidelines",
+    "url": "https://gist.github.com/pmilan24/0506eaeed42ef7dfdb90b3bd8a9383c1",
+    "targetUrl": "https://trackperiods.com/articles/period-blood-clots-what-they-mean",
+    "cluster": "Cluster D: Period Blood Clots & Safe Days"
+  },
+  {
+    "type": "GitHub Gist (DA 96)",
+    "title": "Natural Family Planning: How to Calculate Safe Days to Avoid Pregnancy",
+    "url": "https://gist.github.com/pmilan24/df54ba224e8d23520095e0f9d0fb8d05",
+    "targetUrl": "https://trackperiods.com/articles/safe-days-to-avoid-pregnancy-calculation-guide",
+    "cluster": "Cluster D: Period Blood Clots & Safe Days"
+  },
+  {
+    "type": "GitHub Gist (DA 96)",
+    "title": "The Rise of 100% Private On-Device Period & Ovulation Tracking",
+    "url": "https://gist.github.com/pmilan24/4927b2d49d1672296cd11538688f73d0",
+    "targetUrl": "https://trackperiods.com",
+    "cluster": "Cluster E: General Hub & Privacy App"
+  }
+]
