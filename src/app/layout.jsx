@@ -95,6 +95,79 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable} scroll-smooth font-sans`}>
       <head>
         <link rel="icon" href="/logo.png" type="image/png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              name: 'Period Tracker & Ovulation Cycle',
+              url: 'https://trackperiods.com',
+              description: 'Free, simple, and accurate menstrual cycle, ovulation, and pregnancy tracking platform with 100% in-browser privacy.',
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://trackperiods.com/wellness-hub?category={search_term_string}',
+                'query-input': 'required name=search_term_string',
+              },
+              speakable: {
+                '@type': 'SpeakableSpecification',
+                cssSelector: ['h1', 'h2', 'p', '.speakable-summary'],
+              },
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'Period Tracker & Ovulation Cycle',
+              legalName: 'Tracewave Transparency Private Limited',
+              url: 'https://trackperiods.com',
+              logo: 'https://trackperiods.com/brand-logo-final.png',
+              sameAs: [
+                'https://apps.apple.com/app/id6774117828',
+                'https://play.google.com/store/apps/details?id=com.tracewave.period',
+              ],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'SoftwareApplication',
+              name: 'Period Tracker & Ovulation Cycle',
+              operatingSystem: 'iOS, Android, Web Browser',
+              applicationCategory: 'HealthApplication',
+              applicationSubCategory: 'Menstrual Cycle & Ovulation Tracker',
+              browserRequirements: 'Requires JavaScript. Requires HTML5.',
+              softwareVersion: '2.4',
+              screenshot: 'https://trackperiods.com/brand-logo-final.png',
+              featureList: [
+                'Smart Cycle & Period Prediction',
+                'Ovulation & Peak Fertile Window Detection',
+                'Symptom, BBT & Mood Logging',
+                'Ayurvedic Remedy & Holistic Care Hub',
+                '100% On-Device Private & Encrypted Health Logs',
+              ],
+              offers: {
+                '@type': 'Offer',
+                price: '0',
+                priceCurrency: 'USD',
+              },
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.9',
+                ratingCount: '500000',
+                bestRating: '5',
+                worstRating: '1',
+              },
+            }),
+          }}
+        />
       </head>
       <body className={`${plusJakartaSans.className} min-h-screen flex flex-col bg-[#FAF8F9] text-[#1A1819] antialiased selection:bg-[#FF5E8C]/20 selection:text-[#FF5E8C] font-sans`}>
         {children}
