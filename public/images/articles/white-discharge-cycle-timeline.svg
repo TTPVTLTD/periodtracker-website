@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDFE" />
+      <stop offset="100%" stop-color="#FDF2F5" />
+    </linearGradient>
+    <linearGradient id="pmsGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF758C" />
+      <stop offset="100%" stop-color="#FF7EB3" />
+    </linearGradient>
+    <linearGradient id="pregGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4E65FF" />
+      <stop offset="100%" stop-color="#92EFFD" />
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#1A1819" flood-opacity="0.08" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg3)" rx="16" />
+
+  <!-- Header -->
+  <text x="400" y="46" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#1A1819">
+    White Discharge Before Period: Early Pregnancy vs. PMS
+  </text>
+  <text x="400" y="72" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#706B6E">
+    Comparing Hormonal Mechanisms, DPO Progression, Texture &amp; Clinical Signals
+  </text>
+
+  <!-- Card 1: Premenstrual White Discharge (PMS) -->
+  <g transform="translate(40, 100)" filter="url(#shadow3)">
+    <rect width="345" height="300" rx="14" fill="#FFFFFF" stroke="#FFE4EC" stroke-width="1.5" />
+    <rect x="20" y="18" width="305" height="34" rx="8" fill="url(#pmsGrad)" />
+    <text x="172" y="41" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">
+      Premenstrual Discharge (Luteal PMS)
+    </text>
+
+    <!-- Details -->
+    <text x="30" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#FF5E8C">Volume &amp; Timing:</text>
+    <text x="30" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="#444">Light to moderate volume; dries up 1-2 days before bleeding starts.</text>
+
+    <text x="30" y="128" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#FF5E8C">Consistency &amp; Color:</text>
+    <text x="30" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="#444">Thick, sticky, paste-like, or creamy white; non-stretchy.</text>
+
+    <text x="30" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#FF5E8C">Biological Driver:</text>
+    <text x="30" y="194" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="#444">Progesterone drop as corpus luteum regresses prior to menses.</text>
+
+    <text x="30" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#FF5E8C">Accompanying Clues:</text>
+    <text x="30" y="242" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="#444">PMS cramps, breast swelling, water retention, followed by flow.</text>
+
+    <rect x="25" y="260" width="295" height="28" rx="6" fill="#FFF2F6" />
+    <text x="172" y="278" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C">
+      Progesterone Drops → Period Begins
+    </text>
+  </g>
+
+  <!-- Card 2: Early Pregnancy Leukorrhea -->
+  <g transform="translate(415, 100)" filter="url(#shadow3)">
+    <rect width="345" height="300" rx="14" fill="#FFFFFF" stroke="#DDE7FF" stroke-width="1.5" />
+    <rect x="20" y="18" width="305" height="34" rx="8" fill="url(#pregGrad)" />
+    <text x="172" y="41" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#FFFFFF">
+      Early Pregnancy Leukorrhea
+    </text>
+
+    <!-- Details -->
+    <text x="30" y="80" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#3B5998">Volume &amp; Timing:</text>
+    <text x="30" y="98" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="#444">Significantly increases around 10-14 DPO and continues rising.</text>
+
+    <text x="30" y="128" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#3B5998">Consistency &amp; Color:</text>
+    <text x="30" y="146" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="#444">Milky thin, lotion-like, odorless or mild scent; smooth texture.</text>
+
+    <text x="30" y="176" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#3B5998">Biological Driver:</text>
+    <text x="30" y="194" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="#444">Surging estrogen &amp; blood flow thicken vaginal mucus walls.</text>
+
+    <text x="30" y="224" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#3B5998">Accompanying Clues:</text>
+    <text x="30" y="242" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" fill="#444">Missed period, heightened sense of smell, mild uterine pulling.</text>
+
+    <rect x="25" y="260" width="295" height="28" rx="6" fill="#F0F4FF" />
+    <text x="172" y="278" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#3B5998">
+      Estrogen &amp; hCG Surge → Mucus Plug Forms
+    </text>
+  </g>
+
+  <!-- Watermark -->
+  <text x="400" y="425" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#A89FA3">
+    Period Tracker &amp; Ovulation Cycle • Vaginal Health &amp; Conception Guide (trackperiods.com)
+  </text>
+</svg>

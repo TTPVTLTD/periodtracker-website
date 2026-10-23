@@ -69,6 +69,7 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'Period Tracker & Ovulation Cycle',
+    legalName: 'Tracewave Transparency Private Limited',
     url: 'https://trackperiods.com',
     logo: 'https://trackperiods.com/brand-logo-final.png',
     sameAs: [
@@ -81,8 +82,19 @@ export default function HomePage() {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
     name: 'Period Tracker & Ovulation Cycle',
-    operatingSystem: 'iOS, Android, Web',
+    operatingSystem: 'iOS, Android, Web Browser',
     applicationCategory: 'HealthApplication',
+    applicationSubCategory: 'Menstrual Cycle & Ovulation Tracker',
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+    softwareVersion: '2.4',
+    screenshot: 'https://trackperiods.com/brand-logo-final.png',
+    featureList: [
+      'Smart Cycle & Period Prediction',
+      'Ovulation & Peak Fertile Window Detection',
+      'Symptom, BBT & Mood Logging',
+      'Ayurvedic Remedy & Holistic Care Hub',
+      '100% On-Device Private & Encrypted Health Logs',
+    ],
     offers: {
       '@type': 'Offer',
       price: '0',
@@ -95,6 +107,19 @@ export default function HomePage() {
       bestRating: '5',
       worstRating: '1',
     },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://trackperiods.com',
+      },
+    ],
   };
 
   const faqPageSchema = {
@@ -157,6 +182,10 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"

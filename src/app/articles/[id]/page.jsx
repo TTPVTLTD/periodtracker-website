@@ -127,27 +127,61 @@ export default function ArticlePage({ params }) {
     (a) => a.id !== article.id && (a.category === article.category || Math.random() > 0.4)
   ).slice(0, 3);
 
+  let isoDatePublished = new Date().toISOString();
+  try {
+    const parsed = new Date(article.publishedDate);
+    if (!isNaN(parsed.getTime())) {
+      isoDatePublished = parsed.toISOString();
+    }
+  } catch (e) {}
+
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'MedicalWebPage',
-    name: article.title,
+    '@type': ['Article', 'MedicalWebPage'],
     headline: article.title,
+    name: article.title,
     description: article.summary,
-    image: `https://trackperiods.com${article.image}`,
+    image: [
+      `https://trackperiods.com${article.image}`,
+      'https://trackperiods.com/brand-logo-final.png'
+    ],
+    datePublished: isoDatePublished,
+    dateModified: new Date().toISOString(),
     author: {
       '@type': 'Organization',
       name: article.author || 'Period Tracker Health Editorial',
+      url: 'https://trackperiods.com/about/science-and-research',
+    },
+    reviewer: {
+      '@type': 'MedicalOrganization',
+      name: article.reviewer || 'Period Tracker Medical Advisory Board',
+      url: 'https://trackperiods.com/about/medical-affairs',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Period Tracker & Ovulation Cycle',
+      name: 'Tracewave Transparency Private Limited',
+      url: 'https://trackperiods.com',
       logo: {
         '@type': 'ImageObject',
         url: 'https://trackperiods.com/brand-logo-final.png',
       },
     },
-    datePublished: article.publishedDate,
-    mainEntityOfPage: `https://trackperiods.com/articles/${article.id}`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://trackperiods.com/articles/${article.id}`,
+    },
+    about: {
+      '@type': 'MedicalCondition',
+      name: article.tag || 'Menstrual Cycle Health',
+    },
+    medicalAudience: {
+      '@type': 'MedicalAudience',
+      audienceType: 'Patients',
+    },
+    speakable: {
+      '@type': 'SpeakableSpecification',
+      cssSelector: ['h1', 'p', 'h2'],
+    },
   };
 
   const faqJsonLd = article.faqs && article.faqs.length > 0 ? {

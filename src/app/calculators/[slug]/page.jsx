@@ -211,12 +211,28 @@ export default function CalculatorDetailPage({ params }) {
     name: calc.name,
     description: calc.seoDescription || calc.description || calc.summary,
     applicationCategory: 'HealthApplication',
-    operatingSystem: 'All',
+    applicationSubCategory: 'Reproductive Health & Cycle Tools',
+    operatingSystem: 'iOS, Android, Web Browser',
+    browserRequirements: 'Requires JavaScript. Requires HTML5.',
+    softwareVersion: '2.4',
     url: `https://trackperiods.com/calculators/${calc.slug}`,
     offers: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Tracewave Transparency Private Limited',
+      url: 'https://trackperiods.com',
+      logo: 'https://trackperiods.com/brand-logo-final.png',
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '2540',
+      bestRating: '5',
+      worstRating: '1',
     },
   };
 

@@ -147,7 +147,6 @@ export default async function sitemap() {
 
   return [
     ...staticRoutes,
-    ...categoryRoutes,
     ...calculatorRoutes,
     ...articleRoutes,
     ...aboutRoutes,

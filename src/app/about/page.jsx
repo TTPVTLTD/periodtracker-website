@@ -50,9 +50,29 @@ export default function AboutPage() {
     url: 'https://trackperiods.com/about',
     publisher: {
       '@type': 'Organization',
-      name: 'Period Tracker & Ovulation Cycle',
-      logo: 'https://trackperiods.com/brand-logo-final.png'
-    }
+      name: 'Tracewave Transparency Private Limited',
+      url: 'https://trackperiods.com',
+      logo: 'https://trackperiods.com/brand-logo-final.png',
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://trackperiods.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About',
+        item: 'https://trackperiods.com/about',
+      },
+    ],
   };
 
   return (
@@ -60,6 +80,10 @@ export default function AboutPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Navbar />
 

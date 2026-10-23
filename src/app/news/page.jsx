@@ -42,6 +42,25 @@ export default async function NewsPage() {
     url: 'https://trackperiods.com/news',
   };
 
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://trackperiods.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'News',
+        item: 'https://trackperiods.com/news',
+      },
+    ],
+  };
+
   // Fetch initial data on the server (page 1, limit 9 for a 3x3 grid)
   const initialData = await fetchNewsList(1, 9);
   
@@ -50,6 +69,10 @@ export default async function NewsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <Navbar />
       

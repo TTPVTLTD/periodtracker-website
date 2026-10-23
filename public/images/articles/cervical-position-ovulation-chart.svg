@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8FA" />
+      <stop offset="100%" stop-color="#FFEBF2" />
+    </linearGradient>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5E8C" />
+      <stop offset="100%" stop-color="#FF8C69" />
+    </linearGradient>
+    <filter id="shadow2" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#FF5E8C" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg2)" rx="16" />
+
+  <!-- Title -->
+  <text x="400" y="45" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="800" fill="#1A1819">
+    The SHOW Method: Cervical Position During Ovulation
+  </text>
+  <text x="400" y="72" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#706B6E">
+    How Your Cervix Changes Position, Texture &amp; Opening Across the Menstrual Cycle
+  </text>
+
+  <!-- 4 SHOW Columns -->
+  <!-- S: Soft -->
+  <g transform="translate(35, 100)" filter="url(#shadow2)">
+    <rect width="165" height="295" rx="12" fill="#FFFFFF" stroke="#FFE0E8" stroke-width="1.5" />
+    <rect x="15" y="15" width="135" height="44" rx="8" fill="#FFF0F5" />
+    <text x="82" y="43" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900" fill="#FF5E8C">S</text>
+    <text x="82" y="80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#1A1819">SOFT</text>
+    <line x1="25" y1="92" x2="140" y2="92" stroke="#FFD1DC" stroke-width="1" />
+    
+    <text x="18" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C">Ovulation:</text>
+    <text x="18" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#444">Feels soft &amp; fleshy, like touching your lower lips.</text>
+
+    <text x="18" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#888">Infertile Phase:</text>
+    <text x="18" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#666">Feels firm &amp; muscular, like the tip of your nose.</text>
+
+    <rect x="15" y="240" width="135" height="40" rx="6" fill="#FFF5F8" />
+    <text x="82" y="265" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C">Estrogen Peaks</text>
+  </g>
+
+  <!-- H: High -->
+  <g transform="translate(225, 100)" filter="url(#shadow2)">
+    <rect width="165" height="295" rx="12" fill="#FFFFFF" stroke="#FFE0E8" stroke-width="1.5" />
+    <rect x="15" y="15" width="135" height="44" rx="8" fill="#FFF0F5" />
+    <text x="82" y="43" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900" fill="#FF5E8C">H</text>
+    <text x="82" y="80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#1A1819">HIGH</text>
+    <line x1="25" y1="92" x2="140" y2="92" stroke="#FFD1DC" stroke-width="1" />
+    
+    <text x="18" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C">Ovulation:</text>
+    <text x="18" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#444">Rises high in vaginal canal, often difficult to reach.</text>
+
+    <text x="18" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#888">Infertile Phase:</text>
+    <text x="18" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#666">Drops low in canal, easily reachable with fingertip.</text>
+
+    <rect x="15" y="240" width="135" height="40" rx="6" fill="#FFF5F8" />
+    <text x="82" y="265" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C">Ligaments Shorten</text>
+  </g>
+
+  <!-- O: Open -->
+  <g transform="translate(415, 100)" filter="url(#shadow2)">
+    <rect width="165" height="295" rx="12" fill="#FFFFFF" stroke="#FFE0E8" stroke-width="1.5" />
+    <rect x="15" y="15" width="135" height="44" rx="8" fill="#FFF0F5" />
+    <text x="82" y="43" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900" fill="#FF5E8C">O</text>
+    <text x="82" y="80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#1A1819">OPEN</text>
+    <line x1="25" y1="92" x2="140" y2="92" stroke="#FFD1DC" stroke-width="1" />
+    
+    <text x="18" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C">Ovulation:</text>
+    <text x="18" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#444">External cervical os dilates slightly to welcome sperm.</text>
+
+    <text x="18" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#888">Infertile Phase:</text>
+    <text x="18" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#666">Cervical os tightly puckered shut &amp; blocked by mucus.</text>
+
+    <rect x="15" y="240" width="135" height="40" rx="6" fill="#FFF5F8" />
+    <text x="82" y="265" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C">Dilates for Sperm</text>
+  </g>
+
+  <!-- W: Wet -->
+  <g transform="translate(605, 100)" filter="url(#shadow2)">
+    <rect width="165" height="295" rx="12" fill="#FFFFFF" stroke="#FFE0E8" stroke-width="1.5" />
+    <rect x="15" y="15" width="135" height="44" rx="8" fill="#FFF0F5" />
+    <text x="82" y="43" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="22" font-weight="900" fill="#FF5E8C">W</text>
+    <text x="82" y="80" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#1A1819">WET</text>
+    <line x1="25" y1="92" x2="140" y2="92" stroke="#FFD1DC" stroke-width="1" />
+    
+    <text x="18" y="118" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C">Ovulation:</text>
+    <text x="18" y="135" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#444">Surrounded by slippery, clear, stretchy egg-white fluid.</text>
+
+    <text x="18" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#888">Infertile Phase:</text>
+    <text x="18" y="202" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#666">Dry, sticky, pasty, or tacky sensation.</text>
+
+    <rect x="15" y="240" width="135" height="40" rx="6" fill="#FFF5F8" />
+    <text x="82" y="265" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C">Egg-White Fluid</text>
+  </g>
+
+  <!-- Watermark -->
+  <text x="400" y="425" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#A89FA3">
+    Period Tracker &amp; Ovulation Cycle • Fertility Biomarker Guide (trackperiods.com)
+  </text>
+</svg>

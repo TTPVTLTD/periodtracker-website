@@ -127,10 +127,49 @@ export default function AboutDetailPage({ params }) {
     url: `https://trackperiods.com/about/${pageData.slug}`,
     publisher: {
       '@type': 'Organization',
-      name: 'Period Tracker & Ovulation Cycle',
+      name: 'Tracewave Transparency Private Limited',
+      url: 'https://trackperiods.com',
       logo: 'https://trackperiods.com/brand-logo-final.png',
     },
   };
+
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://trackperiods.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'About',
+        item: 'https://trackperiods.com/about',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: pageData.title,
+        item: `https://trackperiods.com/about/${pageData.slug}`,
+      },
+    ],
+  };
+
+  const faqJsonLd = pageData.faqs && pageData.faqs.length > 0 ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: pageData.faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.answer,
+      },
+    })),
+  } : null;
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF8F9]">
@@ -140,6 +179,16 @@ export default function AboutDetailPage({ params }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        />
+        {faqJsonLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+          />
+        )}
         {renderCustomView()}
       </main>
       <Footer />

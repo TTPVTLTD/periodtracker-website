@@ -343,7 +343,7 @@ export const ARTICLES = [
         "bullets": [
           "Infertile: Firm (tip of nose), closed, low in the vaginal canal, dry",
           "Fertile: Soft (lower lip), open, high (harder to reach), wet with fertile mucus",
-          "Remember the acronym SHOW: Soft, High, Open, Wet"
+          "Remember the acronym SHOW: Soft, High, Open, Wet; explore our clinical [cervical position during ovulation vs pregnancy SHOW guide](/articles/cervical-position-ovulation-vs-pregnancy-how-to-check) for cycle charts"
         ]
       },
       {
@@ -1807,6 +1807,7 @@ export const ARTICLES = [
         "bullets": [
           "Cramping: PMS cramps are rhythmic and intensify leading up to flow. Implantation cramping is usually mild, prickling, or pulling, localized to one side or lower center",
           "Spotting: PMS bleeding is heavy, deep red, and contains clots. Implantation spotting is faint pink or brown, light, and lasts only 24 to 48 hours without clots",
+          "Vaginal Fluid: PMS discharge dries out 24-48 hours before flow, while early pregnancy causes persistent milky leukorrhea; explore our [white discharge before period: early pregnancy vs PMS guide](/articles/white-discharge-before-period-early-pregnancy-vs-pms)",
           "Breast Sensitivity: PMS breasts feel heavy and ache all over, subsiding right when menstruation starts. Early pregnancy breasts feel tingling, sore to the touch, and areolae may darken and develop prominent Montgomery tubercles",
           "Basal Temperature: With PMS, waking BBT drops sharply 24-48 hours before bleeding starts. In pregnancy, BBT stays continuously elevated beyond 16-18 days"
         ]
@@ -1826,6 +1827,7 @@ export const ARTICLES = [
         "bullets": [
           "Pregnancy Test Calculator: Pinpoint the exact calendar date to test for 99% accuracy",
           "Beta hCG Doubling Calculator: Track early pregnancy progression charts between lab blood tests",
+          "Due Date Calculator: Calculate your true fetal age using our [due date by conception date vs LMP guide](/articles/due-date-calculator-by-conception-date-vs-lmp-guide)",
           "Period Tracker App: Keep an encrypted, private digital symptom diary on your iPhone or Android"
         ]
       }
@@ -2576,5 +2578,251 @@ export const ARTICLES = [
         "answer": "Once the blastocyst implants, hCG begins entering maternal circulation. Sensitive urine pregnancy tests can detect hCG 2 to 3 days after implantation (around 10 to 12 DPO)."
       }
     ]
+  },
+  {
+    "id": "due-date-calculator-by-conception-date-vs-lmp-guide",
+    "title": "Due date by conception date vs LMP: how to calculate exact due date",
+    "category": "pregnancy",
+    "categoryName": "Pregnancy",
+    "tag": "Due Date Calculation",
+    "readTime": "7 min read",
+    "publishedDate": "23 October 2026",
+    "author": "Dr. Ananya Sharma, OB/GYN Advisory",
+    "reviewer": "Period Tracker Medical Advisory Board",
+    "image": "/images/articles/conception-due-date-timeline.svg",
+    "tags": [
+      "Due Date Calculator",
+      "Conception Date",
+      "LMP Calculator",
+      "Pregnancy Timeline",
+      "Gestational Age",
+      "Implantation Calculator"
+    ],
+    "summary": "Learn the biological and mathematical differences between calculating your estimated due date (EDD) by exact conception date (266 days) vs. your last menstrual period (280 days).",
+    "content": [
+      {
+        "heading": "The 280-Day Rule vs. The 266-Day Biological Reality",
+        "body": "When you confirm a positive pregnancy test, most doctors calculate your Estimated Due Date (EDD) using Naegele’s Rule: adding 280 days (40 full weeks) to the first day of your Last Menstrual Period (LMP). However, conception does not happen on day one of your period. Biologically, fertilization occurs approximately 14 days later during ovulation. If you know your ovulation day or exact intercourse timing, calculating from your conception date requires adding 266 days (38 weeks), reflecting true fetal embryonic age.",
+        "bullets": [
+          "LMP Calculation (Gestational Age): LMP + 280 days (40 weeks) — includes the 2 weeks before you actually conceived",
+          "Conception Calculation (Fetal Age): Conception Date + 266 days (38 weeks) — true biological age of the developing fetus",
+          "The 14-Day Discrepancy: Assumes a textbook 28-day cycle; women with longer or irregular cycles may experience significant LMP calculation errors"
+        ]
+      },
+      {
+        "heading": "Why Pinpointing the Exact Day of Conception Is Tricky",
+        "body": "Many people assume conception happens the exact hour of intercourse, but human biology is more flexible. Sperm can survive inside fertile cervical mucus for up to 5 days, whereas an ovulated egg remains viable for only 12 to 24 hours. If you had sex on Monday and ovulated on Thursday, fertilization happened on Thursday or Friday—meaning your biological conception date is 3 to 4 days after intimacy.",
+        "bullets": [
+          "Sperm Viability Window: 72 to 120 hours in alkaline fertile cervical fluid",
+          "Egg Viability Window: 12 to 24 hours post-follicular rupture",
+          "Conception Date Window: Can occur any time between the day of intercourse and up to 5 days later"
+        ]
+      },
+      {
+        "heading": "Calculating Due Date by Implantation Date & Early Ultrasound",
+        "body": "For women tracking luteal phase milestones, implantation takes place between 6 and 12 Days Past Ovulation (DPO), with 84% occurring between 8 and 10 DPO. You can cross-reference our [implantation timeline and calculator guide](/articles/embryo-implantation-timeline-symptoms-calculator-guide) to trace blastocyst burrowing. In clinical practice, an early first-trimester ultrasound measuring Crown-Rump Length (CRL) between 7 and 12 weeks provides the gold standard dating accuracy within 3 to 5 days.",
+        "bullets": [
+          "Implantation Window: 8-10 DPO on average; beta hCG enters maternal bloodstream 48 hours later",
+          "Crown-Rump Length (CRL): Most accurate ultrasound measurement before biological growth variations appear in second trimester",
+          "EDD Adjustment Criteria: Clinicians typically update your due date only if ultrasound dating differs from LMP by more than 7 days"
+        ]
+      },
+      {
+        "heading": "IVF Due Date Formulas: Day 3 vs. Day 5 Blastocyst Transfers",
+        "body": "For in vitro fertilization (IVF) pregnancies, conception timing is scientifically exact. Rather than estimating ovulation, reproductive endocrinologists date pregnancies using the precise date of embryo transfer and the embryo’s developmental stage at transfer.",
+        "bullets": [
+          "Day 3 Embryo Transfer Formula: Transfer Date + 263 days (or Transfer Date - 3 days + 266 days)",
+          "Day 5 Blastocyst Transfer Formula: Transfer Date + 261 days (or Transfer Date - 5 days + 266 days)",
+          "Frozen Embryo Transfer (FET): Follows the identical formula based on embryo age at freeze"
+        ]
+      },
+      {
+        "heading": "How to Use Our Digital Pregnancy Due Date Tools",
+        "body": "Whether you have regular cycles, irregular PCOS cycles, or tracked ovulation with basal body temperature (BBT), you can test your personal milestones with our interactive [pregnancy due date calculator](/calculators/pregnancy-due-date-calculator) and [implantation calculator](/calculators/implantation-calculator). Both tools run 100% locally on your browser with zero private health data transmitted.",
+        "bullets": [
+          "Calculate by LMP, Conception Date, or Average Cycle Length",
+          "Generates your trimester milestones, fetal growth comparisons, and safe testing dates",
+          "Cross-checks with your logged [ovulation calculator](/calculators/ovulation-calculator) results"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is due date by conception more accurate than due date by LMP?",
+        "answer": "Yes, especially if you have irregular periods, PCOS, or cycles longer or shorter than 28 days. Naegele's LMP formula assumes you ovulated on Day 14, which can be off by weeks for women with 35+ day cycles."
+      },
+      {
+        "question": "How many days do you add to conception date to get your due date?",
+        "answer": "You add exactly 266 days (which is 38 full weeks) to your confirmed conception or ovulation date to determine your estimated delivery date (EDD)."
+      },
+      {
+        "question": "Can an ultrasound change my due date?",
+        "answer": "Yes. If a first-trimester dating ultrasound (between 7 and 12 weeks) measures your baby's crown-rump length (CRL) and calculates a due date that differs by more than 7 days from your LMP date, your doctor will adjust your official clinical due date."
+      },
+      {
+        "question": "What percentage of babies are actually born on their exact due date?",
+        "answer": "Only about 4% to 5% of babies are born on their exact estimated due date. A full-term pregnancy is safely defined as delivery occurring between 37 weeks, 0 days and 41 weeks, 6 days."
+      }
+    ]
+  },
+  {
+    "id": "cervical-position-ovulation-vs-pregnancy-how-to-check",
+    "title": "Cervical position during ovulation vs early pregnancy: the SHOW guide",
+    "category": "fertility",
+    "categoryName": "Fertility",
+    "tag": "Fertility Signs",
+    "readTime": "6 min read",
+    "publishedDate": "23 October 2026",
+    "author": "Dr. Radhika Sen, Reproductive Health Specialist",
+    "reviewer": "Period Tracker Medical Advisory Board",
+    "image": "/images/articles/cervical-position-ovulation-chart.svg",
+    "tags": [
+      "Cervical Position",
+      "SHOW Method",
+      "Ovulation Signs",
+      "Fertile Window",
+      "Early Pregnancy Signs",
+      "Cervix High Soft Open"
+    ],
+    "summary": "Master the SHOW method (Soft, High, Open, Wet) to check your cervical position throughout your cycle to identify peak ovulation and early pregnancy changes.",
+    "content": [
+      {
+        "heading": "The SHOW Rule: What Your Cervix Feels Like During Peak Fertility",
+        "body": "Your cervix is the cylinder-shaped neck of tissue that connects your vagina to your uterus. Under the influence of surging estrogen leading up to ovulation, the cervix undergoes dramatic physical remodeling remembered by the medical acronym SHOW: Soft, High, Open, and Wet.",
+        "bullets": [
+          "S - Soft: Feels plush and yielding like your lower lips or an earlobe, rather than firm cartilage",
+          "H - High: Rises deep into the upper vaginal vault as uterine ligaments contract, often making it difficult to reach with a single finger",
+          "O - Open: The central dimple (external os) dilates slightly to permit microscopic sperm passage into the fallopian tubes",
+          "W - Wet: Abundant, lubricative, clear egg-white cervical fluid coats the cervical entrance"
+        ]
+      },
+      {
+        "heading": "Step-by-Step Hygienic Guide to Checking Your Cervical Position",
+        "body": "Checking your cervix is safe and straightforward once you learn proper technique. Consistency is key: check at the same time each day, preferably after showering or before bedtime, and avoid checking right after sexual intercourse.",
+        "bullets": [
+          "Hygiene First: Thoroughly wash your hands with mild, unscented soap and ensure fingernails are neatly trimmed to avoid mucosal micro-abrasions",
+          "Choose a Consistent Posture: Squatting low, sitting on the toilet with knees apart, or propping one foot up on a bathtub rim offers optimal pelvic angle",
+          "Gentle Exploration: Slowly insert your clean middle finger into the vaginal canal, aiming toward your lower back until you encounter a round, donut-shaped mound with a central depression",
+          "Assess Texture & Height: Note whether it feels firm like the tip of your nose (infertile) or soft like your lips (fertile), and how deeply your finger had to reach"
+        ]
+      },
+      {
+        "heading": "Cervical Position in Early Pregnancy vs. Pre-Menstrual Drop",
+        "body": "After ovulation, progesterone causes the cervix to quickly become low, firm, dry, and tightly closed. But what happens if fertilization and implantation occur? In early pregnancy, as progesterone and hCG sustain the uterine lining, the cervix typically remains relatively high, soft, and tightly sealed by a thick protective cervical mucus plug (operculum). However, cervical position alone is not a definitive pregnancy test; verify with a [sensitive home pregnancy test](/articles/when-to-take-a-pregnancy-test-dpo-accuracy-calculator-timeline).",
+        "bullets": [
+          "Pre-Menstrual Drop: If not pregnant, the cervix drops lower into the canal, hardens like nose cartilage, and dilates slightly to let menstrual blood drain",
+          "Early Pregnancy Position: Stays elevated, soft to the touch, and firmly puckered shut to safeguard the embryonic environment",
+          "Variability Caveat: Cervical height fluctuates throughout the day with bladder fullness and bowel movements; never rely solely on cervix checks for pregnancy confirmation"
+        ]
+      },
+      {
+        "heading": "Pairing Cervix Checks with BBT & Cervical Mucus for Tri-Biomarker Accuracy",
+        "body": "The most effective natural family planning and conception protocol is the Symptothermal Method. By cross-referencing your cervix firmness with our [cervical mucus stages guide](/articles/cervical-mucus-stages-ovulation-tracking) and daily [basal body temperature tracking](/articles/how-to-track-bbt-basal-body-temperature-conception), you capture both the opening of your fertile window (via SHOW) and the confirmation of ovulation (via the 3-over-6 BBT thermal rise).",
+        "bullets": [
+          "Opening the Window: Cervix softens and egg-white mucus emerges 3 to 5 days before ovulation",
+          "Peak Day: Cervix reaches maximum height and openness on the day of peak luteinizing hormone (LH)",
+          "Closing the Window: Sustained 0.4°F to 0.8°F thermal shift for 3 consecutive days confirms progesterone release and infertile status"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "What does a high, soft, open cervix mean?",
+        "answer": "A high, soft, and open cervix (the SHOW state) indicates that estrogen is peaking and you are in your most fertile days of your cycle, right around ovulation. This is the optimal time for intercourse if you are trying to conceive."
+      },
+      {
+        "question": "Does your cervix feel high or low in early pregnancy?",
+        "answer": "In early pregnancy, under the influence of progesterone and increased pelvic blood flow, the cervix generally remains high, relatively soft, and tightly closed with a thick mucus plug."
+      },
+      {
+        "question": "Can checking your cervix cause an infection or early miscarriage?",
+        "answer": "With clean, washed hands and trimmed nails, gently touching the external cervix is safe and does not cause miscarriage. However, never insert foreign objects, and avoid internal checks if you have unexplained pelvic pain or bleeding."
+      },
+      {
+        "question": "How long after ovulation does the cervix drop and harden?",
+        "answer": "Within 24 to 48 hours following ovulation, the sharp rise in progesterone causes the cervix to quickly descend, feel firm like the tip of your nose, and seal its opening."
+      }
+    ]
+  },
+  {
+    "id": "white-discharge-before-period-early-pregnancy-vs-pms",
+    "title": "White discharge before period: early pregnancy sign or PMS coming?",
+    "category": "period",
+    "categoryName": "Your cycle",
+    "tag": "Vaginal Health",
+    "readTime": "6 min read",
+    "publishedDate": "23 October 2026",
+    "author": "Health & Wellness Editorial",
+    "reviewer": "Period Tracker Medical Advisory Board",
+    "image": "/images/articles/white-discharge-cycle-timeline.svg",
+    "tags": [
+      "White Discharge",
+      "Leukorrhea",
+      "Early Pregnancy Sign",
+      "PMS Symptoms",
+      "Luteal Phase",
+      "Cervical Fluid"
+    ],
+    "summary": "Discover why creamy white discharge increases before your period, how pregnancy leukorrhea differs from premenstrual fluid, and when to test.",
+    "content": [
+      {
+        "heading": "Why Estrogen & Progesterone Cause White Discharge Before Your Period",
+        "body": "Experiencing creamy, lotion-like white discharge in the days leading up to your expected period is extremely common. Physiologically termed leukorrhea, this discharge is composed of cervical mucus, normal vaginal fluid, shedding epithelial cells, and healthy lactobacilli bacteria. Its primary function is to cleanse the vaginal canal and prevent ascending bacterial infections.",
+        "bullets": [
+          "Normal Luteal Hormones: Following ovulation, the corpus luteum secretes progesterone, transforming thin, slippery ovulatory mucus into thicker, opaque white or cream fluid",
+          "Secondary Estrogen Surge: A minor secondary estrogen spike occurs mid-luteal phase (around 7 to 9 DPO), temporarily boosting mucus production",
+          "Vaginal Self-Cleaning: As endometrial shedding approaches, dead cells naturally slough off, creating creamy white or pasty residue on underwear"
+        ]
+      },
+      {
+        "heading": "Pregnancy Leukorrhea vs. Pre-Period Discharge: Key Differences",
+        "body": "Distinguishing whether pre-period white discharge signals impending menstruation or early conception comes down to volume, consistency progression, and accompanying systemic symptoms.",
+        "bullets": [
+          "Volume Trend: Pre-period discharge typically diminishes and dries out 24 to 48 hours before bleeding starts. In early pregnancy, discharge noticeably increases and stays persistent",
+          "Consistency: Pregnancy leukorrhea is usually thinner, milky, and slippery like watered lotion; premenstrual discharge is thicker, pasty, and tacky",
+          "Odor & Color: Both should be white or pale off-white with virtually zero odor or a very mild, non-offensive tangy scent",
+          "Associated Signs: Early pregnancy leukorrhea often pairs with heightened fatigue, mild uterine pulling, and a missed period. Review our [early pregnancy symptoms vs PMS comparison](/articles/early-signs-of-pregnancy-vs-pms-complete-comparison) to analyze symptom clusters"
+        ]
+      },
+      {
+        "heading": "Days Past Ovulation (DPO) Discharge Progression Timeline",
+        "body": "Tracking your daily discharge consistency from ovulation through your expected period date provides helpful cycle insights:",
+        "bullets": [
+          "1 to 3 DPO: Immediate post-ovulation dry-up; fluid turns sticky or gummy as progesterone rises",
+          "4 to 7 DPO: Scant creamy or lotion-like discharge; early luteal phase baseline",
+          "8 to 10 DPO: Implantation window; some women notice an increase in creamy leukorrhea or light pink implantation spotting",
+          "11 to 14 DPO: If not pregnant, discharge thickens and dries up prior to flow; if pregnant, milky leukorrhea flows continuously as vascularization increases"
+        ]
+      },
+      {
+        "heading": "Normal Discharge vs. Yeast Infections (Candida) or BV",
+        "body": "While white discharge is generally healthy and normal, certain textures, colors, and physical sensations signal treatable vaginal infections requiring medical attention.",
+        "bullets": [
+          "Yeast Infection (Candida): Thick, clumpy, cottage-cheese-like white discharge accompanied by intense vulvar itching, burning, and redness",
+          "Bacterial Vaginosis (BV): Thin, watery, grayish-white discharge with a distinct fishy odor that often becomes more noticeable after sex or washing",
+          "Trichomoniasis: Frothy yellow-green discharge with strong odor and painful urination",
+          "When to See a Doctor: If you experience burning with urination, pelvic pain, strong odor, or cottage-cheese texture, consult your healthcare provider"
+        ]
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is thick white creamy discharge a sign of early pregnancy?",
+        "answer": "It can be! If you conceive, surging estrogen and increased blood flow to the cervix cause an increase in milky white discharge (leukorrhea) around the time of your missed period. However, creamy discharge also occurs normally during the premenstrual luteal phase."
+      },
+      {
+        "question": "How many days before your period does white discharge start?",
+        "answer": "Many women experience creamy white discharge during the mid-to-late luteal phase, typically starting 3 to 7 days before their menstrual bleeding begins."
+      },
+      {
+        "question": "Does discharge dry up right before your period?",
+        "answer": "Yes. For many women who are not pregnant, progesterone levels drop sharply 24 to 48 hours before menstruation, resulting in a brief 'dry phase' immediately before bleeding starts."
+      },
+      {
+        "question": "When should I take a pregnancy test if I have excess white discharge?",
+        "answer": "The most accurate time to take a home urine pregnancy test is on the first day of your missed period (typically 14 DPO), using your first morning urine when hCG concentration is highest."
+      }
+    ]
   }
 ];
+
