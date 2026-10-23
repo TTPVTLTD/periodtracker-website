@@ -304,7 +304,7 @@ export default function Navbar() {
                   </a>
                   <a href={APP_LINKS.android} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 bg-black hover:bg-gray-800 text-white px-5 py-3 rounded-xl transition-colors">
                     
-                    <img className="w-5 h-5" src="https://img.utdstc.com/icon/5d0/b04/5d0b0403257ac6cde82fa20c08ec83bea1d4b6ccd406fefdb1672717881c1a7a:600" alt="" />
+                    <img className="w-5 h-5" src="https://img.utdstc.com/icon/5d0/b04/5d0b0403257ac6cde82fa20c08ec83bea1d4b6ccd406fefdb1672717881c1a7a:600" alt="Android Download Icon" />
                     <div className="flex flex-col items-start leading-none">
                       {/* <span className="text-[10px] text-gray-300 font-medium tracking-wide mb-0.5">GET IT ON</span> */}
                       <span className="text-sm font-bold">Google Play</span>

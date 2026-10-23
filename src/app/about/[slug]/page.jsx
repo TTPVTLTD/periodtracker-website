@@ -686,7 +686,7 @@ function ScienceAndResearchView({ pageData, otherPages }) {
                   <path fill="#34A853" d="M17.3 15.5l-3.5-3.5L3.6 22.2c.5.5 1 .3 1.5.1l12.2-6.8z"/>
                   <path fill="#EA4335" d="M20.9 10.5l-3.6-2-3.5 3.5 3.5 3.5 3.6-2c.9-.5.9-1.5 0-2z"/>
                 </svg> */}
-                    <img className="w-5 h-5" src="https://img.utdstc.com/icon/5d0/b04/5d0b0403257ac6cde82fa20c08ec83bea1d4b6ccd406fefdb1672717881c1a7a:600" alt="" />
+                    <img className="w-5 h-5" src="https://img.utdstc.com/icon/5d0/b04/5d0b0403257ac6cde82fa20c08ec83bea1d4b6ccd406fefdb1672717881c1a7a:600" alt="Android Download Icon" />
 
                 <div className="text-left">
                   {/* <div className="text-base uppercase font-medium leading-none text-gray-300">GET IT ON</div> */}

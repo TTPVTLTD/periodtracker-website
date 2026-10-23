@@ -60,11 +60,20 @@ export function generateMetadata({ params }) {
       description: safeDesc,
       url: `https://trackperiods.com/calculators/${calc.slug}`,
       type: 'website',
+      images: [
+        {
+          url: 'https://trackperiods.com/brand-logo-final.png',
+          width: 1200,
+          height: 630,
+          alt: safeTitle,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: safeTitle,
       description: safeDesc,
+      images: ['https://trackperiods.com/brand-logo-final.png'],
     },
   };
 }

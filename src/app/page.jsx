@@ -11,7 +11,7 @@ import Footer from '../components/Footer';
 
 export const metadata = {
   title: 'Period Tracker Ovulation Cycles | Smart Cycle Calendar',
-  description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
+  description: 'Track your period, calculate fertile ovulation days, safe days, and symptoms with 100% private on-device security. Free, accurate menstrual companion.',
   keywords: [
     'period tracker ovulation cycles',
     'period date calculator',
@@ -29,16 +29,25 @@ export const metadata = {
   },
   openGraph: {
     title: 'Period Tracker Ovulation Cycles | Smart Cycle Calendar',
-    description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
+    description: 'Track your period, calculate fertile ovulation days, safe days, and symptoms with 100% private on-device security. Free, accurate menstrual companion.',
     url: 'https://trackperiods.com',
     siteName: 'Period Tracker & Ovulation Cycle',
     locale: 'en_US',
     type: 'website',
+    images: [
+      {
+        url: 'https://trackperiods.com/brand-logo-final.png',
+        width: 1200,
+        height: 630,
+        alt: 'Period Tracker Ovulation Cycles',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Period Tracker & Ovulation Calculator | Smart Cycle Calendar',
-    description: 'Track your period, calculate fertile ovulation days, identify safe days, and log cycle symptoms with 100% private on-device security. Free, accurate menstrual health companion.',
+    description: 'Track your period, calculate fertile ovulation days, safe days, and symptoms with 100% private on-device security. Free, accurate menstrual companion.',
+    images: ['https://trackperiods.com/brand-logo-final.png'],
   },
 };
 
