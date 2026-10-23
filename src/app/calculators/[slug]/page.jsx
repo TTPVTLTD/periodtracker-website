@@ -79,6 +79,51 @@ export function generateMetadata({ params }) {
   };
 }
 
+function renderFormattedText(text) {
+  if (typeof text !== 'string') return text;
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const anchor = match[1];
+    const url = match[2];
+    const isExternal = url.startsWith('http') && !url.includes('trackperiods.com');
+    parts.push(
+      isExternal ? (
+        <a
+          key={match.index}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-flo-600 hover:text-flo-700 font-semibold underline decoration-pink-300 underline-offset-2 hover:decoration-flo-500 transition-colors"
+        >
+          {anchor}
+        </a>
+      ) : (
+        <Link
+          key={match.index}
+          href={url}
+          className="text-flo-600 hover:text-flo-700 font-semibold underline decoration-pink-300 underline-offset-2 hover:decoration-flo-500 transition-colors"
+        >
+          {anchor}
+        </Link>
+      )
+    );
+    lastIndex = linkRegex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+}
+
 export default function CalculatorDetailPage({ params }) {
   const { slug } = params;
   const calc = CALCULATORS.find((c) => c.slug === slug);
@@ -283,7 +328,7 @@ export default function CalculatorDetailPage({ params }) {
                           {sec.paragraphs.map((para, pIdx) => (
                             <p key={pIdx} className=" text-gray-700 leading-relaxed bg-white p-5 sm:p-6 rounded-2xl border border-pink-100/80 shadow-2xs hover:border-pink-200 transition-colors"
                             >
-                              {para}
+                              {renderFormattedText(para)}
                             </p>
                           ))}
                         </div>

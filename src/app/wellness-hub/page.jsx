@@ -21,20 +21,15 @@ import {
   Filter 
 } from 'lucide-react';
 
-function HealthLibraryContent() {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategoryFilter, setActiveCategoryFilter] = useState('all');
-  const [expandedCategories, setExpandedCategories] = useState({});
-
+function CategoryQueryHandler({ onCategoryChange }) {
   const searchParams = useSearchParams();
   const categoryParam = searchParams ? searchParams.get('category') || searchParams.get('cat') : null;
 
-  // Sync category filter from URL query parameter or hash (e.g. from Navbar dropdown while on page)
   useEffect(() => {
     const rawCat = categoryParam || (typeof window !== 'undefined' ? new URLSearchParams(window.location.search).get('category') || window.location.hash.replace('#', '') : '');
     
     if (!rawCat) {
-      setActiveCategoryFilter('all');
+      onCategoryChange('all');
       return;
     }
 
@@ -57,8 +52,7 @@ function HealthLibraryContent() {
 
     const matchedCat = normalizeMap[rawCat.toLowerCase()];
     if (matchedCat) {
-      setActiveCategoryFilter(matchedCat);
-      setSearchQuery('');
+      onCategoryChange(matchedCat);
       setTimeout(() => {
         const el = document.getElementById(matchedCat) || document.getElementById('category-filter-section');
         if (el) {
@@ -66,7 +60,15 @@ function HealthLibraryContent() {
         }
       }, 150);
     }
-  }, [categoryParam]);
+  }, [categoryParam, onCategoryChange]);
+
+  return null;
+}
+
+function HealthLibraryContent() {
+  const [searchQuery, setSearchQuery] = useState('');
+  const [activeCategoryFilter, setActiveCategoryFilter] = useState('all');
+  const [expandedCategories, setExpandedCategories] = useState({});
 
   const handleCategoryClick = (slug) => {
     setSearchQuery('');
@@ -147,6 +149,9 @@ function HealthLibraryContent() {
 
   return (
     <div className="min-h-screen flex flex-col bg-[#fffbf9]">
+      <Suspense fallback={null}>
+        <CategoryQueryHandler onCategoryChange={setActiveCategoryFilter} />
+      </Suspense>
       <Navbar />
 
       <main className="flex-1 pb-24">
@@ -156,8 +161,8 @@ function HealthLibraryContent() {
           <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
             
             {/* Main Title */}
-            <h1 className=" ">
-              Wellness <span className="bg-gradient-to-r from-brand-pink via-brand-babyPink to-brand-peach bg-clip-text text-transparent">Hub</span>
+            <h1 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight leading-tight">
+              Women's Wellness <span className="bg-gradient-to-r from-brand-pink via-brand-babyPink to-brand-peach bg-clip-text text-transparent">Hub</span>
             </h1>
 
             <p className=" text-gray-600 max-w-2xl mx-auto leading-relaxed">
@@ -217,7 +222,7 @@ function HealthLibraryContent() {
           <section id="category-filter-section" className="space-y-4 scroll-mt-24">
             <div className="flex items-center justify-between flex-wrap gap-2">
               <div>
-                <h2 className=" font-extrabold">
+                <h2 className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight">
                   Explore by category
                 </h2>
                 <p className="text-gray-500 mt-0.5">
@@ -503,11 +508,7 @@ function HealthLibraryContent() {
 }
 
 export default function HealthLibraryPage() {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-[#fffbf9]" />}>
-      <HealthLibraryContent />
-    </Suspense>
-  );
+  return <HealthLibraryContent />;
 }
 
 function HorizontalArticleCard({ article, categoryBadgeStyles }) {

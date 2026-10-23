@@ -53,9 +53,9 @@ export function generateMetadata({ params }) {
     'accuracy': ['period tracker accuracy', 'ovulation prediction reliability', 'cycle prediction models'],
   };
 
-  const rawTitle = `${pageData.title} - Science & Care`;
+  const rawTitle = pageData.title;
   const rawDesc = pageData.subtitle || pageData.heroDesc;
-  const safeTitle = clampTitle(rawTitle, 'Period Tracker', 60);
+  const safeTitle = clampTitle(rawTitle, 'Period Tracker', 55);
   const safeDesc = clampDescription(rawDesc, 158);
   const safeKeywords = clampKeywords(keywordsMap[pageData.slug] || [pageData.title, 'period tracker', 'reproductive health'], 6);
 
@@ -71,11 +71,20 @@ export function generateMetadata({ params }) {
       description: safeDesc,
       url: `/about/${pageData.slug}`,
       type: 'article',
+      images: [
+        {
+          url: 'https://trackperiods.com/brand-logo-final.png',
+          width: 1200,
+          height: 630,
+          alt: safeTitle,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: safeTitle,
       description: safeDesc,
+      images: ['https://trackperiods.com/brand-logo-final.png'],
     },
   };
 

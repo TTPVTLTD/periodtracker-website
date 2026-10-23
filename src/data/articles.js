@@ -43,7 +43,7 @@ export const ARTICLES = [
       },
       {
         "heading": "Are There Truly 'Safe' Days in Every Cycle?",
-        "body": "The days immediately following your period (before follicular development begins) and the late luteal phase (from 3 to 4 days after ovulation until your next period starts) carry virtually zero statistical risk of conception. However, because stress, travel, illness, and hormonal fluctuations can cause unexpected early ovulation, relying purely on calendar counting without symptom tracking carries a significant failure rate.",
+        "body": "The days immediately following your period (before follicular development begins) and the late luteal phase (from 3 to 4 days after ovulation until your next period starts) carry virtually zero statistical risk of conception. However, because stress, travel, illness, and hormonal fluctuations can cause unexpected early ovulation, relying purely on calendar counting without symptom tracking carries a significant failure rate. For a deeper breakdown of calendar algorithms vs biological markers, review our [safe days natural family planning calculation guide](/articles/safe-days-to-avoid-pregnancy-calculation-guide).",
         "bullets": [
           "Post-ovulatory luteal phase is physiologically infertile once the corpus luteum establishes",
           "Early ovulation can occur as early as Cycle Day 8 to 10 in shorter 21-24 day cycles",
@@ -52,7 +52,7 @@ export const ARTICLES = [
       },
       {
         "heading": "Multi-Symptom Tracking for Maximum Autonomy",
-        "body": "To safely navigate natural family planning, combining calendar mathematical models with real-time biological markers is essential. Track your morning basal body temperature (BBT), observe cervical mucus elasticity, and consider using barrier protection (such as condoms) throughout the entire follicular and ovulatory window.",
+        "body": "To safely navigate natural family planning, combining calendar mathematical models with real-time biological markers is essential. Track your morning basal body temperature (BBT), observe cervical mucus elasticity, and consider using barrier protection (such as condoms) throughout the entire follicular and ovulatory window. If you recently discontinued hormonal contraception, learn [how long birth control stays in your system](/articles/how-long-birth-control-stays-in-system) to anticipate when true natural cycles resume.",
         "bullets": [
           "Basal Body Temperature (BBT) confirms ovulation after a sustained 0.5°F thermal rise",
           "Cervical fluid shifts from sticky/dry to slippery egg-white consistency as fertile days open",
@@ -72,7 +72,7 @@ export const ARTICLES = [
     "faqs": [
       {
         "question": "Can I get pregnant from sex on my period?",
-        "answer": "While unlikely, it is biologically possible—especially for women with shorter cycles (21 to 24 days). If you ovulate on Day 9 or 10, sperm deposited on Day 5 or 6 of your period can remain alive to fertilize the newly released egg."
+        "answer": "While unlikely, it is biologically possible—especially for women with shorter cycles (21 to 24 days). If you ovulate on Day 9 or 10, sperm deposited on Day 5 or 6 of your period can remain alive to fertilize the newly released egg. Read our comprehensive analysis on [whether you can get pregnant on your period](/articles/can-you-get-pregnant-on-your-period-biology) to see cycle timing charts."
       },
       {
         "question": "How long after ovulation are you completely safe?",
@@ -102,7 +102,7 @@ export const ARTICLES = [
     "content": [
       {
         "heading": "Oral Contraceptive Pills (Combined & Progestin-Only)",
-        "body": "Synthetic estrogen and progestin from daily birth control pills have remarkably short elimination half-lives. Synthetic hormones clear your bloodstream within 48 to 72 hours after swallowing your final tablet. While synthetic hormones vanish rapidly, your hypothalamic-pituitary-ovarian (HPO) axis may require between 1 and 3 cycles to resume natural gonadotropin-releasing hormone pulses.",
+        "body": "Synthetic estrogen and progestin from daily birth control pills have remarkably short elimination half-lives. Synthetic hormones clear your bloodstream within 48 to 72 hours after swallowing your final tablet. While synthetic hormones vanish rapidly, your hypothalamic-pituitary-ovarian (HPO) axis may require between 1 and 3 cycles to resume natural gonadotropin-releasing hormone pulses. Many individuals experience [post-pill syndrome symptoms](/articles/post-pill-syndrome-hormone-recovery-guide) such as rebound acne or irregular bleedings during this reset phase.",
         "bullets": [
           "Circulating synthetic hormones clear blood in 2 to 3 days",
           "50% of women resume regular ovulatory cycles within 30 to 45 days",
@@ -144,7 +144,7 @@ export const ARTICLES = [
       },
       {
         "question": "Why is my first post-pill period so light or delayed?",
-        "answer": "Withdrawal bleeds during pill use were chemically induced. Your first natural period requires your ovaries to produce enough estradiol to build an endometrial lining, which takes time to synchronize."
+        "answer": "Withdrawal bleeds during pill use were chemically induced. Your first natural period requires your ovaries to produce enough estradiol to build an endometrial lining, which takes time to synchronize. If your flow remains absent beyond several weeks, explore [the 10 common causes for a late period with a negative pregnancy test](/articles/why-is-my-period-late-10-common-causes-negative-test)."
       }
     ]
   },
@@ -239,7 +239,7 @@ export const ARTICLES = [
     "content": [
       {
         "heading": "Why Do Period Blood Clots Form in the Uterus?",
-        "body": "To shed the thickened uterine lining efficiently, your body produces natural anticoagulants (plasminogen activators) to thin the menstrual fluid. However, on your heaviest 1 to 2 days of flow, blood pools in the uterine cavity faster than local anticoagulants can dissolve it. The blood coagulates into jelly-like gelatinous clots before passing through the cervix.",
+        "body": "To shed the thickened uterine lining efficiently, your body produces natural anticoagulants (plasminogen activators) to thin the menstrual fluid. However, on your heaviest 1 to 2 days of flow, blood pools in the uterine cavity faster than local anticoagulants can dissolve it. The blood coagulates into jelly-like gelatinous clots before passing through the cervix. Using our [free period date calculator](/calculators/period-calculator) helps you anticipate heavy bleeding days and track menstrual flow duration accurately.",
         "bullets": [
           "Clots are concentrated coagulated blood mixed with cellular endometrial tissue",
           "Color ranges from bright crimson to dark burgundy or deep purple-black",
@@ -267,7 +267,7 @@ export const ARTICLES = [
       },
       {
         "heading": "Blood Clots vs Uterine Tissue Chunks: How to Tell the Difference",
-        "body": "It is critical to distinguish between simple coagulated blood clots and solid pieces of uterine tissue or decidual fragments. Blood clots are deep red, dark crimson, or blackish, with a smooth, jelly-like consistency that dissolves under running water. Endometrial tissue fragments, decidual casts, or pregnancy tissue appear fibrous, firmer, and often have a pinkish-gray, tan, or fleshy appearance.",
+        "body": "It is critical to distinguish between simple coagulated blood clots and solid pieces of uterine tissue or decidual fragments. Blood clots are deep red, dark crimson, or blackish, with a smooth, jelly-like consistency that dissolves under running water. If you are experiencing unexpected bleeding around your expected period date, reviewing the [difference between implantation bleeding and period flow](/articles/implantation-bleeding-vs-period-differences) can clarify whether early pregnancy spotting is occurring. Endometrial tissue fragments, decidual casts, or pregnancy tissue appear fibrous, firmer, and often have a pinkish-gray, tan, or fleshy appearance.",
         "bullets": [
           "Blood Clots: Uniformly red, burgundy, or black; soft and gelatinous; break down under water",
           "Uterine Tissue / Decidual Fragments: Firmer, fibrous, grayish-pink or pale flesh-toned",
@@ -280,12 +280,12 @@ export const ARTICLES = [
         "bullets": [
           "Normal Ovulation Spotting: Very light, pink or watery brown, lasting 12 to 48 hours without clots",
           "Mid-Cycle Clots: Warrant gynecological review to check for cervical ectropion, polyps, or thyroid dysfunction",
-          "Use our free Ovulation Calculator to cross-verify your fertile window against unexpected spotting"
+          "Use our free [Ovulation Calculator](/calculators/ovulation-calculator) to cross-verify your fertile window against unexpected spotting"
         ]
       },
       {
         "heading": "Underlying Conditions That Cause Heavy Clotting & When to See a Doctor",
-        "body": "When heavy, painful clotting becomes a recurring monthly pattern, medical evaluation is essential to identify the root cause. Treatable conditions include uterine fibroids, adenomyosis (endometrial tissue growing into uterine muscle), endometriosis, polycystic ovary syndrome (PCOS), and bleeding disorders such as Von Willebrand disease.",
+        "body": "When heavy, painful clotting becomes a recurring monthly pattern, medical evaluation is essential to identify the root cause. Treatable conditions include uterine fibroids, adenomyosis (endometrial tissue growing into uterine muscle), endometriosis, polycystic ovary syndrome (PCOS), and bleeding disorders such as Von Willebrand disease. Natural supportive protocols like [ayurvedic herbal teas for menstrual cramps](/articles/ayurvedic-herbal-teas-period-cramp-relief) and [castor oil packs for pelvic circulation](/articles/castor-oil-packs-pelvic-circulation-remedies) help soothe uterine muscle spasms alongside medical care.",
         "bullets": [
           "Uterine Fibroids: Non-cancerous muscular growths that expand uterine surface area",
           "Adenomyosis: Causes enlarged, boggy uterus unable to contract effectively to stem bleeding",
@@ -1580,7 +1580,7 @@ export const ARTICLES = [
     "content": [
       {
         "heading": "The Biological Mechanism Behind the BBT Thermal Shift",
-        "body": "Basal Body Temperature (BBT) is your body's lowest resting temperature, reached during deep restorative sleep. During the follicular phase, estrogen keeps your resting temperature lower (typically between 97.0°F and 97.7°F / 36.1°C to 36.5°C). Immediately after ovulation, the ruptured follicle transforms into the corpus luteum, which secretes progesterone. Progesterone acts directly on the brain's hypothalamus, raising resting body temperature by 0.4°F to 0.8°F (0.2°C to 0.5°C) until your next period begins.",
+        "body": "Basal Body Temperature (BBT) is your body's lowest resting temperature, reached during deep restorative sleep. During the follicular phase, estrogen keeps your resting temperature lower (typically between 97.0°F and 97.7°F / 36.1°C to 36.5°C). Cross-verifying your temperature curve against our [clinical ovulation calculator](/calculators/ovulation-calculator) allows you to predict fertile days before the thermal shift occurs. Immediately after ovulation, the ruptured follicle transforms into the corpus luteum, which secretes progesterone. Progesterone acts directly on the brain's hypothalamus, raising resting body temperature by 0.4°F to 0.8°F (0.2°C to 0.5°C) until your next period begins.",
         "bullets": [
           "Follicular phase temperature: Cooler, estrogen-dominant baseline (97.0°F - 97.7°F)",
           "Luteal phase thermal shift: Rises by 0.4°F - 0.8°F within 24-48 hours after egg release",
@@ -1590,7 +1590,7 @@ export const ARTICLES = [
       },
       {
         "heading": "Golden Rules for Accurate Morning Temperature Taking",
-        "body": "Because BBT is extremely sensitive to ambient factors, following consistent daily measurement rules is essential for readable charts.",
+        "body": "Because BBT is extremely sensitive to ambient factors, following consistent daily measurement rules alongside [tracking cervical mucus stages](/articles/cervical-mucus-stages-ovulation-tracking) provides the highest natural conception accuracy.",
         "bullets": [
           "Measure immediately upon waking: Take temperature before sitting up, checking your phone, or drinking water",
           "Same time daily: Take reading within a 30-minute window every single morning",
@@ -1604,7 +1604,7 @@ export const ARTICLES = [
         "bullets": [
           "Drawing the coverline: Placed 0.1°F above the highest of the previous 6 follicular temperatures",
           "Rule of three: Ovulation is confirmed when 3 consecutive temperatures remain higher than the preceding 6 days",
-          "Triphasic pattern: A second sustained temperature rise around 7-10 days post-ovulation often hints at early implantation",
+          "Triphasic pattern: A second sustained temperature rise around 7-10 days post-ovulation often hints at early implantation; review our [embryo implantation timeline & symptoms guide](/articles/embryo-implantation-timeline-symptoms-calculator-guide) to understand this milestone.",
           "Short luteal phase: Temperatures dropping after fewer than 10 days may indicate low progesterone levels"
         ]
       }
@@ -1612,7 +1612,7 @@ export const ARTICLES = [
     "faqs": [
       {
         "question": "Can I use BBT to know when to have sex to get pregnant?",
-        "answer": "BBT confirms that ovulation has already occurred, by which time the egg has only 12-24 hours left. For optimal conception timing, combine BBT with cervical mucus tracking to time intercourse 2-3 days before the temperature shift occurs."
+        "answer": "BBT confirms that ovulation has already occurred, by which time the egg has only 12-24 hours left. For optimal conception timing, review our [safe days natural family planning guide](/articles/safe-days-to-avoid-pregnancy-calculation-guide) and combine BBT with cervical mucus tracking to time intercourse 2-3 days before the temperature shift occurs."
       },
       {
         "question": "Can fever, alcohol, or travel affect my BBT?",

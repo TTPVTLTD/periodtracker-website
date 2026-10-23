@@ -177,9 +177,9 @@ export default function AppFeaturesPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div className="text-center max-w-2xl mx-auto mb-14 space-y-2">
-              <h1 className="">
+              <h2 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
                 Complete App Capabilities
-              </h1>
+              </h2>
               <p className=" text-brand-gray">
                 Everything you need to track, understand, and nurture your body through each cycle phase.
               </p>

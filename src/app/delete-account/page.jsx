@@ -26,9 +26,18 @@ import {
   Sparkles
 } from 'lucide-react';
 
-function DeleteAccountContent() {
+function AppQueryListener({ onAppDetected }) {
   const searchParams = useSearchParams();
-  const isApp = searchParams?.get('app') === 'true';
+  React.useEffect(() => {
+    if (searchParams?.get('app') === 'true') {
+      onAppDetected(true);
+    }
+  }, [searchParams, onAppDetected]);
+  return null;
+}
+
+function DeleteAccountContent() {
+  const [isApp, setIsApp] = useState(false);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -137,6 +146,9 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
 
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF8F9] text-[#1A1819] selection:bg-[#FF5E8C]/20 selection:text-[#FF5E8C]">
+      <Suspense fallback={null}>
+        <AppQueryListener onAppDetected={setIsApp} />
+      </Suspense>
       {/* Top Navigation: Hide full website navbar if opened inside app webview */}
       {!isApp ? (
         <Navbar />
@@ -150,9 +162,9 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
                 className="w-9 h-9 rounded-xl object-contain shadow-xs" 
               />
               <div>
-                <h1 className="font-heading text-sm sm:text-base font-bold text-gray-950 leading-tight">
+                <div className="font-heading text-sm sm:text-base font-bold text-gray-950 leading-tight">
                   Period Tracker Ovulation Cycle
-                </h1>
+                </div>
                 <p className="text-xs text-gray-600 font-medium">
                   Official Account &amp; Data Deletion Portal
                 </p>
@@ -570,16 +582,5 @@ Requested Policy: Permanent deletion of profile, cycle history, ovulation record
 }
 
 export default function DeleteAccountPage() {
-  return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center bg-[#FAF8F9]">
-        <div className="text-center space-y-3">
-          <div className="w-10 h-10 border-4 border-flo-500 border-t-transparent rounded-full animate-spin mx-auto" />
-          <p className="text-xs text-gray-500 font-medium">Loading Account Deletion Portal...</p>
-        </div>
-      </div>
-    }>
-      <DeleteAccountContent />
-    </Suspense>
-  );
+  return <DeleteAccountContent />;
 }

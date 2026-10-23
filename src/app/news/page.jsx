@@ -6,25 +6,51 @@ import NewsClient from './NewsClient';
 import { Newspaper } from 'lucide-react';
 
 export const metadata = {
-  title: 'Latest Health & Wellness News | Period Tracker Ovulation Cycle',
+  title: 'Health & Wellness News | Period Tracker',
   description: 'Stay updated with the latest news, research, and tips on reproductive health, menstrual cycles, and women\'s wellness.',
   alternates: {
     canonical: 'https://trackperiods.com/news',
   },
   openGraph: {
-    title: 'Latest Health & Wellness News | Period Tracker',
+    title: 'Health & Wellness News | Period Tracker',
     description: 'Stay updated with the latest news, research, and tips on reproductive health, menstrual cycles, and women\'s wellness.',
     url: 'https://trackperiods.com/news',
     type: 'website',
-  }
+    images: [
+      {
+        url: 'https://trackperiods.com/brand-logo-final.png',
+        width: 1200,
+        height: 630,
+        alt: 'Health & Wellness News',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Health & Wellness News | Period Tracker',
+    description: 'Stay updated with the latest news, research, and tips on reproductive health, menstrual cycles, and women\'s wellness.',
+    images: ['https://trackperiods.com/brand-logo-final.png'],
+  },
 };
 
 export default async function NewsPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Health & Wellness News',
+    description: 'Latest research and updates on reproductive wellness, fertility science, and menstrual health.',
+    url: 'https://trackperiods.com/news',
+  };
+
   // Fetch initial data on the server (page 1, limit 9 for a 3x3 grid)
   const initialData = await fetchNewsList(1, 9);
   
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#FAF8F9] to-white selection:bg-[#FF5E8C]/20 selection:text-[#FF5E8C]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
       
       <main className="flex-1 w-full relative pb-16 sm:pb-24">

@@ -70,6 +70,51 @@ export function generateMetadata({ params }) {
   };
 }
 
+function renderFormattedText(text) {
+  if (typeof text !== 'string') return text;
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts = [];
+  let lastIndex = 0;
+  let match;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    const anchor = match[1];
+    const url = match[2];
+    const isExternal = url.startsWith('http') && !url.includes('trackperiods.com');
+    parts.push(
+      isExternal ? (
+        <a
+          key={match.index}
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-flo-600 hover:text-flo-700 font-semibold underline decoration-pink-300 underline-offset-2 hover:decoration-flo-500 transition-colors"
+        >
+          {anchor}
+        </a>
+      ) : (
+        <Link
+          key={match.index}
+          href={url}
+          className="text-flo-600 hover:text-flo-700 font-semibold underline decoration-pink-300 underline-offset-2 hover:decoration-flo-500 transition-colors"
+        >
+          {anchor}
+        </Link>
+      )
+    );
+    lastIndex = linkRegex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  return parts.length > 0 ? parts : text;
+}
+
 export default function ArticlePage({ params }) {
   const { id } = params;
   const article = ARTICLES.find((a) => a.id === id);
@@ -265,7 +310,7 @@ export default function ArticlePage({ params }) {
                         <div className="space-y-4">
                           {sec.paragraphs.map((para, pIdx) => (
                             <p key={pIdx} className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                              {para}
+                              {renderFormattedText(para)}
                             </p>
                           ))}
                         </div>
@@ -273,7 +318,7 @@ export default function ArticlePage({ params }) {
                         <div className="space-y-3">
                           {typeof sec.body === 'string' && sec.body.split('\n\n').map((para, pIdx) => (
                             <p key={pIdx} className="text-sm sm:text-base text-gray-700 leading-relaxed">
-                              {para}
+                              {renderFormattedText(para)}
                             </p>
                           ))}
                         </div>
@@ -289,7 +334,7 @@ export default function ArticlePage({ params }) {
                             {sec.bullets.map((bullet, bIdx) => (
                               <li key={bIdx} className="flex items-start gap-3 text-sm text-gray-700">
                                 <CheckCircle2 className="w-5 h-5 text-flo-500 shrink-0 mt-0.5" />
-                                <span className="leading-snug">{bullet}</span>
+                                <span className="leading-snug">{renderFormattedText(bullet)}</span>
                               </li>
                             ))}
                           </ul>

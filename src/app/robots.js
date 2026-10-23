@@ -8,7 +8,22 @@ export default function robots() {
         allow: '/',
         disallow: ['/api/'],
       },
+      {
+        userAgent: [
+          'GPTBot',
+          'ChatGPT-User',
+          'PerplexityBot',
+          'ClaudeBot',
+          'Claude-Web',
+          'Google-Extended',
+          'Applebot',
+          'Applebot-Extended',
+          'cohere-ai',
+        ],
+        allow: '/',
+      },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
+    host: baseUrl,
   };
 }

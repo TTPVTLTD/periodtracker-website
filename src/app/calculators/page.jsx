@@ -46,17 +46,48 @@ export const metadata = {
     description: 'Calculate your next period date, ovulation day, fertile window, beta hCG doubling, and pregnancy due date. 100% private in-browser reproductive tools.',
     url: 'https://trackperiods.com/calculators',
     type: 'website',
+    images: [
+      {
+        url: 'https://trackperiods.com/brand-logo-final.png',
+        width: 1200,
+        height: 630,
+        alt: 'Reproductive & Cycle Calculators',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Free Period & Ovulation Calculators - Menstrual Tools',
     description: 'Calculate your next period date, ovulation day, fertile window, beta hCG doubling, and pregnancy due date. 100% private in-browser tools.',
+    images: ['https://trackperiods.com/brand-logo-final.png'],
   },
 };
 
 export default function CalculatorsHubPage() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Reproductive & Cycle Calculators',
+    description: 'Comprehensive suite of clinical fertility, period, ovulation, hCG, and pregnancy calculators.',
+    url: 'https://trackperiods.com/calculators',
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: CALCULATORS.map((calc, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: calc.name,
+        url: `https://trackperiods.com/calculators/${calc.slug}`,
+        description: calc.description,
+      })),
+    },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[#fff9fb]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <main className="flex-1">
@@ -93,7 +124,15 @@ export default function CalculatorsHubPage() {
 
         {/* Tools Grid */}
         <section className="py-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <div className="text-center max-w-2xl mx-auto">
+              <h2 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
+                All 8 Specialized Cycle & Fertility Calculators
+              </h2>
+              <p className="text-sm text-gray-600 mt-2">
+                Select a tool below to calculate exact dates, physiological shifts, and gestational milestones.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {CALCULATORS.map((calc) => {
                 const Icon = iconMap[calc.icon] || Calculator;

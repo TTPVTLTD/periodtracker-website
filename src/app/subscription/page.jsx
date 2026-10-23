@@ -87,7 +87,15 @@ export default function SubscriptionPage() {
         </section>
 
         {/* Pricing Cards Section */}
-        <section className="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+          <div className="text-center max-w-2xl mx-auto">
+            <h2 className="text-2xl sm:text-3xl font-black text-gray-900 tracking-tight">
+              Compare Membership Plans & Capabilities
+            </h2>
+            <p className="text-sm text-gray-600 mt-2">
+              Choose between our comprehensive free on-device tracker or full AI-powered premium insights.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             
             {/* Plan 1: Free Starter */}

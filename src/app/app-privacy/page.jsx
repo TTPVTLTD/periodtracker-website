@@ -17,10 +17,30 @@ import {
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'App Privacy Policy | Period Tracker Ovulation Cycle',
-  description: 'Privacy Policy for the Period Tracker Ovulation Cycle mobile application. Learn how we collect, use, and safeguard your health and cycle data.',
+  title: 'App Privacy Policy | Period Tracker',
+  description: 'Privacy Policy for the Period Tracker mobile application. Learn how we collect, use, and safeguard your health and cycle data.',
   alternates: {
     canonical: 'https://trackperiods.com/app-privacy',
+  },
+  openGraph: {
+    title: 'App Privacy Policy | Period Tracker',
+    description: 'Privacy Policy for the Period Tracker mobile application. Learn how we collect, use, and safeguard your health and cycle data.',
+    url: 'https://trackperiods.com/app-privacy',
+    type: 'website',
+    images: [
+      {
+        url: 'https://trackperiods.com/brand-logo-final.png',
+        width: 1200,
+        height: 630,
+        alt: 'App Privacy Policy',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'App Privacy Policy | Period Tracker',
+    description: 'Privacy Policy for the Period Tracker mobile application. Learn how we collect, use, and safeguard your health and cycle data.',
+    images: ['https://trackperiods.com/brand-logo-final.png'],
   },
 };
 
@@ -37,8 +57,20 @@ export default function AppPrivacyPage() {
     { id: 'gdpr-ccpa', label: '9. GDPR / CCPA' },
   ];
 
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    name: 'App Privacy Policy',
+    description: 'Privacy policy and data protection disclosure for Period Tracker mobile application.',
+    url: 'https://trackperiods.com/app-privacy',
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#FAF8F9] to-white selection:bg-[#FF5E8C]/20 selection:text-[#FF5E8C] scroll-smooth">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Navbar />
 
       <main className="flex-1 w-full relative pb-8 sm:pb-12">
@@ -104,10 +136,10 @@ export default function AppPrivacyPage() {
 
               {/* Section 1 */}
               <div id="information-we-collect" className="space-y-3 leading-relaxed scroll-mt-24">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
                   <Database className="w-5 h-5 text-[#FF5E8C]" />
                   1. Information We Collect
-                </h3>
+                </h2>
                 <p>
                   We only collect information that is strictly necessary to provide you with cycle predictions, logs, reminders, and personalized health reports.
                 </p>
@@ -126,10 +158,10 @@ export default function AppPrivacyPage() {
 
               {/* Section 2 */}
               <div id="how-we-use-your-information" className="space-y-3 leading-relaxed scroll-mt-24">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
                   <Activity className="w-5 h-5 text-[#FF5E8C]" />
                   2. How We Use Your Information
-                </h3>
+                </h2>
                 <p>
                   We use the collected data strictly for running the core features of the app, including:
                 </p>
@@ -144,10 +176,10 @@ export default function AppPrivacyPage() {
 
               {/* Section 3 */}
               <div id="data-sharing" className="space-y-3 leading-relaxed scroll-mt-24">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
                   <EyeOff className="w-5 h-5 text-[#FF5E8C]" />
                   3. Data Sharing & Third Parties
-                </h3>
+                </h2>
                 <div className="bg-rose-50/80 border border-rose-100 p-4 rounded-2xl text-rose-900 font-bold uppercase text-xs sm:text-sm tracking-wide leading-relaxed shadow-sm">
                   WE DO NOT SELL, RENT, OR SHARE YOUR MENSTRUAL CYCLE, HEALTH, OR PERSONAL DATA WITH ADVERTISERS, AD NETWORKS, OR MARKETING COMPANIES.
                 </div>
@@ -158,10 +190,10 @@ export default function AppPrivacyPage() {
 
               {/* Section 4 */}
               <div id="data-security" className="space-y-3 leading-relaxed scroll-mt-24">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
                   <Lock className="w-5 h-5 text-[#FF5E8C]" />
                   4. Data Security
-                </h3>
+                </h2>
                 <p>
                   Your reproductive and health data is highly personal. We implement industry-standard security measures, including encryption protocols (SSL/TLS), to safeguard your data both in transit (when it is sent to our servers) and at rest (when stored securely).
                 </p>
@@ -169,10 +201,10 @@ export default function AppPrivacyPage() {
 
               {/* Section 5 */}
               <div id="data-retention" className="space-y-3 leading-relaxed scroll-mt-24">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
                   <Clock className="w-5 h-5 text-[#FF5E8C]" />
                   5. Data Retention
-                </h3>
+                </h2>
                 <p>
                   We retain your personal information and health-related data only for as long as your account remains active or as long as necessary to provide the services offered by the App, including cycle tracking, ovulation predictions, reminders, reports, and secure data sync across devices.
                 </p>
@@ -186,10 +218,10 @@ export default function AppPrivacyPage() {
 
               {/* Section 6 */}
               <div id="user-rights" className="space-y-3 leading-relaxed scroll-mt-24">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
                   <UserCheck className="w-5 h-5 text-[#FF5E8C]" />
                   6. User Rights & Data Deletion
-                </h3>
+                </h2>
                 <p>
                   You retain absolute ownership and control over your data:
                 </p>
@@ -203,10 +235,10 @@ export default function AppPrivacyPage() {
 
               {/* Section 7 */}
               <div id="contact-us" className="space-y-3 leading-relaxed scroll-mt-24">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
                   <Mail className="w-5 h-5 text-[#FF5E8C]" />
                   7. Contact Us
-                </h3>
+                </h2>
                 <p>
                   For any privacy-related queries or to request data assistance, please contact us at:
                 </p>
@@ -220,10 +252,10 @@ export default function AppPrivacyPage() {
 
               {/* Section 8 */}
               <div id="medical-disclaimer" className="space-y-3 leading-relaxed scroll-mt-24">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
                   <AlertTriangle className="w-5 h-5 text-[#FF5E8C]" />
                   8. Medical and Health Disclaimer
-                </h3>
+                </h2>
                 <div className="bg-amber-50/80 border border-amber-100 p-5 rounded-2xl space-y-3 text-amber-900 shadow-sm">
                   <p>
                     <strong className="block mb-1 text-amber-950 font-bold">Not Medical Advice:</strong> 
@@ -238,10 +270,10 @@ export default function AppPrivacyPage() {
 
               {/* Section 9 */}
               <div id="gdpr-ccpa" className="space-y-3 leading-relaxed scroll-mt-24">
-                <h3 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
+                <h2 className="text-lg sm:text-xl font-bold text-[#1A1819] flex items-center gap-2.5">
                   <ShieldCheck className="w-5 h-5 text-[#FF5E8C]" />
                   9. Your Rights (GDPR / CCPA)
-                </h3>
+                </h2>
                 <p>
                   Depending on your location, you have the right to:
                 </p>
