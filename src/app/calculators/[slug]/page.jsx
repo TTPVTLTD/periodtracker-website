@@ -27,6 +27,7 @@ import {
 } from 'lucide-react';
 
 import { clampTitle, clampDescription, clampKeywords } from '../../../utils/seo';
+import BottomLinkingHub from '../../../components/BottomLinkingHub';
 
 export function generateStaticParams() {
   return CALCULATORS.map((calc) => ({
@@ -408,6 +409,19 @@ export default function CalculatorDetailPage({ params }) {
             </div>
           </div>
         </section>
+
+        {/* Bottom Contextual Link Juice Sculpting Hub */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <BottomLinkingHub 
+            currentSlug={calc.slug} 
+            cluster={
+              calc.slug.includes('implantation') || calc.slug.includes('ovulation') ? 'fertility' :
+              calc.slug.includes('hcg') || calc.slug.includes('pregnancy') || calc.slug.includes('due-date') || calc.slug.includes('months') ? 'pregnancy' :
+              'cycle'
+            } 
+            pageType="calculator" 
+          />
+        </div>
 
       </main>
 

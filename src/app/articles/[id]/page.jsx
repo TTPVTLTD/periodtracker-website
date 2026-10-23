@@ -19,6 +19,7 @@ import {
   Smartphone
 } from 'lucide-react';
 import { clampTitle, clampDescription, clampKeywords } from '../../../utils/seo';
+import BottomLinkingHub from '../../../components/BottomLinkingHub';
 
 // Next.js static params generation for all articles
 export function generateStaticParams() {
@@ -512,6 +513,20 @@ export default function ArticlePage({ params }) {
             </div>
           </section>
         )}
+
+        {/* Bottom Contextual Link Juice Sculpting Hub */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
+          <BottomLinkingHub 
+            currentSlug={article.id} 
+            cluster={
+              article.id.includes('implantation') || article.category === 'ovulation' ? 'fertility' :
+              article.category === 'pregnancy' || article.id.includes('hcg') || article.id.includes('pregnancy-test') ? 'pregnancy' :
+              article.id.includes('pcos') || article.id.includes('syncing') ? 'pcos' :
+              'cycle'
+            } 
+            pageType="article" 
+          />
+        </div>
 
       </main>
 
