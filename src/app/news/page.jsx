@@ -5,6 +5,8 @@ import { fetchNewsList } from '../../lib/newsApi';
 import NewsClient from './NewsClient';
 import { Newspaper } from 'lucide-react';
 
+export const revalidate = 60;
+
 export const metadata = {
   title: 'Health & Wellness News | Period Tracker',
   description: 'Stay updated with the latest news, research, and tips on reproductive health, menstrual cycles, and women\'s wellness.',

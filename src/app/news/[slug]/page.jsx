@@ -3,8 +3,26 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Navbar from '../../../components/Navbar';
 import Footer from '../../../components/Footer';
-import { fetchNewsDetail, fetchNewsList, generateNewsSlug } from '../../../lib/newsApi';
+import NewsHeroImage from '../NewsHeroImage';
+import { fetchNewsDetail, fetchNewsList, generateNewsSlug, getNewsFallbackImage } from '../../../lib/newsApi';
 import { Calendar, ChevronRight } from 'lucide-react';
+
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  try {
+    const res = await fetchNewsList(1, 100);
+    const list = res?.data?.data || res?.data || [];
+    if (Array.isArray(list) && list.length > 0) {
+      return list.map((item) => ({
+        slug: generateNewsSlug(item) || String(item.id || item._id),
+      }));
+    }
+  } catch (e) {
+    console.error('generateStaticParams error:', e);
+  }
+  return [];
+}
 
 export async function generateMetadata({ params }) {
   const news = await fetchNewsDetail(params.slug);
@@ -13,9 +31,18 @@ export async function generateMetadata({ params }) {
     return { title: 'News Not Found | Period Tracker' };
   }
 
-  const title = news.title || 'Health News';
-  const description = news.short_description || news.shortDescription || news.description?.replace(/<[^>]+>/g, '').substring(0, 160) || 'Health and wellness updates.';
-  const imageUrl = news.news_image || news.image || news.thumbnail || 'https://trackperiods.com/og-image.jpg';
+  const title = news.title || news.old_title || 'Health News';
+  const description = news.short_description || news.shortDescription || news.old_short_description || news.description?.replace(/<[^>]+>/g, '').substring(0, 160) || 'Health and wellness updates.';
+  const fallbackImg = getNewsFallbackImage(title);
+  let imageUrl = news.news_image || news.image || news.thumbnail || fallbackImg;
+  
+  // Guard against known broken third-party domains
+  if (!imageUrl || imageUrl.includes('admin.progenesisivf.com') || imageUrl.includes('images.everydayhealth.com')) {
+    imageUrl = `https://trackperiods.com${fallbackImg}`;
+  } else if (!imageUrl.startsWith('http')) {
+    imageUrl = `https://trackperiods.com${imageUrl}`;
+  }
+  
   const canonicalSlug = generateNewsSlug(news) || params.slug;
 
   return {
@@ -31,6 +58,12 @@ export async function generateMetadata({ params }) {
       images: [imageUrl],
       type: 'article',
     },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [imageUrl],
+    },
   };
 }
 
@@ -41,28 +74,35 @@ export default async function NewsDetailPage({ params }) {
     notFound();
   }
 
-  // Fetch recent news for the bottom section
-  const listData = await fetchNewsList(1, 4);
-  
-  // Safely extract array and filter out the current article
+  const title = news.title || news.old_title || 'Health & Wellness Update';
+  const content = news.description || news.content || news.old_description || '<p>No content available.</p>';
+  const fallbackImg = getNewsFallbackImage(title);
+  const imageUrl = news.news_image || news.image || news.thumbnail || fallbackImg;
+  const canonicalSlug = generateNewsSlug(news) || params.slug;
+  const description = news.short_description || news.shortDescription || news.old_short_description || 'Health and wellness updates.';
+
+  // Fetch recent news for the bottom recommendation section
+  const listData = await fetchNewsList(1, 6);
   let recentNews = [];
   if (listData) {
     const arr = listData?.data?.data || listData?.data || [];
     if (Array.isArray(arr)) {
-      recentNews = arr.filter(item => 
-        (item.slug !== params.slug && item._id !== params.slug && item.id?.toString() !== params.slug)
-      ).slice(0, 3);
+      const currentId = String(news.id || news._id || '');
+      recentNews = arr.filter(item => {
+        const itemSlug = generateNewsSlug(item);
+        const itemId = String(item.id || item._id || '');
+        return itemSlug !== params.slug && itemId !== currentId && item.slug !== params.slug;
+      }).slice(0, 3);
     }
   }
 
-  const title = news.title || 'Health & Wellness Update';
-  const content = news.content || news.description || '<p>No content available.</p>';
-  const imageUrl = news.news_image || news.image || news.thumbnail || 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=1200&auto=format&fit=crop';
-  
+  let datePublished = '2026-10-01T00:00:00.000Z';
   let dateStr = 'Recent';
   try {
-    if (news.created_at || news.createdAt || news.date) {
-      dateStr = new Date(news.created_at || news.createdAt || news.date).toLocaleDateString('en-US', {
+    const rawDate = news.created_at || news.createdAt || news.date;
+    if (rawDate) {
+      datePublished = new Date(rawDate).toISOString();
+      dateStr = new Date(rawDate).toLocaleDateString('en-US', {
         year: 'numeric',
         month: 'long',
         day: 'numeric'
@@ -70,15 +110,78 @@ export default async function NewsDetailPage({ params }) {
     }
   } catch (e) {}
 
+  // Schema.org Structured Data: NewsArticle & BreadcrumbList
+  const newsArticleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://trackperiods.com/news/${canonicalSlug}`,
+    },
+    headline: title,
+    description: description,
+    image: [
+      imageUrl.startsWith('http') ? imageUrl : `https://trackperiods.com${imageUrl}`,
+    ],
+    datePublished: datePublished,
+    dateModified: datePublished,
+    author: {
+      '@type': 'Organization',
+      name: 'Period Tracker Health Editorial Team',
+      url: 'https://trackperiods.com',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Period Tracker & Pregnancy Calendar',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://trackperiods.com/brand-logo-final.png',
+      },
+    },
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://trackperiods.com',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'News',
+        item: 'https://trackperiods.com/news',
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: title,
+        item: `https://trackperiods.com/news/${canonicalSlug}`,
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[#FAF8F9] selection:bg-[#FF5E8C]/20 selection:text-[#FF5E8C]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(newsArticleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <Navbar />
 
       <main className="flex-1 w-full pb-16 sm:pb-24">
         {/* Article Header (Hero) */}
         <div className="relative pt-8 sm:pt-12 pb-10 sm:pb-16 px-4 sm:px-6 z-10 bg-gradient-to-b from-white to-[#FAF8F9] border-b border-pink-50">
           <div className="max-w-6xl mx-auto">
-            {/* Breadcrumb Properly Added */}
+            {/* Breadcrumb Navigation */}
             <nav className="flex flex-wrap items-center text-sm font-medium text-[#706B6E] mb-6 sm:mb-8 gap-2">
               <Link href="/" className="hover:text-[#FF5E8C] transition-colors">Home</Link>
               <span className="text-gray-400">/</span>
@@ -103,18 +206,19 @@ export default async function NewsDetailPage({ params }) {
           </div>
         </div>
 
-        {/* Featured Image (Width synchronized to max-w-6xl) */}
+        {/* Featured Image */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6 -mt-6 sm:-mt-10 relative z-20 mb-10 sm:mb-16">
           <div className="w-full h-[300px] sm:h-[450px] lg:h-[500px] rounded-3xl overflow-hidden shadow-xl shadow-pink-900/10 border border-white/50 bg-white">
-            <img 
+            <NewsHeroImage 
               src={imageUrl} 
+              fallbackSrc={fallbackImg}
               alt={title} 
               className="w-full h-full object-cover"
             />
           </div>
         </div>
 
-        {/* Article Content (Width synchronized to max-w-6xl) */}
+        {/* Article Content */}
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-sm border border-pink-100">
             <div 
@@ -146,7 +250,7 @@ export default async function NewsDetailPage({ params }) {
 
         {/* Recent News Section */}
         {recentNews.length > 0 && (
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-20 sm:mt-32">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 mt-16 sm:mt-24">
             <div className="flex items-center justify-between mb-8 sm:mb-10">
               <h2 className="text-2xl sm:text-3xl font-extrabold text-[#1A1819]">
                 Recent Updates
@@ -159,7 +263,8 @@ export default async function NewsDetailPage({ params }) {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
               {recentNews.map((item, index) => {
                 const itemSlug = generateNewsSlug(item) || index.toString();
-                const itemImg = item.news_image || item.image || item.thumbnail || 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800&auto=format&fit=crop';
+                const itemFallbackImg = getNewsFallbackImage(item.title);
+                const itemImg = item.news_image || item.image || item.thumbnail || itemFallbackImg;
                 
                 let itemDate = 'Recent';
                 try {
@@ -176,9 +281,10 @@ export default async function NewsDetailPage({ params }) {
                     key={itemSlug}
                     className="group flex flex-col bg-white rounded-3xl overflow-hidden border border-pink-100 shadow-sm shadow-pink-900/5 transition-all duration-300 hover:shadow-xl hover:shadow-[#FF5E8C]/10 hover:-translate-y-1"
                   >
-                    <div className="relative w-full h-48 overflow-hidden">
-                      <img 
+                    <div className="relative w-full h-48 overflow-hidden bg-gray-100">
+                      <NewsHeroImage 
                         src={itemImg} 
+                        fallbackSrc={itemFallbackImg}
                         alt={item.title}
                         className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                       />
@@ -193,7 +299,7 @@ export default async function NewsDetailPage({ params }) {
                         {item.title}
                       </h3>
                       <p className="text-[#706B6E] text-xs font-medium line-clamp-2 mt-auto">
-                        {item.short_description || item.shortDescription || 'Read the full story to stay updated...'}
+                        {item.short_description || item.shortDescription || item.old_short_description || 'Read the full story to stay updated...'}
                       </p>
                     </div>
                   </Link>

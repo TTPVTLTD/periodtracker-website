@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Calendar, ChevronRight, Loader2, ArrowRight } from 'lucide-react';
-import { fetchNewsList, generateNewsSlug } from '../../lib/newsApi';
+import { fetchNewsList, generateNewsSlug, getNewsFallbackImage } from '../../lib/newsApi';
 
 export default function NewsClient({ initialData }) {
   // Extract initial docs array defensively based on the exact API response
@@ -18,10 +18,10 @@ export default function NewsClient({ initialData }) {
   const checkHasNextPage = (res) => {
     if (!res) return false;
     if (res.data && res.data.pagination) {
-      return res.data.pagination.page < res.data.pagination.totalPages;
+      const { page = 1, totalPages = 1 } = res.data.pagination;
+      return page < totalPages;
     }
-    // Fallback: if we got exactly 9 items, assume there might be more
-    return getDocs(res).length === 9; 
+    return getDocs(res).length >= 9; 
   };
 
   const [newsList, setNewsList] = useState(getDocs(initialData));
@@ -70,11 +70,12 @@ export default function NewsClient({ initialData }) {
 
   // Helper to extract plain text from HTML content or use short description
   const extractExcerpt = (item) => {
-    if (item.shortDescription) return item.shortDescription;
-    if (item.description) {
-      // Strip HTML tags if any
-      const plainText = item.description.replace(/<[^>]+>/g, '');
-      return plainText.length > 120 ? plainText.substring(0, 120) + '...' : plainText;
+    const text = item.short_description || item.shortDescription || item.old_short_description;
+    if (text && typeof text === 'string') return text;
+    if (item.description || item.content) {
+      const raw = item.description || item.content || '';
+      const plainText = raw.replace(/<[^>]+>/g, '').trim();
+      return plainText.length > 130 ? plainText.substring(0, 130) + '...' : plainText;
     }
     return 'Click to read the full story and stay updated with our latest health news.';
   };
@@ -95,8 +96,9 @@ export default function NewsClient({ initialData }) {
         {newsList.map((news, index) => {
           // Generate clean, keyword-rich SEO slug (50-60 chars max)
           const slug = generateNewsSlug(news) || index.toString();
-          const imageUrl = news.news_image || news.image || news.thumbnail || 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800&auto=format&fit=crop';
-          const title = news.title || 'Health & Wellness Update';
+          const title = news.title || news.old_title || 'Health & Wellness Update';
+          const fallbackImg = getNewsFallbackImage(title);
+          const imageUrl = news.news_image || news.image || news.thumbnail || fallbackImg;
 
           return (
             <Link 
@@ -111,7 +113,7 @@ export default function NewsClient({ initialData }) {
                   alt={title}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   onError={(e) => {
-                    e.target.src = 'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?q=80&w=800&auto=format&fit=crop';
+                    e.target.src = fallbackImg;
                   }}
                 />
                 <div className="absolute top-4 left-4">
