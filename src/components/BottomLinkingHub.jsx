@@ -19,6 +19,7 @@ export default function BottomLinkingHub({
         { name: 'Beta hCG Calculator', href: '/calculators/hcg-calculator', tag: 'Doubling Math' },
       ],
       articles: [
+        { title: '7 Clear Signs of Ovulation: Peak Fertility Guide', href: '/articles/ovulation-symptoms-signs-fertile-window-body-signals' },
         { title: 'Embryo Implantation Timeline & Symptoms Guide', href: '/articles/embryo-implantation-timeline-symptoms-calculator-guide' },
         { title: 'Implantation Bleeding vs Period: 7 Key Differences', href: '/articles/implantation-bleeding-vs-period-differences' },
         { title: 'How to Track BBT for Natural Conception (3-over-6 Rule)', href: '/articles/how-to-track-bbt-basal-body-temperature-conception' },
@@ -53,11 +54,13 @@ export default function BottomLinkingHub({
         { name: 'Implantation Calculator', href: '/calculators/implantation-calculator', tag: 'Spotting' },
       ],
       articles: [
+        { title: 'How to Calculate Your Period Cycle Length Accurately', href: '/articles/how-to-calculate-period-cycle-length-accurately' },
+        { title: 'Why Is My Period Late? 10 Causes Other Than Pregnancy', href: '/articles/why-is-my-period-late-causes-other-than-pregnancy' },
+        { title: 'How to Relieve Period Cramps Fast: 9 Gentle Remedies', href: '/articles/period-cramps-relief-home-remedies-fast-pain-relief' },
         { title: 'Period Blood Clots: Jelly-Like Chunks, Sizes & What It Means', href: '/articles/period-blood-clots-what-they-mean' },
         { title: 'Safe Days to Avoid Pregnancy: Natural Family Planning Guide', href: '/articles/safe-days-to-avoid-pregnancy-calculation-guide' },
         { title: 'Is There a Best Time to Have Sex to Avoid Pregnancy?', href: '/articles/best-time-to-have-sex-avoid-pregnancy' },
-        { title: 'How Long Does Birth Control Stay in Your System?', href: '/articles/how-long-birth-control-stays-in-system' },
-        { title: 'Why is My Period Late? 10 Common Causes with Negative Test', href: '/articles/why-is-my-period-late-10-common-causes-negative-test' },
+        { title: 'Spotting vs Period: 5 Clear Ways to Tell the Difference', href: '/articles/spotting-vs-period-differences-color-flow-causes' },
       ]
     },
     pcos: {

@@ -236,6 +236,40 @@ export default function CalculatorDetailPage({ params }) {
     },
   };
 
+  const medicalWebPageJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalWebPage',
+    name: calc.seoTitle || calc.name,
+    headline: calc.seoTitle || calc.name,
+    description: calc.seoDescription || calc.description || calc.summary,
+    url: `https://trackperiods.com/calculators/${calc.slug}`,
+    lastReviewed: calc.updatedDate || '2026-03-14',
+    reviewedBy: {
+      '@type': 'MedicalOrganization',
+      name: 'Period Tracker Medical Advisory Board',
+      url: 'https://trackperiods.com/about/medical-affairs',
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Period Tracker Health Editorial',
+      url: 'https://trackperiods.com/about/science-and-research',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Period Tracker & Pregnancy Calendar',
+      url: 'https://trackperiods.com',
+      logo: 'https://trackperiods.com/brand-logo-final.png',
+    },
+    about: {
+      '@type': 'MedicalCondition',
+      name: calc.badge || 'Menstrual Cycle Health',
+    },
+    medicalAudience: {
+      '@type': 'MedicalAudience',
+      audienceType: 'Patients',
+    },
+  };
+
   return (
     <div className="min-h-screen flex flex-col bg-[#fff9fb]">
       <Navbar />
@@ -244,6 +278,10 @@ export default function CalculatorDetailPage({ params }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(medicalWebPageJsonLd) }}
         />
         <script
           type="application/ld+json"

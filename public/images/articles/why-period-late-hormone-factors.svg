@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9F5" />
+      <stop offset="100%" stop-color="#FFEFEB" />
+    </linearGradient>
+    <linearGradient id="roseGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5E8C" />
+      <stop offset="100%" stop-color="#FF8C69" />
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#FF5E8C" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGrad2)" rx="24" />
+
+  <!-- Title Header -->
+  <rect x="40" y="25" width="720" height="60" rx="16" fill="#FFFFFF" filter="url(#cardShadow)" />
+  <circle cx="70" cy="55" r="14" fill="#FF8C69" />
+  <path d="M70 47 L70 57 M70 61 L70 63" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <text x="96" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#1A1819">Why Is My Period Late? Key Hormonal &amp; Lifestyle Triggers</text>
+  <text x="640" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#FF8C69">NON-PREGNANCY</text>
+
+  <!-- 4 Primary Factor Columns -->
+  <!-- 1. Stress / Cortisol -->
+  <rect x="40" y="105" width="168" height="235" rx="18" fill="#FFFFFF" filter="url(#cardShadow)" />
+  <rect x="40" y="105" width="168" height="42" rx="18" fill="#FFF0F4" />
+  <text x="124" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FF5E8C" text-anchor="middle">1. Acute Stress</text>
+  <circle cx="124" cy="180" r="24" fill="#FFE5EC" />
+  <path d="M116 180 C116 173, 132 173, 132 180 C132 187, 116 187, 116 180" stroke="#FF5E8C" stroke-width="2.5" fill="none" />
+  <text x="124" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#1A1819" text-anchor="middle">Cortisol Surge</text>
+  <text x="124" y="255" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">Suppresses brain</text>
+  <text x="124" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">GnRH signals</text>
+  <text x="124" y="315" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C" text-anchor="middle">Delays Ovulation</text>
+
+  <!-- 2. Weight & Exercise -->
+  <rect x="224" y="105" width="168" height="235" rx="18" fill="#FFFFFF" filter="url(#cardShadow)" />
+  <rect x="224" y="105" width="168" height="42" rx="18" fill="#FFF5F0" />
+  <text x="308" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#FF8C69" text-anchor="middle">2. Weight Shifts</text>
+  <circle cx="308" cy="180" r="24" fill="#FFEFEA" />
+  <path d="M300 185 L316 175 M300 175 L316 185" stroke="#FF8C69" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <text x="308" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#1A1819" text-anchor="middle">Energy Deficit</text>
+  <text x="308" y="255" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">Rapid weight loss</text>
+  <text x="308" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">or intense workouts</text>
+  <text x="308" y="315" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#FF8C69" text-anchor="middle">Hypothalamic Pause</text>
+
+  <!-- 3. PCOS & Hormones -->
+  <rect x="408" y="105" width="168" height="235" rx="18" fill="#FFFFFF" filter="url(#cardShadow)" />
+  <rect x="408" y="105" width="168" height="42" rx="18" fill="#F4F0FF" />
+  <text x="492" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#9333EA" text-anchor="middle">3. PCOS &amp; Thyroid</text>
+  <circle cx="492" cy="180" r="24" fill="#F3E8FF" />
+  <circle cx="492" cy="180" r="12" stroke="#9333EA" stroke-width="2.5" fill="none" />
+  <text x="492" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#1A1819" text-anchor="middle">Hormone Shift</text>
+  <text x="492" y="255" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">Excess androgens</text>
+  <text x="492" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">or TSH imbalances</text>
+  <text x="492" y="315" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#9333EA" text-anchor="middle">Irregular Ovulation</text>
+
+  <!-- 4. Travel & Illness -->
+  <rect x="592" y="105" width="168" height="235" rx="18" fill="#FFFFFF" filter="url(#cardShadow)" />
+  <rect x="592" y="105" width="168" height="42" rx="18" fill="#F0F9FF" />
+  <text x="676" y="132" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#0284C7" text-anchor="middle">4. Circadian Rhythm</text>
+  <circle cx="676" cy="180" r="24" fill="#E0F2FE" />
+  <path d="M670 174 L682 186 M670 186 L682 174" stroke="#0284C7" stroke-width="2.5" stroke-linecap="round" fill="none" />
+  <text x="676" y="230" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#1A1819" text-anchor="middle">Clock Disruption</text>
+  <text x="676" y="255" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">Time zone change,</text>
+  <text x="676" y="272" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">night shifts or fever</text>
+  <text x="676" y="315" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" fill="#0284C7" text-anchor="middle">Temporary Delay</text>
+
+  <!-- Bottom Guidance Pill -->
+  <rect x="40" y="355" width="720" height="70" rx="18" fill="#FFFFFF" filter="url(#cardShadow)" />
+  <text x="70" y="385" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" fill="#1A1819">When to Take a Pregnancy Test:</text>
+  <text x="70" y="408" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="500" fill="#706B6E">If sexually active, test on the 1st day of your missed period (or 14 days after ovulation) with morning urine.</text>
+</svg>

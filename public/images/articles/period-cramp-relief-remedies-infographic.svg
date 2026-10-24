@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8F5" />
+      <stop offset="100%" stop-color="#FFEFEB" />
+    </linearGradient>
+    <linearGradient id="warmGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF5E8C" />
+      <stop offset="100%" stop-color="#FFA07A" />
+    </linearGradient>
+    <filter id="softGlow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#FF5E8C" flood-opacity="0.1" />
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad4)" rx="24" />
+
+  <!-- Header -->
+  <rect x="40" y="25" width="720" height="60" rx="16" fill="#FFFFFF" filter="url(#softGlow)" />
+  <circle cx="70" cy="55" r="14" fill="#FF5E8C" />
+  <path d="M64 55 Q70 47, 76 55 Q70 63, 64 55" stroke="#FFFFFF" stroke-width="2" fill="none" />
+  <text x="96" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700" fill="#1A1819">Natural Period Cramp Relief: Evidence-Based Remedies</text>
+  <text x="635" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="700" fill="#FF5E8C">PAIN MANAGEMENT</text>
+
+  <!-- 3 Big Action Pillars -->
+  <!-- Pillar 1: Thermal Therapy (Heat) -->
+  <rect x="40" y="105" width="226" height="235" rx="18" fill="#FFFFFF" filter="url(#softGlow)" />
+  <rect x="40" y="105" width="226" height="40" rx="18" fill="#FFF0F4" />
+  <text x="153" y="130" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#FF5E8C" text-anchor="middle">1. Continuous Heat</text>
+  <circle cx="153" cy="180" r="26" fill="#FFE5EC" />
+  <path d="M145 190 Q153 170, 161 190" stroke="#FF5E8C" stroke-width="3" stroke-linecap="round" fill="none" />
+  <text x="153" y="230" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#1A1819" text-anchor="middle">Heating Pad / Bath</text>
+  <text x="153" y="255" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">Relaxes uterine muscles</text>
+  <text x="153" y="272" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">and boosts pelvic blood flow</text>
+  <rect x="65" y="295" width="176" height="30" rx="8" fill="#FFF0F4" />
+  <text x="153" y="315" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#FF5E8C" text-anchor="middle">Equal to Ibuprofen in Trials</text>
+
+  <!-- Pillar 2: Gentle Movement & Stretches -->
+  <rect x="286" y="105" width="226" height="235" rx="18" fill="#FFFFFF" filter="url(#softGlow)" />
+  <rect x="286" y="105" width="226" height="40" rx="18" fill="#FFF5F0" />
+  <text x="399" y="130" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#FF8C69" text-anchor="middle">2. Restorative Yoga</text>
+  <circle cx="399" cy="180" r="26" fill="#FFEFEA" />
+  <path d="M389 180 Q399 170, 409 180 Q399 190, 389 180" stroke="#FF8C69" stroke-width="3" stroke-linecap="round" fill="none" />
+  <text x="399" y="230" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#1A1819" text-anchor="middle">Child's Pose &amp; Cat-Cow</text>
+  <text x="399" y="255" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">Releases pelvic tension</text>
+  <text x="399" y="272" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">and triggers endorphins</text>
+  <rect x="311" y="295" width="176" height="30" rx="8" fill="#FFF5F0" />
+  <text x="399" y="315" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#FF8C69" text-anchor="middle">Natural Pain Blockers</text>
+
+  <!-- Pillar 3: Herbal & Nutritional Care -->
+  <rect x="532" y="105" width="228" height="235" rx="18" fill="#FFFFFF" filter="url(#softGlow)" />
+  <rect x="532" y="105" width="228" height="40" rx="18" fill="#F0FDF4" />
+  <text x="646" y="130" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#15803D" text-anchor="middle">3. Anti-Inflammatories</text>
+  <circle cx="646" cy="180" r="26" fill="#DCFCE7" />
+  <circle cx="646" cy="180" r="12" stroke="#15803D" stroke-width="2.5" fill="none" />
+  <text x="646" y="230" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="14" font-weight="700" fill="#1A1819" text-anchor="middle">Ginger, Ajwain &amp; Mg</text>
+  <text x="646" y="255" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">Inhibits prostaglandins</text>
+  <text x="646" y="272" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="500" fill="#706B6E" text-anchor="middle">that cause uterine spasms</text>
+  <rect x="558" y="295" width="176" height="30" rx="8" fill="#F0FDF4" />
+  <text x="646" y="315" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="11" font-weight="700" fill="#15803D" text-anchor="middle">Lowers Prostaglandins</text>
+
+  <!-- Bottom Red Flag Banner -->
+  <rect x="40" y="355" width="720" height="70" rx="18" fill="#FFFFFF" filter="url(#softGlow)" />
+  <text x="70" y="385" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="13" font-weight="700" fill="#DC2626">When to See a Doctor:</text>
+  <text x="70" y="408" font-family="-apple-system, BlinkMacSystemFont, sans-serif" font-size="12" font-weight="500" fill="#706B6E">Severe, debilitating cramps that do not respond to medication or interfere with daily life can indicate endometriosis or fibroids.</text>
+</svg>
